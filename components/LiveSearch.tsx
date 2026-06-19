@@ -187,12 +187,32 @@ export function LiveSearch({
     };
   }, [serverParams]);
 
-  // Keep the URL in sync via the Next router so it's shareable AND the browser Back button
-  // restores the filters when returning from a scheme. Immediate (filters are discrete clicks
-  // now that free-text search lives in the navbar) so a quick click never outruns the URL update.
+  // Persist filters to sessionStorage AND the URL. sessionStorage is the reliable restore path:
+  // Next's client cache can re-render /search as first loaded (unfiltered) on Back, so on mount
+  // we re-apply the saved filters. The URL stays in sync for shareable links.
   useEffect(() => {
+    try {
+      sessionStorage.setItem("bst.schemeFilters", paramsStr);
+    } catch {
+      /* ignore */
+    }
     router.replace(paramsStr ? `/search?${paramsStr}` : "/search", { scroll: false });
   }, [paramsStr, router]);
+
+  // On mount: if the URL carried no filters, restore the last-used ones (survives Back).
+  useEffect(() => {
+    if (initialQuery) return; // URL already specifies filters → respect them
+    try {
+      const saved = sessionStorage.getItem("bst.schemeFilters");
+      if (saved) {
+        setState(parseState(saved));
+        setEligOpen(hasEligibility(parseState(saved)));
+      }
+    } catch {
+      /* ignore */
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const display = useMemo(() => {
     const arr = [...results];

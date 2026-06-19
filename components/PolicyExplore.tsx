@@ -40,14 +40,37 @@ export function PolicyExplore({
   const [view, setView] = useState<"all" | PolicyBucket>(validView);
   const [cat, setCat] = useState<SchemeCategory | "">(validCat);
 
-  // Sync filters to the URL so the browser Back button restores them on return.
+  // Persist filters (sessionStorage + URL) so Back restores them — sessionStorage is the reliable
+  // path since Next's client cache can re-render /policies unfiltered on Back.
   useEffect(() => {
     const p = new URLSearchParams();
     if (view !== "all") p.set("view", view);
     if (cat) p.set("sector", cat);
     const qs = p.toString();
+    try {
+      sessionStorage.setItem("bst.policyFilters", qs);
+    } catch {
+      /* ignore */
+    }
     router.replace(qs ? `/policies?${qs}` : "/policies", { scroll: false });
   }, [view, cat, router]);
+
+  // On mount: if the URL carried no filters, restore the last-used ones.
+  useEffect(() => {
+    if (initialView || initialCat) return;
+    try {
+      const saved = sessionStorage.getItem("bst.policyFilters");
+      if (!saved) return;
+      const sp = new URLSearchParams(saved);
+      const v = sp.get("view");
+      const c = sp.get("sector");
+      if (v && (["open", "in_force", "past"] as string[]).includes(v)) setView(v as PolicyBucket);
+      if (c && CATEGORY_OPTIONS.some((o) => o.value === c)) setCat(c as SchemeCategory);
+    } catch {
+      /* ignore */
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Only sectors that actually appear, so the dropdown isn't cluttered with empties.
   const presentCats = useMemo(() => {
