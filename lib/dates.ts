@@ -16,6 +16,14 @@ function toDate(iso: string | null | undefined): Date | null {
   return m ? new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])) : null;
 }
 
+/** Display an ISO date ('YYYY-MM-DD') as DD-MM-YYYY (Indian convention). Non-dates pass
+ *  through unchanged; null/empty → null so callers can render an em dash. */
+export function fmtDate(iso: string | null | undefined): string | null {
+  if (!iso) return null;
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
+  return m ? `${m[3]}-${m[2]}-${m[1]}` : iso;
+}
+
 /** Calendar diff from→to (assumes from ≤ to). */
 function diff(from: Date, to: Date) {
   let y = to.getUTCFullYear() - from.getUTCFullYear();

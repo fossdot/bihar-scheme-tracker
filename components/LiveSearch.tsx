@@ -11,7 +11,7 @@ import {
   PERSONA_OPTIONS,
   SOCIAL_CATEGORY_OPTIONS,
 } from "@/lib/facets";
-import { ago, isStale } from "@/lib/dates";
+import { ago, fmtDate, isStale } from "@/lib/dates";
 import { pick, t, type Locale } from "@/lib/i18n";
 import {
   BUCKET_META,
@@ -485,7 +485,7 @@ export function LiveSearch({
                             {s.last_verified && (
                               <span>
                                 {t(locale, "verified")}{" "}
-                                {ago(s.last_verified, today, locale) ?? s.last_verified}
+                                {ago(s.last_verified, today, locale) ?? fmtDate(s.last_verified)}
                               </span>
                             )}
                           </div>
