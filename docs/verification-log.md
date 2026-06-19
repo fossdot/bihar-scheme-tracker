@@ -180,6 +180,22 @@ Baseline tagged `v0.1-baseline` (on `main`) before this work. Verified: `tsc`, `
 all routes 200 in light/dark + EN/HI. Not yet built (proposed next): iCal deadline feed, JSON API
 + open data, embeddable status badges.
 
+## 2026-06-19 — Mapping, global search, startup, fixes (branch `policy-mapping`)
+
+- **dd-mm-yyyy dates** everywhere (`lib/dates.ts fmtDate`); **Table view** is the catalogue default.
+- **Budget framing**: budget & beneficiaries are PUBLIC dimensions → shown as "Public · to add"
+  (from budget.bihar.gov.in) when absent, never "RTI needed" (only district/demographics/outcomes are).
+- **Back button keeps filters**: URL sync moved from `window.history.replaceState` to `router.replace`.
+- **Global navbar search** → `/find` groups matching schemes + policies (plain GET form).
+- **Startup**: Bihar Startup Policy 2022 + Startup Seed Fund scheme (`is_for_startups`).
+- **Scheme ↔ policy mapping** (`scheme_policy_links`, many-to-many): Saat Nishchay-2 umbrella policy
+  seeded + youth cluster linked; Startup Fund → Startup Policy. Scheme shows "Part of <policy>";
+  policy shows "Schemes under this"; new **/map** view (policy → schemes nodes) + nav link.
+- Now: 12 schemes, 10 policies (incl 1 draft, 1 superseded, 1 mission umbrella).
+- **Inactive coverage**: inactive *policies* demonstrated (2016 superseded); inactive *schemes*
+  await real sourced lapsed examples (not fabricated).
+- Verified: `tsc`, `next build`, all routes 200 (light/dark, EN/HI). On `policy-mapping`, not yet merged to `main`.
+
 ## Other progress this session (non-data)
 
 - **Search synonyms** (`lib/queries.ts`): small bilingual alias map (loan→credit card,
