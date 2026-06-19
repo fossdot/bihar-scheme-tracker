@@ -18,7 +18,8 @@
     "seed:startup": "tsx seed/10_startup.ts",
     "seed:mapping": "tsx seed/11_mapping.ts",
     "seed:breadth3": "tsx seed/12_breadth3.ts",
-    "seed:more": "tsx seed/13_more_and_map.ts"
+    "seed:more": "tsx seed/13_more_and_map.ts",
+    "seed:central": "tsx seed/14_central.ts"
   },
   "dependencies": {
     "pg": "^8.13.1",
