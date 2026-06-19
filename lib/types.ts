@@ -232,6 +232,7 @@ export interface SchemeDetail {
   allocations: BudgetAllocation[];
   metrics: SchemeMetric[];
   policies: { id: string; name_en: string; name_hi: string | null }[];
+  successor: { id: string; name_en: string; name_hi: string | null } | null;
   similar: {
     id: string;
     name_en: string;

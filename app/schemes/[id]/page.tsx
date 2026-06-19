@@ -63,7 +63,7 @@ export default async function SchemeDetailPage({
   }
   if (!detail) notFound();
 
-  const { scheme, department, allocations, metrics, policies, similar } = detail;
+  const { scheme, department, allocations, metrics, policies, successor, similar } = detail;
   const name = pick(locale, scheme.name_en, scheme.name_hi);
   const sub =
     locale === "hi"
@@ -151,6 +151,19 @@ export default async function SchemeDetailPage({
           </p>
         )}
       </header>
+
+      {/* Inactive scheme → point the citizen onward to its successor */}
+      {successor && (
+        <Panel>
+          <span className="text-ink">{t(locale, "inactiveSuccessor")} </span>
+          <Link
+            href={`/schemes/${successor.id}`}
+            className="font-medium text-brand underline underline-offset-2"
+          >
+            {pick(locale, successor.name_en, successor.name_hi)}
+          </Link>
+        </Panel>
+      )}
 
       {/* Key facts — at a glance */}
       <div className="grid grid-cols-2 gap-px overflow-hidden rounded-md border border-line bg-line sm:grid-cols-4">

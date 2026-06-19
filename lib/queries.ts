@@ -171,6 +171,15 @@ export async function getSchemeDetail(id: string): Promise<SchemeDetail | null> 
     [id]
   );
 
+  let successor: SchemeDetail["successor"] = null;
+  if (scheme.successor_scheme_id) {
+    const [s] = await query<{ id: string; name_en: string; name_hi: string | null }>(
+      `select id, name_en, name_hi from schemes where id = $1`,
+      [scheme.successor_scheme_id]
+    );
+    successor = s ?? null;
+  }
+
   const similar = scheme.categories.length
     ? await query<SchemeDetail["similar"][number]>(
         `select id, name_en, name_hi, status, categories
@@ -181,7 +190,7 @@ export async function getSchemeDetail(id: string): Promise<SchemeDetail | null> 
       )
     : [];
 
-  return { scheme, department, allocations, metrics, policies, similar };
+  return { scheme, department, allocations, metrics, policies, successor, similar };
 }
 
 const POLICY_LIST_COLUMNS = `

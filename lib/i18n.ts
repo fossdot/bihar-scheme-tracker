@@ -200,6 +200,10 @@ export const STRINGS = {
   partOf: { en: "Part of", hi: "के अंतर्गत" },
   schemesUnder: { en: "Schemes under this", hi: "इसके अंतर्गत योजनाएँ" },
   similarSchemes: { en: "Similar schemes", hi: "मिलती-जुलती योजनाएँ" },
+  inactiveSuccessor: {
+    en: "This scheme is no longer separately active — it continues via:",
+    hi: "यह योजना अब अलग से सक्रिय नहीं — यह इसके माध्यम से जारी है:",
+  },
   relatedPolicies: { en: "Related policies", hi: "संबंधित नीतियाँ" },
   launched: { en: "Launched", hi: "आरंभ" },
   ongoing: { en: "ongoing", hi: "जारी" },
