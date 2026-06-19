@@ -161,6 +161,25 @@ persona/age/gender/category/disability. Amounts/ages are reported figures to cro
 Token layer → CSS variables; `.dark` on `<html>` flips the palette; cookie-backed, read at SSR
 (no flash). ☀/☾ toggle in the header. (See also the dark-theme note below.)
 
+## 2026-06-19 — endoflife.date-inspired upgrade (branch `eol-ideas`)
+
+endoflife.date is this project's sibling — it answers "is this still supported, and when does it
+end?" for software; we answer it for schemes/policies. Adopted its presentation language, staying
+honest where our status is derived (not official). All date-driven — **no RTI needed**.
+
+- **Relative-date language** (`lib/dates.ts`, bilingual, deterministic): "Verified 1 day ago /
+  today" on scheme cards + status evidence; "valid 3 yr 5 mo more" / "lapsed X ago" /
+  "closes in N" on policy cards + detail. `isStale()` flags `last_verified` > 1 year.
+- **Lifecycle timeline** (`components/Timeline.tsx`): validity-window Gantt with a "now" marker on
+  policies (IT Policy 2024 → 2029; superseded 2016 muted); launched → now with confirmed
+  budget-year ticks on schemes (BSCC: FY2024-25, FY2025-26). Renders only where dates exist.
+- **Dense status-table view**: Cards ⇄ Table toggle on `/search` — Scheme · Sector · Status ·
+  Last budget · Verified (+ stale flag). The researcher's bird's-eye; reuses filtered+sorted rows.
+
+Baseline tagged `v0.1-baseline` (on `main`) before this work. Verified: `tsc`, `next build`, and
+all routes 200 in light/dark + EN/HI. Not yet built (proposed next): iCal deadline feed, JSON API
++ open data, embeddable status badges.
+
 ## Other progress this session (non-data)
 
 - **Search synonyms** (`lib/queries.ts`): small bilingual alias map (loan→credit card,
