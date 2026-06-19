@@ -88,6 +88,12 @@ const ICONS: Record<string, ReactNode> = {
     </>
   ),
   moon: <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.5 6.5 0 0 0 9.8 9.8Z" />,
+  search: (
+    <>
+      <circle cx="11" cy="11" r="7" />
+      <path d="M21 21l-4.3-4.3" />
+    </>
+  ),
 };
 
 export function Icon({

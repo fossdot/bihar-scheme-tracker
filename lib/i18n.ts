@@ -30,6 +30,14 @@ export const STRINGS = {
   navExplore: { en: "Explore", hi: "देखें" },
   navSchemes: { en: "Schemes", hi: "योजनाएँ" },
   navAbout: { en: "About the data", hi: "डेटा के बारे में" },
+  searchAllPlaceholder: { en: "Search schemes & policies…", hi: "योजनाएँ व नीतियाँ खोजें…" },
+  findTitle: { en: "Search results", hi: "खोज परिणाम" },
+  findPrompt: {
+    en: "Type a name above to search across schemes and policies.",
+    hi: "योजनाओं व नीतियों में खोजने हेतु ऊपर कोई नाम लिखें।",
+  },
+  findNothing: { en: "Nothing matches", hi: "कुछ मेल नहीं खाता" },
+  forQuery: { en: "for", hi: "के लिए" },
 
   // home
   homeTitle: { en: "Bihar’s schemes, honestly tracked", hi: "बिहार की योजनाएँ, ईमानदारी से दर्ज" },
