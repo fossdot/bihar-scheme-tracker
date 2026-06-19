@@ -12,7 +12,7 @@ import {
   personaLabel,
   socialLabel,
 } from "@/lib/facets";
-import { ago } from "@/lib/dates";
+import { ago, fmtDate } from "@/lib/dates";
 import { pick, t, tryT, type Locale } from "@/lib/i18n";
 import { getLocale } from "@/lib/locale";
 import { todayISO } from "@/lib/policy";
@@ -63,7 +63,7 @@ export default async function SchemeDetailPage({
   }
   if (!detail) notFound();
 
-  const { scheme, department, allocations, metrics } = detail;
+  const { scheme, department, allocations, metrics, policies } = detail;
   const name = pick(locale, scheme.name_en, scheme.name_hi);
   const sub =
     locale === "hi"
@@ -133,6 +133,23 @@ export default async function SchemeDetailPage({
         {objective && !isUnverified(scheme.objective_en) && (
           <p className="max-w-3xl text-ink">{objective}</p>
         )}
+
+        {policies.length > 0 && (
+          <p className="text-sm text-muted">
+            {t(locale, "partOf")}:{" "}
+            {policies.map((p, i) => (
+              <span key={p.id}>
+                {i > 0 && ", "}
+                <Link
+                  href={`/policies/${p.id}`}
+                  className="font-medium text-brand hover:underline"
+                >
+                  {pick(locale, p.name_en, p.name_hi)}
+                </Link>
+              </span>
+            ))}
+          </p>
+        )}
       </header>
 
       {/* Key facts — at a glance */}
@@ -151,7 +168,7 @@ export default async function SchemeDetailPage({
             endISO={null}
             today={today}
             active={scheme.status === "active" || scheme.status === "likely_active"}
-            leftLabel={`${t(locale, "launched")} ${scheme.launch_date}`}
+            leftLabel={`${t(locale, "launched")} ${fmtDate(scheme.launch_date)}`}
             rightLabel={t(locale, "nowLabel")}
             ticks={budgetTicks}
           />
@@ -188,7 +205,7 @@ export default async function SchemeDetailPage({
             label={t(locale, "targetBeneficiary")}
             value={scheme.target_beneficiary}
           />
-          <Field locale={locale} label={t(locale, "launchDate")} value={scheme.launch_date} />
+          <Field locale={locale} label={t(locale, "launchDate")} value={fmtDate(scheme.launch_date)} />
         </dl>
       </Card>
 
@@ -260,8 +277,8 @@ function StatusEvidence({ scheme, locale }: { scheme: Scheme; locale: Locale }) 
   const verifiedAgo = ago(scheme.last_verified, todayISO(), locale);
   const verifiedText = scheme.last_verified
     ? verifiedAgo
-      ? `${scheme.last_verified} · ${verifiedAgo}`
-      : scheme.last_verified
+      ? `${fmtDate(scheme.last_verified)} · ${verifiedAgo}`
+      : fmtDate(scheme.last_verified)
     : null;
   return (
     <Card
@@ -282,7 +299,7 @@ function StatusEvidence({ scheme, locale }: { scheme: Scheme; locale: Locale }) 
       )}
       <dl className="mt-4 grid grid-cols-2 gap-4 border-t border-line pt-3 text-xs sm:grid-cols-3">
         <Meta label={t(locale, "lastBudgetYear")} value={scheme.last_budget_year} />
-        <Meta label={t(locale, "lastNotification")} value={scheme.last_notification_date} />
+        <Meta label={t(locale, "lastNotification")} value={fmtDate(scheme.last_notification_date)} />
         <Meta label={t(locale, "lastVerified")} value={verifiedText} />
       </dl>
     </Card>

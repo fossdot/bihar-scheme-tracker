@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Panel } from "@/components/ui";
 import {
@@ -11,7 +12,7 @@ import {
   PERSONA_OPTIONS,
   SOCIAL_CATEGORY_OPTIONS,
 } from "@/lib/facets";
-import { ago, isStale } from "@/lib/dates";
+import { ago, fmtDate, isStale } from "@/lib/dates";
 import { pick, t, type Locale } from "@/lib/i18n";
 import {
   BUCKET_META,
@@ -146,6 +147,7 @@ export function LiveSearch({
   const [resultView, setResultView] = useState<"cards" | "table">("table");
   const [eligOpen, setEligOpen] = useState(() => hasEligibility(parseState(initialQuery)));
   const firstRun = useRef(true);
+  const router = useRouter();
 
   const paramsStr = useMemo(() => buildParams(state), [state]);
   const set = (patch: Partial<State>) => setState((s) => ({ ...s, ...patch }));
@@ -185,10 +187,15 @@ export function LiveSearch({
     };
   }, [serverParams]);
 
-  // Keep the URL shareable without a full navigation (includes sort).
+  // Keep the URL in sync via the Next router (debounced) so it's shareable AND the browser
+  // Back button restores the filters when returning from a scheme — window.history.replaceState
+  // alone leaves Next's router unaware, which dropped the filters on Back.
   useEffect(() => {
-    window.history.replaceState(null, "", paramsStr ? `/search?${paramsStr}` : "/search");
-  }, [paramsStr]);
+    const id = setTimeout(() => {
+      router.replace(paramsStr ? `/search?${paramsStr}` : "/search", { scroll: false });
+    }, 250);
+    return () => clearTimeout(id);
+  }, [paramsStr, router]);
 
   const display = useMemo(() => {
     const arr = [...results];
@@ -210,25 +217,7 @@ export function LiveSearch({
 
   return (
     <div className="space-y-6">
-      {/* Search bar — full width on top */}
-      <div className="relative">
-        <input
-          type="search"
-          value={state.q}
-          onChange={(e) => set({ q: e.target.value })}
-          autoComplete="off"
-          placeholder={t(locale, "searchPlaceholder")}
-          aria-label={t(locale, "searchPlaceholder")}
-          className="w-full rounded-md border border-line px-3 py-2.5 pr-24 text-ink placeholder:text-muted focus:border-brand"
-        />
-        {loading && (
-          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted">
-            {t(locale, "searching")}
-          </span>
-        )}
-      </div>
-
-      {/* Mobile filters toggle */}
+      {/* Mobile filters toggle (free-text search lives in the global navbar now) */}
       <button
         type="button"
         onClick={() => setFiltersOpen((v) => !v)}
@@ -390,6 +379,9 @@ export function LiveSearch({
                     ? t(locale, "resultsOne")
                     : t(locale, "resultsMany")}
                   {hasEligibility(state) ? ` ${t(locale, "matchingProfile")}` : ""}
+                  {loading && (
+                    <span className="ml-2 text-xs">{t(locale, "searching")}</span>
+                  )}
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="inline-flex overflow-hidden rounded-md border border-line text-xs">
@@ -485,7 +477,7 @@ export function LiveSearch({
                             {s.last_verified && (
                               <span>
                                 {t(locale, "verified")}{" "}
-                                {ago(s.last_verified, today, locale) ?? s.last_verified}
+                                {ago(s.last_verified, today, locale) ?? fmtDate(s.last_verified)}
                               </span>
                             )}
                           </div>

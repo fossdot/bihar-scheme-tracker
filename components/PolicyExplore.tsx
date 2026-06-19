@@ -25,7 +25,6 @@ export function PolicyExplore({
   today: string;
   policies: PolicyListItem[];
 }) {
-  const [q, setQ] = useState("");
   const [view, setView] = useState<"all" | PolicyBucket>("all");
   const [cat, setCat] = useState<SchemeCategory | "">("");
 
@@ -37,33 +36,20 @@ export function PolicyExplore({
   }, [policies]);
 
   const shown = useMemo(() => {
-    const ql = q.trim().toLowerCase();
     return policies.filter((p) => {
-      if (ql) {
-        const hay = `${p.name_en} ${p.name_hi ?? ""} ${p.summary_en ?? ""}`.toLowerCase();
-        if (!hay.includes(ql)) return false;
-      }
       if (cat && !p.categories.includes(cat)) return false;
       if (view !== "all" && policyBucket(policyStatusKey(p, today)) !== view) return false;
       return true;
     });
-  }, [q, view, cat, policies, today]);
+  }, [view, cat, policies, today]);
 
   const selectCls =
     "shrink-0 rounded-md border border-line bg-surface px-2.5 py-2 text-sm text-ink focus:border-brand";
 
   return (
     <div className="space-y-5">
-      {/* Single-line search + filters (search shrinks; dropdowns stay compact — works on mobile + laptop) */}
-      <div className="flex items-center gap-2">
-        <input
-          type="search"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder={t(locale, "searchPoliciesPlaceholder")}
-          aria-label={t(locale, "searchPoliciesPlaceholder")}
-          className="min-w-0 flex-1 rounded-md border border-line px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-brand"
-        />
+      {/* Filters (free-text search lives in the global navbar now) */}
+      <div className="flex flex-wrap items-center gap-2">
         <select
           value={view}
           onChange={(e) => setView(e.target.value as "all" | PolicyBucket)}

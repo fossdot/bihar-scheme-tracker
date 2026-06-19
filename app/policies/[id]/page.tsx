@@ -2,9 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
 import { PolicyBadge } from "@/components/PolicyBadge";
+import { StatusBadge } from "@/components/StatusBadge";
 import { Timeline } from "@/components/Timeline";
 import { Card, ConfigNotice, FactTile, Panel, Row } from "@/components/ui";
-import { deadlineLabel, validityLabel } from "@/lib/dates";
+import { deadlineLabel, fmtDate, validityLabel } from "@/lib/dates";
 import { categoryLabel } from "@/lib/facets";
 import { pick, t, tryT, type Locale } from "@/lib/i18n";
 import { getLocale } from "@/lib/locale";
@@ -49,7 +50,7 @@ export default async function PolicyDetailPage({
   }
   if (!detail) notFound();
 
-  const { policy, department, successor } = detail;
+  const { policy, department, successor, schemes } = detail;
   const name = pick(locale, policy.name_en, policy.name_hi);
   const sub =
     locale === "hi"
@@ -70,9 +71,9 @@ export default async function PolicyDetailPage({
     : "—";
   const validity =
     policy.period_start && policy.period_end
-      ? `${policy.period_start} → ${policy.period_end}`
+      ? `${fmtDate(policy.period_start)} → ${fmtDate(policy.period_end)}`
       : policy.period_start
-        ? `${policy.period_start} →`
+        ? `${fmtDate(policy.period_start)} →`
         : "—";
 
   // Primary action: comment (open drafts) or read the document.
@@ -139,7 +140,7 @@ export default async function PolicyDetailPage({
         />
         <FactTile icon="calendar" label={t(locale, "validity")} value={validity} />
         <FactTile icon="building" label={t(locale, "department")} value={dept} />
-        <FactTile icon="check" label={t(locale, "lastVerified")} value={policy.last_verified ?? "—"} />
+        <FactTile icon="check" label={t(locale, "lastVerified")} value={fmtDate(policy.last_verified) ?? "—"} />
       </div>
 
       {/* Lifecycle timeline — validity window with a "now" marker */}
@@ -150,14 +151,35 @@ export default async function PolicyDetailPage({
             endISO={policy.period_end}
             today={today}
             active={statusKey === "in_force"}
-            leftLabel={policy.period_start}
+            leftLabel={fmtDate(policy.period_start)!}
             rightLabel={
-              policy.period_end ??
+              fmtDate(policy.period_end) ??
               (statusKey === "superseded"
                 ? t(locale, "supersededLabel")
                 : t(locale, "ongoing"))
             }
           />
+        </Card>
+      )}
+
+      {/* Schemes under this policy/framework (the backwards mapping) */}
+      {schemes.length > 0 && (
+        <Card icon="check" title={`${t(locale, "schemesUnder")} · ${schemes.length}`}>
+          <ul className="-my-1 divide-y divide-line">
+            {schemes.map((s) => (
+              <li key={s.id}>
+                <Link
+                  href={`/schemes/${s.id}`}
+                  className="flex items-center justify-between gap-3 py-2.5 hover:opacity-80"
+                >
+                  <span className="min-w-0 font-medium text-ink">
+                    {pick(locale, s.name_en, s.name_hi)}
+                  </span>
+                  <StatusBadge status={s.status} locale={locale} size="sm" />
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Card>
       )}
 
@@ -173,7 +195,7 @@ export default async function PolicyDetailPage({
             <div>
               <dt className="text-muted">{t(locale, "commentDeadline")}</dt>
               <dd className="mt-0.5 font-medium text-ink">
-                {policy.consultation_end ?? t(locale, "deadlineVerify")}
+                {fmtDate(policy.consultation_end) ?? t(locale, "deadlineVerify")}
               </dd>
             </div>
           </dl>

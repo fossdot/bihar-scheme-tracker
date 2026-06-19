@@ -29,7 +29,22 @@ export const STRINGS = {
   },
   navExplore: { en: "Explore", hi: "देखें" },
   navSchemes: { en: "Schemes", hi: "योजनाएँ" },
+  navMap: { en: "Map", hi: "मानचित्र" },
   navAbout: { en: "About the data", hi: "डेटा के बारे में" },
+  mapTitle: { en: "Policy map", hi: "नीति मानचित्र" },
+  mapSubtitle: {
+    en: "How schemes sit under Bihar's policy frameworks — tap a policy or a scheme to dive in.",
+    hi: "बिहार की नीतिगत रूपरेखाओं के अंतर्गत योजनाएँ कैसे आती हैं — किसी नीति या योजना पर टैप करें।",
+  },
+  mapEmpty: { en: "No scheme–policy links yet.", hi: "अभी कोई योजना–नीति संबंध नहीं।" },
+  searchAllPlaceholder: { en: "Search schemes & policies…", hi: "योजनाएँ व नीतियाँ खोजें…" },
+  findTitle: { en: "Search results", hi: "खोज परिणाम" },
+  findPrompt: {
+    en: "Type a name above to search across schemes and policies.",
+    hi: "योजनाओं व नीतियों में खोजने हेतु ऊपर कोई नाम लिखें।",
+  },
+  findNothing: { en: "Nothing matches", hi: "कुछ मेल नहीं खाता" },
+  forQuery: { en: "for", hi: "के लिए" },
 
   // home
   homeTitle: { en: "Bihar’s schemes, honestly tracked", hi: "बिहार की योजनाएँ, ईमानदारी से दर्ज" },
@@ -182,6 +197,8 @@ export const STRINGS = {
   applyCta: { en: "Apply on the official portal", hi: "आधिकारिक पोर्टल पर आवेदन करें" },
   howToApply: { en: "How to apply", hi: "आवेदन कैसे करें" },
   timeline: { en: "Timeline", hi: "समयरेखा" },
+  partOf: { en: "Part of", hi: "के अंतर्गत" },
+  schemesUnder: { en: "Schemes under this", hi: "इसके अंतर्गत योजनाएँ" },
   launched: { en: "Launched", hi: "आरंभ" },
   ongoing: { en: "ongoing", hi: "जारी" },
   nowLabel: { en: "now", hi: "अभी" },
