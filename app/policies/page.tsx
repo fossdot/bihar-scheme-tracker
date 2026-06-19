@@ -8,9 +8,15 @@ import type { PolicyListItem } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
-export default async function PoliciesPage() {
+export default async function PoliciesPage({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
   const locale = getLocale();
   const configured = isDbConfigured();
+  const initialView = typeof searchParams.view === "string" ? searchParams.view : "";
+  const initialCat = typeof searchParams.sector === "string" ? searchParams.sector : "";
 
   let policies: PolicyListItem[] = [];
   if (configured) {
@@ -33,7 +39,13 @@ export default async function PoliciesPage() {
       {!configured ? (
         <ConfigNotice />
       ) : (
-        <PolicyExplore locale={locale} today={todayISO()} policies={policies} />
+        <PolicyExplore
+          locale={locale}
+          today={todayISO()}
+          policies={policies}
+          initialView={initialView}
+          initialCat={initialCat}
+        />
       )}
     </div>
   );

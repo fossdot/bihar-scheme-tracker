@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { PolicyBadge } from "@/components/PolicyBadge";
 import { deadlineLabel, validityLabel } from "@/lib/dates";
 import { CATEGORY_OPTIONS, categoryLabel } from "@/lib/facets";
@@ -20,13 +21,33 @@ export function PolicyExplore({
   locale,
   today,
   policies,
+  initialView,
+  initialCat,
 }: {
   locale: Locale;
   today: string;
   policies: PolicyListItem[];
+  initialView: string;
+  initialCat: string;
 }) {
-  const [view, setView] = useState<"all" | PolicyBucket>("all");
-  const [cat, setCat] = useState<SchemeCategory | "">("");
+  const router = useRouter();
+  const validView = (["open", "in_force", "past"] as string[]).includes(initialView)
+    ? (initialView as PolicyBucket)
+    : "all";
+  const validCat = CATEGORY_OPTIONS.some((o) => o.value === initialCat)
+    ? (initialCat as SchemeCategory)
+    : "";
+  const [view, setView] = useState<"all" | PolicyBucket>(validView);
+  const [cat, setCat] = useState<SchemeCategory | "">(validCat);
+
+  // Sync filters to the URL so the browser Back button restores them on return.
+  useEffect(() => {
+    const p = new URLSearchParams();
+    if (view !== "all") p.set("view", view);
+    if (cat) p.set("sector", cat);
+    const qs = p.toString();
+    router.replace(qs ? `/policies?${qs}` : "/policies", { scroll: false });
+  }, [view, cat, router]);
 
   // Only sectors that actually appear, so the dropdown isn't cluttered with empties.
   const presentCats = useMemo(() => {

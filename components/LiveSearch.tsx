@@ -187,14 +187,11 @@ export function LiveSearch({
     };
   }, [serverParams]);
 
-  // Keep the URL in sync via the Next router (debounced) so it's shareable AND the browser
-  // Back button restores the filters when returning from a scheme — window.history.replaceState
-  // alone leaves Next's router unaware, which dropped the filters on Back.
+  // Keep the URL in sync via the Next router so it's shareable AND the browser Back button
+  // restores the filters when returning from a scheme. Immediate (filters are discrete clicks
+  // now that free-text search lives in the navbar) so a quick click never outruns the URL update.
   useEffect(() => {
-    const id = setTimeout(() => {
-      router.replace(paramsStr ? `/search?${paramsStr}` : "/search", { scroll: false });
-    }, 250);
-    return () => clearTimeout(id);
+    router.replace(paramsStr ? `/search?${paramsStr}` : "/search", { scroll: false });
   }, [paramsStr, router]);
 
   const display = useMemo(() => {
