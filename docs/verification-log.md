@@ -222,6 +222,39 @@ fabrication. Worked directly on `main` (per user; no feature branches).
 - Status spread: 1 active, 50 likely_active, 3 subsumed, 1 lapsed. Verified: tsc + all routes 200
   (light/dark, EN/HI). Repo: github.com/fossdot/bihar-scheme-tracker (private), pushed to `main`.
 
+## 2026-06-19 — Budget allocations (the status "spine"): first real scheme-line figures
+
+A genuine run at `budget.bihar.gov.in`. **Finding (decisive):** the state's own
+`Demands_For_Grants_2025-26.pdf` (45 MB, 108 pp), `Budget_Highlights`, and
+`Explanatory_Memorandum` carry **no text layer** — `pypdf` extracts 0 characters per page and the
+pages contain no image XObjects either, i.e. the text is rendered as **vector paths**. They are
+therefore **not machine-extractable** without OCR of dense Hindi budget tables, which would risk
+transposed digits — unacceptable under "wrong info is worse than no info." (This nails down the
+"not web-extractable" note from the MVP pass with an actual attempt + diagnosis.)
+
+**What worked:** PRS Legislative Research's *Bihar Budget Analysis* (2025-26 and 2026-27) is
+born-digital and itemises select schemes' Budget Estimates, citing the official Bihar Budget
+Documents. Seeded `budget_allocations` only where a PRS scheme call-out maps cleanly to a scheme in
+our DB. Umbrella heads ("Mahila Sashaktikaran", "Power subsidy", "Sub-mission on Agricultural
+Mechanisation", "Samagra Shiksha") were **deliberately not attributed** to any single scheme.
+
+| Scheme | 2025-26 BE | 2026-27 BE | New status |
+|---|---|---|---|
+| MGNREGA (Bihar) | ₹4,392 cr | ₹3,192 cr | active (current-FY line) |
+| PMAY — Urban | ₹2,355 cr | ₹2,842 cr | active (current-FY line) |
+| PMAY — Gramin | ₹4,320 cr | — (not itemised in 2026-27 PRS) | active |
+| Mukhyamantri Vriddhjan Pension | ₹828 cr | — | active |
+
+Sources: PRS *Bihar Budget Analysis 2025-26* and *2026-27* (PDFs), each citing Bihar Budget
+Documents; stored as `budget_allocations.source_url` and quoted in `status_evidence` with the FY.
+6 allocation rows; 4 schemes likely_active → **active**. Status spread now: 5 active, 55
+likely_active, 3 subsumed, 1 lapsed. Verified: MGNREGA detail page renders the two-year budget
+series + "Active". Seed: `seed/18_budget.ts`.
+
+**Next on the spine:** the only path to the remaining scheme-line figures (BSCC, MNSSBY, KYP, the
+scholarship schemes — none itemised by PRS) is OCR of the Bihar demand PDFs or an RTI; both are
+slower, lower-confidence routes deferred until they can be cross-checked.
+
 ## Other progress this session (non-data)
 
 - **Search synonyms** (`lib/queries.ts`): small bilingual alias map (loan→credit card,

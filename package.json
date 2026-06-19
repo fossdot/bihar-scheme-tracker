@@ -22,7 +22,8 @@
     "seed:central": "tsx seed/14_central.ts",
     "seed:inactive": "tsx seed/15_inactive.ts",
     "seed:district": "tsx seed/16_district.ts",
-    "seed:central2": "tsx seed/17_central2.ts"
+    "seed:central2": "tsx seed/17_central2.ts",
+    "seed:budget": "tsx seed/18_budget.ts"
   },
   "dependencies": {
     "pg": "^8.13.1",
