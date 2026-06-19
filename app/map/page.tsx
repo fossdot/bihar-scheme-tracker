@@ -58,26 +58,39 @@ export default async function MapPage() {
                 <PolicyBadge policy={g.policy} today={today} locale={locale} size="sm" />
               </Link>
 
-              {/* Schemes = child nodes */}
-              <div className="flex flex-wrap gap-2 p-4">
-                {g.schemes.map((s) => {
+              {/* Schemes = child nodes, drawn as a branching tree from the policy */}
+              <ul className="list-none p-3 pl-4">
+                {g.schemes.map((s, i) => {
                   const meta = STATUS_META[s.status] ?? STATUS_META.unknown;
+                  const last = i === g.schemes.length - 1;
                   return (
-                    <Link
-                      key={s.id}
-                      href={`/schemes/${s.id}`}
-                      className="inline-flex items-center gap-1.5 rounded-md border border-line bg-surface px-2.5 py-1.5 text-sm text-ink hover:border-ink"
-                      title={locale === "hi" ? meta.hi : meta.en}
-                    >
+                    <li key={s.id} className="relative pl-6 leading-8">
+                      {/* vertical trunk (stops at the tick on the last child) */}
                       <span
-                        className={`h-2 w-2 shrink-0 rounded-full ${meta.dot}`}
+                        className="absolute left-1.5 top-0 w-px bg-line"
+                        style={{ height: last ? "1rem" : "100%" }}
                         aria-hidden="true"
                       />
-                      {pick(locale, s.name_en, s.name_hi)}
-                    </Link>
+                      {/* horizontal branch to this node */}
+                      <span
+                        className="absolute left-1.5 top-4 h-px w-3 bg-line"
+                        aria-hidden="true"
+                      />
+                      <Link
+                        href={`/schemes/${s.id}`}
+                        className="inline-flex items-center gap-2 text-sm hover:underline"
+                        title={locale === "hi" ? meta.hi : meta.en}
+                      >
+                        <span
+                          className={`h-2 w-2 shrink-0 rounded-full ${meta.dot}`}
+                          aria-hidden="true"
+                        />
+                        <span className="text-ink">{pick(locale, s.name_en, s.name_hi)}</span>
+                      </Link>
+                    </li>
                   );
                 })}
-              </div>
+              </ul>
             </section>
           ))}
         </div>

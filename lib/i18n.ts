@@ -199,6 +199,8 @@ export const STRINGS = {
   timeline: { en: "Timeline", hi: "समयरेखा" },
   partOf: { en: "Part of", hi: "के अंतर्गत" },
   schemesUnder: { en: "Schemes under this", hi: "इसके अंतर्गत योजनाएँ" },
+  similarSchemes: { en: "Similar schemes", hi: "मिलती-जुलती योजनाएँ" },
+  relatedPolicies: { en: "Related policies", hi: "संबंधित नीतियाँ" },
   launched: { en: "Launched", hi: "आरंभ" },
   ongoing: { en: "ongoing", hi: "जारी" },
   nowLabel: { en: "now", hi: "अभी" },

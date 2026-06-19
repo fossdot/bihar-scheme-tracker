@@ -50,7 +50,7 @@ export default async function PolicyDetailPage({
   }
   if (!detail) notFound();
 
-  const { policy, department, successor, schemes } = detail;
+  const { policy, department, successor, schemes, related } = detail;
   const name = pick(locale, policy.name_en, policy.name_hi);
   const sub =
     locale === "hi"
@@ -271,6 +271,27 @@ export default async function PolicyDetailPage({
           )}
         </ul>
       </Card>
+
+      {/* Related policies (shared sector) */}
+      {related.length > 0 && (
+        <Card icon="doc" title={t(locale, "relatedPolicies")}>
+          <ul className="-my-1 divide-y divide-line">
+            {related.map((p) => (
+              <li key={p.id}>
+                <Link
+                  href={`/policies/${p.id}`}
+                  className="flex items-center justify-between gap-3 py-2.5 hover:opacity-80"
+                >
+                  <span className="min-w-0 font-medium text-ink">
+                    {pick(locale, p.name_en, p.name_hi)}
+                  </span>
+                  <PolicyBadge policy={p} today={today} locale={locale} size="sm" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Card>
+      )}
     </article>
   );
 }

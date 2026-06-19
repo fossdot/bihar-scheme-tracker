@@ -119,6 +119,15 @@ export interface PolicyDetail {
     name_hi: string | null;
     status: SchemeStatus;
   }[];
+  related: {
+    id: string;
+    name_en: string;
+    name_hi: string | null;
+    is_draft: boolean;
+    superseded_by: string | null;
+    period_end: string | null;
+    consultation_end: string | null;
+  }[];
 }
 
 export interface BudgetAllocation {
@@ -223,6 +232,13 @@ export interface SchemeDetail {
   allocations: BudgetAllocation[];
   metrics: SchemeMetric[];
   policies: { id: string; name_en: string; name_hi: string | null }[];
+  similar: {
+    id: string;
+    name_en: string;
+    name_hi: string | null;
+    status: SchemeStatus;
+    categories: SchemeCategory[];
+  }[];
 }
 
 // ── Citizen-facing status buckets (the finder's coarse filter, per CLAUDE.md) ──

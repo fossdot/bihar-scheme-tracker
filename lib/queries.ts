@@ -171,7 +171,17 @@ export async function getSchemeDetail(id: string): Promise<SchemeDetail | null> 
     [id]
   );
 
-  return { scheme, department, allocations, metrics, policies };
+  const similar = scheme.categories.length
+    ? await query<SchemeDetail["similar"][number]>(
+        `select id, name_en, name_hi, status, categories
+           from schemes
+          where id <> $1 and categories && $2::text[]
+          order by name_en limit 6`,
+        [id, scheme.categories]
+      )
+    : [];
+
+  return { scheme, department, allocations, metrics, policies, similar };
 }
 
 const POLICY_LIST_COLUMNS = `
@@ -244,7 +254,17 @@ export async function getPolicyDetail(id: string): Promise<PolicyDetail | null> 
     [id]
   );
 
-  return { policy, department, successor, schemes };
+  const related = policy.categories.length
+    ? await query<PolicyDetail["related"][number]>(
+        `select id, name_en, name_hi, is_draft, superseded_by, period_end, consultation_end
+           from policies
+          where id <> $1 and categories && $2::text[]
+          order by name_en limit 6`,
+        [id, policy.categories]
+      )
+    : [];
+
+  return { policy, department, successor, schemes, related };
 }
 
 export type PolicyMapGroup = {

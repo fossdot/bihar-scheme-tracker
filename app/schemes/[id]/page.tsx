@@ -63,7 +63,7 @@ export default async function SchemeDetailPage({
   }
   if (!detail) notFound();
 
-  const { scheme, department, allocations, metrics, policies } = detail;
+  const { scheme, department, allocations, metrics, policies, similar } = detail;
   const name = pick(locale, scheme.name_en, scheme.name_hi);
   const sub =
     locale === "hi"
@@ -230,6 +230,34 @@ export default async function SchemeDetailPage({
           )}
         </ul>
       </Card>
+
+      {/* Similar schemes (shared sector) */}
+      {similar.length > 0 && (
+        <Card icon="check" title={t(locale, "similarSchemes")}>
+          <ul className="-my-1 divide-y divide-line">
+            {similar.map((s) => (
+              <li key={s.id}>
+                <Link
+                  href={`/schemes/${s.id}`}
+                  className="flex items-start justify-between gap-3 py-2.5 hover:opacity-80"
+                >
+                  <div className="min-w-0">
+                    <div className="font-medium text-ink">{pick(locale, s.name_en, s.name_hi)}</div>
+                    <div className="mt-0.5 flex flex-wrap gap-1 text-xs text-muted">
+                      {s.categories.map((c) => (
+                        <span key={c} className="rounded border border-line px-1.5 py-0.5 text-ink">
+                          {categoryLabel(locale, c)}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <StatusBadge status={s.status} locale={locale} size="sm" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Card>
+      )}
     </article>
   );
 }
