@@ -11,7 +11,7 @@ import {
   PERSONA_OPTIONS,
   SOCIAL_CATEGORY_OPTIONS,
 } from "@/lib/facets";
-import { ago } from "@/lib/dates";
+import { ago, isStale } from "@/lib/dates";
 import { pick, t, type Locale } from "@/lib/i18n";
 import {
   BUCKET_META,
@@ -143,6 +143,7 @@ export function LiveSearch({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [filtersOpen, setFiltersOpen] = useState(false); // mobile
+  const [resultView, setResultView] = useState<"cards" | "table">("cards");
   const [eligOpen, setEligOpen] = useState(() => hasEligibility(parseState(initialQuery)));
   const firstRun = useRef(true);
 
@@ -390,21 +391,46 @@ export function LiveSearch({
                     : t(locale, "resultsMany")}
                   {hasEligibility(state) ? ` ${t(locale, "matchingProfile")}` : ""}
                 </p>
-                <label className="flex items-center gap-2 text-xs text-muted">
-                  {t(locale, "sortBy")}
-                  <select
-                    value={state.sort}
-                    onChange={(e) => set({ sort: e.target.value as SortKey })}
-                    className="rounded-md border border-line bg-surface px-2 py-1 text-xs text-ink focus:border-brand"
-                  >
-                    <option value="relevance">{t(locale, "sortRelevance")}</option>
-                    <option value="name">{t(locale, "sortName")}</option>
-                    <option value="status">{t(locale, "sortStatus")}</option>
-                    <option value="verified">{t(locale, "sortVerified")}</option>
-                  </select>
-                </label>
+                <div className="flex items-center gap-3">
+                  <div className="inline-flex overflow-hidden rounded-md border border-line text-xs">
+                    {(["cards", "table"] as const).map((v) => {
+                      const on = resultView === v;
+                      return (
+                        <button
+                          key={v}
+                          type="button"
+                          aria-pressed={on}
+                          onClick={() => setResultView(v)}
+                          className={
+                            on
+                              ? "bg-brand px-2.5 py-1 font-medium text-white"
+                              : "bg-surface px-2.5 py-1 text-ink hover:bg-paper"
+                          }
+                        >
+                          {t(locale, v === "cards" ? "viewCards" : "viewTable")}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <label className="flex items-center gap-2 text-xs text-muted">
+                    {t(locale, "sortBy")}
+                    <select
+                      value={state.sort}
+                      onChange={(e) => set({ sort: e.target.value as SortKey })}
+                      className="rounded-md border border-line bg-surface px-2 py-1 text-xs text-ink focus:border-brand"
+                    >
+                      <option value="relevance">{t(locale, "sortRelevance")}</option>
+                      <option value="name">{t(locale, "sortName")}</option>
+                      <option value="status">{t(locale, "sortStatus")}</option>
+                      <option value="verified">{t(locale, "sortVerified")}</option>
+                    </select>
+                  </label>
+                </div>
               </div>
 
+              {resultView === "table" ? (
+                <SchemeTable rows={display} locale={locale} today={today} />
+              ) : (
               <ul className="divide-y divide-line">
                 {display.map((s) => {
                   const band = ageBand(s.min_age, s.max_age);
@@ -469,6 +495,7 @@ export function LiveSearch({
                   );
                 })}
               </ul>
+              )}
             </>
           )}
         </div>
@@ -561,5 +588,79 @@ function Check({
 function Tag({ children }: { children: React.ReactNode }) {
   return (
     <span className="rounded border border-line px-2 py-0.5 text-ink">{children}</span>
+  );
+}
+
+/** Dense, scannable status table — the researcher's bird's-eye (endoflife.date-style).
+ *  Reuses the already-filtered + sorted rows; sort is driven by the shared Sort control. */
+function SchemeTable({
+  rows,
+  locale,
+  today,
+}: {
+  rows: SchemeListItem[];
+  locale: Locale;
+  today: string;
+}) {
+  const cat = (c: string) =>
+    locale === "hi"
+      ? CATEGORY_OPTIONS.find((o) => o.value === c)?.hi ?? c
+      : CATEGORY_OPTIONS.find((o) => o.value === c)?.en ?? c;
+  return (
+    <div className="overflow-x-auto rounded-md border border-line">
+      <table className="min-w-full divide-y divide-line text-sm">
+        <thead className="bg-paper text-left text-xs uppercase tracking-wide text-muted">
+          <tr>
+            <th className="px-3 py-2 font-medium">{t(locale, "colScheme")}</th>
+            <th className="px-3 py-2 font-medium">{t(locale, "sector")}</th>
+            <th className="px-3 py-2 font-medium">{t(locale, "status")}</th>
+            <th className="px-3 py-2 font-medium">{t(locale, "colBudget")}</th>
+            <th className="px-3 py-2 font-medium">{t(locale, "verified")}</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-line">
+          {rows.map((s) => {
+            const a = ago(s.last_verified, today, locale);
+            const stale = isStale(s.last_verified, today);
+            return (
+              <tr key={s.id} className="hover:bg-paper">
+                <td className="px-3 py-2.5 align-top">
+                  <Link
+                    href={`/schemes/${s.id}`}
+                    className="font-medium text-ink hover:underline"
+                  >
+                    {pick(locale, s.name_en, s.name_hi)}
+                  </Link>
+                </td>
+                <td className="px-3 py-2.5 align-top">
+                  <div className="flex flex-wrap gap-1">
+                    {s.categories.map((c) => (
+                      <span
+                        key={c}
+                        className="rounded border border-line px-1.5 py-0.5 text-xs text-muted"
+                      >
+                        {cat(c)}
+                      </span>
+                    ))}
+                  </div>
+                </td>
+                <td className="whitespace-nowrap px-3 py-2.5 align-top">
+                  <StatusBadge status={s.status} locale={locale} size="sm" />
+                </td>
+                <td className="whitespace-nowrap px-3 py-2.5 align-top text-muted">
+                  {s.last_budget_year ?? "—"}
+                </td>
+                <td className="whitespace-nowrap px-3 py-2.5 align-top text-muted">
+                  {a ?? "—"}
+                  {stale && (
+                    <span className="ml-1 text-warn">· {t(locale, "needsReverification")}</span>
+                  )}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 }

@@ -98,6 +98,11 @@ export const STRINGS = {
   detailsUnverified: { en: "Details not yet verified", hi: "विवरण अभी असत्यापित" },
   department: { en: "Department", hi: "विभाग" },
   verified: { en: "Verified", hi: "सत्यापित" },
+  viewCards: { en: "Cards", hi: "कार्ड" },
+  viewTable: { en: "Table", hi: "तालिका" },
+  colScheme: { en: "Scheme", hi: "योजना" },
+  colBudget: { en: "Last budget", hi: "अंतिम बजट" },
+  needsReverification: { en: "stale", hi: "पुराना" },
 
   // detail page
   backToExplore: { en: "← Back to explore", hi: "← सूची पर वापस" },
