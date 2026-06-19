@@ -143,7 +143,7 @@ export function LiveSearch({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [filtersOpen, setFiltersOpen] = useState(false); // mobile
-  const [resultView, setResultView] = useState<"cards" | "table">("cards");
+  const [resultView, setResultView] = useState<"cards" | "table">("table");
   const [eligOpen, setEligOpen] = useState(() => hasEligibility(parseState(initialQuery)));
   const firstRun = useRef(true);
 

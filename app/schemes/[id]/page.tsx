@@ -305,10 +305,21 @@ const DIM_ICON: Record<MetricDimension, string> = {
   outcomes: "check",
 };
 
-function provClass(p: DataProvenance): string {
+// Which dimensions are PUBLIC (budget docs / portals — no RTI) vs RTI-gated, plus a fallback
+// note when a scheme has no data yet for that dimension. Budget is NEVER "RTI needed".
+const DIM_PUBLIC = new Set<MetricDimension>(["budget", "beneficiaries"]);
+const DIM_NOTE: Record<MetricDimension, { en: string; hi: string }> = {
+  budget: { en: "From budget.bihar.gov.in (public — to extract)", hi: "budget.bihar.gov.in से (सार्वजनिक — निकालना है)" },
+  beneficiaries: { en: "From department reports / portal", hi: "विभागीय रिपोर्ट / पोर्टल से" },
+  district: { en: "District-wise — needs an RTI", hi: "ज़िलेवार — RTI आवश्यक" },
+  demographics: { en: "Category / gender — needs an RTI", hi: "श्रेणी / लिंग — RTI आवश्यक" },
+  outcomes: { en: "Completion / outcomes — needs an RTI", hi: "पूर्णता / परिणाम — RTI आवश्यक" },
+};
+
+function provClass(p: string): string {
   if (p === "published" || p === "rti_received") return "text-brand ring-brand/40";
   if (p === "reported" || p === "rti_filed") return "text-warn ring-warn/40";
-  return "text-muted ring-line"; // rti_needed, estimated
+  return "text-muted ring-line"; // rti_needed, public_todo, estimated
 }
 
 function DataImpact({
@@ -399,9 +410,19 @@ function DataImpact({
       <div className="mt-2 divide-y divide-line rounded-md border border-line">
         {DIMENSIONS.map((dim) => {
           const rows = byDim(dim);
+          const valued = rows.find((r) => r.value != null);
           const statusRow = rows.find((r) => r.fiscal_year === null) ?? rows[0];
-          const prov: DataProvenance = statusRow?.provenance ?? "rti_needed";
-          const note = rows.find((r) => r.note)?.note ?? null;
+          // Budget/beneficiaries are PUBLIC: when absent they're "to add", never "RTI needed".
+          const key = valued
+            ? valued.provenance
+            : statusRow
+              ? statusRow.provenance
+              : DIM_PUBLIC.has(dim)
+                ? "public_todo"
+                : "rti_needed";
+          const note =
+            rows.find((r) => r.note)?.note ??
+            (locale === "hi" ? DIM_NOTE[dim].hi : DIM_NOTE[dim].en);
           const src = rows.find((r) => r.source_url)?.source_url ?? null;
           return (
             <div key={dim} className="flex items-start justify-between gap-3 px-3 py-2.5 text-sm">
@@ -418,9 +439,9 @@ function DataImpact({
                 </div>
               </div>
               <span
-                className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-medium ring-1 ring-inset ${provClass(prov)}`}
+                className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-medium ring-1 ring-inset ${provClass(key)}`}
               >
-                {tryT(locale, `prov_${prov}`, prov)}
+                {tryT(locale, `prov_${key}`, key)}
               </span>
             </div>
           );
