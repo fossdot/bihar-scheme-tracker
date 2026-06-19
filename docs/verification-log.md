@@ -198,7 +198,7 @@ all routes 200 in light/dark + EN/HI. Not yet built (proposed next): iCal deadli
 
 ## 2026-06-19 — Big breadth + UX (on `main`)
 
-Catalogue grew 12 → **55 schemes**, **12 policies**, 14 departments. All public-sourced;
+Catalogue grew 12 → **64 schemes**, **12 policies**, 14 departments. All public-sourced;
 conservative `likely_active` (or derived inactive); figures REPORTED ("verify at portal") — no
 fabrication. Worked directly on `main` (per user; no feature branches).
 
@@ -207,6 +207,8 @@ fabrication. Worked directly on `main` (per user; no feature branches).
   welfare (Parvarish, Parivarik Labh, widow pension), housing, electricity, water, MGNREGA, etc.
 - **Central (+10)**: PM-KISAN, Ayushman Bharat PM-JAY, PMAY-G/U, Ujjwala, PM Vishwakarma,
   PM SVANidhi, Mudra, Sukanya Samriddhi, Atal Pension — dept "Government of India (Central Scheme)".
+- **Central batch 2 (+9)**: PMJJBY, PMSBY, PM-SYM, PMKVY, Stand-Up India, PM POSHAN, e-Shram,
+  PMMVY, PMJDY (insurance / pension / skilling / financial inclusion / maternity).
 - **District (+3)**: Kabir Antyeshti Anudan, NFBS, DMFT — dept "District Administration (Bihar)".
 - **Inactive (+4)**: Indira Awaas Yojana → PMAY-G, Rajiv Awas Yojana → PMAY-U (subsumed, successor
   linked), RGGVY (subsumed→DDUGJY), BRGF (lapsed). Scheme detail shows "continues via <successor>".
