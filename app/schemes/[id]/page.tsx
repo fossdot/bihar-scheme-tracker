@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
 import { Field } from "@/components/Field";
 import { StatusBadge } from "@/components/StatusBadge";
+import { Timeline } from "@/components/Timeline";
 import { Card, ConfigNotice, FactTile, Panel, Row } from "@/components/ui";
 import {
   categoryLabel,
@@ -72,6 +73,21 @@ export default async function SchemeDetailPage({
       : scheme.name_hi;
   const objective = pick(locale, scheme.objective_en, scheme.objective_hi);
   const elig = eligibilityFacts(scheme, locale);
+  const today = todayISO();
+  const budgetTicks = Array.from(
+    new Set(
+      metrics
+        .filter(
+          (m) =>
+            (m.dimension === "budget" || m.dimension === "beneficiaries") &&
+            m.fiscal_year &&
+            m.value != null
+        )
+        .map((m) => m.fiscal_year as string)
+    )
+  )
+    .sort()
+    .map((fy) => ({ atISO: `${fy.slice(0, 4)}-04-01`, label: `FY${fy}` }));
 
   return (
     <article className="space-y-6">
@@ -126,6 +142,21 @@ export default async function SchemeDetailPage({
         <FactTile icon="calendar" label={t(locale, "age")} value={elig.age} />
         <FactTile icon="cap" label={t(locale, "education")} value={elig.education} />
       </div>
+
+      {/* Lifecycle timeline — launched → now, with confirmed budget-year ticks */}
+      {scheme.launch_date && (
+        <Card icon="calendar" title={t(locale, "timeline")}>
+          <Timeline
+            startISO={scheme.launch_date}
+            endISO={null}
+            today={today}
+            active={scheme.status === "active" || scheme.status === "likely_active"}
+            leftLabel={`${t(locale, "launched")} ${scheme.launch_date}`}
+            rightLabel={t(locale, "nowLabel")}
+            ticks={budgetTicks}
+          />
+        </Card>
+      )}
 
       {/* Who can apply — visual eligibility + full official text */}
       <Card icon="check" title={t(locale, "whoCanApply")}>

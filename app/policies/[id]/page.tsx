@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
 import { PolicyBadge } from "@/components/PolicyBadge";
+import { Timeline } from "@/components/Timeline";
 import { Card, ConfigNotice, FactTile, Panel, Row } from "@/components/ui";
 import { deadlineLabel, validityLabel } from "@/lib/dates";
 import { categoryLabel } from "@/lib/facets";
@@ -140,6 +141,25 @@ export default async function PolicyDetailPage({
         <FactTile icon="building" label={t(locale, "department")} value={dept} />
         <FactTile icon="check" label={t(locale, "lastVerified")} value={policy.last_verified ?? "—"} />
       </div>
+
+      {/* Lifecycle timeline — validity window with a "now" marker */}
+      {policy.period_start && (
+        <Card icon="calendar" title={t(locale, "timeline")}>
+          <Timeline
+            startISO={policy.period_start}
+            endISO={policy.period_end}
+            today={today}
+            active={statusKey === "in_force"}
+            leftLabel={policy.period_start}
+            rightLabel={
+              policy.period_end ??
+              (statusKey === "superseded"
+                ? t(locale, "supersededLabel")
+                : t(locale, "ongoing"))
+            }
+          />
+        </Card>
+      )}
 
       {/* Public consultation — only for drafts */}
       {policy.is_draft && (

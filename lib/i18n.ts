@@ -175,6 +175,11 @@ export const STRINGS = {
 
   applyCta: { en: "Apply on the official portal", hi: "आधिकारिक पोर्टल पर आवेदन करें" },
   howToApply: { en: "How to apply", hi: "आवेदन कैसे करें" },
+  timeline: { en: "Timeline", hi: "समयरेखा" },
+  launched: { en: "Launched", hi: "आरंभ" },
+  ongoing: { en: "ongoing", hi: "जारी" },
+  nowLabel: { en: "now", hi: "अभी" },
+  supersededLabel: { en: "superseded", hi: "अधिक्रमित" },
 
   // policies
   navPolicies: { en: "Policies", hi: "नीतियाँ" },
