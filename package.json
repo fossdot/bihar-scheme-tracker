@@ -1,0 +1,37 @@
+{
+  "name": "bihar-scheme-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "tsx seed/seed.ts",
+    "seed:verify": "tsx seed/02_verify.ts",
+    "seed:eligibility": "tsx seed/03_eligibility.ts",
+    "seed:metrics": "tsx seed/04_metrics_bscc.ts",
+    "seed:policies": "tsx seed/06_policies.ts",
+    "seed:breadth": "tsx seed/07_breadth.ts",
+    "seed:breadth2": "tsx seed/08_breadth2.ts",
+    "seed:policy-superseded": "tsx seed/09_policy_superseded.ts"
+  },
+  "dependencies": {
+    "pg": "^8.13.1",
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/pg": "^8.11.10",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
+    "dotenv": "^16.4.5",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "tsx": "^4.19.1",
+    "typescript": "^5"
+  }
+}
