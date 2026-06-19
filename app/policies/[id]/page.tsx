@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
 import { PolicyBadge } from "@/components/PolicyBadge";
+import { SidebarList } from "@/components/SidebarList";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Timeline } from "@/components/Timeline";
 import { Card, ConfigNotice, FactTile, Panel, Row } from "@/components/ui";
@@ -87,11 +88,44 @@ export default async function PolicyDetailPage({
           }
         : null;
 
-  return (
-    <article className="space-y-6">
-      <BackLink locale={locale} />
+  const aside =
+    schemes.length > 0 || related.length > 0 ? (
+      <aside className="mt-6 space-y-6 lg:mt-0 lg:sticky lg:top-6">
+        <SidebarList
+          title={`${t(locale, "schemesUnder")} · ${schemes.length}`}
+          icon="check"
+          items={schemes.map((s) => ({
+            id: s.id,
+            href: `/schemes/${s.id}`,
+            name: pick(locale, s.name_en, s.name_hi),
+            badge: <StatusBadge status={s.status} locale={locale} size="sm" />,
+          }))}
+        />
+        <SidebarList
+          title={t(locale, "relatedPolicies")}
+          icon="doc"
+          items={related.map((p) => ({
+            id: p.id,
+            href: `/policies/${p.id}`,
+            name: pick(locale, p.name_en, p.name_hi),
+            badge: <PolicyBadge policy={p} today={today} locale={locale} size="sm" />,
+          }))}
+        />
+      </aside>
+    ) : null;
 
-      <header className="space-y-3">
+  return (
+    <div className="space-y-6">
+      <BackLink locale={locale} />
+      <div
+        className={
+          aside
+            ? "lg:grid lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start lg:gap-8"
+            : undefined
+        }
+      >
+        <article className="min-w-0 space-y-6">
+          <header className="space-y-3">
         <div className="flex flex-wrap gap-2 text-xs text-muted">
           {policy.categories.map((c) => (
             <span key={c} className="rounded border border-line px-2 py-0.5 text-ink">
@@ -162,26 +196,7 @@ export default async function PolicyDetailPage({
         </Card>
       )}
 
-      {/* Schemes under this policy/framework (the backwards mapping) */}
-      {schemes.length > 0 && (
-        <Card icon="check" title={`${t(locale, "schemesUnder")} · ${schemes.length}`}>
-          <ul className="-my-1 divide-y divide-line">
-            {schemes.map((s) => (
-              <li key={s.id}>
-                <Link
-                  href={`/schemes/${s.id}`}
-                  className="flex items-center justify-between gap-3 py-2.5 hover:opacity-80"
-                >
-                  <span className="min-w-0 font-medium text-ink">
-                    {pick(locale, s.name_en, s.name_hi)}
-                  </span>
-                  <StatusBadge status={s.status} locale={locale} size="sm" />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Card>
-      )}
+      {/* Schemes under this policy + related policies → moved to the right sidebar for visibility */}
 
       {/* Public consultation — only for drafts */}
       {policy.is_draft && (
@@ -272,27 +287,10 @@ export default async function PolicyDetailPage({
         </ul>
       </Card>
 
-      {/* Related policies (shared sector) */}
-      {related.length > 0 && (
-        <Card icon="doc" title={t(locale, "relatedPolicies")}>
-          <ul className="-my-1 divide-y divide-line">
-            {related.map((p) => (
-              <li key={p.id}>
-                <Link
-                  href={`/policies/${p.id}`}
-                  className="flex items-center justify-between gap-3 py-2.5 hover:opacity-80"
-                >
-                  <span className="min-w-0 font-medium text-ink">
-                    {pick(locale, p.name_en, p.name_hi)}
-                  </span>
-                  <PolicyBadge policy={p} today={today} locale={locale} size="sm" />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Card>
-      )}
-    </article>
+      </article>
+        {aside}
+      </div>
+    </div>
   );
 }
 

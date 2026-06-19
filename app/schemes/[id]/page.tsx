@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
 import { Field } from "@/components/Field";
+import { SidebarList } from "@/components/SidebarList";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Timeline } from "@/components/Timeline";
 import { Card, ConfigNotice, FactTile, Panel, Row } from "@/components/ui";
@@ -89,11 +90,34 @@ export default async function SchemeDetailPage({
     .sort()
     .map((fy) => ({ atISO: `${fy.slice(0, 4)}-04-01`, label: `FY${fy}` }));
 
-  return (
-    <article className="space-y-6">
-      <BackLink locale={locale} />
+  const aside =
+    similar.length > 0 ? (
+      <aside className="mt-6 space-y-6 lg:mt-0 lg:sticky lg:top-6">
+        <SidebarList
+          title={t(locale, "similarSchemes")}
+          icon="check"
+          items={similar.map((s) => ({
+            id: s.id,
+            href: `/schemes/${s.id}`,
+            name: pick(locale, s.name_en, s.name_hi),
+            badge: <StatusBadge status={s.status} locale={locale} size="sm" />,
+          }))}
+        />
+      </aside>
+    ) : null;
 
-      {/* Hero */}
+  return (
+    <div className="space-y-6">
+      <BackLink locale={locale} />
+      <div
+        className={
+          aside
+            ? "lg:grid lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start lg:gap-8"
+            : undefined
+        }
+      >
+        <article className="min-w-0 space-y-6">
+          {/* Hero */}
       <header className="space-y-3">
         <div className="flex flex-wrap gap-2 text-xs text-muted">
           {scheme.categories.map((c) => (
@@ -244,34 +268,10 @@ export default async function SchemeDetailPage({
         </ul>
       </Card>
 
-      {/* Similar schemes (shared sector) */}
-      {similar.length > 0 && (
-        <Card icon="check" title={t(locale, "similarSchemes")}>
-          <ul className="-my-1 divide-y divide-line">
-            {similar.map((s) => (
-              <li key={s.id}>
-                <Link
-                  href={`/schemes/${s.id}`}
-                  className="flex items-start justify-between gap-3 py-2.5 hover:opacity-80"
-                >
-                  <div className="min-w-0">
-                    <div className="font-medium text-ink">{pick(locale, s.name_en, s.name_hi)}</div>
-                    <div className="mt-0.5 flex flex-wrap gap-1 text-xs text-muted">
-                      {s.categories.map((c) => (
-                        <span key={c} className="rounded border border-line px-1.5 py-0.5 text-ink">
-                          {categoryLabel(locale, c)}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <StatusBadge status={s.status} locale={locale} size="sm" />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Card>
-      )}
-    </article>
+      </article>
+        {aside}
+      </div>
+    </div>
   );
 }
 
