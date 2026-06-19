@@ -12,6 +12,7 @@ import type {
   SchemeFilters,
   SchemeListItem,
   SchemeMetric,
+  SchemeStatus,
 } from "./types";
 
 export function isDbConfigured(): boolean {
@@ -163,7 +164,14 @@ export async function getSchemeDetail(id: string): Promise<SchemeDetail | null> 
     [id]
   );
 
-  return { scheme, department, allocations, metrics };
+  const policies = await query<{ id: string; name_en: string; name_hi: string | null }>(
+    `select p.id, p.name_en, p.name_hi
+       from scheme_policy_links l join policies p on p.id = l.policy_id
+      where l.scheme_id = $1 order by p.name_en`,
+    [id]
+  );
+
+  return { scheme, department, allocations, metrics, policies };
 }
 
 const POLICY_LIST_COLUMNS = `
@@ -229,5 +237,74 @@ export async function getPolicyDetail(id: string): Promise<PolicyDetail | null> 
     successor = s ?? null;
   }
 
-  return { policy, department, successor };
+  const schemes = await query<PolicyDetail["schemes"][number]>(
+    `select s.id, s.name_en, s.name_hi, s.status
+       from scheme_policy_links l join schemes s on s.id = l.scheme_id
+      where l.policy_id = $1 order by s.name_en`,
+    [id]
+  );
+
+  return { policy, department, successor, schemes };
+}
+
+export type PolicyMapGroup = {
+  policy: {
+    id: string;
+    name_en: string;
+    name_hi: string | null;
+    is_draft: boolean;
+    superseded_by: string | null;
+    period_end: string | null;
+    consultation_end: string | null;
+  };
+  schemes: { id: string; name_en: string; name_hi: string | null; status: SchemeStatus }[];
+};
+
+/** Policies that have ≥1 linked scheme, each with its schemes — powers the Map view. */
+export async function getPolicyMap(): Promise<PolicyMapGroup[]> {
+  const rows = await query<{
+    policy_id: string;
+    p_en: string;
+    p_hi: string | null;
+    is_draft: boolean;
+    superseded_by: string | null;
+    period_end: string | null;
+    consultation_end: string | null;
+    scheme_id: string;
+    s_en: string;
+    s_hi: string | null;
+    status: SchemeStatus;
+  }>(
+    `select p.id as policy_id, p.name_en as p_en, p.name_hi as p_hi, p.is_draft,
+            p.superseded_by, p.period_end, p.consultation_end,
+            s.id as scheme_id, s.name_en as s_en, s.name_hi as s_hi, s.status
+       from scheme_policy_links l
+       join policies p on p.id = l.policy_id
+       join schemes s on s.id = l.scheme_id
+      order by p.name_en, s.name_en`
+  );
+  const groups = new Map<string, PolicyMapGroup>();
+  for (const r of rows) {
+    if (!groups.has(r.policy_id)) {
+      groups.set(r.policy_id, {
+        policy: {
+          id: r.policy_id,
+          name_en: r.p_en,
+          name_hi: r.p_hi,
+          is_draft: r.is_draft,
+          superseded_by: r.superseded_by,
+          period_end: r.period_end,
+          consultation_end: r.consultation_end,
+        },
+        schemes: [],
+      });
+    }
+    groups.get(r.policy_id)!.schemes.push({
+      id: r.scheme_id,
+      name_en: r.s_en,
+      name_hi: r.s_hi,
+      status: r.status,
+    });
+  }
+  return Array.from(groups.values());
 }

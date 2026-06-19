@@ -39,6 +39,9 @@ export default function RootLayout({
                 <Link href="/policies" className="text-muted hover:text-ink">
                   {t(locale, "navPolicies")}
                 </Link>
+                <Link href="/map" className="text-muted hover:text-ink">
+                  {t(locale, "navMap")}
+                </Link>
                 <Link href="/about" className="text-muted hover:text-ink">
                   {t(locale, "navAbout")}
                 </Link>

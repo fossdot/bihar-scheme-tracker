@@ -63,7 +63,7 @@ export default async function SchemeDetailPage({
   }
   if (!detail) notFound();
 
-  const { scheme, department, allocations, metrics } = detail;
+  const { scheme, department, allocations, metrics, policies } = detail;
   const name = pick(locale, scheme.name_en, scheme.name_hi);
   const sub =
     locale === "hi"
@@ -132,6 +132,23 @@ export default async function SchemeDetailPage({
 
         {objective && !isUnverified(scheme.objective_en) && (
           <p className="max-w-3xl text-ink">{objective}</p>
+        )}
+
+        {policies.length > 0 && (
+          <p className="text-sm text-muted">
+            {t(locale, "partOf")}:{" "}
+            {policies.map((p, i) => (
+              <span key={p.id}>
+                {i > 0 && ", "}
+                <Link
+                  href={`/policies/${p.id}`}
+                  className="font-medium text-brand hover:underline"
+                >
+                  {pick(locale, p.name_en, p.name_hi)}
+                </Link>
+              </span>
+            ))}
+          </p>
         )}
       </header>
 

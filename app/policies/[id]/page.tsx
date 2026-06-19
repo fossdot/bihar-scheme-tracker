@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
 import { PolicyBadge } from "@/components/PolicyBadge";
+import { StatusBadge } from "@/components/StatusBadge";
 import { Timeline } from "@/components/Timeline";
 import { Card, ConfigNotice, FactTile, Panel, Row } from "@/components/ui";
 import { deadlineLabel, fmtDate, validityLabel } from "@/lib/dates";
@@ -49,7 +50,7 @@ export default async function PolicyDetailPage({
   }
   if (!detail) notFound();
 
-  const { policy, department, successor } = detail;
+  const { policy, department, successor, schemes } = detail;
   const name = pick(locale, policy.name_en, policy.name_hi);
   const sub =
     locale === "hi"
@@ -158,6 +159,27 @@ export default async function PolicyDetailPage({
                 : t(locale, "ongoing"))
             }
           />
+        </Card>
+      )}
+
+      {/* Schemes under this policy/framework (the backwards mapping) */}
+      {schemes.length > 0 && (
+        <Card icon="check" title={`${t(locale, "schemesUnder")} · ${schemes.length}`}>
+          <ul className="-my-1 divide-y divide-line">
+            {schemes.map((s) => (
+              <li key={s.id}>
+                <Link
+                  href={`/schemes/${s.id}`}
+                  className="flex items-center justify-between gap-3 py-2.5 hover:opacity-80"
+                >
+                  <span className="min-w-0 font-medium text-ink">
+                    {pick(locale, s.name_en, s.name_hi)}
+                  </span>
+                  <StatusBadge status={s.status} locale={locale} size="sm" />
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Card>
       )}
 

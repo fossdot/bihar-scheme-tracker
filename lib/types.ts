@@ -113,6 +113,12 @@ export interface PolicyDetail {
   policy: Policy;
   department: Department | null;
   successor: { id: string; name_en: string; name_hi: string | null } | null;
+  schemes: {
+    id: string;
+    name_en: string;
+    name_hi: string | null;
+    status: SchemeStatus;
+  }[];
 }
 
 export interface BudgetAllocation {
@@ -216,6 +222,7 @@ export interface SchemeDetail {
   department: Department | null;
   allocations: BudgetAllocation[];
   metrics: SchemeMetric[];
+  policies: { id: string; name_en: string; name_hi: string | null }[];
 }
 
 // ── Citizen-facing status buckets (the finder's coarse filter, per CLAUDE.md) ──
