@@ -255,6 +255,34 @@ series + "Active". Seed: `seed/18_budget.ts`.
 scholarship schemes — none itemised by PRS) is OCR of the Bihar demand PDFs or an RTI; both are
 slower, lower-confidence routes deferred until they can be cross-checked.
 
+## 2026-06-19 — Top-scheme verification pass (citizens-first)
+
+Verified the 16 most-searched citizen schemes against **authoritative current sources** (official
+portals, PIB, newsonair.gov.in, myScheme) — NOT SEO blogs — via four parallel research agents, then
+applied confirmed/corrected facts + dated `status_evidence` with the source. Status moved to
+`active` only where there was a concrete current-year signal; otherwise held honestly.
+
+**15 → `active`** (evidence-backed): BSCC, MNSSBY, KYP, Kanya Utthan, Mahila Rojgar, Udyami,
+JEEViKA, Laghu Udyami, Vriddhjan/Widow/Divyangjan pensions, e-Kalyan, Krishi Input Anudan,
+PM-KISAN, PM-JAY. **1 held at `likely_active`** — Bihar Rajya Fasal Sahayata (portal live + rates
+known, but no current-season notification fetched → not upgraded, per "default to unknown over a
+confident guess").
+
+Notable **corrections** (the no-misinformation rule in action):
+- **Mukhyamantri Mahila Rojgar Yojana** — was stored as a "₹10,000/**month** stipend"; it is a
+  **one-time ₹10,000 grant** + optional up-to-₹2-lakh top-up, delivered via JEEViKA/SHGs (launched
+  26 Sep 2025). Portal corrected toward brlps.in.
+- **BSCC** — now **interest-free** for all categories (Sept 2025 reform; was 4% / 1%), repayment extended.
+- **Pensions** (old-age / widow / disability) — flat **₹1,100/month** since July 2025 (was ₹400).
+- **KYP** age 15–25 → **15–28**; **Udyami** 18–45 → **18–50**; Kanya Utthan intermediate amount is
+  division-based (₹25,000 / ₹15,000); Laxmibai widow pension income ceiling ₹60,000 added.
+
+Hard current-FY signals captured in evidence: PM-KISAN 22nd installment released 13 Mar 2026
+(₹18,640 cr to 9.32 cr farmers), 23rd due 20 Jun 2026; Krishi Input Anudan open 20–24 Jun 2026.
+Status spread now: **18 active**, 42 likely_active, 3 subsumed, 1 lapsed. Seed: `seed/19_verify.ts`.
+(Portal-liveness curl sweep was run but is unreliable from this environment — many .nic.in/.bihar
+hosts fail TLS/WAF even when live — so it was used only as a soft positive signal, never to downgrade.)
+
 ## Other progress this session (non-data)
 
 - **Search synonyms** (`lib/queries.ts`): small bilingual alias map (loan→credit card,
