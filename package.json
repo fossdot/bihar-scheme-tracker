@@ -24,7 +24,8 @@
     "seed:district": "tsx seed/16_district.ts",
     "seed:central2": "tsx seed/17_central2.ts",
     "seed:budget": "tsx seed/18_budget.ts",
-    "seed:verify": "tsx seed/19_verify.ts"
+    "seed:verify": "tsx seed/19_verify.ts",
+    "seed:verify2": "tsx seed/20_verify2.ts"
   },
   "dependencies": {
     "pg": "^8.13.1",

@@ -283,6 +283,35 @@ Status spread now: **18 active**, 42 likely_active, 3 subsumed, 1 lapsed. Seed: 
 (Portal-liveness curl sweep was run but is unreliable from this environment — many .nic.in/.bihar
 hosts fail TLS/WAF even when live — so it was used only as a soft positive signal, never to downgrade.)
 
+## 2026-06-19 — Verification pass 2: the remaining 45 schemes (whole catalogue now verified)
+
+Verified every remaining scheme (41 likely_active + 4 inactive) against authoritative current
+sources via eight parallel research agents (official portals, PIB, newsonair, myScheme — not blogs),
+applying confirmed/corrected facts + dated, sourced `status_evidence`. **Every one of the 64 schemes
+now carries a "Verified 2026-06-19" evidence line.** Final spread: **45 active, 14 likely_active,
+4 subsumed, 1 lapsed** (0 unverified). Held honestly at `likely_active` where no current-year
+signal: Stand-Up India (extension unconfirmed), Niji Nalkoop, Jananayak Karpoori (new 2026-27
+announcement, rollout pending), several medhasoft scholarships (only secondary corroboration),
+Gram Parivahan, Parivarik Labh, Gramin Awas, Alpsankhyak Rozgar Rin, Har Ghar Bijli (saturated),
+Pratigya (candidate registration not yet open).
+
+Notable **corrections** (no-misinformation rule):
+- **PM SVANidhi** loan tiers raised to ₹15k → ₹25k → ₹50k (2025 restructuring, extended to 2030).
+- **PMMY (Mudra)** ₹20 lakh applies only via Tarun Plus (repeat Tarun borrowers), not a blanket ceiling.
+- **Ujjwala** subsidy ₹300/cyl for up to 9 refills/yr (FY2025-26); **PMJJBY** premium ₹436.
+- **e-Shram** card does NOT auto-provide insurance — it's registration + a gateway (linked schemes need separate enrolment).
+- **Pravasi Majdoor** accident benefit doubled to ₹4 lakh (death) per S.O. 75 of 9 Feb 2026.
+- **Jananayak Karpoori** is a ₹3,000/yr STATE top-up (₹9,000 combined with PM-KISAN), newly announced 2026-27 — not a ₹9,000 state benefit.
+- **Alpsankhyak Rozgar Rin** flat 5% (no separate women's rate); ceiling ₹5 lakh; income ≤₹4 lakh.
+- **Kanya Vivah** ₹5,000 (not ₹5,000–₹10,000), paid to the bride by DBT.
+- **Bihar Startup Fund** is an interest-free loan (the separate "₹3 lakh grant" could not be officially confirmed → removed).
+
+Structural fixes: renamed **"Shatabdi Niji Nalkoop" → "Mukhyamantri Niji Nalkoop Yojana"** (current
+official name); **subsumed "Balika Protsahan (Intermediate)" into Kanya Utthan** (it is that scheme's
+intermediate milestone — successor link set) to stop double-listing the same ₹25k benefit. Hard
+current-FY signals captured: JJM extended to Dec 2028 (Mar 2026), Vaas Bhoomi campaign 15–21 Jun
+2026, Diesel Anudan Kharif window, Bihar Startup portal updated Jun 2026. Seed: `seed/20_verify2.ts`.
+
 ## Other progress this session (non-data)
 
 - **Search synonyms** (`lib/queries.ts`): small bilingual alias map (loan→credit card,
