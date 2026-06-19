@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import { Icon } from "@/components/Icon";
+import { Logo } from "@/components/Logo";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { t } from "@/lib/i18n";
@@ -28,9 +29,11 @@ export default function RootLayout({
             <div className="flex shrink-0 items-center gap-5">
               <Link
                 href="/"
-                className="text-base font-semibold tracking-tight text-ink"
+                className="flex items-center gap-2 text-base font-semibold tracking-tight text-ink"
               >
-                {t(locale, "appName")}
+                <Logo className="h-7 w-7 shrink-0" />
+                <span className="hidden sm:inline">{t(locale, "appName")}</span>
+                <span className="sm:hidden">{locale === "hi" ? "योजना ट्रैकर" : "Tracker"}</span>
               </Link>
               <nav className="hidden items-center gap-5 text-sm md:flex">
                 <Link href="/search" className="text-muted hover:text-ink">
