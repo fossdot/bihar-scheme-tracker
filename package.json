@@ -14,7 +14,8 @@
     "seed:policies": "tsx seed/06_policies.ts",
     "seed:breadth": "tsx seed/07_breadth.ts",
     "seed:breadth2": "tsx seed/08_breadth2.ts",
-    "seed:policy-superseded": "tsx seed/09_policy_superseded.ts"
+    "seed:policy-superseded": "tsx seed/09_policy_superseded.ts",
+    "seed:startup": "tsx seed/10_startup.ts"
   },
   "dependencies": {
     "pg": "^8.13.1",
