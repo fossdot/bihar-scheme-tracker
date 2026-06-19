@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { PolicyBadge } from "@/components/PolicyBadge";
@@ -39,10 +39,15 @@ export function PolicyExplore({
     : "";
   const [view, setView] = useState<"all" | PolicyBucket>(validView);
   const [cat, setCat] = useState<SchemeCategory | "">(validCat);
+  const syncSkip = useRef(true);
 
   // Persist filters (sessionStorage + URL) so Back restores them — sessionStorage is the reliable
   // path since Next's client cache can re-render /policies unfiltered on Back.
   useEffect(() => {
+    if (syncSkip.current) {
+      syncSkip.current = false;
+      return;
+    }
     const p = new URLSearchParams();
     if (view !== "all") p.set("view", view);
     if (cat) p.set("sector", cat);

@@ -147,6 +147,7 @@ export function LiveSearch({
   const [resultView, setResultView] = useState<"cards" | "table">("table");
   const [eligOpen, setEligOpen] = useState(() => hasEligibility(parseState(initialQuery)));
   const firstRun = useRef(true);
+  const syncSkip = useRef(true); // don't persist on the mount run (would clobber saved filters)
   const router = useRouter();
 
   const paramsStr = useMemo(() => buildParams(state), [state]);
@@ -191,6 +192,12 @@ export function LiveSearch({
   // Next's client cache can re-render /search as first loaded (unfiltered) on Back, so on mount
   // we re-apply the saved filters. The URL stays in sync for shareable links.
   useEffect(() => {
+    // Skip the mount run — writing here would clobber the saved filters before the restore
+    // effect below can read them.
+    if (syncSkip.current) {
+      syncSkip.current = false;
+      return;
+    }
     try {
       sessionStorage.setItem("bst.schemeFilters", paramsStr);
     } catch {
