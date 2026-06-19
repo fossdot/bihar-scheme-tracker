@@ -217,25 +217,7 @@ export function LiveSearch({
 
   return (
     <div className="space-y-6">
-      {/* Search bar — full width on top */}
-      <div className="relative">
-        <input
-          type="search"
-          value={state.q}
-          onChange={(e) => set({ q: e.target.value })}
-          autoComplete="off"
-          placeholder={t(locale, "searchPlaceholder")}
-          aria-label={t(locale, "searchPlaceholder")}
-          className="w-full rounded-md border border-line px-3 py-2.5 pr-24 text-ink placeholder:text-muted focus:border-brand"
-        />
-        {loading && (
-          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted">
-            {t(locale, "searching")}
-          </span>
-        )}
-      </div>
-
-      {/* Mobile filters toggle */}
+      {/* Mobile filters toggle (free-text search lives in the global navbar now) */}
       <button
         type="button"
         onClick={() => setFiltersOpen((v) => !v)}
@@ -397,6 +379,9 @@ export function LiveSearch({
                     ? t(locale, "resultsOne")
                     : t(locale, "resultsMany")}
                   {hasEligibility(state) ? ` ${t(locale, "matchingProfile")}` : ""}
+                  {loading && (
+                    <span className="ml-2 text-xs">{t(locale, "searching")}</span>
+                  )}
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="inline-flex overflow-hidden rounded-md border border-line text-xs">
