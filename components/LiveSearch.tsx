@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Panel } from "@/components/ui";
 import {
@@ -146,6 +147,7 @@ export function LiveSearch({
   const [resultView, setResultView] = useState<"cards" | "table">("table");
   const [eligOpen, setEligOpen] = useState(() => hasEligibility(parseState(initialQuery)));
   const firstRun = useRef(true);
+  const router = useRouter();
 
   const paramsStr = useMemo(() => buildParams(state), [state]);
   const set = (patch: Partial<State>) => setState((s) => ({ ...s, ...patch }));
@@ -185,10 +187,15 @@ export function LiveSearch({
     };
   }, [serverParams]);
 
-  // Keep the URL shareable without a full navigation (includes sort).
+  // Keep the URL in sync via the Next router (debounced) so it's shareable AND the browser
+  // Back button restores the filters when returning from a scheme — window.history.replaceState
+  // alone leaves Next's router unaware, which dropped the filters on Back.
   useEffect(() => {
-    window.history.replaceState(null, "", paramsStr ? `/search?${paramsStr}` : "/search");
-  }, [paramsStr]);
+    const id = setTimeout(() => {
+      router.replace(paramsStr ? `/search?${paramsStr}` : "/search", { scroll: false });
+    }, 250);
+    return () => clearTimeout(id);
+  }, [paramsStr, router]);
 
   const display = useMemo(() => {
     const arr = [...results];
