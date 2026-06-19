@@ -196,6 +196,30 @@ all routes 200 in light/dark + EN/HI. Not yet built (proposed next): iCal deadli
   await real sourced lapsed examples (not fabricated).
 - Verified: `tsc`, `next build`, all routes 200 (light/dark, EN/HI). On `policy-mapping`, not yet merged to `main`.
 
+## 2026-06-19 — Big breadth + UX (on `main`)
+
+Catalogue grew 12 → **55 schemes**, **12 policies**, 14 departments. All public-sourced;
+conservative `likely_active` (or derived inactive); figures REPORTED ("verify at portal") — no
+fabrication. Worked directly on `main` (per user; no feature branches).
+
+- **State breadth (+22 then +4)**: scholarships, women (Mahila Rojgar, JEEViKA), agriculture
+  (Karpoori Kisan Samman, Fasal Sahayata, Krishi Yantra, Bagwani, Niji Nalkoop, Diesel Anudan),
+  welfare (Parvarish, Parivarik Labh, widow pension), housing, electricity, water, MGNREGA, etc.
+- **Central (+10)**: PM-KISAN, Ayushman Bharat PM-JAY, PMAY-G/U, Ujjwala, PM Vishwakarma,
+  PM SVANidhi, Mudra, Sukanya Samriddhi, Atal Pension — dept "Government of India (Central Scheme)".
+- **District (+3)**: Kabir Antyeshti Anudan, NFBS, DMFT — dept "District Administration (Bihar)".
+- **Inactive (+4)**: Indira Awaas Yojana → PMAY-G, Rajiv Awas Yojana → PMAY-U (subsumed, successor
+  linked), RGGVY (subsumed→DDUGJY), BRGF (lapsed). Scheme detail shows "continues via <successor>".
+- **Mapping**: umbrella policies (Saat Nishchay-2, Startup Policy, Krishi Road Map, Social Security
+  Pensions) + 14 scheme↔policy links; /map redrawn as a branching tree. Scheme "Part of"; policy
+  "Schemes under this".
+- **UX**: global navbar search → /find (schemes + policies); in-page search boxes removed;
+  filters persist across Back (sessionStorage, mount-clobber bug fixed); dd-mm-yyyy dates; budget
+  framed "Public · to add" not RTI; Similar schemes / Related policies sections; minimal **logo** +
+  favicon (app/icon.svg).
+- Status spread: 1 active, 50 likely_active, 3 subsumed, 1 lapsed. Verified: tsc + all routes 200
+  (light/dark, EN/HI). Repo: github.com/fossdot/bihar-scheme-tracker (private), pushed to `main`.
+
 ## Other progress this session (non-data)
 
 - **Search synonyms** (`lib/queries.ts`): small bilingual alias map (loan→credit card,
