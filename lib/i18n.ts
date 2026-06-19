@@ -78,6 +78,17 @@ export const STRINGS = {
     hi: "योजनाएँ सक्रिय, संभवतः सक्रिय या निष्क्रिय — अंतिम-सत्यापन तिथि व हर निर्णय के पीछे का प्रमाण सहित।",
   },
 
+  // coverage & confidence banner (honest about what this is)
+  coverageTitle: { en: "About this data — read first", hi: "इस डेटा के बारे में — पहले पढ़ें" },
+  coverageBody: {
+    en: "This is a curated, source-checked catalogue — not every scheme in Bihar. Status is derived from evidence (budget lines, official portals, government notifications), each with a verified date and a source link — never asserted. Schemes we haven't verified yet are shown as “Possibly active”, never hidden: an unverified scheme may well be running. Always confirm at the official portal before acting.",
+    hi: "यह एक चयनित, स्रोत-जाँचित सूची है — बिहार की हर योजना नहीं। स्थिति प्रमाण से ली जाती है (बजट पंक्तियाँ, आधिकारिक पोर्टल, सरकारी अधिसूचनाएँ), हर एक के साथ सत्यापन तिथि व स्रोत लिंक — कभी अनुमानित नहीं। जिन योजनाओं को हमने अभी सत्यापित नहीं किया, वे “संभवतः सक्रिय” दिखती हैं, छिपाई नहीं जातीं। कार्य करने से पहले आधिकारिक पोर्टल पर पुष्टि करें।",
+  },
+  coverageStat: {
+    en: "verified Active against official sources",
+    hi: "आधिकारिक स्रोतों से सत्यापित सक्रिय",
+  },
+
   // explore / catalogue
   exploreTitle: { en: "Explore schemes", hi: "योजनाएँ देखें" },
   exploreSubtitle: {

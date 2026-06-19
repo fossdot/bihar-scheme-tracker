@@ -1,0 +1,36 @@
+# Self-hosted Bihar Scheme Tracker — Postgres (with pgvector) + the Next.js app.
+# One command:  docker compose up -d --build
+# The database is created, schema-migrated, and seeded with the verified catalogue
+# automatically on first start (deploy/initdb/ runs in order on an empty data dir).
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: bihar
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bihar}
+      POSTGRES_DB: bihar_scheme_tracker
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      # 01_schema.sql then 02_seed_data.sql — run alphabetically on first init only.
+      - ./deploy/initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bihar -d bihar_scheme_tracker"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgres://bihar:${POSTGRES_PASSWORD:-bihar}@db:5432/bihar_scheme_tracker
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  db_data:

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Icon } from "@/components/Icon";
 import { PolicyBadge } from "@/components/PolicyBadge";
 import { Card, FactTile } from "@/components/ui";
 import { pick, t } from "@/lib/i18n";
@@ -15,6 +16,7 @@ export default async function Home() {
 
   let schemeCount = 0;
   let policyCount = 0;
+  let verifiedActive = 0;
   let openDrafts: PolicyListItem[] = [];
   if (isDbConfigured()) {
     try {
@@ -24,6 +26,7 @@ export default async function Home() {
       ]);
       schemeCount = schemes.length;
       policyCount = policies.length;
+      verifiedActive = schemes.filter((s) => s.status === "active").length;
       openDrafts = policies.filter((p) => policyStatusKey(p, today) === "open");
     } catch {
       /* leave zeros — the page still renders */
@@ -51,6 +54,21 @@ export default async function Home() {
             {t(locale, "homeCtaPolicies")} →
           </Link>
         </div>
+      </section>
+
+      {/* Coverage & confidence — honest about what this catalogue is */}
+      <section className="rounded-md border border-line bg-surface p-5">
+        <h2 className="flex items-center gap-2 text-sm font-semibold text-ink">
+          <Icon name="info" className="h-4 w-4 text-brand" />
+          {t(locale, "coverageTitle")}
+        </h2>
+        <p className="mt-2 text-sm text-muted">{t(locale, "coverageBody")}</p>
+        {verifiedActive > 0 && (
+          <p className="mt-3 text-sm text-ink">
+            <span className="font-semibold text-brand">{verifiedActive}</span>{" "}
+            {t(locale, "coverageStat")}.
+          </p>
+        )}
       </section>
 
       {/* Counts */}
