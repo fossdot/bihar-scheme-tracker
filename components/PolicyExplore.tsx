@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { PolicyBadge } from "@/components/PolicyBadge";
+import { deadlineLabel, validityLabel } from "@/lib/dates";
 import { CATEGORY_OPTIONS, categoryLabel } from "@/lib/facets";
 import { pick, t, tryT, type Locale } from "@/lib/i18n";
 import { policyBucket, policyStatusKey, type PolicyBucket } from "@/lib/policy";
@@ -113,6 +114,13 @@ export function PolicyExplore({
                 : p.name_hi;
             const summary = pick(locale, p.summary_en, p.summary_hi);
             const dept = pick(locale, p.department_en, p.department_hi);
+            const key = policyStatusKey(p, today);
+            const rel =
+              key === "open"
+                ? deadlineLabel(p.consultation_end, today, locale)?.text
+                : key === "in_force" || key === "lapsed"
+                  ? validityLabel(p.period_end, today, locale)?.text
+                  : null;
             return (
               <li key={p.id}>
                 <Link href={`/policies/${p.id}`} className="block bg-surface p-4 hover:bg-paper">
@@ -138,6 +146,12 @@ export function PolicyExplore({
                       </span>
                     )}
                     {dept && <span>{dept}</span>}
+                    {rel && (
+                      <>
+                        <span aria-hidden="true">·</span>
+                        <span>{rel}</span>
+                      </>
+                    )}
                   </div>
                 </Link>
               </li>

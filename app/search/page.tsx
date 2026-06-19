@@ -3,6 +3,7 @@ import { ConfigNotice } from "@/components/ui";
 import { parseFilters } from "@/lib/facets";
 import { t } from "@/lib/i18n";
 import { getLocale } from "@/lib/locale";
+import { todayISO } from "@/lib/policy";
 import { isDbConfigured, searchSchemes } from "@/lib/queries";
 import type { SchemeListItem } from "@/lib/types";
 
@@ -55,6 +56,7 @@ export default async function SearchPage({
       ) : (
         <LiveSearch
           locale={locale}
+          today={todayISO()}
           initialQuery={params.toString()}
           initialResults={initialResults}
         />

@@ -11,8 +11,10 @@ import {
   personaLabel,
   socialLabel,
 } from "@/lib/facets";
+import { ago } from "@/lib/dates";
 import { pick, t, tryT, type Locale } from "@/lib/i18n";
 import { getLocale } from "@/lib/locale";
+import { todayISO } from "@/lib/policy";
 import { getSchemeDetail, isDbConfigured } from "@/lib/queries";
 import { hostLabel, isUnverified, splitEvidence } from "@/lib/status";
 import type {
@@ -224,6 +226,12 @@ function eligibilityFacts(scheme: Scheme, locale: Locale) {
 
 function StatusEvidence({ scheme, locale }: { scheme: Scheme; locale: Locale }) {
   const { prose, sources } = splitEvidence(scheme.status_evidence);
+  const verifiedAgo = ago(scheme.last_verified, todayISO(), locale);
+  const verifiedText = scheme.last_verified
+    ? verifiedAgo
+      ? `${scheme.last_verified} · ${verifiedAgo}`
+      : scheme.last_verified
+    : null;
   return (
     <Card
       icon="info"
@@ -244,7 +252,7 @@ function StatusEvidence({ scheme, locale }: { scheme: Scheme; locale: Locale }) 
       <dl className="mt-4 grid grid-cols-2 gap-4 border-t border-line pt-3 text-xs sm:grid-cols-3">
         <Meta label={t(locale, "lastBudgetYear")} value={scheme.last_budget_year} />
         <Meta label={t(locale, "lastNotification")} value={scheme.last_notification_date} />
-        <Meta label={t(locale, "lastVerified")} value={scheme.last_verified} />
+        <Meta label={t(locale, "lastVerified")} value={verifiedText} />
       </dl>
     </Card>
   );

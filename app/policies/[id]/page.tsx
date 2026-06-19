@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
 import { PolicyBadge } from "@/components/PolicyBadge";
 import { Card, ConfigNotice, FactTile, Panel, Row } from "@/components/ui";
+import { deadlineLabel, validityLabel } from "@/lib/dates";
 import { categoryLabel } from "@/lib/facets";
 import { pick, t, tryT, type Locale } from "@/lib/i18n";
 import { getLocale } from "@/lib/locale";
@@ -57,6 +58,12 @@ export default async function PolicyDetailPage({
       : policy.name_hi;
   const summary = pick(locale, policy.summary_en, policy.summary_hi);
   const statusKey = policyStatusKey(policy, today);
+  const rel =
+    statusKey === "open"
+      ? deadlineLabel(policy.consultation_end, today, locale)?.text
+      : statusKey === "in_force" || statusKey === "lapsed"
+        ? validityLabel(policy.period_end, today, locale)?.text
+        : null;
   const dept = department
     ? pick(locale, department.name_en, department.name_hi)
     : "—";
@@ -102,8 +109,9 @@ export default async function PolicyDetailPage({
             <h1 className="text-2xl font-semibold tracking-tight text-ink">{name}</h1>
             {sub && <p className="mt-0.5 text-muted">{sub}</p>}
           </div>
-          <div className="flex shrink-0 flex-col items-end gap-3">
+          <div className="flex shrink-0 flex-col items-end gap-2">
             <PolicyBadge policy={policy} today={today} locale={locale} />
+            {rel && <span className="text-xs text-muted">{rel}</span>}
             {primary && (
               <a
                 href={primary.href}

@@ -11,6 +11,7 @@ import {
   PERSONA_OPTIONS,
   SOCIAL_CATEGORY_OPTIONS,
 } from "@/lib/facets";
+import { ago } from "@/lib/dates";
 import { pick, t, type Locale } from "@/lib/i18n";
 import {
   BUCKET_META,
@@ -128,10 +129,12 @@ const hasEligibility = (s: State) =>
 
 export function LiveSearch({
   locale,
+  today,
   initialQuery,
   initialResults,
 }: {
   locale: Locale;
+  today: string;
   initialQuery: string; // initial URL query string (e.g. "persona=student&age=22")
   initialResults: SchemeListItem[];
 }) {
@@ -455,7 +458,8 @@ export function LiveSearch({
                             {dept && s.last_verified && <span>·</span>}
                             {s.last_verified && (
                               <span>
-                                {t(locale, "verified")} {s.last_verified}
+                                {t(locale, "verified")}{" "}
+                                {ago(s.last_verified, today, locale) ?? s.last_verified}
                               </span>
                             )}
                           </div>
