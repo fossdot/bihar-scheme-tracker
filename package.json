@@ -29,7 +29,8 @@
     "data:validate": "tsx scripts/validate-data.ts",
     "data:load": "tsx scripts/load-data.ts",
     "data:dump": "tsx scripts/dump-data.ts",
-    "data:stale": "tsx scripts/stale-report.ts"
+    "data:stale": "tsx scripts/stale-report.ts",
+    "seed:metrics-public": "tsx seed/21_metrics_public.ts"
   },
   "dependencies": {
     "next": "^14.2.35",
