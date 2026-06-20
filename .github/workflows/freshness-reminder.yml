@@ -1,0 +1,32 @@
+name: Quarterly freshness reminder
+
+# The "designed for staleness" loop, automated durably (no Claude session needed):
+# every quarter, check the data files' last_verified dates and open a GitHub issue listing
+# entries due for re-verification. Off-minute, 1st of Jan/Apr/Jul/Oct, 06:07 UTC.
+on:
+  schedule:
+    - cron: "7 6 1 1,4,7,10 *"
+  workflow_dispatch: {} # allow manual run too
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - run: npx tsx scripts/freshness-md.ts
+      - name: Open re-verification issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "Quarterly re-verification due — $(date -u +%Y-%m)" \
+            --body-file freshness.md
