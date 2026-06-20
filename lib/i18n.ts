@@ -88,6 +88,10 @@ export const STRINGS = {
     en: "verified Active against official sources",
     hi: "आधिकारिक स्रोतों से सत्यापित सक्रिय",
   },
+  reportIssue: {
+    en: "Spotted something wrong or outdated? Report it",
+    hi: "कुछ गलत या पुराना दिखा? रिपोर्ट करें",
+  },
 
   // explore / catalogue
   exploreTitle: { en: "Explore schemes", hi: "योजनाएँ देखें" },

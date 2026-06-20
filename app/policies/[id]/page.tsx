@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
+import { FeedbackLink } from "@/components/FeedbackLink";
 import { PolicyBadge } from "@/components/PolicyBadge";
 import { SidebarList } from "@/components/SidebarList";
 import { StatusBadge } from "@/components/StatusBadge";
@@ -285,6 +286,9 @@ export default async function PolicyDetailPage({
             <SourceLink label={t(locale, "department")} url={department.website} />
           )}
         </ul>
+        <div className="mt-3 border-t border-line pt-3">
+          <FeedbackLink entity={policy.name_en} label={t(locale, "reportIssue")} />
+        </div>
       </Card>
 
       </article>

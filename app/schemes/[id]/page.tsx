@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
 import { Field } from "@/components/Field";
+import { FeedbackLink } from "@/components/FeedbackLink";
 import { SidebarList } from "@/components/SidebarList";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Timeline } from "@/components/Timeline";
@@ -106,8 +107,24 @@ export default async function SchemeDetailPage({
       </aside>
     ) : null;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "GovernmentService",
+    name: scheme.name_en,
+    description: (scheme.objective_en || scheme.benefit_detail || "").slice(0, 300) || undefined,
+    serviceType: scheme.benefit_type || undefined,
+    areaServed: { "@type": "AdministrativeArea", name: "Bihar, India" },
+    provider: department ? { "@type": "GovernmentOrganization", name: department.name_en } : undefined,
+    url: `https://yojana.bodhya.net/schemes/${scheme.id}`,
+    ...(scheme.application_portal_url ? { serviceUrl: scheme.application_portal_url } : {}),
+  };
+
   return (
     <div className="space-y-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <BackLink locale={locale} />
       <div
         className={
@@ -266,6 +283,9 @@ export default async function SchemeDetailPage({
             <SourceLink label={t(locale, "department")} url={department.website} />
           )}
         </ul>
+        <div className="mt-3 border-t border-line pt-3">
+          <FeedbackLink entity={scheme.name_en} label={t(locale, "reportIssue")} />
+        </div>
       </Card>
 
       </article>
