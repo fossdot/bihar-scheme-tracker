@@ -8,10 +8,49 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { t } from "@/lib/i18n";
 import { getLocale, getTheme } from "@/lib/locale";
 
+const SITE_URL = "https://yojana.bodhya.net";
+
 export const metadata: Metadata = {
-  title: "Bihar Scheme Tracker",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Bihar Scheme Tracker — Find government schemes you qualify for",
+    template: "%s · Bihar Scheme Tracker",
+  },
   description:
-    "A source-backed catalogue of Bihar government policies and schemes, with evidence-based status.",
+    "Tell us who you are and find the Bihar & central government schemes you're likely eligible for — each with its real status, eligibility, benefit, and official apply link. Source-verified and evidence-based, never guessed.",
+  applicationName: "Bihar Scheme Tracker",
+  keywords: [
+    "Bihar schemes",
+    "Bihar yojana",
+    "sarkari yojana",
+    "government schemes Bihar",
+    "scholarship Bihar",
+    "pension Bihar",
+    "Bihar Student Credit Card",
+    "Mukhyamantri Kanya Utthan Yojana",
+    "scheme eligibility",
+    "apply online Bihar",
+    "बिहार योजना",
+    "सरकारी योजना",
+  ],
+  authors: [{ name: "FOSS United", url: "https://fossunited.org" }],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: "Bihar Scheme Tracker",
+    url: SITE_URL,
+    locale: "en_IN",
+    title: "Bihar Scheme Tracker — Find government schemes you qualify for",
+    description:
+      "Discover the Bihar & central government schemes you're eligible for — with real status, eligibility, benefits, and official apply links. Source-verified, evidence-based.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bihar Scheme Tracker — Find schemes you qualify for",
+    description:
+      "Find the Bihar & central government schemes you're eligible for — source-verified status, eligibility, benefits, and official apply links.",
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
