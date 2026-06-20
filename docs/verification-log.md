@@ -312,6 +312,22 @@ intermediate milestone — successor link set) to stop double-listing the same �
 current-FY signals captured: JJM extended to Dec 2028 (Mar 2026), Vaas Bhoomi campaign 15–21 Jun
 2026, Diesel Anudan Kharif window, Bihar Startup portal updated Jun 2026. Seed: `seed/20_verify2.ts`.
 
+## Freshness loop (designed for staleness)
+
+Every scheme/policy carries `last_verified`. The loop that keeps the catalogue honest over time:
+
+1. **Show** — cards and detail pages render "verified N ago" (`lib/dates.ago`).
+2. **Flag** — a scheme detail shows an amber "may be outdated" note once `last_verified` is over a
+   year old (`lib/dates.isStale`). `npm run data:stale` prints the re-verification queue: every
+   entry by age, banded 🟢 fresh / 🟠 due (>180d) / 🔴 stale (>365d). `npm run data:stale -- 180`
+   filters to those due.
+3. **Re-verify** — on a cadence (target: **quarterly**, and always before a budget-season refresh),
+   re-run the verification pass (the parallel-agent method in this log) on the entries `data:stale`
+   surfaces, then update `status_evidence` + `last_verified` and reload (`data:load` → `data:dump`).
+
+Baseline: the whole catalogue was verified 2026-06-19/21, so the first re-verification is due
+~2026-09 (or sooner for marquee schemes around budget announcements).
+
 ## Other progress this session (non-data)
 
 - **Search synonyms** (`lib/queries.ts`): small bilingual alias map (loan→credit card,

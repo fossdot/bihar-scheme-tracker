@@ -129,6 +129,10 @@ export const STRINGS = {
   },
   viewDetails: { en: "View details", hi: "विवरण देखें" },
   homeCtaFind: { en: "Find schemes for me", hi: "मेरे लिए योजनाएँ खोजें" },
+  mayBeOutdated: {
+    en: "This may be outdated — last verified over a year ago, and is due for re-checking.",
+    hi: "यह जानकारी पुरानी हो सकती है — एक वर्ष से अधिक पहले सत्यापित; पुनः जाँच आवश्यक।",
+  },
 
   // explore / catalogue
   exploreTitle: { en: "Explore schemes", hi: "योजनाएँ देखें" },

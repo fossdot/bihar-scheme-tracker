@@ -408,7 +408,7 @@ export function LiveSearch({
                   )}
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="inline-flex overflow-hidden rounded-md border border-line text-xs">
+                  <div className="hidden overflow-hidden rounded-md border border-line text-xs md:inline-flex">
                     {(["cards", "table"] as const).map((v) => {
                       const on = resultView === v;
                       return (
@@ -444,10 +444,13 @@ export function LiveSearch({
                 </div>
               </div>
 
-              {resultView === "table" ? (
-                <SchemeTable rows={display} locale={locale} today={today} />
-              ) : (
-              <ul className="divide-y divide-line">
+              {resultView === "table" && (
+                <div className="hidden md:block">
+                  <SchemeTable rows={display} locale={locale} today={today} />
+                </div>
+              )}
+              {/* Cards: always on mobile (the table is desktop-only); on desktop only in cards mode */}
+              <ul className={`divide-y divide-line ${resultView === "table" ? "md:hidden" : ""}`}>
                 {display.map((s) => {
                   const band = ageBand(s.min_age, s.max_age);
                   const name = pick(locale, s.name_en, s.name_hi);
@@ -511,7 +514,6 @@ export function LiveSearch({
                   );
                 })}
               </ul>
-              )}
             </>
           )}
         </div>

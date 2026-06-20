@@ -28,7 +28,8 @@
     "data:export": "tsx scripts/export-data.ts",
     "data:validate": "tsx scripts/validate-data.ts",
     "data:load": "tsx scripts/load-data.ts",
-    "data:dump": "tsx scripts/dump-data.ts"
+    "data:dump": "tsx scripts/dump-data.ts",
+    "data:stale": "tsx scripts/stale-report.ts"
   },
   "dependencies": {
     "next": "^14.2.35",

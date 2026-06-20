@@ -14,7 +14,7 @@ import {
   personaLabel,
   socialLabel,
 } from "@/lib/facets";
-import { ago, fmtDate } from "@/lib/dates";
+import { ago, fmtDate, isStale } from "@/lib/dates";
 import { pick, t, tryT, type Locale } from "@/lib/i18n";
 import { getLocale } from "@/lib/locale";
 import { todayISO } from "@/lib/policy";
@@ -363,6 +363,12 @@ function StatusEvidence({ scheme, locale }: { scheme: Scheme; locale: Locale }) 
         <Meta label={t(locale, "lastNotification")} value={fmtDate(scheme.last_notification_date)} />
         <Meta label={t(locale, "lastVerified")} value={verifiedText} />
       </dl>
+      {isStale(scheme.last_verified, todayISO()) && (
+        <p className="mt-3 flex items-center gap-1.5 border-t border-line pt-3 text-xs text-warn">
+          <Icon name="info" className="h-3.5 w-3.5 shrink-0" />
+          {t(locale, "mayBeOutdated")}
+        </p>
+      )}
     </Card>
   );
 }
