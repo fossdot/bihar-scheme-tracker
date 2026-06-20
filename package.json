@@ -26,7 +26,9 @@
     "seed:budget": "tsx seed/18_budget.ts",
     "seed:verify2": "tsx seed/20_verify2.ts",
     "data:export": "tsx scripts/export-data.ts",
-    "data:validate": "tsx scripts/validate-data.ts"
+    "data:validate": "tsx scripts/validate-data.ts",
+    "data:load": "tsx scripts/load-data.ts",
+    "data:dump": "tsx scripts/dump-data.ts"
   },
   "dependencies": {
     "next": "^14.2.35",
