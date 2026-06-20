@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { OgLogo } from "@/components/OgLogo";
 import { getSchemeDetail, isDbConfigured } from "@/lib/queries";
 
 export const runtime = "nodejs";
@@ -41,7 +42,7 @@ export default async function Image({ params }: { params: { id: string } }) {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          <div style={{ display: "flex", width: "44px", height: "44px", borderRadius: "10px", backgroundColor: BRAND }} />
+          <OgLogo size={44} />
           <div style={{ display: "flex", fontSize: "30px", fontWeight: 600, color: "#111111" }}>Bihar Scheme Tracker</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>

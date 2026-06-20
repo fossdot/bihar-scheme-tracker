@@ -1,11 +1,10 @@
 import { ImageResponse } from "next/og";
+import { OgLogo } from "@/components/OgLogo";
 
 export const runtime = "nodejs";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = "Bihar Scheme Tracker — find government schemes you qualify for";
-
-const BRAND = "#278F5E";
 
 export default function Image() {
   return new ImageResponse(
@@ -18,7 +17,7 @@ export default function Image() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
-          <div style={{ display: "flex", width: "56px", height: "56px", borderRadius: "12px", backgroundColor: BRAND }} />
+          <OgLogo size={56} />
           <div style={{ display: "flex", fontSize: "34px", fontWeight: 600, color: "#111111" }}>Bihar Scheme Tracker</div>
         </div>
         <div style={{ display: "flex", fontSize: "66px", fontWeight: 700, color: "#111111", lineHeight: 1.1, maxWidth: "920px" }}>
