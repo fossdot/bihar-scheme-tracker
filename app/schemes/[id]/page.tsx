@@ -150,19 +150,19 @@ export default async function SchemeDetailPage({
           )}
         </div>
 
-        <div className="flex flex-wrap items-start justify-between gap-4">
+        <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
           <div className="min-w-0">
             <h1 className="text-2xl font-semibold tracking-tight text-ink">{name}</h1>
             {sub && <p className="mt-0.5 text-muted">{sub}</p>}
           </div>
-          <div className="flex shrink-0 flex-col items-end gap-3">
+          <div className="flex shrink-0 flex-col items-start gap-3 sm:items-end">
             <StatusBadge status={scheme.status} locale={locale} />
             {scheme.application_portal_url && (
               <a
                 href={scheme.application_portal_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-md bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark"
+                className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark sm:w-auto sm:justify-start"
               >
                 <Icon name="external" className="h-4 w-4" />
                 {t(locale, "applyCta")}
