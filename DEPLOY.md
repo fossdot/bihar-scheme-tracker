@@ -1,7 +1,11 @@
 # Deploying the Bihar Scheme Tracker (self-hosted)
 
-No cloud required. Everything runs in two containers on a box you control — a VPS, an office
+No cloud required. Everything runs in containers on a box you control — a VPS, an office
 server, or your own machine. Postgres (with `pgvector`) holds the data; the Next.js app serves it.
+
+> **Live deployment:** https://yojana.bodhya.net — a DigitalOcean droplet (Ubuntu 24.04),
+> behind Cloudflare (proxied, SSL mode "Full"), running `docker-compose.prod.yml` (see
+> "Production: real domain + HTTPS" below).
 
 ## One command
 
@@ -44,6 +48,34 @@ If you changed the schema, also regenerate `01_schema.sql`:
 ```bash
 { echo "create extension if not exists vector;"; echo "create extension if not exists pg_trgm;"; \
   cat supabase/migrations/*.sql; } > deploy/initdb/01_schema.sql
+```
+
+## Production: real domain + HTTPS (behind Cloudflare)
+
+This is how the live site runs. It adds a Caddy reverse proxy in front for HTTPS and keeps the
+app internal. Use `docker-compose.prod.yml` instead of the base compose file.
+
+```bash
+# .env on the server:
+POSTGRES_PASSWORD=<strong random value>
+SITE_ADDRESS=yojana.bodhya.net          # your domain
+
+docker compose -f docker-compose.prod.yml up -d --build
+```
+
+**DNS / Cloudflare:** add an `A` record for the subdomain → the server's IP. Keep it **Proxied
+(orange cloud)** for caching + DDoS protection, and set **SSL/TLS mode to "Full"** in the
+Cloudflare dashboard. Caddy serves a self-signed cert on the origin (`tls internal`); Cloudflare
+presents the public browser-trusted cert. Open ports **80 + 443** on the firewall (`ufw allow 80,443/tcp`).
+
+If you instead run **without** Cloudflare (direct / grey cloud), remove the `tls internal` line in
+`deploy/caddy/Caddyfile` — Caddy will obtain a real Let's Encrypt cert automatically (needs 80+443
+reachable publicly).
+
+On a small (≤1 GB) droplet, add swap before building so `next build` doesn't run out of memory:
+```bash
+fallocate -l 3G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile
+echo '/swapfile none swap sw 0 0' >> /etc/fstab
 ```
 
 ## Putting it on the internet

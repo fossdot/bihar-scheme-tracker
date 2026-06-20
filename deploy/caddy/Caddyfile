@@ -1,0 +1,16 @@
+# Reverse proxy + HTTPS for the production deployment.
+# SITE_ADDRESS is injected from the environment (.env). Set it to your domain,
+# e.g. SITE_ADDRESS=yojana.bodhya.net
+#
+# `tls internal` makes Caddy serve a self-signed cert on the origin. This is the
+# right choice when sitting BEHIND Cloudflare (proxied / orange cloud) with the
+# Cloudflare SSL/TLS mode set to "Full": Cloudflare terminates the public,
+# browser-trusted certificate, and the Caddy↔Cloudflare hop stays encrypted.
+#
+# If you are NOT behind Cloudflare (grey cloud / direct), delete the `tls internal`
+# line — Caddy will then obtain a real Let's Encrypt certificate automatically
+# (requires ports 80 + 443 reachable from the internet).
+{$SITE_ADDRESS} {
+	reverse_proxy app:3000
+	tls internal
+}
