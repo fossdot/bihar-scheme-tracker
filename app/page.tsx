@@ -42,8 +42,14 @@ export default async function Home() {
         <p className="mt-4 text-ink">{t(locale, "homeBody")}</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
-            href="/search"
+            href="/find-my-schemes"
             className="inline-flex items-center rounded-md bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark"
+          >
+            {t(locale, "homeCtaFind")} →
+          </Link>
+          <Link
+            href="/search"
+            className="inline-flex items-center rounded-md border border-line px-4 py-2 text-sm font-medium text-ink hover:border-ink"
           >
             {t(locale, "homeCtaExplore")} →
           </Link>

@@ -117,6 +117,9 @@ export async function searchSchemes(
     conds.push(`(min_age is null or min_age <= ${pAge})`);
     conds.push(`(max_age is null or max_age >= ${pAge})`);
   }
+  // income: a scheme admits the citizen if it has no income bar, or its ceiling is at/above them
+  if (typeof filters.income === "number")
+    conds.push(`(income_ceiling is null or income_ceiling >= ${p(filters.income)})`);
   // disability-exclusive schemes only surface when the citizen indicates a disability
   if (filters.is_for_disabled === false) conds.push(`is_for_disabled = false`);
 

@@ -140,6 +140,17 @@ export function parseFilters(sp: URLSearchParams): SchemeFilters {
     if (Number.isFinite(age) && age >= 0 && age <= 120) filters.age = Math.floor(age);
   }
 
+  const incomeRaw = sp.get("income")?.trim();
+  if (incomeRaw) {
+    const income = Number(incomeRaw);
+    if (Number.isFinite(income) && income >= 0) filters.income = Math.floor(income);
+  }
+
+  // disability: "false" → citizen has none, hide disability-only schemes; "true" → include all
+  const disabled = sp.get("disabled")?.trim();
+  if (disabled === "false") filters.is_for_disabled = false;
+  else if (disabled === "true") filters.is_for_disabled = true;
+
   const categories = csv(sp.get("category")).filter((v) =>
     CATEGORY_SET.has(v as SchemeCategory)
   );

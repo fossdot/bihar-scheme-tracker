@@ -258,6 +258,7 @@ export interface SchemeFilters {
   social_categories?: SocialCategory[]; // citizen belongs to any of these
   gender?: Exclude<Gender, "any">; // citizen's gender
   age?: number; // citizen's age
+  income?: number; // citizen's annual family income (₹) → schemes whose ceiling admits them
   is_for_disabled?: boolean; // citizen is disabled → include disability schemes too
   buckets?: StatusBucket[]; // default ["active","possibly_active"]
 }

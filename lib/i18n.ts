@@ -93,6 +93,43 @@ export const STRINGS = {
     hi: "कुछ गलत या पुराना दिखा? रिपोर्ट करें",
   },
 
+  // guided finder ("tell us about you → your schemes")
+  guidedTitle: { en: "Find schemes for you", hi: "आपके लिए योजनाएँ खोजें" },
+  findIntro: {
+    en: "Tell us a little about yourself and we'll show the schemes you likely qualify for. Everything is optional — answer what you can.",
+    hi: "अपने बारे में थोड़ा बताएँ और हम आपको वे योजनाएँ दिखाएँगे जिनके लिए आप पात्र हो सकते हैं। सब कुछ वैकल्पिक है — जितना बता सकें बताएँ।",
+  },
+  orBrowse: { en: "Prefer to browse everything?", hi: "सब कुछ देखना चाहते हैं?" },
+  browseAll: { en: "Browse all schemes", hi: "सभी योजनाएँ देखें" },
+  qWho: { en: "Who are you?", hi: "आप कौन हैं?" },
+  qAge: { en: "Your age", hi: "आपकी आयु" },
+  qGender: { en: "Gender", hi: "लिंग" },
+  qSocial: { en: "Social category", hi: "सामाजिक श्रेणी" },
+  qEducation: { en: "Highest education", hi: "उच्चतम शिक्षा" },
+  qIncome: { en: "Annual family income", hi: "वार्षिक पारिवारिक आय" },
+  qDisability: { en: "Do you have a disability?", hi: "क्या आप दिव्यांग हैं?" },
+  selectAllApply: { en: "select all that apply", hi: "जो लागू हों चुनें" },
+  optionalHint: { en: "optional", hi: "वैकल्पिक" },
+  agePlaceholder: { en: "e.g. 25", hi: "जैसे 25" },
+  yes: { en: "Yes", hi: "हाँ" },
+  no: { en: "No", hi: "नहीं" },
+  showMySchemes: { en: "Show my schemes", hi: "मेरी योजनाएँ दिखाएँ" },
+  clearAnswers: { en: "Clear answers", hi: "उत्तर साफ़ करें" },
+  schemesForYou: {
+    en: "schemes you may qualify for",
+    hi: "योजनाएँ जिनके लिए आप पात्र हो सकते हैं",
+  },
+  guidedNote: {
+    en: "These are schemes you likely qualify for based on what you told us — including some marked “Possibly active”. Always confirm details and apply at the official source.",
+    hi: "ये वे योजनाएँ हैं जिनके लिए आपके बताए अनुसार आप संभवतः पात्र हैं — कुछ “संभवतः सक्रिय” सहित। विवरण की पुष्टि करें और आधिकारिक स्रोत पर ही आवेदन करें।",
+  },
+  noMatches: {
+    en: "No schemes matched. Try removing an answer (e.g. age or income) to widen the search.",
+    hi: "कोई योजना मेल नहीं खाई। खोज को व्यापक करने हेतु कोई उत्तर हटाएँ (जैसे आयु या आय)।",
+  },
+  viewDetails: { en: "View details", hi: "विवरण देखें" },
+  homeCtaFind: { en: "Find schemes for me", hi: "मेरे लिए योजनाएँ खोजें" },
+
   // explore / catalogue
   exploreTitle: { en: "Explore schemes", hi: "योजनाएँ देखें" },
   exploreSubtitle: {
