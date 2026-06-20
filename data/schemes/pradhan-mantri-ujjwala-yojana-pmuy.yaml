@@ -1,0 +1,38 @@
+name_en: Pradhan Mantri Ujjwala Yojana (PMUY)
+name_hi: प्रधानमंत्री उज्ज्वला योजना (PMUY)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - social_welfare
+  - women_child
+  - health
+objective_en: Free LPG (cooking gas) connection to women of poor / eligible households.
+objective_hi: निर्धन/पात्र परिवारों की महिलाओं को नि:शुल्क एलपीजी (रसोई गैस) कनेक्शन।
+eligibility_en: Adult woman of an eligible low-income household without an existing LPG connection.
+eligibility_hi: पात्र निम्न-आय परिवार की वयस्क महिला जिसके पास पहले से एलपीजी कनेक्शन न हो।
+benefit_type: Free LPG connection
+benefit_detail: >-
+  Free LPG connection with deposit support (₹1,700 / ₹950) plus first refill and stove; subsidy of
+  ₹300 per 14.2 kg cylinder for up to 9 refills/year (FY2025-26).
+target_beneficiary: Women of eligible low-income households.
+personas:
+  - widow
+education_levels: []
+gender_eligibility: female
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — Cabinet continued the targeted subsidy for FY2025-26 (₹12,000 cr); ~10.56 crore
+  connections. Verified 2026-06-19. Source: https://www.pmuy.gov.in/
+source_url: https://www.pmuy.gov.in
+application_portal_url: https://www.pmuy.gov.in
+last_verified: '2026-06-19'

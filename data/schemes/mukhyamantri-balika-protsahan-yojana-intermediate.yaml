@@ -1,0 +1,39 @@
+name_en: Mukhyamantri Balika Protsahan Yojana (Intermediate)
+name_hi: मुख्यमंत्री बालिका प्रोत्साहन योजना (इंटरमीडिएट)
+department_en: Education Department, Government of Bihar
+department_hi: शिक्षा विभाग, बिहार सरकार
+department_website: https://education.bihar.gov.in
+categories:
+  - education
+  - women_child
+objective_en: One-time incentive for girls who pass the Class 12 (Intermediate) BSEB exam.
+objective_hi: बिहार बोर्ड से 12वीं (इंटरमीडिएट) उत्तीर्ण बालिकाओं हेतु एकमुश्त प्रोत्साहन।
+eligibility_en: Girls of Bihar passing Class 12 from BSEB.
+eligibility_hi: बिहार बोर्ड से 12वीं उत्तीर्ण बिहार की बालिकाएँ।
+benefit_type: Cash incentive
+benefit_detail: Reported ₹25,000 one-time. Verify at the portal.
+target_beneficiary: Girls passing Class 12 in Bihar.
+personas:
+  - student
+education_levels:
+  - senior_secondary
+gender_eligibility: female
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: subsumed
+status_evidence: >-
+  Subsumed — the intermediate-pass girls' incentive is now administered as the intermediate
+  milestone of the Mukhyamantri Kanya Utthan Yojana (₹25,000 first division / ₹15,000 second
+  division, via medhasoft). Apply under Kanya Utthan. Verified 2026-06-19. Source:
+  https://medhasoft.bihar.gov.in/
+source_url: https://www.medhasoft.bihar.gov.in
+application_portal_url: https://www.medhasoft.bihar.gov.in
+successor_scheme: Mukhyamantri Kanya Utthan Yojana
+last_verified: '2026-06-19'

@@ -1,0 +1,39 @@
+name_en: Bihar Alpsankhyak Rozgar Rin Yojana
+name_hi: बिहार अल्पसंख्यक रोज़गार ऋण योजना
+department_en: Minority Welfare Department, Government of Bihar
+department_hi: अल्पसंख्यक कल्याण विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/minoritywelfare
+categories:
+  - financial_inclusion
+  - employment
+objective_en: Low-interest business loans for minority-community entrepreneurs.
+objective_hi: अल्पसंख्यक समुदाय के उद्यमियों हेतु कम-ब्याज व्यवसाय ऋण।
+eligibility_en: Minority-community residents of Bihar aged 18–50 starting/expanding a business.
+eligibility_hi: बिहार के अल्पसंख्यक समुदाय के निवासी, आयु 18–50, व्यवसाय हेतु।
+benefit_type: Business loan
+benefit_detail: >-
+  Self-employment loan up to ₹5 lakh at 5% simple interest (with a 0.5% rebate for timely
+  repayment), repaid over 5 years, for minority-community members.
+target_beneficiary: Minority entrepreneurs of Bihar.
+personas:
+  - self_employed_entrepreneur
+education_levels: []
+gender_eligibility: any
+social_categories:
+  - minority
+min_age: 18
+max_age: 50
+income_ceiling: 400000
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Likely active — listed by BSMFC and myScheme, but the latest official sanction lists are FY2021-22
+  with no new 2024-26 cycle confirmed. [Corrected: flat 5% (no separate women's rate); ceiling ₹5
+  lakh; family income ≤₹4 lakh/yr.] Verified 2026-06-19. Source: https://bsmfc.org/
+source_url: https://state.bihar.gov.in/minoritywelfare
+application_portal_url: https://state.bihar.gov.in/minoritywelfare
+last_verified: '2026-06-19'

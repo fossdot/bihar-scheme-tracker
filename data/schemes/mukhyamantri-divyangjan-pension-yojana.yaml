@@ -1,0 +1,42 @@
+name_en: Mukhyamantri Divyangjan Pension Yojana
+name_hi: मुख्यमंत्री दिव्यांगजन पेंशन योजना
+department_en: Social Welfare Department, Government of Bihar
+department_hi: समाज कल्याण विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/socialwelfare
+categories:
+  - social_welfare
+objective_en: Monthly social-security pension for persons with disabilities resident in Bihar.
+objective_hi: बिहार में निवासरत दिव्यांगजनों हेतु मासिक सामाजिक-सुरक्षा पेंशन।
+eligibility_en: >-
+  Permanent resident of Bihar who is a person with disability (a disability certificate is typically
+  required), not a retired government employee and not receiving any other
+  government/social-security pension. Confirm the minimum disability percentage at the source.
+eligibility_hi: >-
+  बिहार का स्थायी निवासी दिव्यांगजन (सामान्यतः दिव्यांगता प्रमाण-पत्र आवश्यक), जो सेवानिवृत्त सरकारी
+  कर्मचारी न हो एवं किसी अन्य सरकारी/सामाजिक-सुरक्षा पेंशन का लाभार्थी न हो। न्यूनतम दिव्यांगता
+  प्रतिशत स्रोत से सत्यापित करें।
+benefit_type: Monthly pension (DBT)
+benefit_detail: ₹1,100 per month (raised from ₹400 in July 2025). Paid via Direct Benefit Transfer.
+target_beneficiary: Persons with disabilities in Bihar.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: true
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — disability pension raised to ₹1,100/month effective July 2025 (was ₹400), paid by DBT.
+  Eligibility: 40%+ disability, via SSPMIS / Lok Seva. Verified 2026-06-19. Source:
+  https://www.sspmis.bihar.gov.in/
+source_url: https://www.sspmis.bihar.gov.in
+application_portal_url: https://www.sspmis.bihar.gov.in
+policies:
+  - Bihar Social Security Pensions (SSPMIS)
+last_verified: '2026-06-19'

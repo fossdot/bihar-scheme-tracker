@@ -1,0 +1,41 @@
+name_en: Mukhyamantri Medhavriti Yojana
+name_hi: मुख्यमंत्री मेधावृत्ति योजना
+department_en: Social Welfare Department, Government of Bihar
+department_hi: समाज कल्याण विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/socialwelfare
+categories:
+  - education
+  - women_child
+objective_en: Merit incentive for SC/ST girl students who pass Class 12.
+objective_hi: 12वीं उत्तीर्ण करने वाली SC/ST छात्राओं हेतु मेधा प्रोत्साहन।
+eligibility_en: SC/ST girls of Bihar passing Class 12 from a recognised board.
+eligibility_hi: मान्यता प्राप्त बोर्ड से 12वीं उत्तीर्ण बिहार की SC/ST छात्राएँ।
+benefit_type: Cash incentive
+benefit_detail: Reported ₹15,000 (1st division) / ₹10,000 (2nd division). Verify at the portal.
+target_beneficiary: SC/ST girl students of Bihar.
+personas:
+  - student
+education_levels:
+  - senior_secondary
+gender_eligibility: female
+social_categories:
+  - sc
+  - st
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Likely active — merit scholarship reported running via medhasoft for 2025: ₹15,000 (first
+  division) / ₹10,000 (second division) for SC/ST & minority intermediate-pass students, with a
+  separate BC/EBC variant run by the BC/EBC Welfare Department. [Corrected: it is an
+  intermediate-pass, not matric, incentive.] Verified 2026-06-19. Source:
+  https://medhasoft.bihar.gov.in/
+source_url: https://www.medhasoft.bihar.gov.in
+application_portal_url: https://www.medhasoft.bihar.gov.in
+last_verified: '2026-06-19'

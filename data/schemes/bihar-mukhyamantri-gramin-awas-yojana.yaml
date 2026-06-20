@@ -1,0 +1,37 @@
+name_en: Bihar Mukhyamantri Gramin Awas Yojana
+name_hi: बिहार मुख्यमंत्री ग्रामीण आवास योजना
+department_en: Rural Development Department, Government of Bihar
+department_hi: ग्रामीण विकास विभाग, बिहार सरकार
+department_website: https://rdd.bihar.gov.in
+categories:
+  - housing
+  - social_welfare
+objective_en: Assistance to rural poor families without a pucca house to build one.
+objective_hi: पक्के मकान से वंचित ग्रामीण निर्धन परिवारों को आवास निर्माण हेतु सहायता।
+eligibility_en: Rural BPL families of Bihar without a pucca house.
+eligibility_hi: पक्के मकान से वंचित बिहार के ग्रामीण BPL परिवार।
+benefit_type: Housing assistance (DBT)
+benefit_detail: >-
+  Unit assistance of ₹1.20 lakh (₹1.30 lakh in 11 IAP districts) in milestone installments plus
+  MGNREGA wage days, for rural families excluded from PMAY-G.
+target_beneficiary: Rural BPL families of Bihar.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: true
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Likely active — listed on myScheme as a Bihar Rural Development Dept scheme for PMAY-G-excluded
+  families; no current-FY state budget line or notice fetched, so not upgraded to active. Verified
+  2026-06-19. Source: https://www.myscheme.gov.in/schemes/mgawb
+source_url: https://rdd.bihar.gov.in
+application_portal_url: https://state.bihar.gov.in/rdd/
+last_verified: '2026-06-19'

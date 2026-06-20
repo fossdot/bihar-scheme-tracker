@@ -1,0 +1,38 @@
+name_en: Mukhyamantri Balika Protsahan Yojana (Matric)
+name_hi: मुख्यमंत्री बालिका प्रोत्साहन योजना (मैट्रिक)
+department_en: Education Department, Government of Bihar
+department_hi: शिक्षा विभाग, बिहार सरकार
+department_website: https://education.bihar.gov.in
+categories:
+  - education
+  - women_child
+objective_en: Cash incentive for girls who pass the Class 10 (Matric) BSEB exam.
+objective_hi: बिहार बोर्ड से 10वीं (मैट्रिक) उत्तीर्ण बालिकाओं हेतु नकद प्रोत्साहन।
+eligibility_en: Girls of Bihar passing Class 10 from BSEB.
+eligibility_hi: बिहार बोर्ड से 10वीं उत्तीर्ण बिहार की बालिकाएँ।
+benefit_type: Cash incentive
+benefit_detail: Reported ₹10,000 (1st division) / ₹8,000 (2nd division). Verify at the portal.
+target_beneficiary: Girls passing Class 10 in Bihar.
+personas:
+  - student
+education_levels:
+  - secondary
+gender_eligibility: female
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Likely active — a Class-10 first-division incentive (reported ₹10,000) is running via medhasoft
+  for 2025; recent reporting suggests it may now cover all first-division students (not girls only),
+  so the exact gender scope needs confirmation. Verified 2026-06-19. Source:
+  https://medhasoft.bihar.gov.in/
+source_url: https://www.medhasoft.bihar.gov.in
+application_portal_url: https://www.medhasoft.bihar.gov.in
+last_verified: '2026-06-19'

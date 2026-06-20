@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Bihar policy record",
+  "description": "A policy / framework document. Display status is DERIVED (lib/policy.ts) from the validity window + draft/consultation/successor fields — never asserted. Every record carries a source_url and last_verified.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name_en", "source_url", "last_verified"],
+  "properties": {
+    "name_en": { "type": "string", "minLength": 3 },
+    "name_hi": { "type": ["string", "null"] },
+    "department_en": { "type": ["string", "null"] },
+    "department_hi": { "type": ["string", "null"] },
+    "department_website": { "type": ["string", "null"], "format": "uri" },
+    "summary_en": { "type": ["string", "null"] },
+    "summary_hi": { "type": ["string", "null"] },
+    "categories": {
+      "type": "array", "uniqueItems": true,
+      "items": { "enum": ["agriculture", "education", "employment", "skilling", "industry", "social_welfare", "health", "women_child", "housing", "financial_inclusion"] }
+    },
+    "policy_type": { "type": ["string", "null"], "description": "e.g. policy, act, mission, rules, framework." },
+    "period_start": { "type": ["string", "null"], "format": "date" },
+    "period_end": { "type": ["string", "null"], "format": "date" },
+    "status": { "enum": ["active", "likely_active", "dormant", "subsumed", "superseded", "lapsed", "unknown"] },
+    "successor_policy": { "type": ["string", "null"], "description": "name_en of the policy that supersedes this one." },
+    "document_url": { "type": ["string", "null"], "format": "uri" },
+    "is_draft": { "type": "boolean" },
+    "consultation_url": { "type": ["string", "null"], "format": "uri" },
+    "consultation_start": { "type": ["string", "null"], "format": "date" },
+    "consultation_end": { "type": ["string", "null"], "format": "date" },
+    "how_to_comment_en": { "type": ["string", "null"] },
+    "how_to_comment_hi": { "type": ["string", "null"] },
+    "source_url": { "type": "string", "format": "uri" },
+    "last_verified": { "type": "string", "format": "date" }
+  }
+}

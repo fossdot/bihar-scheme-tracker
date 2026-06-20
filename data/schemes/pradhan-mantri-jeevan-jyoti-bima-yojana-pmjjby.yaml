@@ -1,0 +1,37 @@
+name_en: Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)
+name_hi: प्रधानमंत्री जीवन ज्योति बीमा योजना (PMJJBY)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - financial_inclusion
+  - social_welfare
+objective_en: Affordable life-insurance cover via a bank account.
+objective_hi: बैंक खाते के माध्यम से किफायती जीवन बीमा।
+eligibility_en: Bank account holders aged 18–50 who auto-debit the premium.
+eligibility_hi: 18–50 आयु के बैंक खाताधारक जो प्रीमियम ऑटो-डेबिट करें।
+benefit_type: Life insurance
+benefit_detail: >-
+  Life cover of ₹2 lakh for an annual premium of ₹436 (revised 2022); bank-account holders aged
+  18–50.
+target_beneficiary: Bank account holders (18–50).
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 18
+max_age: 50
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — runs under the Jan Suraksha umbrella (PMJJBY + PMSBY enrolments past 55 crore by 2026);
+  premium ₹436/year since 1 Jun 2022 (PIB). Verified 2026-06-19. Source:
+  https://www.jansuraksha.gov.in/
+source_url: https://www.jansuraksha.gov.in
+application_portal_url: https://www.jansuraksha.gov.in
+last_verified: '2026-06-19'

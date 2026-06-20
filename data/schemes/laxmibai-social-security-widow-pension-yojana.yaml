@@ -1,0 +1,42 @@
+name_en: Laxmibai Social Security (Widow) Pension Yojana
+name_hi: लक्ष्मीबाई सामाजिक सुरक्षा (विधवा) पेंशन योजना
+department_en: Social Welfare Department, Government of Bihar
+department_hi: समाज कल्याण विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/socialwelfare
+categories:
+  - social_welfare
+  - women_child
+objective_en: Monthly social-security pension for widows in Bihar.
+objective_hi: बिहार की विधवाओं हेतु मासिक सामाजिक-सुरक्षा पेंशन।
+eligibility_en: >-
+  Widow, permanent resident of Bihar, typically aged 18+, from a BPL/eligible family (verify
+  criteria at SSPMIS).
+eligibility_hi: >-
+  विधवा, बिहार की स्थायी निवासी, सामान्यतः 18+ आयु, BPL/पात्र परिवार से (मानदंड SSPMIS पर सत्यापित
+  करें)।
+benefit_type: Monthly pension (DBT)
+benefit_detail: ₹1,100 per month (raised from ₹400 in July 2025), paid by DBT via SSPMIS.
+target_beneficiary: Widows of Bihar.
+personas:
+  - widow
+education_levels: []
+gender_eligibility: female
+social_categories: []
+min_age: 18
+max_age: null
+income_ceiling: 60000
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — among the six social-security pensions raised to a flat ₹1,100/month effective July 2025
+  (was ₹400). For widows aged 18+ with annual family income below ₹60,000 (Bihar resident), via
+  SSPMIS. Verified 2026-06-19. Source: https://www.sspmis.bihar.gov.in/
+source_url: https://www.sspmis.bihar.gov.in
+application_portal_url: https://www.sspmis.bihar.gov.in
+policies:
+  - Bihar Social Security Pensions (SSPMIS)
+last_verified: '2026-06-19'

@@ -1,0 +1,41 @@
+name_en: Bihar Diesel Anudan Yojana
+name_hi: बिहार डीज़ल अनुदान योजना
+department_en: Department of Agriculture, Government of Bihar
+department_hi: कृषि विभाग, बिहार सरकार
+department_website: https://dbtagriculture.bihar.gov.in
+categories:
+  - agriculture
+objective_en: Diesel subsidy to farmers for irrigating standing crops during dry spells.
+objective_hi: सूखे के दौरान खड़ी फसलों की सिंचाई हेतु किसानों को डीज़ल अनुदान।
+eligibility_en: >-
+  Farmers of Bihar (Raiyat/non-Raiyat) registered on the Agriculture DBT portal, during a notified
+  drought/dry spell.
+eligibility_hi: अधिसूचित सूखा/शुष्क अवधि में कृषि DBT पोर्टल पर पंजीकृत बिहार के किसान (रैयत/गैर-रैयत)।
+benefit_type: Diesel subsidy (DBT)
+benefit_detail: >-
+  Per-irrigation-round diesel subsidy (rate notified each season; reported ~₹750/acre per round,
+  e.g. ~₹1,500/acre for paddy).
+target_beneficiary: Farmers of Bihar during dry spells.
+personas:
+  - farmer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: any
+status: active
+status_evidence: >-
+  Active — the official DBT Agriculture portal listed Diesel Subsidy (Kharif) 2025-26 with a 31
+  Jul–30 Oct 2025 window; runs each season. Verified 2026-06-19. Source:
+  https://dbtagriculture.bihar.gov.in/
+source_url: https://dbtagriculture.bihar.gov.in
+application_portal_url: https://dbtagriculture.bihar.gov.in
+policies:
+  - Bihar Krishi Road Map (Agriculture Roadmap)
+last_verified: '2026-06-19'

@@ -1,0 +1,45 @@
+name_en: Mukhyamantri Udyami Yojana
+name_hi: मुख्यमंत्री उद्यमी योजना
+department_en: Industries Department, Government of Bihar
+department_hi: उद्योग विभाग, बिहार सरकार
+department_website: https://industries.bihar.gov.in
+categories:
+  - industry
+  - financial_inclusion
+objective_en: Promote first-generation entrepreneurship in Bihar by financing new micro/small enterprises.
+objective_hi: नए सूक्ष्म/लघु उद्यमों हेतु वित्त प्रदान कर बिहार में प्रथम-पीढ़ी उद्यमिता को बढ़ावा देना।
+eligibility_en: >-
+  Permanent resident of Bihar aged 18–45, with at least class 12 / ITI / Diploma / Graduate (per
+  component). Components for SC/ST, EBC, BC, Women and Youth. SC/ST/EBC/women loans are
+  interest-free; general youth pay 1% simple interest.
+eligibility_hi: >-
+  बिहार का स्थायी निवासी, आयु 18–45, न्यूनतम 12वीं / आईटीआई / डिप्लोमा / स्नातक (घटक अनुसार)। SC/ST,
+  EBC, BC, महिला एवं युवा हेतु घटक। SC/ST/EBC/महिला ऋण ब्याज-मुक्त; सामान्य युवा 1% साधारण ब्याज।
+benefit_type: Loan + subsidy
+benefit_detail: >-
+  Up to ₹10 lakh — 50% subsidy (grant, up to ₹5 lakh) + 50% loan (up to ₹5 lakh) repayable over 84
+  months; the Youth category pays 1% interest. No collateral.
+target_beneficiary: Aspiring entrepreneurs in Bihar (SC/ST/EBC/BC/women/youth).
+personas:
+  - self_employed_entrepreneur
+education_levels:
+  - senior_secondary
+gender_eligibility: any
+social_categories: []
+min_age: 18
+max_age: 50
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — official udyami.bihar.gov.in shows the FY2025-26 cycle (applications closed 23 Mar 2026,
+  selection by randomisation 20 May 2026, document upload by 24 Jun 2026) — mid-cycle and
+  operational. Categories: SC/ST, EBC, women, youth, minority; age 18–50; min education
+  10+2/ITI/diploma. Verified 2026-06-19. Source: https://udyami.bihar.gov.in/
+source_url: https://udyami.bihar.gov.in
+application_portal_url: https://udyami.bihar.gov.in
+last_verified: '2026-06-19'

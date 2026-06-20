@@ -1,0 +1,37 @@
+name_en: Stand-Up India
+name_hi: स्टैंड-अप इंडिया
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - financial_inclusion
+  - industry
+objective_en: Bank loans for greenfield enterprises by SC/ST and women entrepreneurs.
+objective_hi: SC/ST एवं महिला उद्यमियों के नए उद्यमों हेतु बैंक ऋण।
+eligibility_en: SC/ST or women entrepreneurs (18+) setting up a new manufacturing/services/trading enterprise.
+eligibility_hi: नया विनिर्माण/सेवा/व्यापार उद्यम स्थापित करने वाले SC/ST या महिला उद्यमी (18+)।
+benefit_type: Bank loan
+benefit_detail: Bank loans ₹10 lakh–₹1 crore for greenfield projects. Verify current terms.
+target_beneficiary: SC/ST and women entrepreneurs.
+personas:
+  - self_employed_entrepreneur
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 18
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Likely active — bank loans ₹10 lakh–₹1 crore for SC/ST and women entrepreneurs (greenfield);
+  sanctions continued through Oct 2025 (₹62,807 cr cumulative, IBEF), but the notified scheme period
+  ran to 2025 and a formal post-March-2025 extension was not confirmed. Verified 2026-06-19. Source:
+  https://www.standupmitra.in/
+source_url: https://www.standupmitra.in
+application_portal_url: https://www.standupmitra.in
+last_verified: '2026-06-19'

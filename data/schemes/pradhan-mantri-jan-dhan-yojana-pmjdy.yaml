@@ -1,0 +1,35 @@
+name_en: Pradhan Mantri Jan Dhan Yojana (PMJDY)
+name_hi: प्रधानमंत्री जन धन योजना (PMJDY)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - financial_inclusion
+objective_en: Universal access to a basic bank account with overdraft, insurance and DBT linkage.
+objective_hi: ओवरड्राफ्ट, बीमा एवं DBT लिंकेज सहित बुनियादी बैंक खाते तक सार्वभौमिक पहुँच।
+eligibility_en: Any Indian resident without a bank account (zero-balance account).
+eligibility_hi: बिना बैंक खाते वाला कोई भी भारतीय निवासी (शून्य-शेष खाता)।
+benefit_type: Zero-balance bank account
+benefit_detail: >-
+  Zero-balance account with RuPay card, overdraft up to ₹10,000, and ₹2 lakh accidental insurance
+  cover.
+target_beneficiary: Unbanked residents.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — 11 years in 2025: 56.16 crore accounts and 38.68 crore RuPay cards (PIB, Aug 2025).
+  Verified 2026-06-19. Source: https://pmjdy.gov.in/
+source_url: https://pmjdy.gov.in
+application_portal_url: https://pmjdy.gov.in
+last_verified: '2026-06-19'

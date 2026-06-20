@@ -1,0 +1,37 @@
+name_en: Pradhan Mantri Matru Vandana Yojana (PMMVY)
+name_hi: प्रधानमंत्री मातृ वंदना योजना (PMMVY)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - women_child
+  - health
+objective_en: Maternity benefit / wage compensation for pregnant and lactating women.
+objective_hi: गर्भवती व स्तनपान कराने वाली महिलाओं हेतु मातृत्व लाभ / मज़दूरी क्षतिपूर्ति।
+eligibility_en: Pregnant and lactating women for the first (and per current norms, second girl) child.
+eligibility_hi: पहले (एवं वर्तमान मानदंड अनुसार दूसरी बालिका) बच्चे हेतु गर्भवती व स्तनपान कराने वाली महिलाएँ।
+benefit_type: Maternity benefit (DBT)
+benefit_detail: >-
+  ₹5,000 for the first child (in two installments); an additional ₹6,000 for a second child if a
+  girl. Paid by DBT.
+target_beneficiary: Pregnant and lactating women.
+personas:
+  - pregnant_lactating_woman
+education_levels: []
+gender_eligibility: female
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — special registration drive extended to 15 Aug 2025 (PIB). Verified 2026-06-19. Source:
+  https://pmmvy.wcd.gov.in/
+source_url: https://wcd.nic.in
+application_portal_url: https://pmmvy.wcd.gov.in/
+last_verified: '2026-06-19'

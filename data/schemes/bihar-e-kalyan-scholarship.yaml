@@ -1,0 +1,48 @@
+name_en: Bihar e-Kalyan Scholarship
+name_hi: बिहार ई-कल्याण छात्रवृत्ति
+department_en: Social Welfare Department, Government of Bihar
+department_hi: समाज कल्याण विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/socialwelfare
+categories:
+  - education
+objective_en: Post-matric scholarships for SC/ST/BC/EBC and minority students pursuing higher studies.
+objective_hi: उच्च शिक्षा हेतु SC/ST/BC/EBC एवं अल्पसंख्यक विद्यार्थियों के लिए पोस्ट-मैट्रिक छात्रवृत्ति।
+eligibility_en: >-
+  Bihar-resident SC/ST/BC/EBC/minority students from Class 11 to PhD; income limits apply per
+  category (verify at e-Kalyan).
+eligibility_hi: >-
+  बिहार निवासी SC/ST/BC/EBC/अल्पसंख्यक विद्यार्थी, कक्षा 11 से पीएचडी तक; श्रेणी अनुसार आय-सीमा
+  (e-Kalyan पर सत्यापित करें)।
+benefit_type: Scholarship
+benefit_detail: >-
+  Tuition fees + annual maintenance (reported ₹2,000–₹25,000+/year by level). Verify current rates
+  at the portal.
+target_beneficiary: SC/ST/BC/EBC/minority students of Bihar.
+personas:
+  - student
+education_levels:
+  - senior_secondary
+gender_eligibility: any
+social_categories:
+  - sc
+  - st
+  - bc
+  - ebc
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — Bihar Post-Matric Scholarship (SC/ST/BC/EBC) operational for 2025-26 (fresh applications
+  ~Sept–Nov 2025, correction window to 25 Dec 2025). Tuition + maintenance, Class 11 to
+  graduation/PG/professional. Income limit ₹2.5 lakh for BC/EBC; no income bar for SC/ST. For
+  2025-26, post-matric applications run via pmsonline.bihar.gov.in; status/history via e-Kalyan.
+  Verified 2026-06-19. Source: https://ekalyan.bih.nic.in/
+source_url: https://www.ekalyan.bih.nic.in
+application_portal_url: https://www.ekalyan.bih.nic.in
+last_verified: '2026-06-19'

@@ -1,0 +1,42 @@
+name_en: Bihar Mukhyamantri Gram Parivahan Yojana
+name_hi: बिहार मुख्यमंत्री ग्राम परिवहन योजना
+department_en: Social Welfare Department, Government of Bihar
+department_hi: समाज कल्याण विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/socialwelfare
+categories:
+  - employment
+  - social_welfare
+objective_en: Subsidy to rural SC/ST/EBC youth to buy a passenger vehicle for transport livelihood.
+objective_hi: ग्रामीण SC/ST/EBC युवाओं को यात्री वाहन खरीदने हेतु अनुदान।
+eligibility_en: Rural SC/ST/EBC residents of Bihar.
+eligibility_hi: बिहार के ग्रामीण SC/ST/EBC निवासी।
+benefit_type: Vehicle subsidy
+benefit_detail: >-
+  50% subsidy, capped at ₹1 lakh (standard 3/4-wheeler), ₹70,000 (e-rickshaw) or ₹2 lakh
+  (ambulance), for SC/ST/EBC groups.
+target_beneficiary: Rural SC/ST/EBC youth.
+personas:
+  - self_employed_entrepreneur
+education_levels: []
+gender_eligibility: any
+social_categories:
+  - sc
+  - st
+  - ebc
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Likely active — listed on the Bihar Transport Dept portal and myScheme and run phase-wise, but the
+  latest hard figures are older (43,917 beneficiaries to Mar 2023) with no current-FY notification
+  found. [Corrected: SC/ST/EBC only; tiered caps.] Verified 2026-06-19. Source:
+  https://state.bihar.gov.in/transport/
+source_url: https://state.bihar.gov.in/transport
+application_portal_url: https://state.bihar.gov.in/transport
+last_verified: '2026-06-19'

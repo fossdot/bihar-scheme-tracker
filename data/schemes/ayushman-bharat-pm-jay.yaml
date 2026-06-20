@@ -1,0 +1,42 @@
+name_en: Ayushman Bharat — PM-JAY
+name_hi: आयुष्मान भारत — पीएम-जय
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - health
+  - social_welfare
+objective_en: Health insurance cover for hospitalisation to eligible low-income families.
+objective_hi: पात्र निम्न-आय परिवारों को अस्पताल में भर्ती हेतु स्वास्थ्य बीमा।
+eligibility_en: >-
+  Families identified as eligible (SECC deprivation criteria / state-extended lists). Check
+  eligibility on the PM-JAY portal.
+eligibility_hi: >-
+  पात्र पहचाने गए परिवार (SECC वंचना मानदंड / राज्य-विस्तारित सूची)। पात्रता PM-JAY पोर्टल पर
+  जाँचें।
+benefit_type: Health insurance
+benefit_detail: >-
+  Cover up to ₹5 lakh per family per year for secondary/tertiary hospitalisation. The Ayushman Vay
+  Vandana extension additionally covers all citizens aged 70+ regardless of income.
+target_beneficiary: Eligible low-income families.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active in Bihar — official reports cite >₹1,000 crore saved by Bihar beneficiaries in a year, with
+  ongoing enrolment drives. ₹5 lakh/family/year (secondary/tertiary). The Ayushman Vay Vandana
+  extension now covers all citizens aged 70+ regardless of income. Verified 2026-06-19. Source:
+  https://pmjay.gov.in/
+source_url: https://pmjay.gov.in
+application_portal_url: https://pmjay.gov.in
+last_verified: '2026-06-19'

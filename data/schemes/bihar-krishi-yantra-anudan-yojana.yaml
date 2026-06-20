@@ -1,0 +1,39 @@
+name_en: Bihar Krishi Yantra Anudan Yojana
+name_hi: बिहार कृषि यंत्र अनुदान योजना
+department_en: Department of Agriculture, Government of Bihar
+department_hi: कृषि विभाग, बिहार सरकार
+department_website: https://dbtagriculture.bihar.gov.in
+categories:
+  - agriculture
+objective_en: Subsidy to farmers for purchasing farm machinery and equipment.
+objective_hi: कृषि यंत्र व उपकरण खरीदने हेतु किसानों को अनुदान।
+eligibility_en: Farmers of Bihar registered on the Agriculture DBT portal.
+eligibility_hi: कृषि DBT पोर्टल पर पंजीकृत बिहार के किसान।
+benefit_type: Equipment subsidy
+benefit_detail: >-
+  Subsidy (commonly up to ~80–90% for priority categories) on ~91 types of farm implements; applied
+  via the OFMAS / DBT Agriculture portal in a seasonal window.
+target_beneficiary: Farmers of Bihar.
+personas:
+  - farmer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: any
+status: active
+status_evidence: >-
+  Active — Bihar's 2026-27 budget allocates ₹176 cr to agricultural mechanisation (PRS); the OFMAS
+  portal (farmech.bihar.gov.in) is live and linked from the DBT Agriculture portal. Applications are
+  seasonal. Verified 2026-06-19. Source: https://dbtagriculture.bihar.gov.in/
+source_url: https://farmech.bih.nic.in
+application_portal_url: https://farmech.bihar.gov.in/
+policies:
+  - Bihar Krishi Road Map (Agriculture Roadmap)
+last_verified: '2026-06-19'

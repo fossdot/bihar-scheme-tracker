@@ -1,0 +1,37 @@
+name_en: Bihar Mukhyamantri Bagwani Mission
+name_hi: बिहार मुख्यमंत्री बागवानी मिशन
+department_en: Department of Agriculture, Government of Bihar
+department_hi: कृषि विभाग, बिहार सरकार
+department_website: https://dbtagriculture.bihar.gov.in
+categories:
+  - agriculture
+objective_en: Subsidy support for horticulture — fruit and vegetable cultivation.
+objective_hi: बागवानी — फल व सब्ज़ी की खेती हेतु अनुदान सहायता।
+eligibility_en: Farmers of Bihar undertaking horticulture cultivation.
+eligibility_hi: बागवानी करने वाले बिहार के किसान।
+benefit_type: Cultivation subsidy
+benefit_detail: Reported up to 50% subsidy (₹15,000–₹1,00,000/ha by crop). Verify current rates.
+target_beneficiary: Horticulture farmers of Bihar.
+personas:
+  - farmer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: any
+status: active
+status_evidence: >-
+  Active — the official CMHM horticulture portal is live with a 2025-26 application year and
+  2025/2026-dated notices; subsidy up to ~50% varies by component. Verified 2026-06-19. Source:
+  https://horticulture.bihar.gov.in/MainSite/SchemeDetails_CMHM.aspx
+source_url: https://horticulture.bihar.gov.in
+application_portal_url: https://horticulture.bihar.gov.in/MainSite/SchemeDetails_CMHM.aspx
+policies:
+  - Bihar Krishi Road Map (Agriculture Roadmap)
+last_verified: '2026-06-19'

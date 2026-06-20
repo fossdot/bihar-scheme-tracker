@@ -1,0 +1,27 @@
+name: Validate data
+
+# Runs on every PR (and push) that touches the data files, schema, or validator.
+# Pure file checks — no database, no secrets — so it's fast and safe for outside contributors.
+on:
+  pull_request:
+    paths:
+      - "data/**"
+      - "scripts/validate-data.ts"
+      - "package.json"
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "scripts/validate-data.ts"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - run: npm run data:validate

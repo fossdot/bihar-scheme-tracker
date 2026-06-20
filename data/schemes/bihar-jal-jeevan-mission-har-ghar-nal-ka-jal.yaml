@@ -1,0 +1,35 @@
+name_en: Bihar Jal Jeevan Mission (Har Ghar Nal Ka Jal)
+name_hi: बिहार जल जीवन मिशन (हर घर नल का जल)
+department_en: Public Health Engineering Department, Government of Bihar
+department_hi: लोक स्वास्थ्य अभियंत्रण विभाग, बिहार सरकार
+department_website: https://phed.bihar.gov.in
+categories:
+  - social_welfare
+  - health
+objective_en: Functional piped tap-water connection to every rural household.
+objective_hi: प्रत्येक ग्रामीण घर को कार्यशील पाइप जल कनेक्शन।
+eligibility_en: Rural households of Bihar lacking piped water (SC/ST/BPL free).
+eligibility_hi: पाइप जल से वंचित बिहार के ग्रामीण घर (SC/ST/BPL नि:शुल्क)।
+benefit_type: Piped water connection
+benefit_detail: Functional tap connection; free for SC/ST/BPL, nominal for others. Verify current terms.
+target_beneficiary: Rural households of Bihar.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — Jal Jeevan Mission extended to Dec 2028 (JJM 2.0, Cabinet approval Mar 2026); Bihar at
+  ~96% functional tap-connection coverage. Verified 2026-06-19. Source:
+  https://jaljeevanmission.gov.in/
+source_url: https://phedcms.bihar.gov.in
+application_portal_url: https://phedcgrc.in/
+last_verified: '2026-06-19'

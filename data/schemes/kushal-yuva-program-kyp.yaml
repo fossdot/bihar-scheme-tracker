@@ -1,0 +1,52 @@
+name_en: Kushal Yuva Program (KYP)
+name_hi: कुशल युवा कार्यक्रम
+department_en: Saat Nischay — Yuva Upmission (Government of Bihar)
+department_hi: सात निश्चय — युवा उपमिशन (बिहार सरकार)
+department_website: https://www.7nishchay-yuvaupmission.bihar.gov.in/
+categories:
+  - skilling
+  - employment
+objective_en: >-
+  Employability training for youth in Bihar — Hindi & English communication, basic computer skills,
+  and soft/behavioural skills.
+objective_hi: >-
+  बिहार के युवाओं हेतु रोज़गार-योग्यता प्रशिक्षण — हिंदी व अंग्रेज़ी संवाद, बुनियादी कंप्यूटर कौशल,
+  एवं सॉफ्ट/व्यवहार कौशल।
+eligibility_en: >-
+  Youth in Bihar who have passed at least class 10 and are not in formal education. Note: sources
+  differ on the upper age limit (15–25 vs 15–28) — confirm against the KYP guideline (rev.
+  22/02/2017).
+eligibility_hi: >-
+  बिहार के युवा जिन्होंने कम से कम 10वीं उत्तीर्ण की हो और औपचारिक शिक्षा में न हों। नोट: ऊपरी
+  आयु-सीमा पर स्रोतों में भिन्नता (15–25 बनाम 15–28) — KYP दिशानिर्देश (संशोधन 22/02/2017) से पुष्टि
+  करें।
+benefit_type: Skill training
+benefit_detail: >-
+  Approximately 240 hours of training covering language & communication, basic computer skills, and
+  soft skills. Completion is mandatory for MNSSBY allowance beneficiaries.
+target_beneficiary: Youth in Bihar (class 10 passed, not in formal education) seeking employability skills.
+personas:
+  - unemployed_youth
+education_levels:
+  - secondary
+gender_eligibility: any
+social_categories: []
+min_age: 15
+max_age: 28
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — official 7nishchay portal lists KYP live under the Bihar Skill Development Mission
+  (240-hour training: communication, basic computer, soft skills; free). Eligibility 15–28
+  (relaxations: SC/ST & PwD to 33, OBC to 31), 10th-pass. Verified 2026-06-19. Source:
+  https://www.7nishchay-yuvaupmission.bihar.gov.in/
+source_url: https://www.7nishchay-yuvaupmission.bihar.gov.in/
+application_portal_url: https://www.7nishchay-yuvaupmission.bihar.gov.in/
+policies:
+  - Saat Nishchay-2 — Yuva Upmission
+last_verified: '2026-06-19'

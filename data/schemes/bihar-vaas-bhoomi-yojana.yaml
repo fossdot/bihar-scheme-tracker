@@ -1,0 +1,39 @@
+name_en: Bihar Vaas Bhoomi Yojana
+name_hi: बिहार वास भूमि योजना
+department_en: Revenue & Land Reforms Department, Government of Bihar
+department_hi: राजस्व एवं भूमि सुधार विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/lrc
+categories:
+  - housing
+  - social_welfare
+objective_en: Free homestead land to landless rural poor families (priority to Mahadalit/SC/ST).
+objective_hi: भूमिहीन ग्रामीण निर्धन परिवारों को नि:शुल्क वास भूमि (महादलित/SC/ST को प्राथमिकता)।
+eligibility_en: Landless rural BPL families of Bihar without homestead land.
+eligibility_hi: वास भूमि से वंचित बिहार के भूमिहीन ग्रामीण BPL परिवार।
+benefit_type: Homestead land title
+benefit_detail: >-
+  Free homestead plot of up to 5 decimal (basgeet parcha) to a landless family; where no government
+  land is available, ₹1 lakh cash to buy a plot.
+target_beneficiary: Landless rural BPL families.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories:
+  - sc
+  - st
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: true
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — live campaign 'Abhiyan Basera-2' (15–21 Jun 2026) allotting plots; the cash-purchase
+  assistance was raised from ₹60,000 to ₹1 lakh (Prabhat Khabar, Jun 2026). Verified 2026-06-19.
+  Source: https://state.bihar.gov.in/lrc/
+source_url: https://state.bihar.gov.in/lrc
+application_portal_url: https://state.bihar.gov.in/lrc/
+last_verified: '2026-06-19'

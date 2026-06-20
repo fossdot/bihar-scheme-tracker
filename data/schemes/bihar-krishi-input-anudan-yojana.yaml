@@ -1,0 +1,47 @@
+name_en: Bihar Krishi Input Anudan Yojana
+name_hi: बिहार कृषि इनपुट अनुदान योजना
+department_en: Department of Agriculture, Government of Bihar
+department_hi: कृषि विभाग, बिहार सरकार
+department_website: https://dbtagriculture.bihar.gov.in
+categories:
+  - agriculture
+objective_en: >-
+  Input subsidy to farmers whose crops are damaged (33% or more) by flood, drought, hailstorm or
+  unseasonal rain.
+objective_hi: बाढ़, सूखा, ओलावृष्टि या बेमौसम वर्षा से 33% या अधिक फसल क्षति झेलने वाले किसानों को इनपुट अनुदान।
+eligibility_en: >-
+  Permanent-resident farmers of Bihar (both Raiyat and Non-Raiyat) registered on the Agriculture DBT
+  portal, whose crops suffered 33% or more damage. Typically capped at 2 hectares per farmer.
+eligibility_hi: >-
+  बिहार के स्थायी-निवासी किसान (रैयत एवं गैर-रैयत दोनों) जो कृषि DBT पोर्टल पर पंजीकृत हों एवं जिनकी
+  फसल को 33% या अधिक क्षति हुई हो। सामान्यतः प्रति किसान 2 हेक्टेयर तक।
+benefit_type: Input subsidy (DBT)
+benefit_detail: >-
+  Per-hectare subsidy on 33%+ crop loss: ₹8,500 (un-irrigated), ₹17,000 (irrigated), ₹22,500
+  (perennial), up to ~2 hectares.
+target_beneficiary: Farmers of Bihar with crop loss.
+personas:
+  - farmer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: any
+status: active
+status_evidence: >-
+  Active — official dbtagriculture.bihar.gov.in shows Krishi Input Anudan open for Rabi 2025-26
+  (application 20–24 Jun 2026 across 5 districts) and publishes the Kharif 2025-26 implementation
+  guidelines — a current-FY signal. Per-hectare on 33%+ loss: ₹8,500 (un-irrigated) / ₹17,000
+  (irrigated) / ₹22,500 (perennial), up to ~2 hectares. Verified 2026-06-19. Source:
+  https://dbtagriculture.bihar.gov.in/
+source_url: https://dbtagriculture.bihar.gov.in
+application_portal_url: https://dbtagriculture.bihar.gov.in
+policies:
+  - Bihar Krishi Road Map (Agriculture Roadmap)
+last_verified: '2026-06-19'

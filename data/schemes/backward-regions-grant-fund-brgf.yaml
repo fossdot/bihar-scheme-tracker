@@ -1,0 +1,34 @@
+name_en: Backward Regions Grant Fund (BRGF)
+name_hi: पिछड़ा क्षेत्र अनुदान निधि (BRGF)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - social_welfare
+objective_en: Earlier central fund to redress regional development imbalances in backward districts.
+objective_hi: पिछड़े ज़िलों में क्षेत्रीय विकास असंतुलन दूर करने हेतु पूर्ववर्ती केंद्रीय निधि।
+eligibility_en: Identified backward districts (historical programme).
+eligibility_hi: चिह्नित पिछड़े ज़िले (ऐतिहासिक कार्यक्रम)।
+benefit_type: District development grant
+benefit_detail: Provided untied grants to backward districts for development gaps.
+target_beneficiary: Backward districts.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: lapsed
+status_evidence: >-
+  Lapsed — the Backward Regions Grant Fund was delinked from central budgetary support from 2015-16
+  following the 14th Finance Commission (states' tax share raised to 42%); no direct successor.
+  Verified 2026-06-19. Source:
+  https://cprindia.org/briefsreports/budget-brief-2015-16-backward-regions-grant-fund/
+source_url: https://rural.gov.in
+last_verified: '2026-06-19'

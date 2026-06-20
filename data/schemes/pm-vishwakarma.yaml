@@ -1,0 +1,42 @@
+name_en: PM Vishwakarma
+name_hi: पीएम विश्वकर्मा
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - skilling
+  - financial_inclusion
+  - industry
+objective_en: Support to traditional artisans and craftspeople — recognition, skilling, toolkit and credit.
+objective_hi: पारंपरिक शिल्पकारों एवं कारीगरों को सहायता — मान्यता, कौशल, टूलकिट एवं ऋण।
+eligibility_en: >-
+  Artisans/craftspeople in one of the notified trades (carpenter, blacksmith, potter, weaver, etc.);
+  family/occupation criteria apply.
+eligibility_hi: >-
+  अधिसूचित व्यवसायों (बढ़ई, लोहार, कुम्हार, बुनकर आदि) के शिल्पकार/कारीगर; परिवार/व्यवसाय मानदंड
+  लागू।
+benefit_type: Skilling + toolkit + collateral-free loan
+benefit_detail: >-
+  ₹500/day training stipend, a ₹15,000 toolkit incentive, and collateral-free loans up to ₹3 lakh
+  (₹1 lakh then ₹2 lakh) at 5% interest.
+target_beneficiary: Traditional artisans and craftspeople.
+personas:
+  - artisan_weaver
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — 30+ lakh artisans registered and 4.7 lakh loans sanctioned by Aug 2025 (PIB). Verified
+  2026-06-19. Source: https://pmvishwakarma.gov.in/
+source_url: https://pmvishwakarma.gov.in
+application_portal_url: https://pmvishwakarma.gov.in
+last_verified: '2026-06-19'

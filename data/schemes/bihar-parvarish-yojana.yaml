@@ -1,0 +1,38 @@
+name_en: Bihar Parvarish Yojana
+name_hi: बिहार परवरिश योजना
+department_en: Social Welfare Department, Government of Bihar
+department_hi: समाज कल्याण विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/socialwelfare
+categories:
+  - social_welfare
+  - women_child
+objective_en: >-
+  Monthly maintenance for orphans, semi-orphans and children of HIV-positive or severely disabled
+  parents.
+objective_hi: अनाथ, अर्ध-अनाथ एवं HIV-संक्रमित या गंभीर दिव्यांग माता-पिता के बच्चों हेतु मासिक भरण-पोषण।
+eligibility_en: Eligible vulnerable children of Bihar up to age 18 (per scheme criteria).
+eligibility_hi: योजना मानदंड अनुसार बिहार के पात्र संवेदनशील बच्चे, 18 वर्ष तक।
+benefit_type: Monthly maintenance (DBT)
+benefit_detail: >-
+  ₹1,000/month per eligible child (0–18) — orphans, HIV/leprosy/cancer-affected, and children of
+  widows or disabled parents. Paid via DBT.
+target_beneficiary: Orphans/vulnerable children of Bihar.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — listed on myScheme and shown as payable on Bihar's e-Suvidha portal (Mar 2026). Verified
+  2026-06-19. Source: https://www.myscheme.gov.in/schemes/pybihar
+source_url: https://state.bihar.gov.in/socialwelfare
+application_portal_url: https://esuvidha.bihar.gov.in
+last_verified: '2026-06-19'

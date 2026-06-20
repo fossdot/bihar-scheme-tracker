@@ -1,0 +1,39 @@
+name_en: Bihar Scholarship Portal (Pre/Post-Matric)
+name_hi: बिहार छात्रवृत्ति पोर्टल (प्री/पोस्ट-मैट्रिक)
+department_en: Social Welfare Department, Government of Bihar
+department_hi: समाज कल्याण विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/socialwelfare
+categories:
+  - education
+objective_en: Pre- and post-matric scholarships for SC/ST/BC/EBC students across school and college levels.
+objective_hi: विद्यालय व महाविद्यालय स्तर पर SC/ST/BC/EBC विद्यार्थियों हेतु प्री व पोस्ट-मैट्रिक छात्रवृत्ति।
+eligibility_en: Bihar-resident SC/ST/BC/EBC students; class and category-based rates; income limits apply.
+eligibility_hi: बिहार निवासी SC/ST/BC/EBC विद्यार्थी; कक्षा व श्रेणी आधारित दरें; आय-सीमा लागू।
+benefit_type: Scholarship
+benefit_detail: Reported ₹1,000–₹15,000+/year depending on class and category. Verify at the portal.
+target_beneficiary: SC/ST/BC/EBC students of Bihar.
+personas:
+  - student
+education_levels: []
+gender_eligibility: any
+social_categories:
+  - sc
+  - st
+  - bc
+  - ebc
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — SC/ST and BC/EBC pre/post-matric scholarships ran for 2025-26 (applications/correction
+  windows open into late 2025). SC/ST via scstpmsonline.bihar.gov.in, BC/EBC via
+  pmsonline.bihar.gov.in. Verified 2026-06-19. Source: https://pmsonline.bihar.gov.in/
+source_url: https://www.ekalyan.bih.nic.in
+application_portal_url: https://pmsonline.bihar.gov.in
+last_verified: '2026-06-19'

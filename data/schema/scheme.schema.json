@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Bihar scheme record",
+  "description": "One government scheme. Status is DERIVED FROM EVIDENCE, never asserted — every record must carry a source_url, a last_verified date, and status_evidence explaining the status.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name_en", "categories", "status", "status_evidence", "source_url", "last_verified"],
+  "properties": {
+    "name_en": { "type": "string", "minLength": 3, "description": "Official English name." },
+    "name_hi": { "type": ["string", "null"], "description": "Hindi name (हिन्दी)." },
+    "department_en": { "type": ["string", "null"], "description": "Administering department, English." },
+    "department_hi": { "type": ["string", "null"] },
+    "department_website": { "type": ["string", "null"], "format": "uri" },
+    "categories": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": { "enum": ["agriculture", "education", "employment", "skilling", "industry", "social_welfare", "health", "women_child", "housing", "financial_inclusion"] }
+    },
+    "launch_date": { "type": ["string", "null"], "format": "date" },
+    "objective_en": { "type": ["string", "null"] },
+    "objective_hi": { "type": ["string", "null"] },
+    "eligibility_en": { "type": ["string", "null"] },
+    "eligibility_hi": { "type": ["string", "null"] },
+    "benefit_type": { "type": ["string", "null"], "description": "e.g. cash transfer, loan, scholarship, training, subsidy." },
+    "benefit_detail": { "type": ["string", "null"] },
+    "target_beneficiary": { "type": ["string", "null"] },
+    "personas": {
+      "type": "array", "uniqueItems": true,
+      "items": { "enum": ["student", "unemployed_youth", "farmer", "agricultural_labourer", "salaried_employee", "self_employed_entrepreneur", "artisan_weaver", "worker_labourer", "shg_jeevika_member", "senior_citizen", "widow", "pregnant_lactating_woman"] }
+    },
+    "education_levels": {
+      "type": "array", "uniqueItems": true,
+      "items": { "enum": ["none", "primary", "secondary", "senior_secondary", "iti_diploma", "graduate", "postgraduate"] }
+    },
+    "gender_eligibility": { "enum": ["any", "female", "male", "transgender"] },
+    "social_categories": {
+      "type": "array", "uniqueItems": true,
+      "items": { "enum": ["general", "ebc", "bc", "sc", "st", "minority"] }
+    },
+    "min_age": { "type": ["integer", "null"], "minimum": 0, "maximum": 120 },
+    "max_age": { "type": ["integer", "null"], "minimum": 0, "maximum": 120 },
+    "income_ceiling": { "type": ["number", "null"], "minimum": 0, "description": "Annual ₹ ceiling; null = no income bar." },
+    "requires_bpl": { "type": "boolean" },
+    "domicile": { "enum": ["bihar", "any"] },
+    "is_for_disabled": { "type": "boolean" },
+    "is_for_startups": { "type": "boolean" },
+    "land_ownership": { "enum": ["raiyat", "non_raiyat", "any", null] },
+    "status": { "enum": ["active", "likely_active", "dormant", "subsumed", "superseded", "lapsed", "unknown"] },
+    "status_evidence": { "type": "string", "minLength": 10, "description": "WHY this status — what was checked, with a date and source. No status without it." },
+    "last_budget_year": { "type": ["string", "null"], "description": "e.g. 2026-27" },
+    "last_notification_date": { "type": ["string", "null"], "format": "date" },
+    "last_verified": { "type": "string", "format": "date" },
+    "source_url": { "type": "string", "format": "uri", "description": "Primary official source. Required — never drop it." },
+    "application_portal_url": { "type": ["string", "null"], "format": "uri" },
+    "successor_scheme": { "type": ["string", "null"], "description": "For subsumed/superseded: name_en of the scheme that continues it." },
+    "policies": { "type": "array", "items": { "type": "string" }, "description": "name_en of the policy/framework(s) this scheme sits under." },
+    "budget_allocations": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["fiscal_year", "source_url"],
+        "properties": {
+          "fiscal_year": { "type": "string" },
+          "allocated_cr": { "type": ["number", "null"] },
+          "revised_cr": { "type": ["number", "null"] },
+          "source_url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

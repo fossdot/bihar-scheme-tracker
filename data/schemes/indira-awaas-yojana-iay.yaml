@@ -1,0 +1,35 @@
+name_en: Indira Awaas Yojana (IAY)
+name_hi: इंदिरा आवास योजना (IAY)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - housing
+  - social_welfare
+objective_en: Earlier central rural housing scheme providing assistance to BPL families to build houses.
+objective_hi: BPL परिवारों को मकान निर्माण हेतु सहायता देने वाली पूर्ववर्ती केंद्रीय ग्रामीण आवास योजना।
+eligibility_en: Rural BPL families (historical scheme).
+eligibility_hi: ग्रामीण BPL परिवार (ऐतिहासिक योजना)।
+benefit_type: Housing assistance
+benefit_detail: Provided grant assistance for rural house construction (now under PMAY-G).
+target_beneficiary: Rural BPL families.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: subsumed
+status_evidence: >-
+  Subsumed — Indira Awaas Yojana was restructured into Pradhan Mantri Awaas Yojana–Gramin with
+  effect from 1 Apr 2016 (PMAY-G launched 20 Nov 2016). Apply under PMAY-G. Verified 2026-06-19.
+  Source: https://pmayg.nic.in/
+source_url: https://rural.gov.in
+successor_scheme: Pradhan Mantri Awas Yojana — Gramin (PMAY-G)
+last_verified: '2026-06-19'

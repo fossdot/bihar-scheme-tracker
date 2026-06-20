@@ -1,0 +1,37 @@
+name_en: Pradhan Mantri Mudra Yojana (PMMY)
+name_hi: प्रधानमंत्री मुद्रा योजना (PMMY)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - financial_inclusion
+  - employment
+objective_en: Collateral-free micro-loans for non-farm income-generating micro/small enterprises.
+objective_hi: गैर-कृषि आय-सृजन सूक्ष्म/लघु उद्यमों हेतु बिना गारंटी सूक्ष्म-ऋण।
+eligibility_en: Non-corporate, non-farm micro/small enterprises and aspiring entrepreneurs (via banks/MFIs/NBFCs).
+eligibility_hi: गैर-कॉर्पोरेट, गैर-कृषि सूक्ष्म/लघु उद्यम एवं इच्छुक उद्यमी (बैंक/MFI/NBFC के माध्यम से)।
+benefit_type: Collateral-free loan
+benefit_detail: >-
+  Loans under Shishu (≤₹50k), Kishore (₹50k–₹5L), Tarun (₹5L–₹10L) and Tarun Plus (₹10L–₹20L, for
+  borrowers who have repaid a Tarun loan). Collateral-free, CGFMU-guaranteed.
+target_beneficiary: Micro/small entrepreneurs.
+personas:
+  - self_employed_entrepreneur
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — loan limit doubled to ₹20 lakh via the new Tarun Plus category (effective 24 Oct 2024,
+  PIB). Verified 2026-06-19. Source: https://www.mudra.org.in/
+source_url: https://www.mudra.org.in
+application_portal_url: https://www.mudra.org.in
+last_verified: '2026-06-19'

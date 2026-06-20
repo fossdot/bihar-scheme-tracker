@@ -1,0 +1,43 @@
+name_en: JEEViKA (Bihar Rural Livelihoods) SHG Support
+name_hi: जीविका (बिहार ग्रामीण आजीविका) स्वयं सहायता समूह सहायता
+department_en: Rural Development Department, Government of Bihar
+department_hi: ग्रामीण विकास विभाग, बिहार सरकार
+department_website: https://rdd.bihar.gov.in
+categories:
+  - women_child
+  - financial_inclusion
+  - employment
+objective_en: >-
+  Organise rural poor women into Self-Help Groups with revolving funds, bank credit and livelihoods
+  support.
+objective_hi: >-
+  ग्रामीण निर्धन महिलाओं को स्वयं सहायता समूहों में संगठित कर रिवॉल्विंग फंड, बैंक ऋण व आजीविका
+  सहायता।
+eligibility_en: Rural women of Bihar who join a Jeevika SHG.
+eligibility_hi: जीविका स्वयं सहायता समूह से जुड़ने वाली बिहार की ग्रामीण महिलाएँ।
+benefit_type: Revolving fund + credit linkage
+benefit_detail: >-
+  SHG support: one-time revolving fund + initial capitalisation / community investment fund grants,
+  bank credit linkage, and capacity-building/training (amounts vary by stage).
+target_beneficiary: Rural poor women (SHG members).
+personas:
+  - shg_jeevika_member
+education_levels: []
+gender_eligibility: female
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — BRLPS/JEEViKA official portal live; FY2024-25 Annual Action Plan & Budget published; also
+  the delivery rail for the 2025 Mahila Rojgar Yojana. Verified 2026-06-19. Source:
+  https://brlps.in/
+source_url: https://brlps.in
+application_portal_url: https://brlps.in
+last_verified: '2026-06-19'

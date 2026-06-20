@@ -1,0 +1,43 @@
+name_en: e-Shram (Unorganised Workers Registration)
+name_hi: ई-श्रम (असंगठित श्रमिक पंजीकरण)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - social_welfare
+  - employment
+objective_en: >-
+  National database & identity card for unorganised workers, linking them to welfare/social-security
+  benefits.
+objective_hi: >-
+  असंगठित श्रमिकों हेतु राष्ट्रीय डेटाबेस व पहचान-पत्र, जो उन्हें कल्याण/सामाजिक-सुरक्षा लाभों से
+  जोड़े।
+eligibility_en: Unorganised-sector workers aged 16–59 (non-EPF/ESIC, non-income-tax-payers).
+eligibility_hi: 16–59 आयु के असंगठित श्रमिक (EPF/ESIC में नहीं, गैर-आयकरदाता)।
+benefit_type: Registration + accident cover
+benefit_detail: >-
+  An e-Shram card is registration/identity for unorganised workers and a gateway to linked welfare
+  schemes (PMSBY, PMJJBY, PM-SYM, PDS, Ayushman, NSAP, etc.). It does not itself provide insurance —
+  linked schemes require separate enrolment.
+target_beneficiary: Unorganised-sector workers.
+personas:
+  - worker_labourer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 16
+max_age: 59
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — ~31 crore registrations by Aug 2025; mobile app launched Feb 2025; 14 schemes integrated
+  (PIB). [Corrected: the card does not auto-provide accident cover.] Verified 2026-06-19. Source:
+  https://eshram.gov.in/
+source_url: https://eshram.gov.in
+application_portal_url: https://eshram.gov.in
+last_verified: '2026-06-19'

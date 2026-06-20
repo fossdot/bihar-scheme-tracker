@@ -1,0 +1,37 @@
+name_en: PM POSHAN (Mid-Day Meal)
+name_hi: पीएम पोषण (मध्याह्न भोजन)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - education
+  - health
+  - women_child
+objective_en: Hot cooked meals to school children to improve nutrition and attendance.
+objective_hi: पोषण व उपस्थिति सुधारने हेतु विद्यालयी बच्चों को गर्म पका भोजन।
+eligibility_en: Children in government and government-aided schools (Bal Vatika to Class 8).
+eligibility_hi: सरकारी व सरकारी-सहायता प्राप्त विद्यालयों के बच्चे (बाल वाटिका से कक्षा 8)।
+benefit_type: School meals
+benefit_detail: One hot cooked meal per school day, per nutrition norms.
+target_beneficiary: Government-school children.
+personas:
+  - student
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — material cost revised +9.5% effective 1 May 2025 (~₹954 cr extra in FY2025-26); one hot
+  cooked meal per school day, Bal Vatika–Class 8. Sanctioned through FY2025-26 (continuation beyond
+  Mar 2026 needs fresh approval). Verified 2026-06-19. Source: https://pmposhan.education.gov.in/
+source_url: https://pmposhan.education.gov.in
+application_portal_url: https://pmposhan.education.gov.in
+last_verified: '2026-06-19'

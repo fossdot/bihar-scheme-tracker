@@ -1,0 +1,34 @@
+name_en: Bihar Parivarik Labh Yojana
+name_hi: बिहार पारिवारिक लाभ योजना
+department_en: Social Welfare Department, Government of Bihar
+department_hi: समाज कल्याण विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/socialwelfare
+categories:
+  - social_welfare
+objective_en: One-time lump-sum support to a BPL family on the death of its primary breadwinner.
+objective_hi: मुख्य कमाने वाले की मृत्यु पर BPL परिवार को एकमुश्त सहायता।
+eligibility_en: BPL families of Bihar whose primary earner (aged 18–60) has died.
+eligibility_hi: बिहार के BPL परिवार जिनके मुख्य कमाने वाले (आयु 18–60) की मृत्यु हुई हो।
+benefit_type: Lump-sum assistance
+benefit_detail: Reported ₹20,000 one-time. Verify current amount.
+target_beneficiary: BPL families of Bihar.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: true
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Likely active — Bihar's delivery of the National Family Benefit Scheme (₹20,000 one-time on a BPL
+  breadwinner's death, age 18–60), via serviceonline.bihar.gov.in; confirmed on NIC pages but no
+  current-FY notification found. Verified 2026-06-19. Source: https://serviceonline.bihar.gov.in/
+source_url: https://state.bihar.gov.in/socialwelfare
+application_portal_url: https://state.bihar.gov.in/socialwelfare
+last_verified: '2026-06-19'

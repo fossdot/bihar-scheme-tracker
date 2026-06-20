@@ -1,0 +1,41 @@
+name_en: PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)
+name_hi: पीएम-किसान (प्रधानमंत्री किसान सम्मान निधि)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - agriculture
+  - financial_inclusion
+objective_en: Central income support to landholding farmer families.
+objective_hi: भूमिधारी किसान परिवारों को केंद्रीय आय-सहायता।
+eligibility_en: >-
+  Landholding farmer families (with cultivable land), subject to exclusion criteria (income-tax
+  payers, institutional landholders etc.). Registered on the PM-KISAN portal.
+eligibility_hi: >-
+  खेती योग्य भूमि वाले किसान परिवार, अपवर्जन मानदंड सहित (आयकरदाता, संस्थागत भूधारक आदि)। पीएम-किसान
+  पोर्टल पर पंजीकृत।
+benefit_type: Income support (DBT)
+benefit_detail: ₹6,000/year in three ₹2,000 installments. Verify current status at the portal.
+target_beneficiary: Landholding farmer families.
+personas:
+  - farmer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: raiyat
+status: active
+status_evidence: >-
+  Active — 22nd installment released 13 Mar 2026 (₹18,640 cr to 9.32 crore farmers; cumulative
+  >₹4.27 lakh crore, per PIB); 23rd installment scheduled 20 Jun 2026. ₹6,000/year in three ₹2,000
+  installments; eKYC mandatory. Verified 2026-06-19. Source: https://pmkisan.gov.in/
+last_notification_date: '2026-03-13'
+source_url: https://pmkisan.gov.in
+application_portal_url: https://pmkisan.gov.in
+last_verified: '2026-06-19'

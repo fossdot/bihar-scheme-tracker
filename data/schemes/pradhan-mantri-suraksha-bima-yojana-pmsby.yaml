@@ -1,0 +1,36 @@
+name_en: Pradhan Mantri Suraksha Bima Yojana (PMSBY)
+name_hi: प्रधानमंत्री सुरक्षा बीमा योजना (PMSBY)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - financial_inclusion
+  - social_welfare
+objective_en: Affordable accident-insurance cover via a bank account.
+objective_hi: बैंक खाते के माध्यम से किफायती दुर्घटना बीमा।
+eligibility_en: Bank account holders aged 18–70 who auto-debit the premium.
+eligibility_hi: 18–70 आयु के बैंक खाताधारक जो प्रीमियम ऑटो-डेबिट करें।
+benefit_type: Accident insurance
+benefit_detail: >-
+  Accidental death/disability cover of ₹2 lakh for an annual premium of ₹20; bank-account holders
+  aged 18–70.
+target_beneficiary: Bank account holders (18–70).
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 18
+max_age: 70
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — Jan Suraksha umbrella, 55+ crore combined enrolments (2026); premium ₹20/year since 1 Jun
+  2022 (PIB). Verified 2026-06-19. Source: https://www.jansuraksha.gov.in/
+source_url: https://www.jansuraksha.gov.in
+application_portal_url: https://www.jansuraksha.gov.in
+last_verified: '2026-06-19'

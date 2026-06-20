@@ -1,0 +1,43 @@
+name_en: Pradhan Mantri Awas Yojana — Gramin (PMAY-G)
+name_hi: प्रधानमंत्री आवास योजना — ग्रामीण (PMAY-G)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - housing
+  - social_welfare
+objective_en: Assistance to rural houseless / kutcha-house families to build a pucca house.
+objective_hi: ग्रामीण बेघर/कच्चे-मकान परिवारों को पक्का मकान बनाने हेतु सहायता।
+eligibility_en: Rural families without a pucca house, identified per SECC/Awas+ lists.
+eligibility_hi: पक्के मकान से वंचित ग्रामीण परिवार, SECC/आवास+ सूची अनुसार।
+benefit_type: Housing assistance (DBT)
+benefit_detail: >-
+  Reported ~₹1.20 lakh (plains) / ₹1.30 lakh (hilly/difficult) + MGNREGA wage days + toilet support.
+  Verify current terms.
+target_beneficiary: Rural houseless/kutcha-house families.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: true
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — budget line ₹4,320 cr (2025-26 BE) under Rural Development, per the Bihar Budget
+  Documents (PRS analysis). The 2026-27 PRS analysis does not separately itemise PMAY-G, so the
+  latest confirmed line is 2025-26. Verified 2026-06-19.
+last_budget_year: 2025-26
+source_url: https://pmayg.nic.in
+application_portal_url: https://pmayg.nic.in
+budget_allocations:
+  - fiscal_year: 2025-26
+    allocated_cr: 4320
+    revised_cr: null
+    source_url: https://prsindia.org/files/budget/budget_state/bihar/2025/Bihar_Budget_Analysis_2025-26.pdf
+last_verified: '2026-06-19'

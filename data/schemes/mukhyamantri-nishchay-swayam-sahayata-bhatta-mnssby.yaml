@@ -1,0 +1,44 @@
+name_en: Mukhyamantri Nishchay Swayam Sahayata Bhatta (MNSSBY)
+name_hi: मुख्यमंत्री निश्चय स्वयं सहायता भत्ता योजना
+department_en: Saat Nischay — Yuva Upmission (Government of Bihar)
+department_hi: सात निश्चय — युवा उपमिशन (बिहार सरकार)
+department_website: https://www.7nishchay-yuvaupmission.bihar.gov.in/
+categories:
+  - employment
+launch_date: '2016-10-02'
+objective_en: Financial support to unemployed youth of Bihar while they search for employment.
+objective_hi: रोज़गार की तलाश के दौरान बिहार के बेरोज़गार युवाओं को वित्तीय सहायता।
+eligibility_en: >-
+  Permanent resident of Bihar aged 20–25, unemployed and actively seeking work, who has passed class
+  12 but is not enrolled in higher education. Enrolment in Kushal Yuva Program training is
+  mandatory.
+eligibility_hi: >-
+  बिहार का स्थायी निवासी, आयु 20–25 वर्ष, बेरोज़गार एवं रोज़गार की तलाश में, जिसने 12वीं उत्तीर्ण की
+  हो परन्तु उच्च शिक्षा में नामांकित न हो। कुशल युवा कार्यक्रम प्रशिक्षण में नामांकन अनिवार्य।
+benefit_type: Monthly cash allowance
+benefit_detail: ₹1,000 per month for a maximum period of two years.
+target_beneficiary: Unemployed youth of Bihar aged 20–25 searching for employment.
+personas:
+  - unemployed_youth
+education_levels:
+  - senior_secondary
+gender_eligibility: any
+social_categories: []
+min_age: 20
+max_age: 25
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — official 7nishchay portal lists it live and accepting registrations (also on UMANG).
+  ₹1,000/month for up to 2 years for unemployed Bihar youth aged 20–25 (12th-passed, not in higher
+  studies). Verified 2026-06-19. Source: https://www.7nishchay-yuvaupmission.bihar.gov.in/
+source_url: https://www.7nishchay-yuvaupmission.bihar.gov.in/
+application_portal_url: https://www.7nishchay-yuvaupmission.bihar.gov.in/
+policies:
+  - Saat Nishchay-2 — Yuva Upmission
+last_verified: '2026-06-19'

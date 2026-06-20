@@ -1,0 +1,46 @@
+name_en: Bihar Startup Fund (Seed Funding)
+name_hi: बिहार स्टार्टअप फंड (सीड फंडिंग)
+department_en: Industries Department, Government of Bihar
+department_hi: उद्योग विभाग, बिहार सरकार
+department_website: https://industries.bihar.gov.in
+categories:
+  - industry
+  - financial_inclusion
+objective_en: Seed capital and support for innovative early-stage startups registered and operating in Bihar.
+objective_hi: बिहार में पंजीकृत व संचालित नवाचारी प्रारंभिक-चरण स्टार्टअप हेतु सीड पूंजी एवं सहायता।
+eligibility_en: >-
+  A startup registered and operating in Bihar with an innovative, scalable business model (per the
+  Bihar Startup Policy 2022). Founder eligibility and registration details to be confirmed at the
+  portal.
+eligibility_hi: >-
+  बिहार में पंजीकृत व संचालित स्टार्टअप जिसका व्यवसाय मॉडल नवाचारी व मापनीय हो (बिहार स्टार्टअप नीति
+  2022 अनुसार)। संस्थापक पात्रता व पंजीकरण विवरण पोर्टल से पुष्टि करें।
+benefit_type: Interest-free seed loan + grant
+benefit_detail: >-
+  Interest-free seed-funding loan up to ₹10 lakh (10-year repayment), with enhancements for women
+  and SC/ST/PwD founders, under the Bihar Startup Policy 2022.
+target_beneficiary: Early-stage startups in Bihar.
+personas:
+  - self_employed_entrepreneur
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: true
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — the startup.bihar.gov.in portal is live (updated Jun 2026) and SIDBI manages a ₹50 cr
+  Bihar scale-up fund (Jun 2026); ~₹52+ cr disbursed to 900+ startups. [Note: a separate ₹3 lakh
+  grant could not be officially confirmed.] Verified 2026-06-19. Source:
+  https://startup.bihar.gov.in/
+source_url: https://startup.bihar.gov.in
+application_portal_url: https://startup.bihar.gov.in
+policies:
+  - Bihar Startup Policy 2022
+last_verified: '2026-06-19'

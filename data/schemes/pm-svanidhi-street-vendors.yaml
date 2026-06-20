@@ -1,0 +1,38 @@
+name_en: PM SVANidhi (Street Vendors)
+name_hi: पीएम स्वनिधि (पथ विक्रेता)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - financial_inclusion
+  - employment
+objective_en: Collateral-free working-capital loans for urban street vendors.
+objective_hi: शहरी पथ विक्रेताओं हेतु बिना गारंटी कार्यशील-पूंजी ऋण।
+eligibility_en: Urban street vendors with a vending certificate/identity (or per survey).
+eligibility_hi: वेंडिंग प्रमाण-पत्र/पहचान वाले शहरी पथ विक्रेता (या सर्वेक्षण अनुसार)।
+benefit_type: Working-capital loan
+benefit_detail: >-
+  Collateral-free working-capital loans for street vendors — ₹15,000, then ₹25,000, then ₹50,000
+  (tiers raised in the 2025 restructuring), with interest subsidy; repaying the 2nd loan unlocks a
+  UPI-linked RuPay credit card.
+target_beneficiary: Urban street vendors.
+personas:
+  - self_employed_entrepreneur
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — Cabinet restructured and extended it to 31 Mar 2030 (₹7,332 cr, Aug 2025); ~96 lakh loans
+  disbursed by Jul 2025. Verified 2026-06-19. Source: https://pmsvanidhi.mohua.gov.in/
+source_url: https://pmsvanidhi.mohua.gov.in
+application_portal_url: https://pmsvanidhi.mohua.gov.in
+last_verified: '2026-06-19'

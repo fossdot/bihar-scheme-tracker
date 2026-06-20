@@ -1,0 +1,38 @@
+name_en: Sukanya Samriddhi Yojana (SSY)
+name_hi: सुकन्या समृद्धि योजना (SSY)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - financial_inclusion
+  - women_child
+objective_en: Small-savings account for a girl child with attractive interest and tax benefits.
+objective_hi: बालिका हेतु आकर्षक ब्याज एवं कर-लाभ वाला अल्प-बचत खाता।
+eligibility_en: >-
+  Account opened by a guardian for a girl child below 10 years (max two girls per family, exceptions
+  apply).
+eligibility_hi: अभिभावक द्वारा 10 वर्ष से कम आयु की बालिका हेतु खाता (अधिकतम दो बालिकाएँ, अपवाद सहित)।
+benefit_type: Small-savings account
+benefit_detail: >-
+  Small-savings deposit for a girl child at 8.2% p.a. (Apr–Jun 2026) with EEE tax benefit; matures
+  for her education/marriage.
+target_beneficiary: Girl children (below 10).
+personas: []
+education_levels: []
+gender_eligibility: female
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — small-savings rates retained, SSY at 8.2% for Q1 FY2026-27 (Finance Ministry, Mar 2026).
+  Verified 2026-06-19. Source: https://www.nsiindia.gov.in/
+source_url: https://www.nsiindia.gov.in
+application_portal_url: https://www.nsiindia.gov.in
+last_verified: '2026-06-19'

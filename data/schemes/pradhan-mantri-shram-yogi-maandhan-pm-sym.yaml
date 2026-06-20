@@ -1,0 +1,36 @@
+name_en: Pradhan Mantri Shram Yogi Maandhan (PM-SYM)
+name_hi: प्रधानमंत्री श्रम योगी मानधन (PM-SYM)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - social_welfare
+  - financial_inclusion
+objective_en: Voluntary contributory pension for unorganised-sector workers.
+objective_hi: असंगठित क्षेत्र के श्रमिकों हेतु स्वैच्छिक अंशदायी पेंशन।
+eligibility_en: Unorganised-sector workers aged 18–40 with monthly income up to ₹15,000 (non-EPF/ESIC/NPS).
+eligibility_hi: 18–40 आयु के असंगठित श्रमिक, मासिक आय ₹15,000 तक (EPF/ESIC/NPS में नहीं)।
+benefit_type: Guaranteed pension
+benefit_detail: Assured ₹3,000/month pension after age 60 (50% govt co-contribution). Verify current terms.
+target_beneficiary: Unorganised-sector workers (18–40).
+personas:
+  - worker_labourer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 18
+max_age: 40
+income_ceiling: 180000
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — Ministry of Labour confirms operation (PIB 2025): ₹3,000/month pension after 60 with
+  equal (50%) government co-contribution, for unorganised workers 18–40 earning ≤₹15,000/month and
+  not in EPFO/ESIC/NPS. Verified 2026-06-19. Source: https://maandhan.in/
+source_url: https://maandhan.in
+application_portal_url: https://maandhan.in
+last_verified: '2026-06-19'

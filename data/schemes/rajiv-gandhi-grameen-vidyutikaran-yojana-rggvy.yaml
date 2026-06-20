@@ -1,0 +1,34 @@
+name_en: Rajiv Gandhi Grameen Vidyutikaran Yojana (RGGVY)
+name_hi: राजीव गांधी ग्रामीण विद्युतीकरण योजना (RGGVY)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - social_welfare
+objective_en: Earlier central rural electrification scheme.
+objective_hi: पूर्ववर्ती केंद्रीय ग्रामीण विद्युतीकरण योजना।
+eligibility_en: Un-electrified rural areas/households (historical scheme).
+eligibility_hi: अविद्युतीकृत ग्रामीण क्षेत्र/घर (ऐतिहासिक योजना)।
+benefit_type: Rural electrification
+benefit_detail: Funded rural electrification infrastructure (subsumed into DDUGJY).
+target_beneficiary: Un-electrified rural households.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: subsumed
+status_evidence: >-
+  Subsumed — RGGVY was subsumed into the Deen Dayal Upadhyaya Gram Jyoti Yojana (DDUGJY) as its
+  rural-electrification component (2014-15); household electrification later continued under
+  Saubhagya (Oct 2017). Verified 2026-06-19. Source:
+  https://www.pib.gov.in/PressReleasePage.aspx?PRID=1883918
+source_url: https://powermin.gov.in
+last_verified: '2026-06-19'

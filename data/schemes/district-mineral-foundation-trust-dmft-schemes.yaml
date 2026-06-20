@@ -1,0 +1,45 @@
+name_en: District Mineral Foundation Trust (DMFT) Schemes
+name_hi: ज़िला खनिज फाउंडेशन ट्रस्ट (DMFT) योजनाएँ
+department_en: District Administration (Bihar)
+department_hi: ज़िला प्रशासन (बिहार)
+department_website: https://state.bihar.gov.in
+categories:
+  - social_welfare
+  - health
+  - education
+objective_en: >-
+  District-level development works (health, education, drinking water, livelihoods) for communities
+  in mining-affected areas, funded by mining royalties.
+objective_hi: >-
+  खनन-प्रभावित क्षेत्रों के समुदायों हेतु ज़िला-स्तरीय विकास कार्य (स्वास्थ्य, शिक्षा, पेयजल,
+  आजीविका), खनन रॉयल्टी से वित्त-पोषित।
+eligibility_en: >-
+  Communities/persons affected by mining in Bihar's mining districts; works prioritised by the
+  district DMFT.
+eligibility_hi: बिहार के खनन ज़िलों में खनन-प्रभावित समुदाय/व्यक्ति; कार्य ज़िला DMFT द्वारा प्राथमिकता अनुसार।
+benefit_type: District development works
+benefit_detail: >-
+  Funds health, education, water and livelihood works in mining-affected areas (per district DMFT
+  plans).
+target_beneficiary: Mining-affected communities (relevant districts).
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — DMFs operate across Bihar's mining districts under PMKKKY (revamped Jan 2024); National
+  DMF Summit Mar 2026; live Bihar PMKKKY dashboard. Funds health/education/water/livelihood works in
+  mining-affected areas. Verified 2026-06-19. Source:
+  https://mitra.ibm.gov.in/pmkkky/Bihar/Pages/Dashboard.aspx
+source_url: https://state.bihar.gov.in/mines
+application_portal_url: https://state.bihar.gov.in/mines
+last_verified: '2026-06-19'

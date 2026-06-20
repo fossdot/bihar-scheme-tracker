@@ -1,0 +1,34 @@
+name_en: Rajiv Awas Yojana (RAY)
+name_hi: राजीव आवास योजना (RAY)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - housing
+objective_en: Earlier central scheme towards a slum-free India / urban housing for the poor.
+objective_hi: झुग्गी-मुक्त भारत / शहरी निर्धन आवास हेतु पूर्ववर्ती केंद्रीय योजना।
+eligibility_en: Urban slum dwellers / poor (historical scheme).
+eligibility_hi: शहरी झुग्गीवासी / निर्धन (ऐतिहासिक योजना)।
+benefit_type: Urban housing
+benefit_detail: Supported slum redevelopment / urban housing (now under PMAY-Urban).
+target_beneficiary: Urban poor / slum dwellers.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: subsumed
+status_evidence: >-
+  Subsumed — Rajiv Awas Yojana was discontinued by Ministry order dated 19 May 2015 and its
+  liabilities folded into the Housing for All mission (PMAY-Urban, launched Jun 2015). Verified
+  2026-06-19. Source: https://pmay-urban.gov.in/
+source_url: https://mohua.gov.in
+successor_scheme: Pradhan Mantri Awas Yojana — Urban (PMAY-U)
+last_verified: '2026-06-19'

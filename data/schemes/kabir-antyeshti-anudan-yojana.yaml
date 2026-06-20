@@ -1,0 +1,38 @@
+name_en: Kabir Antyeshti Anudan Yojana
+name_hi: कबीर अंत्येष्टि अनुदान योजना
+department_en: District Administration (Bihar)
+department_hi: ज़िला प्रशासन (बिहार)
+department_website: https://state.bihar.gov.in
+categories:
+  - social_welfare
+objective_en: Immediate assistance to a poor family for the last rites of a deceased member.
+objective_hi: किसी सदस्य की मृत्यु पर निर्धन परिवार को अंतिम संस्कार हेतु तत्काल सहायता।
+eligibility_en: >-
+  BPL family in Bihar on the death of a member; applied via the local body / district welfare
+  office.
+eligibility_hi: किसी सदस्य की मृत्यु पर बिहार का BPL परिवार; स्थानीय निकाय / ज़िला कल्याण कार्यालय के माध्यम से।
+benefit_type: Last-rites assistance
+benefit_detail: >-
+  ₹3,000 immediate last-rites assistance for a BPL family, routed via the local body's account on
+  e-Suvidha.
+target_beneficiary: BPL families of Bihar.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: true
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — disbursed in FY2024-25 (e.g. Begusarai paid 3,030 cases at ₹3,000 each; Prabhat Khabar,
+  Mar 2025); BPL family + 10-year Bihar residency. Verified 2026-06-19. Source:
+  https://esuvidha.bihar.gov.in/
+source_url: https://state.bihar.gov.in/socialwelfare
+application_portal_url: https://esuvidha.bihar.gov.in
+last_verified: '2026-06-19'

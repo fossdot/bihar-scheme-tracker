@@ -1,0 +1,48 @@
+name_en: Mukhyamantri Vridhjan Pension Yojana
+name_hi: मुख्यमंत्री वृद्धजन पेंशन योजना
+department_en: Social Welfare Department, Government of Bihar
+department_hi: समाज कल्याण विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/socialwelfare
+categories:
+  - social_welfare
+objective_en: Monthly social-security pension for elderly residents of Bihar.
+objective_hi: बिहार के वृद्ध निवासियों हेतु मासिक सामाजिक-सुरक्षा पेंशन।
+eligibility_en: >-
+  Permanent resident of Bihar aged 60 or above, not a retired government employee and not receiving
+  any other government/family/social-security pension.
+eligibility_hi: >-
+  बिहार का स्थायी निवासी, आयु 60 वर्ष या अधिक, जो सेवानिवृत्त सरकारी कर्मचारी न हो एवं किसी अन्य
+  सरकारी/पारिवारिक/सामाजिक-सुरक्षा पेंशन का लाभार्थी न हो।
+benefit_type: Monthly pension (DBT)
+benefit_detail: ₹1,100 per month (raised from ₹400/₹500 in July 2025), paid by DBT on the 10th of each month.
+target_beneficiary: Senior citizens (60+) of Bihar.
+personas:
+  - senior_citizen
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 60
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — Bihar budget line ₹828 cr (2025-26 BE) under Social Welfare (Bihar Budget Documents, PRS
+  analysis). Pension raised from ₹400/₹500 to a flat ₹1,100/month effective July 2025 (~1.09 crore
+  beneficiaries, paid on the 10th by DBT). Verified 2026-06-19. Source:
+  https://www.sspmis.bihar.gov.in/
+last_budget_year: 2025-26
+source_url: https://www.sspmis.bihar.gov.in
+application_portal_url: https://www.sspmis.bihar.gov.in
+policies:
+  - Bihar Social Security Pensions (SSPMIS)
+budget_allocations:
+  - fiscal_year: 2025-26
+    allocated_cr: 828
+    revised_cr: null
+    source_url: https://prsindia.org/files/budget/budget_state/bihar/2025/Bihar_Budget_Analysis_2025-26.pdf
+last_verified: '2026-06-19'

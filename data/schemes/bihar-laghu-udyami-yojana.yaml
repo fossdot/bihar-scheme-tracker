@@ -1,0 +1,45 @@
+name_en: Bihar Laghu Udyami Yojana
+name_hi: बिहार लघु उद्यमी योजना
+department_en: Industries Department, Government of Bihar
+department_hi: उद्योग विभाग, बिहार सरकार
+department_website: https://industries.bihar.gov.in
+categories:
+  - financial_inclusion
+  - industry
+objective_en: >-
+  ₹2 lakh capital support to very poor families across all communities to start a small business /
+  self-employment.
+objective_hi: सभी समुदायों के अत्यंत निर्धन परिवारों को लघु व्यवसाय/स्वरोज़गार हेतु ₹2 लाख पूंजी सहायता।
+eligibility_en: >-
+  Bihar resident aged 18–50 from a family with monthly income below ₹6,000 (all categories —
+  General/OBC/SC/ST/Minority). Requires a current-year Bihar residence certificate.
+eligibility_hi: >-
+  बिहार निवासी, आयु 18–50, जिसके परिवार की मासिक आय ₹6,000 से कम हो (सभी श्रेणियाँ)। चालू वर्ष का
+  आवासीय प्रमाण-पत्र आवश्यक।
+benefit_type: Capital subsidy (grant)
+benefit_detail: >-
+  ₹2 lakh as a 100% subsidy (no repayment), released in three installments (25% / 50% / 25%). For
+  families with monthly income below ₹6,000.
+target_beneficiary: Very poor families of Bihar (monthly income < ₹6,000).
+personas:
+  - self_employed_entrepreneur
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 18
+max_age: 50
+income_ceiling: 72000
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — hosted on the official udyami.bihar.gov.in portal; FY2025-26 cycle closed 23 Mar 2026
+  (selection by computerised randomisation), with current beneficiary notices (June 2026). ₹2 lakh
+  100% grant in three installments to families with monthly income below ₹6,000; all social
+  categories, age 18–50. Verified 2026-06-19. Source: https://udyami.bihar.gov.in/
+source_url: https://udyami.bihar.gov.in
+application_portal_url: https://udyami.bihar.gov.in
+last_verified: '2026-06-19'

@@ -1,0 +1,48 @@
+name_en: Pradhan Mantri Awas Yojana — Urban (PMAY-U)
+name_hi: प्रधानमंत्री आवास योजना — शहरी (PMAY-U)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - housing
+objective_en: Housing assistance/interest subsidy for urban EWS/LIG/MIG families.
+objective_hi: शहरी EWS/LIG/MIG परिवारों हेतु आवास सहायता/ब्याज सब्सिडी।
+eligibility_en: >-
+  Urban EWS/LIG/MIG households without a pucca house (income-based slabs). Verify slabs at the
+  portal.
+eligibility_hi: पक्के मकान से वंचित शहरी EWS/LIG/MIG परिवार (आय-आधारित स्लैब)। स्लैब पोर्टल पर सत्यापित करें।
+benefit_type: Housing assistance / interest subsidy
+benefit_detail: >-
+  Credit-linked interest subsidy / construction assistance for eligible income groups. Verify
+  current terms.
+target_beneficiary: Urban EWS/LIG/MIG families.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: 600000
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — budget line ₹2,355 cr (2025-26 BE) rising to ₹2,842 cr (2026-27 BE) under Urban
+  Development, per the Bihar Budget Documents (PRS analysis). A current-fiscal-year allocation is
+  present. Verified 2026-06-19.
+last_budget_year: 2026-27
+source_url: https://pmay-urban.gov.in
+application_portal_url: https://pmay-urban.gov.in
+budget_allocations:
+  - fiscal_year: 2025-26
+    allocated_cr: 2355
+    revised_cr: null
+    source_url: https://prsindia.org/files/budget/budget_state/bihar/2025/Bihar_Budget_Analysis_2025-26.pdf
+  - fiscal_year: 2026-27
+    allocated_cr: 2842
+    revised_cr: null
+    source_url: https://prsindia.org/files/budget/budget_state/bihar/2026/Budget_Analysis_2026-27-Bihar.pdf
+last_verified: '2026-06-19'

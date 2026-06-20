@@ -1,0 +1,43 @@
+name_en: Bihar Rajya Fasal Sahayata Yojana
+name_hi: बिहार राज्य फसल सहायता योजना
+department_en: Department of Agriculture, Government of Bihar
+department_hi: कृषि विभाग, बिहार सरकार
+department_website: https://dbtagriculture.bihar.gov.in
+categories:
+  - agriculture
+objective_en: >-
+  Financial assistance to farmers for crop loss from natural calamities (state crop-protection
+  scheme).
+objective_hi: प्राकृतिक आपदाओं से फसल क्षति पर किसानों को वित्तीय सहायता (राज्य फसल-सुरक्षा योजना)।
+eligibility_en: Raiyat and non-Raiyat farmers of Bihar registered for the scheme.
+eligibility_hi: योजना हेतु पंजीकृत बिहार के रैयत व गैर-रैयत किसान।
+benefit_type: Crop-loss assistance
+benefit_detail: >-
+  Reported ₹7,500/ha (loss up to 20%) or ₹10,000/ha (loss above 20%), up to 2 hectares per farmer.
+  Verify current-season rates.
+target_beneficiary: Farmers of Bihar with crop loss.
+personas:
+  - farmer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: any
+status: likely_active
+status_evidence: >-
+  Likely active — the official FSY portal (pacsonline.bih.nic.in/fsy) is the live registration
+  system and the scheme runs each season (Kharif 2025 window ~20 Aug–31 Oct 2025). Reported
+  ₹7,500/ha (loss ≤20%) / ₹10,000/ha (loss >20%), up to 2 hectares. No current-season official
+  notification was fetched, so not upgraded to active. Verified 2026-06-19. Source:
+  https://pacsonline.bih.nic.in/fsy/login.aspx
+source_url: https://pacsonline.bih.nic.in
+application_portal_url: https://pacsonline.bih.nic.in
+policies:
+  - Bihar Krishi Road Map (Agriculture Roadmap)
+last_verified: '2026-06-19'

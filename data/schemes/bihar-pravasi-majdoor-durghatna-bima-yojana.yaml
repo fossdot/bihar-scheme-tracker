@@ -1,0 +1,39 @@
+name_en: Bihar Pravasi Majdoor Durghatna Bima Yojana
+name_hi: बिहार प्रवासी मज़दूर दुर्घटना बीमा योजना
+department_en: Labour Resources Department, Government of Bihar
+department_hi: श्रम संसाधन विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/labour
+categories:
+  - social_welfare
+  - employment
+objective_en: Accident insurance cover for migrant workers from Bihar.
+objective_hi: बिहार के प्रवासी मज़दूरों हेतु दुर्घटना बीमा।
+eligibility_en: Registered migrant workers from Bihar.
+eligibility_hi: बिहार के पंजीकृत प्रवासी मज़दूर।
+benefit_type: Accident insurance
+benefit_detail: >-
+  For migrant-worker accidents outside Bihar/abroad (within 180 days): ₹4 lakh on death, ₹1 lakh for
+  permanent full disability, ₹50,000 for permanent partial disability — paid by RTGS.
+target_beneficiary: Migrant workers of Bihar.
+personas:
+  - worker_labourer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — amounts revised by the Bihar State Migrant Labour Accident Grant (Amendment) Rules, 2026
+  (S.O. 75, 9 Feb 2026): death ₹2L→₹4L, partial ₹75k→₹50k. Verified 2026-06-19. Source:
+  https://serviceonline.bihar.gov.in/
+last_notification_date: '2026-02-09'
+source_url: https://state.bihar.gov.in/labour
+application_portal_url: https://state.bihar.gov.in/labour
+last_verified: '2026-06-19'

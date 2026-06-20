@@ -1,0 +1,43 @@
+name: "➕ Suggest a scheme or policy to add"
+description: "A Bihar or central government scheme/policy that's missing from the tracker."
+title: "[New] "
+labels: ["data", "new-entry"]
+body:
+  - type: markdown
+    attributes:
+      value: "We add an entry only when we can verify it against an official source. The more of the below you can fill in (with links), the faster it goes in."
+  - type: input
+    id: name
+    attributes:
+      label: Scheme / policy name
+      placeholder: "e.g. Mukhyamantri Gramin Setu Yojana"
+    validations:
+      required: true
+  - type: input
+    id: department
+    attributes:
+      label: Department / ministry
+      placeholder: "e.g. Rural Works Department, Government of Bihar"
+    validations:
+      required: false
+  - type: textarea
+    id: what
+    attributes:
+      label: What does it do? Who is it for?
+      placeholder: "Who's eligible, what's the benefit, how do they apply?"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source URL
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: status
+    attributes:
+      label: Is it currently running? Any evidence?
+      placeholder: "e.g. budget line in 2025-26, portal open, recent notification…"
+    validations:
+      required: false

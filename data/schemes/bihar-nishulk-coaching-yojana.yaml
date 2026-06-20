@@ -1,0 +1,46 @@
+name_en: Bihar Nishulk Coaching Yojana
+name_hi: बिहार नि:शुल्क कोचिंग योजना
+department_en: Social Welfare Department, Government of Bihar
+department_hi: समाज कल्याण विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/socialwelfare
+categories:
+  - education
+  - skilling
+objective_en: Free competitive-exam coaching for SC/ST/EBC/OBC/minority students from low-income families.
+objective_hi: >-
+  निम्न-आय परिवारों के SC/ST/EBC/OBC/अल्पसंख्यक विद्यार्थियों हेतु नि:शुल्क प्रतियोगी-परीक्षा
+  कोचिंग।
+eligibility_en: Bihar-resident SC/ST/EBC/OBC/minority students with family income below ₹3 lakh/year.
+eligibility_hi: बिहार निवासी SC/ST/EBC/OBC/अल्पसंख्यक विद्यार्थी जिनकी पारिवारिक आय ₹3 लाख/वर्ष से कम हो।
+benefit_type: Free coaching + stipend
+benefit_detail: >-
+  Free competitive-exam (UPSC/BPSC/SSC) coaching with a monthly stipend (reported ₹1,500 for local /
+  ₹3,000 for outstation students).
+target_beneficiary: Low-income SC/ST/EBC/OBC/minority students.
+personas:
+  - student
+education_levels: []
+gender_eligibility: any
+social_categories:
+  - sc
+  - st
+  - ebc
+  - bc
+  - minority
+min_age: null
+max_age: null
+income_ceiling: 300000
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Likely active — Bihar free-coaching programs reported open in 2025 via Pre-Examination Training
+  Centres; an umbrella of department-specific programs (the prominent one run by the BC/EBC Welfare
+  Department). Stipend reported, not officially published. Verified 2026-06-19. Source:
+  https://bcebconline.bihar.gov.in/
+source_url: https://state.bihar.gov.in/socialwelfare
+application_portal_url: https://state.bihar.gov.in/socialwelfare
+last_verified: '2026-06-19'

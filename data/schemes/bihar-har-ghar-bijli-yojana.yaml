@@ -1,0 +1,36 @@
+name_en: Bihar Har Ghar Bijli Yojana
+name_hi: बिहार हर घर बिजली योजना
+department_en: Energy Department, Government of Bihar
+department_hi: ऊर्जा विभाग, बिहार सरकार
+department_website: https://energy.bihar.gov.in
+categories:
+  - social_welfare
+objective_en: Free electricity connection to every un-electrified household in Bihar.
+objective_hi: बिहार के प्रत्येक अविद्युतीकृत घर को नि:शुल्क बिजली कनेक्शन।
+eligibility_en: Un-electrified households in Bihar (BPL households get free connection).
+eligibility_hi: बिहार के अविद्युतीकृत घर (BPL परिवारों को नि:शुल्क कनेक्शन)।
+benefit_type: Electricity connection
+benefit_detail: >-
+  Free new domestic electricity connection (the portal stays open for unconnected households). Bihar
+  also gives 125 free units/month to domestic consumers from Aug 2025.
+target_beneficiary: Un-electrified households of Bihar.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Likely active — universal household electrification was achieved Oct 2018 (a saturation scheme);
+  BSPHCL's portal stays open for new/missed households. A separate 125-free-units/month benefit
+  began Aug 2025. Verified 2026-06-19. Source: https://hargharbijli.bsphcl.co.in/
+source_url: https://energy.bihar.gov.in
+application_portal_url: https://hargharbijli.bsphcl.co.in
+last_verified: '2026-06-19'

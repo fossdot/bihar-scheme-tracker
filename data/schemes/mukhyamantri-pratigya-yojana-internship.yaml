@@ -1,0 +1,39 @@
+name_en: Mukhyamantri Pratigya Yojana (Internship)
+name_hi: मुख्यमंत्री प्रतिज्ञा योजना (इंटर्नशिप)
+department_en: Labour Resources Department, Government of Bihar
+department_hi: श्रम संसाधन विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/labour
+categories:
+  - employment
+  - skilling
+objective_en: Internship/stipend scheme to give unemployed youth work experience.
+objective_hi: बेरोज़गार युवाओं को कार्य-अनुभव देने हेतु इंटर्नशिप/भत्ता योजना।
+eligibility_en: Unemployed youth of Bihar aged 18–28 (educational criteria apply; verify at source).
+eligibility_hi: बिहार के बेरोज़गार युवा, आयु 18–28 (शैक्षिक मानदंड लागू; स्रोत से सत्यापित करें)।
+benefit_type: Internship stipend
+benefit_detail: >-
+  Internship stipend of ₹4,000 (12th) / ₹5,000 (ITI or diploma) / ₹6,000 (graduate and above) per
+  month, plus ₹2,000 if interning outside the home district or ₹5,000 if outside Bihar.
+target_beneficiary: Unemployed youth of Bihar.
+personas:
+  - unemployed_youth
+education_levels:
+  - senior_secondary
+gender_eligibility: any
+social_categories: []
+min_age: 18
+max_age: 28
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Likely active — approved by the Bihar cabinet on 1 Jul 2025 under Saat Nishchay-2 with an official
+  portal (cmpratigya.bihar.gov.in); employer registration opened, candidate registration rolling
+  out. Verified 2026-06-19. Source: https://cmpratigya.bihar.gov.in/
+source_url: https://state.bihar.gov.in/labour
+application_portal_url: https://cmpratigya.bihar.gov.in/
+last_verified: '2026-06-19'

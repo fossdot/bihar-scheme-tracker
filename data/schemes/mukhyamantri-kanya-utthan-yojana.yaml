@@ -1,0 +1,47 @@
+name_en: Mukhyamantri Kanya Utthan Yojana
+name_hi: मुख्यमंत्री कन्या उत्थान योजना
+department_en: Education Department, Government of Bihar
+department_hi: शिक्षा विभाग, बिहार सरकार
+department_website: https://education.bihar.gov.in
+categories:
+  - education
+  - women_child
+launch_date: '2018-04-25'
+objective_en: >-
+  Financial incentives to girls in Bihar from birth through graduation, to improve girls' education
+  and well-being.
+objective_hi: लड़कियों की शिक्षा एवं कल्याण हेतु जन्म से स्नातक तक बिहार की बेटियों को वित्तीय प्रोत्साहन।
+eligibility_en: >-
+  Girl students who are permanent residents of Bihar. No income limit — open to all categories.
+  Benefits are paid at stages (e.g. on passing intermediate and on graduation); the account must be
+  in the girl's name and Aadhaar-linked.
+eligibility_hi: >-
+  बिहार की स्थायी निवासी छात्राएँ। कोई आय-सीमा नहीं — सभी श्रेणियों हेतु। लाभ चरणों में (जैसे
+  इंटरमीडिएट एवं स्नातक उत्तीर्ण करने पर) देय; खाता बालिका के नाम एवं आधार से जुड़ा हो।
+benefit_type: Cash incentive (DBT)
+benefit_detail: >-
+  Graduation incentive ₹50,000 (one-time); intermediate incentive ₹25,000 (first division) or
+  ₹15,000 (second division). Paid by DBT to the Aadhaar-linked account.
+target_beneficiary: Girls / women students of Bihar.
+personas:
+  - student
+education_levels: []
+gender_eligibility: female
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — medhasoft portal shows '2026 Registration Open' for the intermediate and graduation
+  components. Graduation ₹50,000 (one-time, DBT); intermediate ₹25,000 (first division) / ₹15,000
+  (second division); unmarried at the intermediate stage. Verified 2026-06-19. Source:
+  https://medhasoft.bihar.gov.in/
+source_url: https://medhasoft.bihar.gov.in
+application_portal_url: https://medhasoft.bihar.gov.in
+last_verified: '2026-06-19'

@@ -1,0 +1,44 @@
+name: "🔎 Report incorrect or outdated info"
+description: "A scheme's amount, eligibility, status, or link is wrong or out of date."
+title: "[Data] "
+labels: ["data", "needs-verification"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for helping keep this accurate. **Please include an official source** — we never change a fact without one."
+  - type: input
+    id: scheme
+    attributes:
+      label: Which scheme or policy?
+      placeholder: "e.g. Bihar Student Credit Card Scheme (or paste the page URL)"
+    validations:
+      required: true
+  - type: textarea
+    id: whats-wrong
+    attributes:
+      label: What's wrong?
+      placeholder: "e.g. The benefit says ₹10,000/month, but it's a one-time ₹10,000 grant."
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What's the correct information?
+      placeholder: "e.g. One-time ₹10,000 grant + optional top-up up to ₹2 lakh."
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source URL
+      description: "A government portal, notification, PIB release, or myScheme page. Not a blog if avoidable."
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: as-of
+    attributes:
+      label: As of when? (date on the source)
+      placeholder: "e.g. 2026-02-09"
+    validations:
+      required: false

@@ -1,0 +1,18 @@
+name_en: Bihar Krishi Road Map (Agriculture Roadmap)
+name_hi: बिहार कृषि रोड मैप
+department_en: Department of Agriculture, Government of Bihar
+department_hi: कृषि विभाग, बिहार सरकार
+department_website: https://dbtagriculture.bihar.gov.in
+summary_en: >-
+  Bihar's multi-year agriculture framework coordinating input subsidies, mechanisation,
+  horticulture, irrigation and farmer income support across the farm sector.
+summary_hi: >-
+  बिहार की बहु-वर्षीय कृषि रूपरेखा जो इनपुट अनुदान, यंत्रीकरण, बागवानी, सिंचाई एवं किसान आय-सहायता
+  का समन्वय करती है।
+categories:
+  - agriculture
+policy_type: framework
+status: active
+is_draft: false
+source_url: https://krishi.bih.nic.in
+last_verified: '2026-06-19'

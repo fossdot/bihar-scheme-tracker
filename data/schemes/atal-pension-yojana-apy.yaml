@@ -1,0 +1,38 @@
+name_en: Atal Pension Yojana (APY)
+name_hi: अटल पेंशन योजना (APY)
+department_en: Government of India (Central Scheme)
+department_hi: भारत सरकार (केंद्रीय योजना)
+department_website: https://www.india.gov.in
+categories:
+  - social_welfare
+  - financial_inclusion
+objective_en: Guaranteed minimum pension for workers, especially in the unorganised sector.
+objective_hi: श्रमिकों, विशेषकर असंगठित क्षेत्र, हेतु गारंटीशुदा न्यूनतम पेंशन।
+eligibility_en: Indian citizens aged 18–40 with a bank account (non-income-tax-payers).
+eligibility_hi: 18–40 आयु के भारतीय नागरिक जिनके पास बैंक खाता हो (गैर-आयकरदाता)।
+benefit_type: Guaranteed pension
+benefit_detail: >-
+  Guaranteed pension of ₹1,000–₹5,000/month after age 60 based on contribution. Income-tax payers
+  are not eligible (since Oct 2022).
+target_beneficiary: Unorganised-sector workers (18–40).
+personas:
+  - worker_labourer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 18
+max_age: 40
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — PFRDA confirms it is operational and enrolling (~9.1 crore subscribers by May 2026, a
+  record ~1.35 crore added in FY2025-26). Age 18–40. Verified 2026-06-19. Source:
+  https://www.pfrda.org.in/
+source_url: https://www.npscra.nsdl.co.in
+application_portal_url: https://www.npscra.nsdl.co.in
+last_verified: '2026-06-19'

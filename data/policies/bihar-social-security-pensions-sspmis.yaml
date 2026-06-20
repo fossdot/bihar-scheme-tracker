@@ -1,0 +1,18 @@
+name_en: Bihar Social Security Pensions (SSPMIS)
+name_hi: बिहार सामाजिक सुरक्षा पेंशन (SSPMIS)
+department_en: Social Welfare Department, Government of Bihar
+department_hi: समाज कल्याण विभाग, बिहार सरकार
+department_website: https://state.bihar.gov.in/socialwelfare
+summary_en: >-
+  The state's social-security pension framework (delivered via SSPMIS) covering the elderly, persons
+  with disabilities and widows through monthly DBT pensions.
+summary_hi: >-
+  राज्य की सामाजिक-सुरक्षा पेंशन रूपरेखा (SSPMIS के माध्यम से) जो वृद्धजनों, दिव्यांगजनों एवं
+  विधवाओं को मासिक DBT पेंशन देती है।
+categories:
+  - social_welfare
+policy_type: mission
+status: active
+is_draft: false
+source_url: https://www.sspmis.bihar.gov.in
+last_verified: '2026-06-19'

@@ -1,0 +1,48 @@
+name_en: MGNREGA (Bihar)
+name_hi: मनरेगा (बिहार)
+department_en: Rural Development Department, Government of Bihar
+department_hi: ग्रामीण विकास विभाग, बिहार सरकार
+department_website: https://rdd.bihar.gov.in
+categories:
+  - employment
+  - social_welfare
+objective_en: Guaranteed wage employment for rural households willing to do unskilled manual work.
+objective_hi: अकुशल शारीरिक कार्य हेतु इच्छुक ग्रामीण परिवारों को गारंटीशुदा मज़दूरी रोज़गार।
+eligibility_en: Adult members of rural households in Bihar with a job card.
+eligibility_hi: जॉब कार्ड धारक बिहार के ग्रामीण परिवारों के वयस्क सदस्य।
+benefit_type: Guaranteed wage employment
+benefit_detail: >-
+  Up to 100 days of guaranteed work per household per year at the notified daily wage. Verify the
+  current wage rate.
+target_beneficiary: Rural households of Bihar.
+personas:
+  - worker_labourer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — scheme budget line confirmed two years running: ₹4,392 cr (2025-26 BE) and ₹3,192 cr
+  (2026-27 BE), from the Bihar Budget Documents as itemised by PRS Legislative Research. A
+  current-fiscal-year allocation is present. Verified 2026-06-19.
+last_budget_year: 2026-27
+source_url: https://nrega.nic.in
+application_portal_url: https://nrega.nic.in
+budget_allocations:
+  - fiscal_year: 2025-26
+    allocated_cr: 4392
+    revised_cr: null
+    source_url: https://prsindia.org/files/budget/budget_state/bihar/2025/Bihar_Budget_Analysis_2025-26.pdf
+  - fiscal_year: 2026-27
+    allocated_cr: 3192
+    revised_cr: null
+    source_url: https://prsindia.org/files/budget/budget_state/bihar/2026/Budget_Analysis_2026-27-Bihar.pdf
+last_verified: '2026-06-19'

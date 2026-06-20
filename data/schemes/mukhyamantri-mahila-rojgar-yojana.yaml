@@ -1,0 +1,43 @@
+name_en: Mukhyamantri Mahila Rojgar Yojana
+name_hi: मुख्यमंत्री महिला रोज़गार योजना
+department_en: Industries Department, Government of Bihar
+department_hi: उद्योग विभाग, बिहार सरकार
+department_website: https://industries.bihar.gov.in
+categories:
+  - employment
+  - women_child
+  - financial_inclusion
+objective_en: Stipend, micro-enterprise support and skilling for women to start livelihoods.
+objective_hi: महिलाओं को आजीविका शुरू करने हेतु भत्ता, सूक्ष्म-उद्यम सहायता एवं कौशल।
+eligibility_en: Women of Bihar (priority to SHG/Jeevika members); details to verify at source.
+eligibility_hi: बिहार की महिलाएँ (स्वयं सहायता समूह/जीविका सदस्यों को प्राथमिकता); विवरण स्रोत से सत्यापित करें।
+benefit_type: Stipend + enterprise support
+benefit_detail: >-
+  One-time ₹10,000 startup grant per woman (DBT), plus an optional top-up of up to ₹2 lakh for
+  ventures showing progress after ~6 months. Delivered via the JEEViKA / SHG network.
+target_beneficiary: Women of Bihar.
+personas:
+  - self_employed_entrepreneur
+  - shg_jeevika_member
+education_levels: []
+gender_eligibility: female
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — launched 26 Sept 2025 (₹7,500 cr scheme): a ONE-TIME ₹10,000 grant per woman by DBT, with
+  an optional second-stage top-up up to ₹2 lakh for viable ventures after ~6 months. Delivered
+  through JEEViKA / urban SHGs (Rural Development Dept); 1.1+ crore women selected (₹10,000 to 21
+  lakh more on 6 Oct 2025). [Corrected: was stored as a ₹10,000/month stipend — it is a one-time
+  grant.] Verified 2026-06-19. Source:
+  https://www.pmindia.gov.in/en/news_updates/pm-launches-bihars-mukhyamantri-mahila-rojgar-yojana/
+source_url: https://industries.bihar.gov.in
+application_portal_url: https://brlps.in
+last_verified: '2026-06-19'

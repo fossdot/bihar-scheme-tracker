@@ -1,0 +1,40 @@
+name_en: Jananayak Karpoori Thakur Kisan Samman Nidhi
+name_hi: जननायक कर्पूरी ठाकुर किसान सम्मान निधि
+department_en: Department of Agriculture, Government of Bihar
+department_hi: कृषि विभाग, बिहार सरकार
+department_website: https://dbtagriculture.bihar.gov.in
+categories:
+  - agriculture
+objective_en: State income support to farmers (over and above central PM-Kisan).
+objective_hi: किसानों को राज्य आय-सहायता (केंद्रीय पीएम-किसान के अतिरिक्त)।
+eligibility_en: Eligible farmer families of Bihar registered on the Agriculture DBT portal.
+eligibility_hi: कृषि DBT पोर्टल पर पंजीकृत बिहार के पात्र किसान परिवार।
+benefit_type: Income support (DBT)
+benefit_detail: >-
+  ₹3,000/year Bihar state top-up to farmer income support (₹9,000/year combined with the central
+  PM-KISAN ₹6,000).
+target_beneficiary: Farmer families of Bihar.
+personas:
+  - farmer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: any
+status: likely_active
+status_evidence: >-
+  Likely active — newly announced in Bihar's 2026-27 budget (Feb 2026) as a ₹3,000/year state top-up
+  over PM-KISAN (PRS); rollout pending, so not yet 'active'. [Corrected: ₹9,000 is the combined
+  figure, not a ₹9,000 state benefit.] Verified 2026-06-19. Source:
+  https://prsindia.org/budgets/states/bihar-budget-analysis-2026-27
+source_url: https://dbtagriculture.bihar.gov.in
+application_portal_url: https://dbtagriculture.bihar.gov.in
+policies:
+  - Bihar Krishi Road Map (Agriculture Roadmap)
+last_verified: '2026-06-19'

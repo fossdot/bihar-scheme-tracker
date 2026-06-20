@@ -1,0 +1,40 @@
+name_en: National Family Benefit Scheme (NFBS)
+name_hi: राष्ट्रीय परिवार लाभ योजना (NFBS)
+department_en: District Administration (Bihar)
+department_hi: ज़िला प्रशासन (बिहार)
+department_website: https://state.bihar.gov.in
+categories:
+  - social_welfare
+objective_en: >-
+  One-time ex-gratia to a BPL family on the death of its primary breadwinner (district-administered,
+  under NSAP).
+objective_hi: >-
+  मुख्य कमाने वाले की मृत्यु पर BPL परिवार को एकमुश्त अनुग्रह राशि (ज़िला-प्रशासित, NSAP के
+  अंतर्गत)।
+eligibility_en: >-
+  BPL family in Bihar whose primary breadwinner (aged 18–59) has died; applied at the district
+  level.
+eligibility_hi: बिहार का BPL परिवार जिसके मुख्य कमाने वाले (आयु 18–59) की मृत्यु हुई हो; ज़िला स्तर पर आवेदन।
+benefit_type: Ex-gratia (lump sum)
+benefit_detail: Reported ₹20,000 one-time. Verify current amount at the district welfare office.
+target_beneficiary: BPL families of Bihar.
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: true
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Active — operating under NSAP with ~3.5 lakh beneficiaries; ₹20,000 one-time on death of a BPL
+  family's primary breadwinner, DBT-delivered (PIB/NSAP 2025). Verified 2026-06-19. Source:
+  https://nsap.nic.in/
+source_url: https://nsap.nic.in
+application_portal_url: https://nsap.nic.in
+last_verified: '2026-06-19'

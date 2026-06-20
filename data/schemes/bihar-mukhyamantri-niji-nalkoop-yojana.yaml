@@ -1,0 +1,38 @@
+name_en: Bihar Mukhyamantri Niji Nalkoop Yojana
+name_hi: मुख्यमंत्री निजी नलकूप योजना
+department_en: Department of Agriculture, Government of Bihar
+department_hi: कृषि विभाग, बिहार सरकार
+department_website: https://dbtagriculture.bihar.gov.in
+categories:
+  - agriculture
+objective_en: Subsidy to farmers for installing private tubewells for irrigation.
+objective_hi: सिंचाई हेतु निजी नलकूप लगाने के लिए किसानों को अनुदान।
+eligibility_en: Farmers of Bihar (Raiyat/non-Raiyat) needing irrigation; minimum landholding criteria may apply.
+eligibility_hi: सिंचाई हेतु इच्छुक बिहार के किसान (रैयत/गैर-रैयत); न्यूनतम भूधारिता मानदंड लागू हो सकते हैं।
+benefit_type: Tubewell subsidy
+benefit_detail: Reported 50–80% subsidy (₹15,000–₹35,000 per farmer). Verify current rates.
+target_beneficiary: Farmers of Bihar needing irrigation.
+personas:
+  - farmer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: any
+status: likely_active
+status_evidence: >-
+  Likely active — the official Minor Water Resources portal runs the Mukhyamantri Niji Nalkoop
+  Yojana under Saat Nishchay-2 (target 35,000 borewells); 'Shatabdi Niji Nalkoop' is an older label.
+  No current open-application window confirmed, so not upgraded to active. Verified 2026-06-19.
+  Source: https://mwrd.bihar.gov.in/mnny/
+source_url: https://mwrd.bihar.gov.in
+application_portal_url: https://mwrd.bihar.gov.in/mnny/
+policies:
+  - Bihar Krishi Road Map (Agriculture Roadmap)
+last_verified: '2026-06-19'
