@@ -20,7 +20,9 @@ const candidates = [
 const pgDump = candidates.find((c) => c === "pg_dump" || existsSync(c)) ?? "pg_dump";
 
 const out = execFileSync(pgDump, [
-  "--data-only", "--disable-triggers", "--no-owner", "--no-privileges", "--column-inserts", url,
+  "--data-only", "--disable-triggers", "--no-owner", "--no-privileges", "--column-inserts",
+  "--exclude-table-data=public.search_events", // runtime analytics, not seed data
+  url,
 ], { maxBuffer: 64 * 1024 * 1024 });
 
 const target = join(__dirname, "..", "deploy", "initdb", "02_seed_data.sql");

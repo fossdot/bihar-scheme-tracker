@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { parseFilters } from "@/lib/facets";
 import { isDbConfigured, searchSchemes } from "@/lib/queries";
+import { logSearch } from "@/lib/searchlog";
 
 export const dynamic = "force-dynamic";
 
@@ -10,7 +11,10 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ results: [] });
   }
   try {
-    const results = await searchSchemes(parseFilters(req.nextUrl.searchParams));
+    const filters = parseFilters(req.nextUrl.searchParams);
+    const results = await searchSchemes(filters);
+    const surface = req.nextUrl.searchParams.get("surface") === "guided" ? "guided" : "finder";
+    logSearch({ surface, q: filters.q, filters, resultCount: results.length });
     return NextResponse.json({ results });
   } catch (e) {
     const message = e instanceof Error ? e.message : "Search failed.";

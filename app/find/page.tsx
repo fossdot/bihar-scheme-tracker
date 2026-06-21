@@ -7,6 +7,7 @@ import { pick, t } from "@/lib/i18n";
 import { getLocale } from "@/lib/locale";
 import { todayISO } from "@/lib/policy";
 import { isDbConfigured, listPolicies, searchSchemes } from "@/lib/queries";
+import { logSearch } from "@/lib/searchlog";
 import type { PolicyListItem, SchemeListItem } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -31,6 +32,7 @@ export default async function FindPage({
     } catch {
       /* leave empty */
     }
+    logSearch({ surface: "navbar", q, resultCount: schemes.length + policies.length });
   }
   const total = schemes.length + policies.length;
 

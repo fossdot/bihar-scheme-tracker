@@ -80,6 +80,7 @@ export function GuidedFinder({ locale }: { locale: Locale }) {
     if (income != null) params.set("income", String(income));
     if (disability === "no") params.set("disabled", "false");
     if (disability === "yes") params.set("disabled", "true");
+    params.set("surface", "guided"); // tag for the search log (analytics)
     try {
       const res = await fetch(`/api/search?${params.toString()}`);
       const data = await res.json();
