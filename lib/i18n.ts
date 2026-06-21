@@ -137,6 +137,18 @@ export const STRINGS = {
     en: "Couldn't load this right now. Please try again in a moment.",
     hi: "अभी यह लोड नहीं हो सका। कृपया कुछ देर बाद पुनः प्रयास करें।",
   },
+  notFoundTitle: { en: "Page not found", hi: "पृष्ठ नहीं मिला" },
+  notFoundBody: {
+    en: "This page doesn't exist, or the scheme or policy may have been moved.",
+    hi: "यह पृष्ठ मौजूद नहीं है, या योजना/नीति को हटाया जा सकता है।",
+  },
+  backHome: { en: "Back to home", hi: "होम पर लौटें" },
+  errorTitle: { en: "Something went wrong", hi: "कुछ गड़बड़ हो गई" },
+  errorBody: {
+    en: "An unexpected error occurred. Please try again.",
+    hi: "एक अप्रत्याशित त्रुटि हुई। कृपया पुनः प्रयास करें।",
+  },
+  tryAgain: { en: "Try again", hi: "पुनः प्रयास करें" },
 
   // explore / catalogue
   exploreTitle: { en: "Explore schemes", hi: "योजनाएँ देखें" },
