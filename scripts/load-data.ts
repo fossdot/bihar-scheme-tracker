@@ -13,7 +13,28 @@ import { load } from "js-yaml";
 import { getPool } from "../lib/db";
 
 const ROOT = join(__dirname, "..", "data");
+const PRUNE = process.argv.includes("--prune"); // delete DB rows no longer present in YAML
 type Row = Record<string, any>;
+
+type Q = (text: string, params?: unknown[]) => Promise<{ rows: any[] }>;
+
+// Flag (or, with --prune, remove) rows whose name_en is no longer backed by a YAML file.
+async function reportOrphans(q: Q, table: string, present: Set<string>, prune: boolean) {
+  const { rows } = await q(`select id, name_en from ${table}`);
+  const orphans = rows.filter((r) => !present.has(r.name_en));
+  if (!orphans.length) return;
+  for (const o of orphans) {
+    if (prune) {
+      // Null inbound successor links first so the FK doesn't block the delete.
+      if (table === "schemes") await q(`update schemes set successor_scheme_id = null where successor_scheme_id = $1`, [o.id]);
+      if (table === "policies") await q(`update policies set superseded_by = null where superseded_by = $1`, [o.id]);
+      await q(`delete from ${table} where id = $1`, [o.id]); // budget_allocations / links cascade
+      console.log(`  ✗ pruned orphan ${table}: "${o.name_en}"`);
+    } else {
+      console.log(`  ⚠ orphan ${table} (in DB, no YAML): "${o.name_en}" — rerun with --prune to delete`);
+    }
+  }
+}
 
 function readDir(sub: string): Row[] {
   const dir = join(ROOT, sub);
@@ -115,6 +136,12 @@ async function main() {
       for (const pn of s.policies ?? [])
         if (policyId.has(pn)) await q(`insert into scheme_policy_links (scheme_id, policy_id) values ($1,$2) on conflict do nothing`, [id, policyId.get(pn)]);
     }
+
+    // 5. Orphans: rows in the DB whose YAML file was renamed/deleted. The upsert path
+    //    never removes them, so a deleted scheme would otherwise linger (and keep serving
+    //    a stale /schemes/<id> page). Report by default; delete only with --prune.
+    await reportOrphans(q, "schemes", new Set(schemeId.keys()), PRUNE);
+    await reportOrphans(q, "policies", new Set(policyId.keys()), PRUNE);
 
     await q("COMMIT");
     console.log(`Loaded ${schemes.length} schemes, ${policies.length} policies, ${deptId.size} departments.`);

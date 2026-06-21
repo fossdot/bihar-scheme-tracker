@@ -6,10 +6,20 @@
 #
 # Caddy owns ports 80/443 and reverse-proxies to the app (which stays internal to the
 # compose network). The verified catalogue auto-seeds from deploy/initdb on first init.
+
+# Cap container logs so json-file logs can't silently fill the (small) droplet disk:
+# 3 × 10 MB per service. Applied to every service via the &logging anchor.
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
 services:
   db:
     image: pgvector/pgvector:pg16
     restart: unless-stopped
+    logging: *logging
     environment:
       POSTGRES_USER: bihar
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env (no insecure default)}
@@ -26,6 +36,7 @@ services:
   app:
     build: .
     restart: unless-stopped
+    logging: *logging
     environment:
       DATABASE_URL: postgres://bihar:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@db:5432/bihar_scheme_tracker
     expose:
@@ -37,6 +48,7 @@ services:
   caddy:
     image: caddy:2-alpine
     restart: unless-stopped
+    logging: *logging
     environment:
       SITE_ADDRESS: ${SITE_ADDRESS:-:80}
     ports:

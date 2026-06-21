@@ -246,7 +246,7 @@ export const STRINGS = {
   prov_rti_received: { en: "RTI received", hi: "RTI प्राप्त" },
   prov_rti_filed: { en: "RTI filed · awaiting", hi: "RTI दायर · प्रतीक्षारत" },
   prov_rti_needed: { en: "RTI needed", hi: "RTI आवश्यक" },
-  prov_public_todo: { en: "Public · to add", hi: "सार्वजनिक · जोड़ना है" },
+  prov_public_todo: { en: "Public — not yet added", hi: "सार्वजनिक — अभी जोड़ा नहीं" },
   prov_estimated: { en: "Estimated", hi: "अनुमानित" },
   lbl_sanctioned: { en: "sanctioned", hi: "स्वीकृत" },
   lbl_disbursed: { en: "disbursed", hi: "वितरित" },
