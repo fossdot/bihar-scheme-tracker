@@ -11,7 +11,7 @@ import { LOCALES, DEFAULT_LOCALE } from "@/lib/i18n";
 
 // Paths that must never be locale-prefixed or redirected (route handlers + SEO/asset
 // files). Belt-and-suspenders alongside config.matcher below.
-const EXCLUDED = /^\/(?:api|health|_next|sitemap\.xml|robots\.txt|opengraph-image|icon\.svg|favicon\.ico)(?:\/|$)/;
+const EXCLUDED = /^\/(?:api|health|admin|_next|sitemap\.xml|robots\.txt|opengraph-image|icon\.svg|favicon\.ico)(?:\/|$)/;
 
 export function middleware(req: NextRequest) {
   const { pathname, search } = req.nextUrl;
@@ -38,6 +38,6 @@ export const config = {
   // Run on everything except Next internals, asset files, and the excluded route
   // handlers / SEO files (also guarded inside the function above).
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|icon.svg|api|health|sitemap.xml|robots.txt|opengraph-image).*)",
+    "/((?!_next/static|_next/image|favicon.ico|icon.svg|api|health|admin|sitemap.xml|robots.txt|opengraph-image).*)",
   ],
 };

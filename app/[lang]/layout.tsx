@@ -5,6 +5,7 @@ import { Icon } from "@/components/Icon";
 import { Logo } from "@/components/Logo";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { ViewBeacon } from "@/components/ViewBeacon";
 import { altLinks, localizedHref, LOCALES, t, type Locale } from "@/lib/i18n";
 import { getTheme, resolveLocale } from "@/lib/locale";
 
@@ -92,6 +93,7 @@ export default function LangLayout({
         </div>
       </header>
       <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+      <ViewBeacon />
     </>
   );
 }

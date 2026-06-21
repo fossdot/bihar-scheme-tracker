@@ -39,6 +39,9 @@ services:
     logging: *logging
     environment:
       DATABASE_URL: postgres://bihar:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@db:5432/bihar_scheme_tracker
+      # Secret that unlocks /admin (analytics dashboard). Set ADMIN_KEY in .env (≥8 chars);
+      # unset/short = dashboard stays locked. Kept out of the image — interpolated from .env.
+      ADMIN_KEY: ${ADMIN_KEY:-}
     expose:
       - "3000"
     depends_on:
