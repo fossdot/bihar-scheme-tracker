@@ -27,7 +27,11 @@ export function middleware(req: NextRequest) {
   }
 
   const dest = new URL(`/${DEFAULT_LOCALE}${pathname === "/" ? "" : pathname}${search}`, req.url);
-  return NextResponse.redirect(dest, 308);
+  const res = NextResponse.redirect(dest, 308);
+  // The bare→/en mapping is deterministic + permanent, so let browsers and the CDN cache
+  // it instead of hitting the origin for the redirect on every fresh entry.
+  res.headers.set("Cache-Control", "public, max-age=3600, s-maxage=86400");
+  return res;
 }
 
 export const config = {
