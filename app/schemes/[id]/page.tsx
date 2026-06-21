@@ -468,9 +468,9 @@ function DataImpact({
           <table className="min-w-full divide-y divide-line text-sm">
             <thead className="bg-paper text-left text-xs uppercase tracking-wide text-muted">
               <tr>
-                <th className="px-3 py-2 font-medium">{t(locale, "fiscalYear")}</th>
-                <th className="px-3 py-2 font-medium">{t(locale, "funds")}</th>
-                <th className="px-3 py-2 font-medium">{t(locale, "people")}</th>
+                <th scope="col" className="px-3 py-2 font-medium">{t(locale, "fiscalYear")}</th>
+                <th scope="col" className="px-3 py-2 font-medium">{t(locale, "funds")}</th>
+                <th scope="col" className="px-3 py-2 font-medium">{t(locale, "people")}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-line">
@@ -563,10 +563,10 @@ function DataImpact({
           <table className="min-w-full divide-y divide-line text-sm">
             <thead className="bg-paper text-left text-xs uppercase tracking-wide text-muted">
               <tr>
-                <th className="px-3 py-2 font-medium">{t(locale, "fiscalYear")}</th>
-                <th className="px-3 py-2 text-right font-medium">{t(locale, "allocatedBE")}</th>
-                <th className="px-3 py-2 text-right font-medium">{t(locale, "revisedRE")}</th>
-                <th className="px-3 py-2 font-medium">{t(locale, "source")}</th>
+                <th scope="col" className="px-3 py-2 font-medium">{t(locale, "fiscalYear")}</th>
+                <th scope="col" className="px-3 py-2 text-right font-medium">{t(locale, "allocatedBE")}</th>
+                <th scope="col" className="px-3 py-2 text-right font-medium">{t(locale, "revisedRE")}</th>
+                <th scope="col" className="px-3 py-2 font-medium">{t(locale, "source")}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-line">

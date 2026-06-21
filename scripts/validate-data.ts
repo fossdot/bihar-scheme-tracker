@@ -60,6 +60,22 @@ for (const { file, data } of policies) {
   if (successor_policy && !policyNames.has(successor_policy)) warnings.push(`${file}: successor_policy "${successor_policy}" not found among policies`);
 }
 
+// Circular successor links would make "continues via" loop forever.
+function checkCycles(items: { data: Record<string, any> }[], key: string, kind: string) {
+  const succ = new Map(items.map((x) => [x.data.name_en as string, x.data[key] as string | undefined]));
+  for (const start of Array.from(succ.keys())) {
+    const seen = new Set<string>([start]);
+    let cur = succ.get(start);
+    while (cur) {
+      if (seen.has(cur)) { errors.push(`circular ${kind} successor: "${start}" eventually loops back`); break; }
+      seen.add(cur);
+      cur = succ.get(cur);
+    }
+  }
+}
+checkCycles(schemes, "successor_scheme", "scheme");
+checkCycles(policies, "successor_policy", "policy");
+
 console.log(`Validated ${schemes.length} schemes + ${policies.length} policies.`);
 if (warnings.length) { console.log(`\n⚠ ${warnings.length} warning(s):`); warnings.forEach((w) => console.log("  - " + w)); }
 if (errors.length) {

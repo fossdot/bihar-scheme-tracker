@@ -65,6 +65,7 @@ export function GuidedFinder({ locale }: { locale: Locale }) {
   const [results, setResults] = useState<SchemeListItem[] | null>(null);
   const [loading, setLoading] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
+  const reqId = useRef(0); // guards against a slow earlier search overwriting a newer one
 
   const toggle = (arr: string[], v: string, set: (x: string[]) => void) =>
     set(arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
@@ -82,15 +83,19 @@ export function GuidedFinder({ locale }: { locale: Locale }) {
     if (disability === "no") params.set("disabled", "false");
     if (disability === "yes") params.set("disabled", "true");
     params.set("surface", "guided"); // tag for the search log (analytics)
+    const myId = ++reqId.current;
     try {
       const res = await fetch(`/api/search?${params.toString()}`);
-      const data = await res.json();
-      setResults(data.results ?? []);
+      const data = (await res.json()) as { results?: unknown };
+      if (myId !== reqId.current) return; // a newer search superseded this one
+      setResults(Array.isArray(data.results) ? (data.results as SchemeListItem[]) : []);
     } catch {
-      setResults([]);
+      if (myId === reqId.current) setResults([]);
     } finally {
-      setLoading(false);
-      requestAnimationFrame(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+      if (myId === reqId.current) {
+        setLoading(false);
+        requestAnimationFrame(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+      }
     }
   }
 
@@ -180,13 +185,13 @@ export function GuidedFinder({ locale }: { locale: Locale }) {
       </div>
 
       {/* Results */}
-      <div ref={resultsRef}>
+      <div ref={resultsRef} aria-live="polite">
         {results !== null && (
           <div className="space-y-4">
-            <div className="flex items-baseline gap-2">
+            <h2 className="flex items-baseline gap-2">
               <span className="text-xl font-semibold text-ink">{results.length}</span>
               <span className="text-ink">{t(locale, "schemesForYou")}</span>
-            </div>
+            </h2>
             <p className="text-sm text-muted">{t(locale, "guidedNote")}</p>
             {results.length === 0 ? (
               <p className="rounded-md border border-line bg-paper p-4 text-sm text-ink">

@@ -84,14 +84,14 @@ export default async function MapPage() {
                       />
                       <Link
                         href={`/schemes/${s.id}`}
-                        className="inline-flex items-center gap-2 text-sm hover:underline"
+                        className="flex min-w-0 items-center gap-2 text-sm hover:underline"
                         title={locale === "hi" ? meta.hi : meta.en}
                       >
                         <span
                           className={`h-2 w-2 shrink-0 rounded-full ${meta.dot}`}
                           aria-hidden="true"
                         />
-                        <span className="text-ink">{pick(locale, s.name_en, s.name_hi)}</span>
+                        <span className="min-w-0 break-words text-ink">{pick(locale, s.name_en, s.name_hi)}</span>
                       </Link>
                     </li>
                   );

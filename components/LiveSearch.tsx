@@ -629,11 +629,11 @@ function SchemeTable({
       <table className="min-w-full divide-y divide-line text-sm">
         <thead className="bg-paper text-left text-xs uppercase tracking-wide text-muted">
           <tr>
-            <th className="px-3 py-2 font-medium">{t(locale, "colScheme")}</th>
-            <th className="px-3 py-2 font-medium">{t(locale, "sector")}</th>
-            <th className="px-3 py-2 font-medium">{t(locale, "status")}</th>
-            <th className="px-3 py-2 font-medium">{t(locale, "colBudget")}</th>
-            <th className="px-3 py-2 font-medium">{t(locale, "verified")}</th>
+            <th scope="col" className="px-3 py-2 font-medium">{t(locale, "colScheme")}</th>
+            <th scope="col" className="px-3 py-2 font-medium">{t(locale, "sector")}</th>
+            <th scope="col" className="px-3 py-2 font-medium">{t(locale, "status")}</th>
+            <th scope="col" className="px-3 py-2 font-medium">{t(locale, "colBudget")}</th>
+            <th scope="col" className="px-3 py-2 font-medium">{t(locale, "verified")}</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-line">
