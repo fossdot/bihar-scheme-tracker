@@ -133,6 +133,10 @@ export const STRINGS = {
     en: "This may be outdated — last verified over a year ago, and is due for re-checking.",
     hi: "यह जानकारी पुरानी हो सकती है — एक वर्ष से अधिक पहले सत्यापित; पुनः जाँच आवश्यक।",
   },
+  loadError: {
+    en: "Couldn't load this right now. Please try again in a moment.",
+    hi: "अभी यह लोड नहीं हो सका। कृपया कुछ देर बाद पुनः प्रयास करें।",
+  },
 
   // explore / catalogue
   exploreTitle: { en: "Explore schemes", hi: "योजनाएँ देखें" },

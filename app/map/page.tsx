@@ -11,6 +11,12 @@ import type { PolicyMapGroup } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 
+export const metadata = {
+  title: "Scheme–policy map",
+  description: "How Bihar's schemes sit under their policy frameworks — a visual map.",
+  alternates: { canonical: "/map" },
+};
+
 export default async function MapPage() {
   const locale = getLocale();
   const today = todayISO();

@@ -77,7 +77,8 @@ export default async function SchemeDetailPage({
   try {
     detail = await getDetail(params.id);
   } catch (e) {
-    error = e instanceof Error ? e.message : "Failed to load scheme.";
+    console.error("scheme detail load failed:", e); // log details server-side, never to the user
+    error = t(locale, "loadError");
   }
 
   if (error) {

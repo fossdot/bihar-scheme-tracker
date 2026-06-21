@@ -9,6 +9,13 @@ import type { SchemeListItem } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
+export const metadata = {
+  title: "Browse schemes",
+  description:
+    "Browse and filter Bihar & central government schemes by sector, eligibility, and status — each with its evidence-based status and official links.",
+  alternates: { canonical: "/search" },
+};
+
 /** Flatten Next's searchParams object into a URLSearchParams so the same parseFilters()
  *  used by the JSON API drives the SSR render. */
 function toSearchParams(sp: {

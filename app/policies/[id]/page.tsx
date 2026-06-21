@@ -63,7 +63,8 @@ export default async function PolicyDetailPage({
   try {
     detail = await getDetail(params.id);
   } catch (e) {
-    error = e instanceof Error ? e.message : "Failed to load policy.";
+    console.error("policy detail load failed:", e);
+    error = t(locale, "loadError");
   }
   if (error) {
     return (
@@ -138,8 +139,22 @@ export default async function PolicyDetailPage({
       </aside>
     ) : null;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Legislation",
+    name: policy.name_en,
+    description: (policy.summary_en || "").slice(0, 300) || undefined,
+    legislationJurisdiction: "Bihar, India",
+    url: `https://yojana.bodhya.net/policies/${policy.id}`,
+    ...(policy.document_url ? { sameAs: policy.document_url } : {}),
+  };
+
   return (
     <div className="space-y-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <BackLink locale={locale} />
       <div
         className={

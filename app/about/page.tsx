@@ -3,6 +3,13 @@ import { getLocale } from "@/lib/locale";
 
 export const dynamic = "force-dynamic";
 
+export const metadata = {
+  title: "About the data",
+  description:
+    "How the Bihar Scheme Tracker determines status from evidence, sources every fact, and stays honest about staleness.",
+  alternates: { canonical: "/about" },
+};
+
 export default function AboutPage() {
   const locale = getLocale();
   const L = (en: string, hi: string) => (locale === "hi" ? hi : en);

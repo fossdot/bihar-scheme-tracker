@@ -8,6 +8,13 @@ import type { PolicyListItem } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
+export const metadata = {
+  title: "Policies",
+  description:
+    "Bihar government policies, acts, missions and frameworks — with derived status and public-consultation drafts open for comment.",
+  alternates: { canonical: "/policies" },
+};
+
 export default async function PoliciesPage({
   searchParams,
 }: {

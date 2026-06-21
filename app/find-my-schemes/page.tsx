@@ -9,6 +9,7 @@ export const metadata = {
   title: "Find schemes for you",
   description:
     "Answer a few questions about yourself and see the Bihar & central government schemes you likely qualify for — with status, benefits, and official apply links.",
+  alternates: { canonical: "/find-my-schemes" },
 };
 
 export default function FindMySchemesPage() {

@@ -12,6 +12,13 @@ import type { PolicyListItem, SchemeListItem } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
+export const metadata = {
+  title: "Search",
+  description: "Search Bihar government schemes and policies by name.",
+  alternates: { canonical: "/find" },
+  robots: { index: false, follow: true }, // query-driven results page — not for indexing
+};
+
 export default async function FindPage({
   searchParams,
 }: {
