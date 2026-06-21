@@ -6,13 +6,25 @@ import { Card, FactTile } from "@/components/ui";
 import { altLinks, localizedHref, pick, t } from "@/lib/i18n";
 import { resolveLocale } from "@/lib/locale";
 import { policyStatusKey, todayISO } from "@/lib/policy";
-import { isDbConfigured, listPolicies, searchSchemes } from "@/lib/queries";
+import { getSchemeCounts, isDbConfigured, listPolicies } from "@/lib/queries";
 import type { PolicyListItem } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
-  return { alternates: altLinks(resolveLocale(params.lang), "/") };
+  const locale = resolveLocale(params.lang);
+  const title =
+    locale === "hi"
+      ? "बिहार योजना ट्रैकर — अपने लिए सरकारी योजनाएँ खोजें"
+      : "Bihar Scheme Tracker — Find government schemes you qualify for";
+  const description =
+    locale === "hi"
+      ? "बताइए आप कौन हैं और बिहार व केंद्र सरकार की वे योजनाएँ पाइए जिनके लिए आप पात्र हैं — हर एक की वास्तविक स्थिति, पात्रता, लाभ और आधिकारिक लिंक के साथ।"
+      : "Discover the Bihar & central government schemes you're eligible for — with real status, eligibility, benefits, and official apply links. Source-verified, evidence-based.";
+  return {
+    alternates: altLinks(locale, "/"),
+    openGraph: { url: localizedHref(locale, "/"), title, description },
+  };
 }
 
 export default async function Home({ params }: { params: { lang: string } }) {
@@ -25,13 +37,13 @@ export default async function Home({ params }: { params: { lang: string } }) {
   let openDrafts: PolicyListItem[] = [];
   if (isDbConfigured()) {
     try {
-      const [schemes, policies] = await Promise.all([
-        searchSchemes({ buckets: ["active", "possibly_active", "inactive"] }),
+      const [counts, policies] = await Promise.all([
+        getSchemeCounts(),            // cheap aggregate — no row cap, no undercount
         listPolicies({}),
       ]);
-      schemeCount = schemes.length;
+      schemeCount = counts.total;
+      verifiedActive = counts.active;
       policyCount = policies.length;
-      verifiedActive = schemes.filter((s) => s.status === "active").length;
       openDrafts = policies.filter((p) => policyStatusKey(p, today) === "open");
     } catch {
       /* leave zeros — the page still renders */

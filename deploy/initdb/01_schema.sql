@@ -3,7 +3,6 @@ create extension if not exists vector;
 create extension if not exists pg_trgm;
 
 -- ==== supabase/migrations/20260618000000_init_schema.sql ====
-
 -- Bihar Policy & Scheme Tracker — initial schema.
 -- Mirrors the data model in CLAUDE.md (the source of truth). Core DDL is verbatim;
 -- the RLS block at the end is an addition for the read-via-anon / write-via-service-role
@@ -93,7 +92,6 @@ create index budget_allocations_scheme_idx on budget_allocations (scheme_id);
 -- be bypassed anyway. If a least-privilege read-only app role is added later, revisit.
 
 -- ==== supabase/migrations/20260618010000_fuzzy_search.sql ====
-
 -- Fuzzy search: trigram matching so typos and partial words still find schemes,
 -- complementing the exact full-text search (search_tsv). pg_trgm is a stock Postgres
 -- contrib module (no compile needed, unlike pgvector).
@@ -112,7 +110,6 @@ alter table schemes add column search_text text
 create index schemes_trgm_idx on schemes using gin (search_text gin_trgm_ops);
 
 -- ==== supabase/migrations/20260618020000_structured_eligibility.sql ====
-
 -- Structured, filterable eligibility for the citizen-facing finder (Step 2).
 -- Free-text eligibility_en/_hi stays for DISPLAY; these columns power the facet FILTERS.
 --
@@ -210,7 +207,6 @@ create index schemes_categories_idx         on schemes using gin (categories);
 -- actually needs it (e.g. PMAY-Gramin vs PMAY-Urban).
 
 -- ==== supabase/migrations/20260619000000_scheme_metrics.sql ====
-
 -- Research-mode metrics: a provenance-aware time series for the "Data & impact" view.
 -- Holds financial (₹ cr) and beneficiary counts per year, AND dimension-level data-status
 -- markers (value NULL) so the page can honestly show "RTI needed / awaiting" instead of a
@@ -245,7 +241,6 @@ create index scheme_metrics_scheme_idx on scheme_metrics (scheme_id);
 create index scheme_metrics_dimension_idx on scheme_metrics (scheme_id, dimension);
 
 -- ==== supabase/migrations/20260619010000_policies_consultation.sql ====
-
 -- Policies as a first-class, browsable entity (like schemes): sector tags, the actual
 -- document link, and PUBLIC-CONSULTATION fields for drafts open for comments. Status is
 -- derived (in force / lapsed / superseded / draft) from validity window + these fields.
@@ -273,7 +268,6 @@ create index policies_categories_idx on policies using gin (categories);
 create index policies_is_draft_idx on policies (is_draft);
 
 -- ==== supabase/migrations/20260619020000_scheme_policy_links.sql ====
-
 -- Map schemes to the policy/act framework(s) they sit under — many-to-many (a scheme can
 -- implement more than one policy/act; a policy umbrella has many schemes). Powers the
 -- "Part of" link on a scheme, the "Schemes under this" list on a policy, and the Map view.
@@ -286,7 +280,6 @@ create table scheme_policy_links (
 create index scheme_policy_links_policy_idx on scheme_policy_links (policy_id);
 
 -- ==== supabase/migrations/20260621000000_search_events.sql ====
-
 -- Privacy-respecting search log: what people search for + how many results it returned.
 -- No cookies, no IP, no user identity — only the anonymous query shape. The signal that
 -- matters most: rows with result_count = 0 are the schemes/keywords people want and we lack.
@@ -303,9 +296,31 @@ create index if not exists search_events_zero_idx    on search_events (result_co
 create index if not exists search_events_q_idx        on search_events (lower(q));
 
 -- ==== supabase/migrations/20260621010000_perf_indexes.sql ====
-
 -- Index the department foreign keys (joined on every detail page + sitemap).
 create index if not exists schemes_department_idx  on schemes (department_id);
 create index if not exists policies_department_idx on policies (department_id);
--- scheme_metrics is read per scheme on every detail page.
-create index if not exists scheme_metrics_scheme_idx on scheme_metrics (scheme_id);
+-- (scheme_metrics(scheme_id) is already indexed by its own migration, 20260619000000.)
+
+-- ==== supabase/migrations/20260621020000_page_views.sql ====
+-- Privacy-respecting page-view log. Like search_events: NO cookies, NO IP, NO identity,
+-- NO user-agent — only the (already public) path that was viewed + a derived entity link.
+-- Written by a client-side beacon (/api/track), so it counts views even when the HTML is
+-- served from the CDN edge cache (a server-side counter would miss every cache HIT).
+create table if not exists page_views (
+  id          uuid primary key default gen_random_uuid(),
+  created_at  timestamptz not null default now(),
+  path        text not null,
+  locale      text,                       -- 'en' | 'hi' | null
+  entity_type text,                        -- 'scheme' | 'policy' | null (listing/other pages)
+  entity_id   uuid                         -- the scheme/policy id, when the path is a detail page
+);
+create index if not exists page_views_created_idx on page_views (created_at desc);
+create index if not exists page_views_entity_idx  on page_views (entity_type, entity_id);
+
+-- ==== supabase/migrations/20260621030000_not_null_evidence.sql ====
+-- Enforce "no status without evidence" (CLAUDE.md) at the DB layer, so the guardrail holds on
+-- ANY apply path — not only the validated YAML loader. source_url is already NOT NULL; extend
+-- the same to status_evidence and last_verified. (Existing rows already satisfy this: the
+-- validator requires status_evidence ≥10 chars and a last_verified date on every record.)
+alter table schemes alter column status_evidence set not null;
+alter table schemes alter column last_verified  set not null;

@@ -205,6 +205,7 @@ export default async function SchemeDetailPage({
               >
                 <Icon name="external" className="h-4 w-4" />
                 {t(locale, "applyCta")}
+                <span className="sr-only"> {t(locale, "opensNewTab")}</span>
               </a>
             )}
           </div>

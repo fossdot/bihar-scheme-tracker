@@ -51,6 +51,7 @@ export const STRINGS = {
   navSchemes: { en: "Schemes", hi: "योजनाएँ" },
   navMap: { en: "Map", hi: "मानचित्र" },
   navAbout: { en: "About the data", hi: "डेटा के बारे में" },
+  navMenu: { en: "Menu", hi: "मेन्यू" },
   mapTitle: { en: "Policy map", hi: "नीति मानचित्र" },
   mapSubtitle: {
     en: "How schemes sit under Bihar's policy frameworks — tap a policy or a scheme to dive in.",
@@ -287,6 +288,7 @@ export const STRINGS = {
   lbl_allocated_be: { en: "allocated (BE)", hi: "आवंटित (BE)" },
 
   applyCta: { en: "Apply on the official portal", hi: "आधिकारिक पोर्टल पर आवेदन करें" },
+  opensNewTab: { en: "(opens in a new tab)", hi: "(नए टैब में खुलता है)" },
   howToApply: { en: "How to apply", hi: "आवेदन कैसे करें" },
   timeline: { en: "Timeline", hi: "समयरेखा" },
   partOf: { en: "Part of", hi: "के अंतर्गत" },

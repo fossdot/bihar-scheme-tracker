@@ -19,6 +19,14 @@ export function isDbConfigured(): boolean {
   return Boolean(process.env.DATABASE_URL);
 }
 
+/** Aggregate counts for the home page — a cheap COUNT instead of fetching (and capping) rows. */
+export async function getSchemeCounts(): Promise<{ total: number; active: number }> {
+  const rows = await query<{ total: number; active: number }>(
+    `select count(*)::int total, count(*) filter (where status = 'active')::int active from schemes`
+  );
+  return { total: rows[0]?.total ?? 0, active: rows[0]?.active ?? 0 };
+}
+
 const LIST_COLUMNS = `
   s.id, s.name_en, s.name_hi, s.categories, s.status, s.objective_en, s.objective_hi,
   s.benefit_type, s.min_age, s.max_age, s.last_verified, s.last_budget_year,

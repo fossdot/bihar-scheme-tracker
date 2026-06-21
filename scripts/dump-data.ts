@@ -22,6 +22,7 @@ const pgDump = candidates.find((c) => c === "pg_dump" || existsSync(c)) ?? "pg_d
 const out = execFileSync(pgDump, [
   "--data-only", "--disable-triggers", "--no-owner", "--no-privileges", "--column-inserts",
   "--exclude-table-data=public.search_events", // runtime analytics, not seed data
+  "--exclude-table-data=public.page_views",    // visitor-path analytics — never seed/commit to the public repo
   url,
 ], { maxBuffer: 64 * 1024 * 1024 });
 

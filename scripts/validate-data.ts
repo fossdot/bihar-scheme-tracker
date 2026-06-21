@@ -47,17 +47,26 @@ for (const { file, data } of schemes) {
   if (min_age != null && max_age != null && min_age > max_age) errors.push(`${file}: min_age (${min_age}) > max_age (${max_age})`);
   if (requires_bpl === true && income_ceiling != null) errors.push(`${file}: requires_bpl and income_ceiling must not both be set`);
   if (typeof last_verified === "string" && last_verified > today) errors.push(`${file}: last_verified ${last_verified} is in the future`);
-  // referential + completeness (warnings)
+  // referential + completeness
   if ((status === "subsumed" || status === "superseded") && !successor_scheme) warnings.push(`${file}: status '${status}' but no successor_scheme set`);
-  if (successor_scheme && !schemeNames.has(successor_scheme)) warnings.push(`${file}: successor_scheme "${successor_scheme}" not found among schemes`);
+  // A successor_scheme that names a non-existent scheme is a dangling pointer (load drops it
+  // silently, so the citizen loses the "continue via" link) — hard error, not a warning.
+  if (successor_scheme && !schemeNames.has(successor_scheme)) errors.push(`${file}: successor_scheme "${successor_scheme}" not found among schemes (dangling reference)`);
   for (const p of (pols ?? [])) if (!policyNames.has(p)) warnings.push(`${file}: policy "${p}" not found among policies`);
   // metrics: enforce the no-fabrication rule (CLAUDE.md) at the data layer.
   for (const m of ((data as Record<string, any>).metrics ?? [])) {
-    const real = ["published", "reported", "rti_received"].includes(m.provenance);
-    if (m.value != null && real && !m.source_url)
-      errors.push(`${file}: metric "${m.label ?? m.dimension}" has a ${m.provenance} value but no source_url`);
+    // Any non-null figure must carry a source — regardless of provenance. No sourceless numbers.
+    if (m.value != null && !m.source_url)
+      errors.push(`${file}: metric "${m.label ?? m.dimension}" has a value but no source_url`);
+    // rti_filed / rti_needed mean "data awaited" — they must NOT carry a figure.
+    if (m.value != null && (m.provenance === "rti_needed" || m.provenance === "rti_filed"))
+      errors.push(`${file}: metric "${m.label ?? m.dimension}" has a value but provenance '${m.provenance}' means no data yet — use published/reported/rti_received/estimated`);
+    // A null value is the honest placeholder only for awaited/estimated provenance.
     if (m.value == null && !["rti_needed", "rti_filed", "estimated"].includes(m.provenance))
       errors.push(`${file}: metric "${m.label ?? m.dimension}" has no value — provenance must be rti_needed/rti_filed/estimated, not '${m.provenance}'`);
+    // 'estimated' is the weakest provenance: require a source AND an explaining note.
+    if (m.value != null && m.provenance === "estimated" && !m.note)
+      errors.push(`${file}: metric "${m.label ?? m.dimension}" is 'estimated' — add a note explaining the basis`);
   }
 }
 
@@ -65,7 +74,22 @@ for (const { file, data } of policies) {
   if (!validatePolicy(data)) ajvErr(file, validatePolicy.errors);
   const { last_verified, successor_policy } = data as Record<string, any>;
   if (typeof last_verified === "string" && last_verified > today) errors.push(`${file}: last_verified ${last_verified} is in the future`);
-  if (successor_policy && !policyNames.has(successor_policy)) warnings.push(`${file}: successor_policy "${successor_policy}" not found among policies`);
+  if (successor_policy && !policyNames.has(successor_policy)) errors.push(`${file}: successor_policy "${successor_policy}" not found among policies (dangling reference)`);
+}
+
+// Department consistency: load-data dedups departments by name_en, keeping whichever file
+// loads first — so disagreeing name_hi/website across files would be silently mutated on the
+// next export round-trip. Flag conflicts so the data stays self-consistent.
+{
+  const seen = new Map<string, { file: string; hi: unknown; web: unknown }>();
+  for (const { file, data } of [...schemes, ...policies]) {
+    const d = data as Record<string, any>;
+    if (!d.department_en) continue;
+    const prev = seen.get(d.department_en);
+    if (!prev) { seen.set(d.department_en, { file, hi: d.department_hi ?? null, web: d.department_website ?? null }); continue; }
+    if ((d.department_hi ?? null) !== prev.hi || (d.department_website ?? null) !== prev.web)
+      errors.push(`${file}: department "${d.department_en}" has name_hi/website differing from ${prev.file} — they must agree (load dedups by name_en)`);
+  }
 }
 
 // Circular successor links would make "continues via" loop forever.

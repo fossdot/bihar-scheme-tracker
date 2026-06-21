@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type Stats = {
   days: number;
@@ -20,6 +20,7 @@ export function AdminClient() {
   const [key, setKey] = useState("");
   const [error, setError] = useState(false);
   const [busy, setBusy] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const refresh = useCallback(async () => {
     try {
@@ -51,12 +52,14 @@ export function AdminClient() {
       });
       if (!res.ok) {
         setError(true);
+        inputRef.current?.focus();
         return;
       }
       setKey("");
       await refresh();
     } catch {
       setError(true);
+      inputRef.current?.focus();
     } finally {
       setBusy(false);
     }
@@ -86,13 +89,16 @@ export function AdminClient() {
         </label>
         <input
           id="key"
+          ref={inputRef}
           type="password"
           autoComplete="current-password"
           value={key}
           onChange={(e) => setKey(e.target.value)}
+          aria-invalid={error}
+          aria-describedby={error ? "key-error" : undefined}
           className="w-full rounded-md border border-line bg-surface px-3 py-2 text-sm text-ink focus:border-brand"
         />
-        {error && <p className="text-sm text-danger">Wrong key — try again.</p>}
+        {error && <p id="key-error" role="alert" className="text-sm text-danger">Wrong key — try again.</p>}
         <button
           type="submit"
           disabled={busy || !key}

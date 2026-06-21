@@ -33,7 +33,15 @@ if [ "$size" -lt 1000 ] || [ "$hits" -eq 0 ]; then
   exit 1
 fi
 
-# Retention: keep the newest $KEEP_DAILY, delete older.
+# Retention: keep the newest $KEEP_DAILY backups, delete older.
 ls -1t "$DEST"/bihar-*.sql.gz 2>/dev/null | tail -n +"$((KEEP_DAILY + 1))" | xargs -r rm -f
+
+# Analytics retention: trim the append-only logs so they can't grow without bound. 90 days is
+# well beyond the 30-day window the dashboard/report read. Best-effort (never fail the backup).
+ANALYTICS_KEEP_DAYS="${ANALYTICS_KEEP_DAYS:-90}"
+docker compose exec -T db psql -U bihar -d bihar_scheme_tracker -c \
+  "delete from page_views   where created_at < now() - interval '${ANALYTICS_KEEP_DAYS} days';
+   delete from search_events where created_at < now() - interval '${ANALYTICS_KEEP_DAYS} days';" \
+  >/dev/null 2>&1 || echo "[$(date -u)] analytics prune skipped (non-fatal)"
 
 echo "[$(date -u)] backup ok: $out ($(du -h "$out" | cut -f1))"

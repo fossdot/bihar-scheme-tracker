@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { headers } from "next/headers";
 import { query } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
@@ -11,6 +12,18 @@ const noContent = () =>
 // Derive locale + entity from the (public) path, e.g. /hi/schemes/<uuid> → {hi, scheme, uuid}.
 const UUID = "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}";
 const DETAIL = new RegExp(`^/(en|hi)/(schemes|policies)/(${UUID})`);
+const LOCALIZED = /^\/(en|hi)(\/|$)/; // only real localized routes are logged
+
+// Best-effort per-IP rate limit so the open beacon can't be used to flood the table.
+const hits = new Map<string, { n: number; resetAt: number }>();
+function rateLimited(): boolean {
+  const ip = (headers().get("cf-connecting-ip") || headers().get("x-forwarded-for") || "?").split(",")[0].trim();
+  const now = Date.now();
+  const e = hits.get(ip);
+  if (!e || e.resetAt < now) { hits.set(ip, { n: 1, resetAt: now + 60_000 }); return false; }
+  e.n += 1;
+  return e.n > 120; // >120 views/min from one IP → drop
+}
 
 export async function POST(req: Request) {
   if (!process.env.DATABASE_URL) return noContent();
@@ -19,10 +32,11 @@ export async function POST(req: Request) {
     if (raw.length > 2048) return noContent(); // ignore oversized bodies
     const body = JSON.parse(raw) as { path?: unknown };
     const path = typeof body.path === "string" ? body.path.slice(0, 512) : "";
-    if (!path.startsWith("/")) return noContent();
+    // Only log genuine localized routes — ignores junk/spam paths and bounds the data shape.
+    if (!LOCALIZED.test(path) || rateLimited()) return noContent();
 
     const detail = DETAIL.exec(path);
-    const locale = /^\/(en|hi)(\/|$)/.exec(path)?.[1] ?? null;
+    const locale = LOCALIZED.exec(path)?.[1] ?? null;
     const entityType = detail ? (detail[2] === "schemes" ? "scheme" : "policy") : null;
     const entityId = detail ? detail[3] : null;
 

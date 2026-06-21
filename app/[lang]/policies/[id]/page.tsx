@@ -208,6 +208,7 @@ export default async function PolicyDetailPage({
               >
                 <Icon name="external" className="h-4 w-4" />
                 {primary.label}
+                <span className="sr-only"> {t(locale, "opensNewTab")}</span>
               </a>
             )}
           </div>

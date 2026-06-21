@@ -99,6 +99,8 @@ export default async function MapPage({ params }: { params: { lang: string } }) 
                           aria-hidden="true"
                         />
                         <span className="min-w-0 break-words text-ink">{pick(locale, s.name_en, s.name_hi)}</span>
+                        {/* status conveyed by colour dot for sighted users; sr-only text for the rest */}
+                        <span className="sr-only">— {locale === "hi" ? meta.hi : meta.en}</span>
                       </Link>
                     </li>
                   );

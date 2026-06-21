@@ -44,6 +44,13 @@ services:
       ADMIN_KEY: ${ADMIN_KEY:-}
     expose:
       - "3000"
+    healthcheck:
+      # /health checks DB readiness; Caddy waits for this before proxying (no 502 on a cold/stuck app).
+      test: ["CMD", "node", "-e", "require('http').get('http://127.0.0.1:3000/health',r=>process.exit(r.statusCode===200?0:1)).on('error',()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 25s
     depends_on:
       db:
         condition: service_healthy
@@ -62,7 +69,8 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     depends_on:
-      - app
+      app:
+        condition: service_healthy
 
 volumes:
   db_data:

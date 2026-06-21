@@ -4,29 +4,23 @@ import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
 import { Logo } from "@/components/Logo";
 import { LanguageToggle } from "@/components/LanguageToggle";
+import { SiteNav } from "@/components/SiteNav";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ViewBeacon } from "@/components/ViewBeacon";
-import { altLinks, localizedHref, LOCALES, t, type Locale } from "@/lib/i18n";
+import { localizedHref, LOCALES, t, type Locale } from "@/lib/i18n";
 import { getTheme, resolveLocale } from "@/lib/locale";
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
   const locale = resolveLocale(params.lang);
+  // Only per-locale SITE-WIDE og defaults here — NO url/title/description/canonical, or every
+  // child page would inherit the homepage's (wrong og:url + og:title). Each page sets its own
+  // alternates; og:title/description fall back to each page's title/description.
   return {
-    alternates: altLinks(locale, "/"),
     openGraph: {
       type: "website",
       siteName: "Bihar Scheme Tracker",
-      url: localizedHref(locale, "/"),
       locale: locale === "hi" ? "hi_IN" : "en_IN",
       alternateLocale: locale === "hi" ? "en_IN" : "hi_IN",
-      title:
-        locale === "hi"
-          ? "बिहार योजना ट्रैकर — अपने लिए सरकारी योजनाएँ खोजें"
-          : "Bihar Scheme Tracker — Find government schemes you qualify for",
-      description:
-        locale === "hi"
-          ? "बताइए आप कौन हैं और बिहार व केंद्र सरकार की वे योजनाएँ पाइए जिनके लिए आप पात्र हैं — हर एक की वास्तविक स्थिति, पात्रता, लाभ और आधिकारिक लिंक के साथ।"
-          : "Discover the Bihar & central government schemes you're eligible for — with real status, eligibility, benefits, and official apply links. Source-verified, evidence-based.",
     },
   };
 }
@@ -56,20 +50,7 @@ export default function LangLayout({
               <span className="hidden sm:inline">{t(locale, "appName")}</span>
               <span className="sm:hidden">{locale === "hi" ? "योजना ट्रैकर" : "Tracker"}</span>
             </Link>
-            <nav className="hidden items-center gap-5 text-sm md:flex">
-              <Link href={localizedHref(locale, "/search")} className="text-muted hover:text-ink">
-                {t(locale, "navSchemes")}
-              </Link>
-              <Link href={localizedHref(locale, "/policies")} className="text-muted hover:text-ink">
-                {t(locale, "navPolicies")}
-              </Link>
-              <Link href={localizedHref(locale, "/map")} className="text-muted hover:text-ink">
-                {t(locale, "navMap")}
-              </Link>
-              <Link href={localizedHref(locale, "/about")} className="text-muted hover:text-ink">
-                {t(locale, "navAbout")}
-              </Link>
-            </nav>
+            <SiteNav locale={locale} />
           </div>
 
           {/* Global search across schemes + policies (plain GET form — works without JS) */}

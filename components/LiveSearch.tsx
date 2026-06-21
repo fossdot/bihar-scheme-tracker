@@ -389,10 +389,10 @@ export function LiveSearch({
           </div>
         </aside>
 
-        {/* ── Results ── */}
-        <div className="mt-6 min-w-0 flex-1 lg:mt-0">
+        {/* ── Results ── (aria-live so screen readers hear filter/loading/error changes) */}
+        <div className="mt-6 min-w-0 flex-1 lg:mt-0" aria-live="polite" aria-busy={loading}>
           {error ? (
-            <Panel tone="error">{error}</Panel>
+            <Panel tone="error"><span role="alert">{error}</span></Panel>
           ) : display.length === 0 ? (
             <Panel>{anyFilter ? t(locale, "noResults") : t(locale, "noSchemes")}</Panel>
           ) : (

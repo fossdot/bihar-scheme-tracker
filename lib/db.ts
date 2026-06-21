@@ -15,11 +15,14 @@ export function getPool(): Pool {
   }
   if (!g.__pgPool) {
     // Bounded pool sized for a small (512MB) box; idle clients reaped; a stuck connect fails fast.
+    // statement_timeout kills any runaway query at 10s so it can't pin a connection and
+    // exhaust the pool (Postgres cancels the query; the connection returns to the pool).
     g.__pgPool = new Pool({
       connectionString: process.env.DATABASE_URL,
       max: 10,
       idleTimeoutMillis: 30_000,
       connectionTimeoutMillis: 5_000,
+      statement_timeout: 10_000,
     });
     // Never let a background client error crash the process.
     g.__pgPool.on("error", (err) => console.error("[pg] idle client error:", err.message));

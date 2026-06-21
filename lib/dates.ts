@@ -98,6 +98,7 @@ export function validityLabel(
   if (n == null) return null;
   const a = toDate(today)!;
   const b = toDate(end)!;
+  if (n === 0) return { past: false, text: locale === "hi" ? "आज समाप्त होगा" : "valid through today" };
   const bare = n >= 0 ? phrase2(a, b, locale) : phrase2(b, a, locale);
   if (n >= 0) {
     return {
@@ -122,6 +123,7 @@ export function deadlineLabel(
   if (n == null) return null;
   const a = toDate(today)!;
   const b = toDate(end)!;
+  if (n === 0) return { open: true, text: locale === "hi" ? "आज बंद होगा" : "closes today" };
   if (n >= 0) {
     const bare = phrase2(a, b, locale);
     return {
