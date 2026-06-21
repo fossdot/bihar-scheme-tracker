@@ -11,8 +11,8 @@ import { Timeline } from "@/components/Timeline";
 import { Card, ConfigNotice, FactTile, Panel, Row } from "@/components/ui";
 import { deadlineLabel, fmtDate, validityLabel } from "@/lib/dates";
 import { categoryLabel } from "@/lib/facets";
-import { pick, t, tryT, type Locale } from "@/lib/i18n";
-import { getLocale } from "@/lib/locale";
+import { altLinks, localizedHref, pick, t, tryT, type Locale } from "@/lib/i18n";
+import { resolveLocale } from "@/lib/locale";
 import { policyStatusKey, todayISO } from "@/lib/policy";
 import { getPolicyDetail, isDbConfigured } from "@/lib/queries";
 import { hostLabel } from "@/lib/status";
@@ -22,19 +22,30 @@ export const dynamic = "force-dynamic";
 
 const getDetail = cache((id: string) => getPolicyDetail(id));
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { lang: string; id: string } }): Promise<Metadata> {
+  const locale = resolveLocale(params.lang);
   if (!isDbConfigured()) return {};
   try {
     const detail = await getDetail(params.id);
     if (!detail) return {};
-    const name = detail.policy.name_en;
-    const description = (detail.policy.summary_en || "").replace(/\s+/g, " ").trim().slice(0, 200) || undefined;
-    const url = `/policies/${params.id}`;
+    const name = pick(locale, detail.policy.name_en, detail.policy.name_hi);
+    const description =
+      (pick(locale, detail.policy.summary_en, detail.policy.summary_hi) || "")
+        .replace(/\s+/g, " ")
+        .trim()
+        .slice(0, 200) || undefined;
     return {
       title: name,
       description,
-      alternates: { canonical: url },
-      openGraph: { title: `${name} · Bihar Scheme Tracker`, description, type: "article", url },
+      alternates: altLinks(locale, `/policies/${params.id}`),
+      openGraph: {
+        title: `${name} · Bihar Scheme Tracker`,
+        description,
+        type: "article",
+        url: localizedHref(locale, `/policies/${params.id}`),
+        locale: locale === "hi" ? "hi_IN" : "en_IN",
+        alternateLocale: locale === "hi" ? "en_IN" : "hi_IN",
+      },
     };
   } catch {
     return {};
@@ -44,9 +55,9 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 export default async function PolicyDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: { lang: string; id: string };
 }) {
-  const locale = getLocale();
+  const locale = resolveLocale(params.lang);
   const today = todayISO();
 
   if (!isDbConfigured()) {
@@ -121,7 +132,7 @@ export default async function PolicyDetailPage({
           icon="check"
           items={schemes.map((s) => ({
             id: s.id,
-            href: `/schemes/${s.id}`,
+            href: localizedHref(locale, `/schemes/${s.id}`),
             name: pick(locale, s.name_en, s.name_hi),
             badge: <StatusBadge status={s.status} locale={locale} size="sm" />,
           }))}
@@ -131,7 +142,7 @@ export default async function PolicyDetailPage({
           icon="doc"
           items={related.map((p) => ({
             id: p.id,
-            href: `/policies/${p.id}`,
+            href: localizedHref(locale, `/policies/${p.id}`),
             name: pick(locale, p.name_en, p.name_hi),
             badge: <PolicyBadge policy={p} today={today} locale={locale} size="sm" />,
           }))}
@@ -142,10 +153,11 @@ export default async function PolicyDetailPage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Legislation",
-    name: policy.name_en,
-    description: (policy.summary_en || "").slice(0, 300) || undefined,
+    name: pick(locale, policy.name_en, policy.name_hi),
+    description: (pick(locale, policy.summary_en, policy.summary_hi) || "").slice(0, 300) || undefined,
+    inLanguage: locale === "hi" ? "hi-IN" : "en-IN",
     legislationJurisdiction: "Bihar, India",
-    url: `https://yojana.bodhya.net/policies/${policy.id}`,
+    url: `https://yojana.bodhya.net${localizedHref(locale, `/policies/${policy.id}`)}`,
     ...(policy.document_url ? { sameAs: policy.document_url } : {}),
   };
 
@@ -299,7 +311,7 @@ export default async function PolicyDetailPage({
             {locale === "hi" ? "इसे प्रतिस्थापित किया गया: " : "Superseded by: "}
           </span>
           <Link
-            href={`/policies/${successor.id}`}
+            href={localizedHref(locale, `/policies/${successor.id}`)}
             className="font-medium text-brand underline underline-offset-2"
           >
             {pick(locale, successor.name_en, successor.name_hi)}
@@ -361,7 +373,7 @@ function PolicyImpact({ locale }: { locale: Locale }) {
 
 function BackLink({ locale }: { locale: Locale }) {
   return (
-    <Link href="/policies" className="text-sm font-medium text-brand hover:underline">
+    <Link href={localizedHref(locale, "/policies")} className="text-sm font-medium text-brand hover:underline">
       {t(locale, "backToPolicies")}
     </Link>
   );

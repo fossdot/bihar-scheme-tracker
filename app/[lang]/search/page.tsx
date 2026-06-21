@@ -1,20 +1,26 @@
+import type { Metadata } from "next";
 import { LiveSearch } from "@/components/LiveSearch";
 import { ConfigNotice } from "@/components/ui";
 import { parseFilters } from "@/lib/facets";
-import { t } from "@/lib/i18n";
-import { getLocale } from "@/lib/locale";
+import { altLinks, t } from "@/lib/i18n";
+import { resolveLocale } from "@/lib/locale";
 import { todayISO } from "@/lib/policy";
 import { isDbConfigured, searchSchemes } from "@/lib/queries";
 import type { SchemeListItem } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
-export const metadata = {
-  title: "Browse schemes",
-  description:
-    "Browse and filter Bihar & central government schemes by sector, eligibility, and status — each with its evidence-based status and official links.",
-  alternates: { canonical: "/search" },
-};
+export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
+  const locale = resolveLocale(params.lang);
+  return {
+    title: locale === "hi" ? "योजनाएँ देखें" : "Browse schemes",
+    description:
+      locale === "hi"
+        ? "बिहार व केंद्र सरकार की योजनाएँ क्षेत्र, पात्रता और स्थिति के अनुसार देखें व छाँटें — हर एक की प्रमाण-आधारित स्थिति और आधिकारिक लिंक सहित।"
+        : "Browse and filter Bihar & central government schemes by sector, eligibility, and status — each with its evidence-based status and official links.",
+    alternates: altLinks(locale, "/search"),
+  };
+}
 
 /** Flatten Next's searchParams object into a URLSearchParams so the same parseFilters()
  *  used by the JSON API drives the SSR render. */
@@ -30,13 +36,15 @@ function toSearchParams(sp: {
 }
 
 export default async function SearchPage({
+  params,
   searchParams,
 }: {
+  params: { lang: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  const locale = getLocale();
-  const params = toSearchParams(searchParams);
-  const initialFilters = parseFilters(params);
+  const locale = resolveLocale(params.lang);
+  const query = toSearchParams(searchParams);
+  const initialFilters = parseFilters(query);
   const configured = isDbConfigured();
 
   // SSR the initial results so shared links / no-JS render; the client takes over live.
@@ -64,7 +72,7 @@ export default async function SearchPage({
         <LiveSearch
           locale={locale}
           today={todayISO()}
-          initialQuery={params.toString()}
+          initialQuery={query.toString()}
           initialResults={initialResults}
         />
       )}

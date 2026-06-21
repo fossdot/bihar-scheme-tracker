@@ -10,7 +10,7 @@ import {
   PERSONA_OPTIONS,
   SOCIAL_CATEGORY_OPTIONS,
 } from "@/lib/facets";
-import { pick, t, type Locale } from "@/lib/i18n";
+import { localizedHref, pick, t, type Locale } from "@/lib/i18n";
 import type { SchemeListItem } from "@/lib/types";
 
 // Income bands → a representative annual ₹ figure used for eligibility matching
@@ -202,7 +202,7 @@ export function GuidedFinder({ locale }: { locale: Locale }) {
                 {results.map((s) => (
                   <li key={s.id}>
                     <Link
-                      href={`/schemes/${s.id}`}
+                      href={localizedHref(locale, `/schemes/${s.id}`)}
                       className="block rounded-md border border-line bg-surface p-4 hover:border-ink"
                     >
                       <div className="flex items-start justify-between gap-3">

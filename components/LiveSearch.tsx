@@ -13,7 +13,7 @@ import {
   SOCIAL_CATEGORY_OPTIONS,
 } from "@/lib/facets";
 import { ago, fmtDate, isStale } from "@/lib/dates";
-import { pick, t, type Locale } from "@/lib/i18n";
+import { localizedHref, pick, t, type Locale } from "@/lib/i18n";
 import {
   BUCKET_META,
   DEFAULT_BUCKETS,
@@ -203,8 +203,9 @@ export function LiveSearch({
     } catch {
       /* ignore */
     }
-    router.replace(paramsStr ? `/search?${paramsStr}` : "/search", { scroll: false });
-  }, [paramsStr, router]);
+    // Keep the locale prefix — a bare "/search" would 308 HI users back to /en.
+    router.replace(localizedHref(locale, paramsStr ? `/search?${paramsStr}` : "/search"), { scroll: false });
+  }, [paramsStr, router, locale]);
 
   // On mount: if the URL carried no filters, restore the last-used ones (survives Back).
   useEffect(() => {
@@ -467,7 +468,7 @@ export function LiveSearch({
                     : pick(locale, s.objective_en, s.objective_hi);
                   return (
                     <li key={s.id}>
-                      <Link href={`/schemes/${s.id}`} className="block rounded-md px-3 py-4 hover:bg-paper">
+                      <Link href={localizedHref(locale, `/schemes/${s.id}`)} className="block rounded-md px-3 py-4 hover:bg-paper">
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0">
                             <h3 className="font-semibold text-ink">{name}</h3>
@@ -644,7 +645,7 @@ function SchemeTable({
               <tr key={s.id} className="hover:bg-paper">
                 <td className="px-3 py-2.5 align-top">
                   <Link
-                    href={`/schemes/${s.id}`}
+                    href={localizedHref(locale, `/schemes/${s.id}`)}
                     className="font-medium text-ink hover:underline"
                   >
                     {pick(locale, s.name_en, s.name_hi)}

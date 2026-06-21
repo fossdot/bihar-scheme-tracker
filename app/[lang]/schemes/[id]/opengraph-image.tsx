@@ -15,7 +15,10 @@ function statusView(status?: string): { label: string; color: string } {
   return { label: "Inactive", color: "#6B7280" };
 }
 
-export default async function Image({ params }: { params: { id: string } }) {
+// Text stays English-only: next/og's default font has no Devanagari glyphs, so a Hindi
+// name would render as tofu. The localized og:title/description (HTML metadata) drive the
+// share text; bundling a Devanagari font for Hindi OG images is a separate follow-up.
+export default async function Image({ params }: { params: { lang: string; id: string } }) {
   let name = "Bihar Scheme Tracker";
   let benefit = "Find government schemes you qualify for";
   let status: string | undefined;

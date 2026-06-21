@@ -6,7 +6,27 @@
 export type Locale = "en" | "hi";
 export const LOCALES: Locale[] = ["en", "hi"];
 export const DEFAULT_LOCALE: Locale = "en";
-export const LOCALE_COOKIE = "lang";
+
+/** Prefix an internal, UNPREFIXED path with the active locale segment.
+ *  Every internal nav (Link/anchor/form action/router.replace) must go through this
+ *  so navigation never drops the locale. `/` → `/en`; `/search` → `/en/search`. */
+export function localizedHref(locale: Locale, path: string): string {
+  return path === "/" ? `/${locale}` : `/${locale}${path}`;
+}
+
+/** Self-referential canonical + reciprocal hreflang for a given page path.
+ *  Canonical is ALWAYS the current locale's own URL (never cross-locale, or Google
+ *  drops the alternate). `x-default` points at English. Use for `alternates`. */
+export function altLinks(locale: Locale, path: string) {
+  return {
+    canonical: localizedHref(locale, path),
+    languages: {
+      en: localizedHref("en", path),
+      hi: localizedHref("hi", path),
+      "x-default": localizedHref("en", path),
+    },
+  };
+}
 
 /** Pick a bilingual content value for the active locale, falling back to the other
  *  language when the preferred one is empty (so a missing _hi never blanks the UI). */

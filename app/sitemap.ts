@@ -6,13 +6,24 @@ export const dynamic = "force-dynamic";
 
 const BASE = "https://yojana.bodhya.net";
 
+// One entry per page/entity, with the /en URL as primary and reciprocal en/hi
+// alternates (Next renders these as <xhtml:link hreflang=…>). /find is omitted (noindex).
+function entry(
+  path: string,
+  opts: Omit<MetadataRoute.Sitemap[number], "url" | "alternates"> = {}
+): MetadataRoute.Sitemap[number] {
+  const en = `${BASE}/en${path}`;
+  const hi = `${BASE}/hi${path}`;
+  return { url: en, alternates: { languages: { en, hi } }, ...opts };
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE, changeFrequency: "weekly", priority: 1 },
-    { url: `${BASE}/search`, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE}/policies`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE}/map`, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${BASE}/about`, changeFrequency: "monthly", priority: 0.4 },
+    entry("", { changeFrequency: "weekly", priority: 1 }),
+    entry("/search", { changeFrequency: "weekly", priority: 0.9 }),
+    entry("/policies", { changeFrequency: "weekly", priority: 0.7 }),
+    entry("/map", { changeFrequency: "monthly", priority: 0.5 }),
+    entry("/about", { changeFrequency: "monthly", priority: 0.4 }),
   ];
   if (!isDbConfigured()) return staticPages;
   try {
@@ -21,17 +32,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       query<{ id: string; last_verified: string | null }>(`select id, last_verified from schemes order by name_en`),
       query<{ id: string }>(`select id from policies order by name_en`),
     ]);
-    const schemeUrls: MetadataRoute.Sitemap = schemes.map((s) => ({
-      url: `${BASE}/schemes/${s.id}`,
-      lastModified: s.last_verified ? new Date(s.last_verified) : undefined,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    }));
-    const policyUrls: MetadataRoute.Sitemap = policies.map((p) => ({
-      url: `${BASE}/policies/${p.id}`,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    }));
+    const schemeUrls: MetadataRoute.Sitemap = schemes.map((s) =>
+      entry(`/schemes/${s.id}`, {
+        lastModified: s.last_verified ? new Date(s.last_verified) : undefined,
+        changeFrequency: "monthly",
+        priority: 0.8,
+      })
+    );
+    const policyUrls: MetadataRoute.Sitemap = policies.map((p) =>
+      entry(`/policies/${p.id}`, { changeFrequency: "monthly", priority: 0.6 })
+    );
     return [...staticPages, ...schemeUrls, ...policyUrls];
   } catch {
     return staticPages;

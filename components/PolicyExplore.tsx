@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { PolicyBadge } from "@/components/PolicyBadge";
 import { deadlineLabel, validityLabel } from "@/lib/dates";
 import { CATEGORY_OPTIONS, categoryLabel } from "@/lib/facets";
-import { pick, t, tryT, type Locale } from "@/lib/i18n";
+import { localizedHref, pick, t, tryT, type Locale } from "@/lib/i18n";
 import { policyBucket, policyStatusKey, type PolicyBucket } from "@/lib/policy";
 import type { PolicyListItem, SchemeCategory } from "@/lib/types";
 
@@ -57,8 +57,9 @@ export function PolicyExplore({
     } catch {
       /* ignore */
     }
-    router.replace(qs ? `/policies?${qs}` : "/policies", { scroll: false });
-  }, [view, cat, router]);
+    // Keep the locale prefix — a bare "/policies" would 308 HI users back to /en.
+    router.replace(localizedHref(locale, qs ? `/policies?${qs}` : "/policies"), { scroll: false });
+  }, [view, cat, router, locale]);
 
   // On mount: if the URL carried no filters, restore the last-used ones.
   useEffect(() => {
@@ -158,7 +159,7 @@ export function PolicyExplore({
                   : null;
             return (
               <li key={p.id}>
-                <Link href={`/policies/${p.id}`} className="block bg-surface p-4 hover:bg-paper">
+                <Link href={localizedHref(locale, `/policies/${p.id}`)} className="block bg-surface p-4 hover:bg-paper">
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0">
                       <h3 className="font-semibold text-ink">{name}</h3>

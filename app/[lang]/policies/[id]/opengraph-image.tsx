@@ -13,7 +13,8 @@ const STATUS_COLOR: Record<string, string> = {
   open: BRAND, in_force: BRAND, draft_closed: "#B45309", lapsed: "#6B7280", superseded: "#6B7280",
 };
 
-export default async function Image({ params }: { params: { id: string } }) {
+// English-only text (see scheme opengraph-image): next/og has no Devanagari font.
+export default async function Image({ params }: { params: { lang: string; id: string } }) {
   let name = "Bihar Scheme Tracker";
   let summary = "Bihar government policies & frameworks";
   let statusLabel = "Policy";

@@ -32,7 +32,7 @@ export default function Error({
         >
           {t(locale, "tryAgain")}
         </button>
-        <a href="/" className="text-sm font-medium text-muted hover:text-ink">
+        <a href={`/${locale}`} className="text-sm font-medium text-muted hover:text-ink">
           {t(locale, "backHome")}
         </a>
       </div>

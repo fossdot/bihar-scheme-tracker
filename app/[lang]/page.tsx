@@ -1,17 +1,22 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { PolicyBadge } from "@/components/PolicyBadge";
 import { Card, FactTile } from "@/components/ui";
-import { pick, t } from "@/lib/i18n";
-import { getLocale } from "@/lib/locale";
+import { altLinks, localizedHref, pick, t } from "@/lib/i18n";
+import { resolveLocale } from "@/lib/locale";
 import { policyStatusKey, todayISO } from "@/lib/policy";
 import { isDbConfigured, listPolicies, searchSchemes } from "@/lib/queries";
 import type { PolicyListItem } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
-export default async function Home() {
-  const locale = getLocale();
+export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
+  return { alternates: altLinks(resolveLocale(params.lang), "/") };
+}
+
+export default async function Home({ params }: { params: { lang: string } }) {
+  const locale = resolveLocale(params.lang);
   const today = todayISO();
 
   let schemeCount = 0;
@@ -42,19 +47,19 @@ export default async function Home() {
         <p className="mt-4 text-ink">{t(locale, "homeBody")}</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
-            href="/find-my-schemes"
+            href={localizedHref(locale, "/find-my-schemes")}
             className="inline-flex items-center rounded-md bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark"
           >
             {t(locale, "homeCtaFind")} →
           </Link>
           <Link
-            href="/search"
+            href={localizedHref(locale, "/search")}
             className="inline-flex items-center rounded-md border border-line px-4 py-2 text-sm font-medium text-ink hover:border-ink"
           >
             {t(locale, "homeCtaExplore")} →
           </Link>
           <Link
-            href="/policies"
+            href={localizedHref(locale, "/policies")}
             className="inline-flex items-center rounded-md border border-line px-4 py-2 text-sm font-medium text-ink hover:border-ink"
           >
             {t(locale, "homeCtaPolicies")} →
@@ -92,7 +97,7 @@ export default async function Home() {
             {openDrafts.map((p) => (
               <li key={p.id}>
                 <Link
-                  href={`/policies/${p.id}`}
+                  href={localizedHref(locale, `/policies/${p.id}`)}
                   className="flex items-start justify-between gap-3 py-3 hover:opacity-80"
                 >
                   <span className="min-w-0 font-medium text-ink">

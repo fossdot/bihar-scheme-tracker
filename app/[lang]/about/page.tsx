@@ -1,17 +1,24 @@
+import type { Metadata } from "next";
 import { Card } from "@/components/ui";
-import { getLocale } from "@/lib/locale";
+import { altLinks } from "@/lib/i18n";
+import { resolveLocale } from "@/lib/locale";
 
 export const dynamic = "force-dynamic";
 
-export const metadata = {
-  title: "About the data",
-  description:
-    "How the Bihar Scheme Tracker determines status from evidence, sources every fact, and stays honest about staleness.",
-  alternates: { canonical: "/about" },
-};
+export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
+  const locale = resolveLocale(params.lang);
+  return {
+    title: locale === "hi" ? "डेटा के बारे में" : "About the data",
+    description:
+      locale === "hi"
+        ? "बिहार योजना ट्रैकर प्रमाण से स्थिति कैसे तय करता है, हर तथ्य का स्रोत देता है, और पुरानी जानकारी के बारे में ईमानदार रहता है।"
+        : "How the Bihar Scheme Tracker determines status from evidence, sources every fact, and stays honest about staleness.",
+    alternates: altLinks(locale, "/about"),
+  };
+}
 
-export default function AboutPage() {
-  const locale = getLocale();
+export default function AboutPage({ params }: { params: { lang: string } }) {
+  const locale = resolveLocale(params.lang);
   const L = (en: string, hi: string) => (locale === "hi" ? hi : en);
 
   return (

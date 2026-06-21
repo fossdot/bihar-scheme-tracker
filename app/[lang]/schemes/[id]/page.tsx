@@ -17,8 +17,8 @@ import {
   socialLabel,
 } from "@/lib/facets";
 import { ago, fmtDate, isStale } from "@/lib/dates";
-import { pick, t, tryT, type Locale } from "@/lib/i18n";
-import { getLocale } from "@/lib/locale";
+import { altLinks, localizedHref, pick, t, tryT, type Locale } from "@/lib/i18n";
+import { resolveLocale } from "@/lib/locale";
 import { todayISO } from "@/lib/policy";
 import { getSchemeDetail, isDbConfigured } from "@/lib/queries";
 import { hostLabel, isUnverified, splitEvidence } from "@/lib/status";
@@ -36,20 +36,30 @@ export const dynamic = "force-dynamic";
 // Cached per request so generateMetadata + the page share one fetch (no double query).
 const getDetail = cache((id: string) => getSchemeDetail(id));
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { lang: string; id: string } }): Promise<Metadata> {
+  const locale = resolveLocale(params.lang);
   if (!isDbConfigured()) return {};
   try {
     const detail = await getDetail(params.id);
     if (!detail) return {};
-    const name = detail.scheme.name_en;
-    const raw = detail.scheme.benefit_detail || detail.scheme.objective_en || "";
+    const name = pick(locale, detail.scheme.name_en, detail.scheme.name_hi);
+    const raw =
+      pick(locale, detail.scheme.objective_en, detail.scheme.objective_hi) ||
+      detail.scheme.benefit_detail ||
+      "";
     const description = raw.replace(/\s+/g, " ").trim().slice(0, 200) || undefined;
-    const url = `/schemes/${params.id}`;
     return {
       title: name,
       description,
-      alternates: { canonical: url },
-      openGraph: { title: `${name} · Bihar Scheme Tracker`, description, type: "article", url },
+      alternates: altLinks(locale, `/schemes/${params.id}`),
+      openGraph: {
+        title: `${name} · Bihar Scheme Tracker`,
+        description,
+        type: "article",
+        url: localizedHref(locale, `/schemes/${params.id}`),
+        locale: locale === "hi" ? "hi_IN" : "en_IN",
+        alternateLocale: locale === "hi" ? "en_IN" : "hi_IN",
+      },
     };
   } catch {
     return {};
@@ -59,9 +69,9 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 export default async function SchemeDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: { lang: string; id: string };
 }) {
-  const locale = getLocale();
+  const locale = resolveLocale(params.lang);
 
   if (!isDbConfigured()) {
     return (
@@ -125,7 +135,7 @@ export default async function SchemeDetailPage({
           icon="check"
           items={similar.map((s) => ({
             id: s.id,
-            href: `/schemes/${s.id}`,
+            href: localizedHref(locale, `/schemes/${s.id}`),
             name: pick(locale, s.name_en, s.name_hi),
             badge: <StatusBadge status={s.status} locale={locale} size="sm" />,
           }))}
@@ -136,12 +146,15 @@ export default async function SchemeDetailPage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "GovernmentService",
-    name: scheme.name_en,
-    description: (scheme.objective_en || scheme.benefit_detail || "").slice(0, 300) || undefined,
+    name: pick(locale, scheme.name_en, scheme.name_hi),
+    description:
+      (pick(locale, scheme.objective_en, scheme.objective_hi) || scheme.benefit_detail || "").slice(0, 300) ||
+      undefined,
+    inLanguage: locale === "hi" ? "hi-IN" : "en-IN",
     serviceType: scheme.benefit_type || undefined,
     areaServed: { "@type": "AdministrativeArea", name: "Bihar, India" },
     provider: department ? { "@type": "GovernmentOrganization", name: department.name_en } : undefined,
-    url: `https://yojana.bodhya.net/schemes/${scheme.id}`,
+    url: `https://yojana.bodhya.net${localizedHref(locale, `/schemes/${scheme.id}`)}`,
     ...(scheme.application_portal_url ? { serviceUrl: scheme.application_portal_url } : {}),
   };
 
@@ -208,7 +221,7 @@ export default async function SchemeDetailPage({
               <span key={p.id}>
                 {i > 0 && ", "}
                 <Link
-                  href={`/policies/${p.id}`}
+                  href={localizedHref(locale, `/policies/${p.id}`)}
                   className="font-medium text-brand hover:underline"
                 >
                   {pick(locale, p.name_en, p.name_hi)}
@@ -224,7 +237,7 @@ export default async function SchemeDetailPage({
         <Panel>
           <span className="text-ink">{t(locale, "inactiveSuccessor")} </span>
           <Link
-            href={`/schemes/${successor.id}`}
+            href={localizedHref(locale, `/schemes/${successor.id}`)}
             className="font-medium text-brand underline underline-offset-2"
           >
             {pick(locale, successor.name_en, successor.name_hi)}
@@ -624,7 +637,7 @@ function Meta({ label, value }: { label: string; value: string | null }) {
 
 function BackLink({ locale }: { locale: Locale }) {
   return (
-    <Link href="/search" className="text-sm font-medium text-brand hover:underline">
+    <Link href={localizedHref(locale, "/search")} className="text-sm font-medium text-brand hover:underline">
       {t(locale, "backToExplore")}
     </Link>
   );

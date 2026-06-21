@@ -1,17 +1,23 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { LOCALE_COOKIE, type Locale } from "@/lib/i18n";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { LOCALES, type Locale } from "@/lib/i18n";
 
-/** EN ⇄ हिं switch. Persists the choice to a cookie and refreshes so server
- *  components re-render in the chosen language. English is the default. */
+/** EN ⇄ हिं switch. Locale lives in the URL (/en, /hi), so this navigates to the same
+ *  path under the other locale, preserving the query string. No cookie. */
 export function LanguageToggle({ locale }: { locale: Locale }) {
   const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   function setLocale(next: Locale) {
     if (next === locale) return;
-    document.cookie = `${LOCALE_COOKIE}=${next}; path=/; max-age=31536000; samesite=lax`;
-    router.refresh();
+    const segments = pathname.split("/");
+    // segments[0] is "" (leading slash); segments[1] is the locale prefix.
+    if ((LOCALES as readonly string[]).includes(segments[1])) segments[1] = next;
+    else segments.splice(1, 0, next); // defensive: no prefix yet → add one
+    const qs = searchParams.toString();
+    router.push(`${segments.join("/")}${qs ? `?${qs}` : ""}`);
   }
 
   const opts: { value: Locale; label: string }[] = [

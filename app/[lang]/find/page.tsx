@@ -1,10 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { PolicyBadge } from "@/components/PolicyBadge";
 import { StatusBadge } from "@/components/StatusBadge";
 import { ConfigNotice } from "@/components/ui";
 import { categoryLabel } from "@/lib/facets";
-import { pick, t } from "@/lib/i18n";
-import { getLocale } from "@/lib/locale";
+import { localizedHref, pick, t } from "@/lib/i18n";
+import { resolveLocale } from "@/lib/locale";
 import { todayISO } from "@/lib/policy";
 import { isDbConfigured, listPolicies, searchSchemes } from "@/lib/queries";
 import { logSearch } from "@/lib/searchlog";
@@ -12,19 +13,28 @@ import type { PolicyListItem, SchemeListItem } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
-export const metadata = {
-  title: "Search",
-  description: "Search Bihar government schemes and policies by name.",
-  alternates: { canonical: "/find" },
-  robots: { index: false, follow: true }, // query-driven results page — not for indexing
-};
+export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
+  const locale = resolveLocale(params.lang);
+  return {
+    title: locale === "hi" ? "खोज" : "Search",
+    description:
+      locale === "hi"
+        ? "बिहार सरकार की योजनाएँ व नीतियाँ नाम से खोजें।"
+        : "Search Bihar government schemes and policies by name.",
+    // Query-driven results page — noindex, so a self-canonical only (no hreflang).
+    alternates: { canonical: localizedHref(locale, "/find") },
+    robots: { index: false, follow: true },
+  };
+}
 
 export default async function FindPage({
+  params,
   searchParams,
 }: {
+  params: { lang: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  const locale = getLocale();
+  const locale = resolveLocale(params.lang);
   const today = todayISO();
   const q = (typeof searchParams.q === "string" ? searchParams.q : "").trim();
 
@@ -78,7 +88,7 @@ export default async function FindPage({
                 {schemes.map((s) => (
                   <li key={s.id}>
                     <Link
-                      href={`/schemes/${s.id}`}
+                      href={localizedHref(locale, `/schemes/${s.id}`)}
                       className="flex items-start justify-between gap-3 bg-surface p-3 hover:bg-paper"
                     >
                       <div className="min-w-0">
@@ -113,7 +123,7 @@ export default async function FindPage({
                 {policies.map((p) => (
                   <li key={p.id}>
                     <Link
-                      href={`/policies/${p.id}`}
+                      href={localizedHref(locale, `/policies/${p.id}`)}
                       className="flex items-start justify-between gap-3 bg-surface p-3 hover:bg-paper"
                     >
                       <div className="min-w-0">

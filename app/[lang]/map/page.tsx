@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { PolicyBadge } from "@/components/PolicyBadge";
 import { ConfigNotice } from "@/components/ui";
-import { pick, t } from "@/lib/i18n";
-import { getLocale } from "@/lib/locale";
+import { altLinks, localizedHref, pick, t } from "@/lib/i18n";
+import { resolveLocale } from "@/lib/locale";
 import { todayISO } from "@/lib/policy";
 import { getPolicyMap, isDbConfigured } from "@/lib/queries";
 import { STATUS_META } from "@/lib/status";
@@ -11,14 +12,20 @@ import type { PolicyMapGroup } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 
-export const metadata = {
-  title: "Scheme–policy map",
-  description: "How Bihar's schemes sit under their policy frameworks — a visual map.",
-  alternates: { canonical: "/map" },
-};
+export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
+  const locale = resolveLocale(params.lang);
+  return {
+    title: locale === "hi" ? "योजना–नीति मानचित्र" : "Scheme–policy map",
+    description:
+      locale === "hi"
+        ? "बिहार की योजनाएँ अपने नीति-ढाँचों के अंतर्गत कैसे आती हैं — एक दृश्य मानचित्र।"
+        : "How Bihar's schemes sit under their policy frameworks — a visual map.",
+    alternates: altLinks(locale, "/map"),
+  };
+}
 
-export default async function MapPage() {
-  const locale = getLocale();
+export default async function MapPage({ params }: { params: { lang: string } }) {
+  const locale = resolveLocale(params.lang);
   const today = todayISO();
 
   let groups: PolicyMapGroup[] = [];
@@ -54,7 +61,7 @@ export default async function MapPage() {
             >
               {/* Policy = parent node */}
               <Link
-                href={`/policies/${g.policy.id}`}
+                href={localizedHref(locale, `/policies/${g.policy.id}`)}
                 className="flex items-center justify-between gap-3 border-b border-line bg-paper px-4 py-3 hover:bg-line/40"
               >
                 <span className="inline-flex min-w-0 items-center gap-2 font-semibold text-ink">
@@ -83,7 +90,7 @@ export default async function MapPage() {
                         aria-hidden="true"
                       />
                       <Link
-                        href={`/schemes/${s.id}`}
+                        href={localizedHref(locale, `/schemes/${s.id}`)}
                         className="flex min-w-0 items-center gap-2 text-sm hover:underline"
                         title={locale === "hi" ? meta.hi : meta.en}
                       >
