@@ -33,4 +33,41 @@ status_evidence: >-
   2022 (PIB). Verified 2026-06-19. Source: https://www.jansuraksha.gov.in/
 source_url: https://www.jansuraksha.gov.in
 application_portal_url: https://www.jansuraksha.gov.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: null
+    label: 'Cumulative enrolments (persons) [scope: National]'
+    value: 505400000
+    unit: persons
+    provenance: published
+    as_of_date: '2025-03-19'
+    source_url: https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/may/doc202558551401.pdf
+    note: '50,54,00,000 persons, as of 2025-03-19. [scope: National]'
+  - dimension: beneficiaries
+    fiscal_year: null
+    label: 'Cumulative enrolments (persons), earlier PIB figure [scope: National]'
+    value: 491200000
+    unit: persons
+    provenance: published
+    as_of_date: '2025-01-15'
+    source_url: https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/feb/doc202521493501.pdf
+    note: '49,12,00,000 persons, as of 2025-01-15. [scope: National]'
+  - dimension: outcomes
+    fiscal_year: null
+    label: 'Cumulative claims amount disbursed [scope: National]'
+    value: 2994.75
+    unit: ₹ crore
+    provenance: published
+    as_of_date: '2025-01-15'
+    source_url: https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/feb/doc202521493501.pdf
+    note: '2,994.75 ₹ crore, as of 2025-01-15. [scope: National]'
+  - dimension: outcomes
+    fiscal_year: null
+    label: 'Cumulative claims received (count) [scope: National]'
+    value: 198446
+    unit: claims
+    provenance: published
+    as_of_date: '2025-01-15'
+    source_url: https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/feb/doc202521493501.pdf
+    note: '1,98,446 claims, as of 2025-01-15. [scope: National]'
 last_verified: '2026-06-19'

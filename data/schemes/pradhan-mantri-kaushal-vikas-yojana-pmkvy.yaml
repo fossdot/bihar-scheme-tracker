@@ -35,4 +35,29 @@ status_evidence: >-
   skillindiadigital.gov.in). Verified 2026-06-19. Source: https://www.pmkvyofficial.org/
 source_url: https://www.pmkvyofficial.org
 application_portal_url: https://www.pmkvyofficial.org
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: null
+    label: >-
+      Candidates trained under PMKVY 4.0 (as on 11 July 2025), per government 10-year statement
+      [scope: National]
+    value: 2500000
+    unit: persons
+    provenance: published
+    as_of_date: '2025-07-11'
+    source_url: >-
+      https://ddnews.gov.in/en/a-decade-of-skill-building-pmkvy-powers-indias-future-ready-workforce/
+    note: '25,00,000 persons, as of 2025-07-11. [scope: National]'
+  - dimension: beneficiaries
+    fiscal_year: null
+    label: >-
+      Total candidates trained/oriented under PMKVY across all four phases over 10 years (cumulative
+      since 2015 launch) [scope: National]
+    value: 16300000
+    unit: persons
+    provenance: published
+    as_of_date: '2025-07-14'
+    source_url: >-
+      https://ddnews.gov.in/en/a-decade-of-skill-building-pmkvy-powers-indias-future-ready-workforce/
+    note: '1,63,00,000 persons, as of 2025-07-14. [scope: National]'
 last_verified: '2026-06-19'
