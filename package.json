@@ -31,7 +31,8 @@
     "data:dump": "tsx scripts/dump-data.ts",
     "data:stale": "tsx scripts/stale-report.ts",
     "seed:metrics-public": "tsx seed/21_metrics_public.ts",
-    "data:searches": "tsx scripts/search-report.ts"
+    "data:searches": "tsx scripts/search-report.ts",
+    "seed:metrics-deep": "tsx seed/22_metrics_deep.ts"
   },
   "dependencies": {
     "next": "^14.2.35",
