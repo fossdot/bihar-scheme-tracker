@@ -147,51 +147,42 @@ export async function getSchemeDetail(id: string): Promise<SchemeDetail | null> 
   const [scheme] = await query<Scheme>(`select * from schemes where id = $1`, [id]);
   if (!scheme) return null;
 
-  let department: Department | null = null;
-  if (scheme.department_id) {
-    const [dep] = await query<Department>(
-      `select * from departments where id = $1`,
-      [scheme.department_id]
-    );
-    department = dep ?? null;
-  }
-
-  const allocations = await query<BudgetAllocation>(
-    `select * from budget_allocations where scheme_id = $1 order by fiscal_year`,
-    [id]
-  );
-
-  const metrics = await query<SchemeMetric>(
-    `select * from scheme_metrics where scheme_id = $1
-      order by dimension, fiscal_year nulls last`,
-    [id]
-  );
-
-  const policies = await query<{ id: string; name_en: string; name_hi: string | null }>(
-    `select p.id, p.name_en, p.name_hi
-       from scheme_policy_links l join policies p on p.id = l.policy_id
-      where l.scheme_id = $1 order by p.name_en`,
-    [id]
-  );
-
-  let successor: SchemeDetail["successor"] = null;
-  if (scheme.successor_scheme_id) {
-    const [s] = await query<{ id: string; name_en: string; name_hi: string | null }>(
-      `select id, name_en, name_hi from schemes where id = $1`,
-      [scheme.successor_scheme_id]
-    );
-    successor = s ?? null;
-  }
-
-  const similar = scheme.categories.length
-    ? await query<SchemeDetail["similar"][number]>(
-        `select id, name_en, name_hi, status, categories
-           from schemes
-          where id <> $1 and categories && $2::text[]
-          order by name_en limit 6`,
-        [id, scheme.categories]
-      )
-    : [];
+  // The scheme row is fetched first (needed for the FKs below); the remaining six queries are
+  // independent of each other, so run them in parallel rather than sequentially (was N+1-ish).
+  const [department, allocations, metrics, policies, successor, similar] = await Promise.all([
+    scheme.department_id
+      ? query<Department>(`select * from departments where id = $1`, [scheme.department_id]).then((r) => r[0] ?? null)
+      : Promise.resolve<Department | null>(null),
+    query<BudgetAllocation>(
+      `select * from budget_allocations where scheme_id = $1 order by fiscal_year`,
+      [id]
+    ),
+    query<SchemeMetric>(
+      `select * from scheme_metrics where scheme_id = $1 order by dimension, fiscal_year nulls last`,
+      [id]
+    ),
+    query<{ id: string; name_en: string; name_hi: string | null }>(
+      `select p.id, p.name_en, p.name_hi
+         from scheme_policy_links l join policies p on p.id = l.policy_id
+        where l.scheme_id = $1 order by p.name_en`,
+      [id]
+    ),
+    scheme.successor_scheme_id
+      ? query<{ id: string; name_en: string; name_hi: string | null }>(
+          `select id, name_en, name_hi from schemes where id = $1`,
+          [scheme.successor_scheme_id]
+        ).then((r) => r[0] ?? null)
+      : Promise.resolve<SchemeDetail["successor"]>(null),
+    scheme.categories.length
+      ? query<SchemeDetail["similar"][number]>(
+          `select id, name_en, name_hi, status, categories
+             from schemes
+            where id <> $1 and categories && $2::text[]
+            order by name_en limit 6`,
+          [id, scheme.categories]
+        )
+      : Promise.resolve<SchemeDetail["similar"]>([]),
+  ]);
 
   return { scheme, department, allocations, metrics, policies, successor, similar };
 }

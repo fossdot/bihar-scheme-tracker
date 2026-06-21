@@ -14,7 +14,15 @@ export function getPool(): Pool {
     throw new Error("DATABASE_URL is not set — see .env.local.example.");
   }
   if (!g.__pgPool) {
-    g.__pgPool = new Pool({ connectionString: process.env.DATABASE_URL });
+    // Bounded pool sized for a small (512MB) box; idle clients reaped; a stuck connect fails fast.
+    g.__pgPool = new Pool({
+      connectionString: process.env.DATABASE_URL,
+      max: 10,
+      idleTimeoutMillis: 30_000,
+      connectionTimeoutMillis: 5_000,
+    });
+    // Never let a background client error crash the process.
+    g.__pgPool.on("error", (err) => console.error("[pg] idle client error:", err.message));
   }
   return g.__pgPool;
 }

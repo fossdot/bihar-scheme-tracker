@@ -1,3 +1,5 @@
+import { cache } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
@@ -17,6 +19,27 @@ import { hostLabel } from "@/lib/status";
 import type { PolicyDetail } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
+
+const getDetail = cache((id: string) => getPolicyDetail(id));
+
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  if (!isDbConfigured()) return {};
+  try {
+    const detail = await getDetail(params.id);
+    if (!detail) return {};
+    const name = detail.policy.name_en;
+    const description = (detail.policy.summary_en || "").replace(/\s+/g, " ").trim().slice(0, 200) || undefined;
+    const url = `/policies/${params.id}`;
+    return {
+      title: name,
+      description,
+      alternates: { canonical: url },
+      openGraph: { title: `${name} · Bihar Scheme Tracker`, description, type: "article", url },
+    };
+  } catch {
+    return {};
+  }
+}
 
 export default async function PolicyDetailPage({
   params,
@@ -38,7 +61,7 @@ export default async function PolicyDetailPage({
   let detail: PolicyDetail | null = null;
   let error: string | null = null;
   try {
-    detail = await getPolicyDetail(params.id);
+    detail = await getDetail(params.id);
   } catch (e) {
     error = e instanceof Error ? e.message : "Failed to load policy.";
   }

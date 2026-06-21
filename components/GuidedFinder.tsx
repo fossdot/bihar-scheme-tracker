@@ -42,14 +42,15 @@ function Chip({
 }
 
 function Question({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
+  // fieldset + legend so each question is announced as a labelled group to screen readers.
   return (
-    <div className="border-t border-line py-5 first:border-t-0 first:pt-0">
-      <div className="mb-3">
+    <fieldset className="m-0 min-w-0 border-0 border-t border-line p-0 py-5 first:border-t-0 first:pt-0">
+      <legend className="mb-3 p-0">
         <span className="text-base font-semibold text-ink">{label}</span>
         {hint && <span className="ml-2 text-sm text-muted">{hint}</span>}
-      </div>
+      </legend>
       {children}
-    </div>
+    </fieldset>
   );
 }
 
@@ -114,6 +115,7 @@ export function GuidedFinder({ locale }: { locale: Locale }) {
           <input
             type="number" inputMode="numeric" min={0} max={120} value={age}
             onChange={(e) => setAge(e.target.value)} placeholder={t(locale, "agePlaceholder")}
+            aria-label={t(locale, "qAge")}
             className="w-32 rounded-md border border-line bg-surface px-3 py-2 text-sm text-ink focus:border-brand"
           />
         </Question>

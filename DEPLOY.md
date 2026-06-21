@@ -89,11 +89,29 @@ schemes.example.org {
 }
 ```
 
+## Backups & recovery
+
+The verified registry is the project's crown jewel — back it up automatically.
+
+**Set up (once, on the server):**
+```bash
+chmod +x /root/bihar-scheme-tracker/deploy/backup/backup.sh
+( crontab -l 2>/dev/null; echo '7 2 * * * cd /root/bihar-scheme-tracker && ./deploy/backup/backup.sh >> /root/backups/backup.log 2>&1' ) | crontab -
+```
+`deploy/backup/backup.sh` writes a gzipped full dump to `/root/backups/bihar-<ts>.sql.gz` daily at
+02:07 UTC, verifies it (non-empty + contains the `schemes` table), and keeps the newest 30.
+For off-box safety, also copy `/root/backups` elsewhere (e.g. `rclone`/`rsync` to object storage).
+
+**Restore:**
+```bash
+gunzip -c /root/backups/bihar-YYYYMMDD-HHMM.sql.gz | docker compose exec -T db psql -U bihar -d bihar_scheme_tracker
+```
+Test recovery periodically: restore into a throwaway DB and check row counts (`select count(*) from schemes`).
+
 ## Notes
 
 - **Runtime needs only Postgres** — the finder uses full-text + trigram search. The Anthropic API
   is used only offline, when (re)generating embeddings/summaries during seeding, never at request time.
-- **Backups:** `docker compose exec db pg_dump -U bihar bihar_scheme_tracker > backup.sql`.
 - **Logs:** `docker compose logs -f app`.
 - **Local dev (no Docker)** is unchanged: a local Postgres + `.env.local` with `DATABASE_URL`,
   then `npm run dev`. Migrations in `supabase/migrations/` are applied with `psql`.

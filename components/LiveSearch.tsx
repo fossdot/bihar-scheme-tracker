@@ -467,7 +467,7 @@ export function LiveSearch({
                     : pick(locale, s.objective_en, s.objective_hi);
                   return (
                     <li key={s.id}>
-                      <Link href={`/schemes/${s.id}`} className="block py-4 hover:bg-paper">
+                      <Link href={`/schemes/${s.id}`} className="block rounded-md px-3 py-4 hover:bg-paper">
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0">
                             <h3 className="font-semibold text-ink">{name}</h3>

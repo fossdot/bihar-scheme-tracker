@@ -9,7 +9,7 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_USER: bihar
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bihar}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env (no insecure default)}
       POSTGRES_DB: bihar_scheme_tracker
     volumes:
       - db_data:/var/lib/postgresql/data
@@ -25,7 +25,7 @@ services:
     build: .
     restart: unless-stopped
     environment:
-      DATABASE_URL: postgres://bihar:${POSTGRES_PASSWORD:-bihar}@db:5432/bihar_scheme_tracker
+      DATABASE_URL: postgres://bihar:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env (no insecure default)}@db:5432/bihar_scheme_tracker
     ports:
       - "${APP_PORT:-3000}:3000"
     depends_on:

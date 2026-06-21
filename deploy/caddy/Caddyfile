@@ -13,4 +13,12 @@
 {$SITE_ADDRESS} {
 	reverse_proxy app:3000
 	tls internal
+	header {
+		# Security baseline (Cloudflare adds its own; these protect the origin + direct hits).
+		X-Frame-Options "SAMEORIGIN"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		-Server
+	}
 }
