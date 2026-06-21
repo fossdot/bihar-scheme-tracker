@@ -39,4 +39,16 @@ source_url: https://www.sspmis.bihar.gov.in
 application_portal_url: https://www.sspmis.bihar.gov.in
 policies:
   - Bihar Social Security Pensions (SSPMIS)
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: Bihar disability pensioners (state)
+    value: 978483
+    unit: persons
+    provenance: reported
+    as_of_date: '2025-06-01'
+    source_url: https://indianmasterminds.com/news/bihar-pension-scheme-2025-nitish-kumar-dbt-transfer-143835/
+    note: >-
+      State Bihar Divyangjan pension (~9.78 lakh); a further ~1.10 lakh get the central IGNDPS.
+      [Bihar]
 last_verified: '2026-06-19'

@@ -39,4 +39,15 @@ source_url: https://www.sspmis.bihar.gov.in
 application_portal_url: https://www.sspmis.bihar.gov.in
 policies:
   - Bihar Social Security Pensions (SSPMIS)
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: Bihar widow pensioners
+    value: 860000
+    unit: persons
+    provenance: reported
+    as_of_date: null
+    source_url: >-
+      https://patnapress.com/bihar-raises-social-security-pension-to-rs-1100-for-over-11-million-beneficiaries/
+    note: ~8.6 lakh widows — disaggregated from the combined ~1.09 crore social-security total. [Bihar]
 last_verified: '2026-06-19'

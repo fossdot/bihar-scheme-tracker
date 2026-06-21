@@ -34,4 +34,15 @@ status_evidence: >-
   Mar 2026 needs fresh approval). Verified 2026-06-19. Source: https://pmposhan.education.gov.in/
 source_url: https://pmposhan.education.gov.in
 application_portal_url: https://pmposhan.education.gov.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: India students covered
+    value: 110000000
+    unit: students
+    provenance: reported
+    as_of_date: '2025-07-28'
+    source_url: >-
+      https://www.newsonair.gov.in/govt-provides-nutritious-meals-to-nearly-11cr-students-informs-state-education-minister-to-ls
+    note: 'National (~11 cr children). [scope: National]'
 last_verified: '2026-06-19'

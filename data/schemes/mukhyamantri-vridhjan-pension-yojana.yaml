@@ -45,4 +45,15 @@ budget_allocations:
     allocated_cr: 828
     revised_cr: null
     source_url: https://prsindia.org/files/budget/budget_state/bihar/2025/Bihar_Budget_Analysis_2025-26.pdf
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: All Bihar social-security pensions (combined)
+    value: 10969255
+    unit: persons
+    provenance: reported
+    as_of_date: '2025-07-01'
+    source_url: >-
+      https://www.oneindia.com/india/bihar-social-security-pension-hiked-to-1100-over-1-crore-beneficiaries-to-benefit-from-july-7778997.html
+    note: 'COMBINED old-age + widow + disability total (~1.09 cr); not split per scheme. [scope: Bihar]'
 last_verified: '2026-06-19'

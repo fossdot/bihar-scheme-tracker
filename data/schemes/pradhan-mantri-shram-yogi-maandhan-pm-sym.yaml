@@ -33,4 +33,15 @@ status_evidence: >-
   not in EPFO/ESIC/NPS. Verified 2026-06-19. Source: https://maandhan.in/
 source_url: https://maandhan.in
 application_portal_url: https://maandhan.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: India subscribers
+    value: 4612330
+    unit: persons
+    provenance: reported
+    as_of_date: '2025-03-05'
+    source_url: >-
+      https://visionias.in/current-affairs/news-today/2025-03-05/schemes-in-news/six-years-of-pradhan-mantri-shram-yogi-maandhan-yojana-pm-sym-completed
+    note: 'National. [scope: National]'
 last_verified: '2026-06-19'

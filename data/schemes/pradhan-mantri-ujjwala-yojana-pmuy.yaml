@@ -35,4 +35,14 @@ status_evidence: >-
   connections. Verified 2026-06-19. Source: https://www.pmuy.gov.in/
 source_url: https://www.pmuy.gov.in
 application_portal_url: https://www.pmuy.gov.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: India LPG connections
+    value: 103300000
+    unit: connections
+    provenance: published
+    as_of_date: '2025-03-01'
+    source_url: https://www.pib.gov.in/PressNoteDetails.aspx?NoteId=154355&ModuleId=3
+    note: 'National (Lok Sabha reply, 10.33 cr). [scope: National]'
 last_verified: '2026-06-19'

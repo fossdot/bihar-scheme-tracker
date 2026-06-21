@@ -35,4 +35,15 @@ status_evidence: >-
   https://www.pfrda.org.in/
 source_url: https://www.npscra.nsdl.co.in
 application_portal_url: https://www.npscra.nsdl.co.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: India subscribers
+    value: 90000000
+    unit: persons
+    provenance: reported
+    as_of_date: '2026-04-21'
+    source_url: >-
+      https://www.tribuneindia.com/news/business/atal-pension-yojana-enrolments-surpass-9-crore-enrolments-fy26-additions-highest-at-1-35-crore/amp
+    note: 'National (~9 cr). [scope: National]'
 last_verified: '2026-06-19'

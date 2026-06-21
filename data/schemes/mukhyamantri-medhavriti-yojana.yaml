@@ -38,4 +38,25 @@ status_evidence: >-
   https://medhasoft.bihar.gov.in/
 source_url: https://www.medhasoft.bihar.gov.in
 application_portal_url: https://www.medhasoft.bihar.gov.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2020–25
+    label: Bihar SC/ST students (cumulative)
+    value: 978000
+    unit: students
+    provenance: reported
+    as_of_date: '2026-05-01'
+    source_url: >-
+      https://indianmasterminds.com/news/government/bihar-sc-st-students-scholarship-under-mukhyamantri-medhavriti-yojana-202730/
+    note: '6-year cumulative (2020–2025). [scope: Bihar]'
+  - dimension: budget
+    fiscal_year: 2020–25
+    label: Bihar disbursed (cumulative)
+    value: 941.31
+    unit: cr
+    provenance: reported
+    as_of_date: '2026-05-01'
+    source_url: >-
+      https://indianmasterminds.com/news/government/bihar-sc-st-students-scholarship-under-mukhyamantri-medhavriti-yojana-202730/
+    note: '[scope: Bihar]'
 last_verified: '2026-06-19'

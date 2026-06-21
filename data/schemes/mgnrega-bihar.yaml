@@ -45,4 +45,42 @@ budget_allocations:
     allocated_cr: 3192
     revised_cr: null
     source_url: https://prsindia.org/files/budget/budget_state/bihar/2026/Budget_Analysis_2026-27-Bihar.pdf
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2023-24
+    label: Bihar households employed
+    value: 4600000
+    unit: households
+    provenance: reported
+    as_of_date: '2024-03-13'
+    source_url: >-
+      https://www.newslaundry.com/2024/04/01/corruption-bad-working-conditions-how-mgnrega-continues-to-falter-in-bihar
+    note: '46 lakh households; 201.5 M person-days (FY23-24, NREGA portal). [scope: Bihar]'
+  - dimension: budget
+    fiscal_year: 2024-25
+    label: Bihar actual expenditure
+    value: 8473.73
+    unit: cr
+    provenance: published
+    as_of_date: '2025-09-01'
+    source_url: https://www.dord.gov.in/static/uploads/2025/09/d81193f25cde78b36f36b559ffabbb18.pdf
+    note: Total actual MGNREGA expenditure in Bihar, FY2024-25 (MoRD). [Bihar]
+  - dimension: demographics
+    fiscal_year: 2024-25
+    label: SC/ST share of person-days
+    value: 20
+    unit: percent
+    provenance: published
+    as_of_date: '2025-09-01'
+    source_url: https://www.dord.gov.in/static/uploads/2025/09/d81193f25cde78b36f36b559ffabbb18.pdf
+    note: SC ~20% and ST ~2% of total person-days in Bihar (FY2024-25, MoRD). [Bihar]
+  - dimension: outcomes
+    fiscal_year: 2024-25
+    label: Person-days generated
+    value: 250399729
+    unit: person-days
+    provenance: published
+    as_of_date: '2025-09-01'
+    source_url: https://www.dord.gov.in/static/uploads/2025/09/d81193f25cde78b36f36b559ffabbb18.pdf
+    note: ~25.04 crore person-days generated in Bihar (FY2024-25, MoRD). [Bihar]
 last_verified: '2026-06-19'

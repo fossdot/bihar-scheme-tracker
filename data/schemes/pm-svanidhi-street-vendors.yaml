@@ -35,4 +35,23 @@ status_evidence: >-
   disbursed by Jul 2025. Verified 2026-06-19. Source: https://pmsvanidhi.mohua.gov.in/
 source_url: https://pmsvanidhi.mohua.gov.in
 application_portal_url: https://pmsvanidhi.mohua.gov.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: India loans
+    value: 10000000
+    unit: loans
+    provenance: published
+    as_of_date: '2026-03-30'
+    source_url: https://www.newsonair.gov.in/pm-svanidhi-scheme-supports-street-vendors-with-17115-crore-loans
+    note: 'National (~1 cr loans). [scope: National]'
+  - dimension: budget
+    fiscal_year: 2025-26
+    label: India loans disbursed
+    value: 17115
+    unit: cr
+    provenance: published
+    as_of_date: '2026-03-30'
+    source_url: https://www.newsonair.gov.in/pm-svanidhi-scheme-supports-street-vendors-with-17115-crore-loans
+    note: '[scope: National]'
 last_verified: '2026-06-19'

@@ -135,6 +135,12 @@ async function main() {
       await q(`delete from scheme_policy_links where scheme_id = $1`, [id]);
       for (const pn of s.policies ?? [])
         if (policyId.has(pn)) await q(`insert into scheme_policy_links (scheme_id, policy_id) values ($1,$2) on conflict do nothing`, [id, policyId.get(pn)]);
+      await q(`delete from scheme_metrics where scheme_id = $1`, [id]);
+      for (const m of s.metrics ?? [])
+        await q(`insert into scheme_metrics (scheme_id, dimension, fiscal_year, label, value, unit, provenance, as_of_date, source_url, note)
+                 values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)`,
+          [id, m.dimension, m.fiscal_year ?? null, m.label ?? null, m.value ?? null, m.unit ?? null,
+           m.provenance, m.as_of_date ?? null, m.source_url ?? null, m.note ?? null]);
     }
 
     // 5. Orphans: rows in the DB whose YAML file was renamed/deleted. The upsert path

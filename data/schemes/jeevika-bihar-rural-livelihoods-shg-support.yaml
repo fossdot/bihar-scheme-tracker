@@ -40,4 +40,48 @@ status_evidence: >-
   https://brlps.in/
 source_url: https://brlps.in
 application_portal_url: https://brlps.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: Bihar women mobilised (in SHGs)
+    value: 13500000
+    unit: persons
+    provenance: reported
+    as_of_date: '2025-07-01'
+    source_url: >-
+      https://yourstory.com/2025/07/inside-jeevika-bihar-silent-financial-engine-powering-rural-women-development
+    note: '~1.35 cr women across ~10.6 lakh SHGs. [scope: Bihar]'
+  - dimension: budget
+    fiscal_year: 2024-25
+    label: NRLM Annual Action Plan
+    value: 3136.95
+    unit: cr
+    provenance: published
+    as_of_date: '2024-04-01'
+    source_url: >-
+      https://brlps.in/UplodFiles/Files/AAP%20and%20Budget%20of%20BRLPS(JEEVIKA)%20for%20FY%202024-25%20(1).pdf
+    note: BRLPS/JEEViKA NRLM Annual Action Plan budget, FY2024-25. [Bihar]
+  - dimension: district
+    fiscal_year: 2024-25
+    label: District-wise (public)
+    value: 331631
+    unit: households
+    provenance: published
+    as_of_date: '2025-06-21'
+    source_url: https://brlps.in/districtAbout?us=3
+    note: >-
+      Per-district mobilisation is published on brlps.in (e.g. Begusarai ~3.32 lakh households).
+      [Bihar]
+  - dimension: outcomes
+    fiscal_year: 2025-26
+    label: Cumulative credit to SHGs
+    value: 57186
+    unit: cr
+    provenance: published
+    as_of_date: '2025-06-30'
+    source_url: >-
+      https://brlps.in/UplodFiles/Files/JEEVIKA%2071st%20Quarterly%20Progress%20Report%20(April-June%202025)_c.pdf
+    note: >-
+      ₹57,186 cr cumulative credit to SHGs. Structure: 11.0 lakh SHGs, 73,515 VOs, 1,684 CLFs (Jun
+      2025). [Bihar]
 last_verified: '2026-06-19'

@@ -40,4 +40,14 @@ status_evidence: >-
   https://eshram.gov.in/
 source_url: https://eshram.gov.in
 application_portal_url: https://eshram.gov.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: Bihar workers registered
+    value: 29588748
+    unit: persons
+    provenance: reported
+    as_of_date: '2025-07-31'
+    source_url: https://www.medianama.com/2026/01/223-maharashtra-e-shram-platform-workers-small-states-lag/
+    note: 'Ministry of Labour data (~2.96 cr registered in Bihar). [scope: Bihar]'
 last_verified: '2026-06-19'

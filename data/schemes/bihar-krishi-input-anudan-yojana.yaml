@@ -44,4 +44,30 @@ source_url: https://dbtagriculture.bihar.gov.in
 application_portal_url: https://dbtagriculture.bihar.gov.in
 policies:
   - Bihar Krishi Road Map (Agriculture Roadmap)
+metrics:
+  - dimension: budget
+    fiscal_year: 2025-26
+    label: Bihar disbursed (Aug-2025 flood loss)
+    value: 113.16
+    unit: cr
+    provenance: reported
+    as_of_date: '2026-02-21'
+    source_url: >-
+      https://www.thehansindia.com/news/national/bihar-nitish-kumar-transfers-rs-113-crore-to-farmers-affected-by-flood-cyclone-montha-1050659
+    note: >-
+      Input subsidy via DBT for Aug-2025 flood / Cyclone Montha kharif crop loss (CM transfer, 21
+      Feb 2026). [Bihar]
+  - dimension: district
+    fiscal_year: 2025-26
+    label: Phase-1 districts
+    value: 13
+    unit: districts
+    provenance: reported
+    as_of_date: '2026-02-21'
+    source_url: >-
+      https://www.thehansindia.com/news/national/bihar-nitish-kumar-transfers-rs-113-crore-to-farmers-affected-by-flood-cyclone-montha-1050659
+    note: >-
+      Phase-1 disbursement covered 13 districts, 53 blocks, 493 panchayats (Begusarai, Bhojpur,
+      Darbhanga, Gaya, Kaimur, Kishanganj, Madhepura, Madhubani, Muzaffarpur, E. Champaran, Sheohar,
+      Sitamarhi, Supaul). [Bihar]
 last_verified: '2026-06-19'

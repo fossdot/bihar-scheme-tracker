@@ -34,4 +34,23 @@ status_evidence: >-
   PIB). Verified 2026-06-19. Source: https://www.mudra.org.in/
 source_url: https://www.mudra.org.in
 application_portal_url: https://www.mudra.org.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: India loans sanctioned
+    value: 47948320
+    unit: loans
+    provenance: reported
+    as_of_date: '2025-03-31'
+    source_url: https://www.ibef.org/government-schemes/pradhan-mantri-mudra-loan-bank-yojana
+    note: 'National FY24-25. [scope: National]'
+  - dimension: budget
+    fiscal_year: 2024-25
+    label: India sanctioned
+    value: 502782
+    unit: cr
+    provenance: reported
+    as_of_date: '2025-03-31'
+    source_url: https://www.ibef.org/government-schemes/pradhan-mantri-mudra-loan-bank-yojana
+    note: '[scope: National]'
 last_verified: '2026-06-19'

@@ -40,4 +40,43 @@ source_url: https://pacsonline.bih.nic.in
 application_portal_url: https://pacsonline.bih.nic.in
 policies:
   - Bihar Krishi Road Map (Agriculture Roadmap)
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: Rabi 2022-23
+    label: Bihar farmers paid
+    value: 167237
+    unit: farmers
+    provenance: reported
+    as_of_date: '2025-03-12'
+    source_url: https://m.bihar.punjabkesari.in/national/news/bihar-fasal-sahayata-yojana-2025-2119117
+    note: Farmers paid compensation for Rabi 2022-23 crop loss. [Bihar]
+  - dimension: beneficiaries
+    fiscal_year: Rabi 2025-26
+    label: Bihar applications (not yet paid)
+    value: 365563
+    unit: applications
+    provenance: published
+    as_of_date: '2026-06-21'
+    source_url: https://esahkari.bihar.gov.in/coop/fsy/ApplicationReportRabi.aspx
+    note: >-
+      Applications for Rabi 2025-26 on the official Cooperative Dept portal — these are
+      APPLICATIONS, not confirmed payouts. [Bihar]
+  - dimension: budget
+    fiscal_year: Kharif 2023
+    label: Bihar disbursed
+    value: 32.83
+    unit: cr
+    provenance: reported
+    as_of_date: '2025-04-26'
+    source_url: https://bihar.punjabkesari.in/bihar/news/bihar-fasal-sahayata-yojana-2142281
+    note: Compensation transferred for Kharif 2023 crop loss. [Bihar]
+  - dimension: budget
+    fiscal_year: Rabi 2022-23
+    label: Bihar disbursed
+    value: 122.32
+    unit: cr
+    provenance: reported
+    as_of_date: '2025-03-12'
+    source_url: https://m.bihar.punjabkesari.in/national/news/bihar-fasal-sahayata-yojana-2025-2119117
+    note: Compensation transferred for Rabi 2022-23 crop loss. [Bihar]
 last_verified: '2026-06-19'

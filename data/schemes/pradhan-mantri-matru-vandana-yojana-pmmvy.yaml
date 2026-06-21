@@ -34,4 +34,25 @@ status_evidence: >-
   https://pmmvy.wcd.gov.in/
 source_url: https://wcd.nic.in
 application_portal_url: https://pmmvy.wcd.gov.in/
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: India beneficiaries (cumulative)
+    value: 36400000
+    unit: persons
+    provenance: published
+    as_of_date: '2024-12-13'
+    source_url: >-
+      https://www.newsonair.gov.in/rs-18854-crore-disbursed-among-3-64-crore-beneficiaries-of-pm-matru-vandana-yojana-union-minister-annapurna-devi
+    note: 'National cumulative since inception. [scope: National]'
+  - dimension: budget
+    fiscal_year: 2024-25
+    label: India disbursed (cumulative)
+    value: 18854
+    unit: cr
+    provenance: published
+    as_of_date: '2024-12-13'
+    source_url: >-
+      https://www.newsonair.gov.in/rs-18854-crore-disbursed-among-3-64-crore-beneficiaries-of-pm-matru-vandana-yojana-union-minister-annapurna-devi
+    note: '[scope: National]'
 last_verified: '2026-06-19'

@@ -40,4 +40,48 @@ budget_allocations:
     allocated_cr: 4320
     revised_cr: null
     source_url: https://prsindia.org/files/budget/budget_state/bihar/2025/Bihar_Budget_Analysis_2025-26.pdf
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2023-24
+    label: Bihar houses completed (cumulative)
+    value: 2894000
+    unit: houses
+    provenance: reported
+    as_of_date: '2026-02-27'
+    source_url: >-
+      https://www.etvbharat.com/en/state/cag-flags-irregularities-in-housing-and-health-schemes-in-bihar-enn26022704136
+    note: >-
+      Cumulative 2017-18→2023-24 per CAG: 30.67 lakh sanctioned, 28.94 lakh completed. [scope:
+      Bihar]
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: Bihar houses sanctioned (cumulative)
+    value: 4900000
+    unit: houses
+    provenance: published
+    as_of_date: '2025-08-04'
+    source_url: https://www.pib.gov.in/PressNoteDetails.aspx?NoteId=155191&ModuleId=3
+    note: '>49 lakh sanctioned (target 50.12 lakh), as on 4 Aug 2025 (PIB). [Bihar]'
+  - dimension: budget
+    fiscal_year: 2023-24
+    label: Bihar expenditure (cumulative)
+    value: 46015.34
+    unit: cr
+    provenance: published
+    as_of_date: '2024-03-31'
+    source_url: >-
+      https://cag.gov.in/uploads/download_audit_report/2025/Performance-Audit---Civil---Report---4-of-2025--English-069a01619c584d8.44750365.pdf
+    note: >-
+      Total expenditure ₹46,015 cr (Central ₹26,745 cr + State ₹17,830 cr), cumulative FY2017-24
+      (CAG). [Bihar]
+  - dimension: demographics
+    fiscal_year: 2023-24
+    label: Houses to persons with disabilities
+    value: 6766
+    unit: houses
+    provenance: published
+    as_of_date: '2024-03-31'
+    source_url: >-
+      https://cag.gov.in/uploads/download_audit_report/2025/Performance-Audit---Civil---Report---4-of-2025--English-069a01619c584d8.44750365.pdf
+    note: 6,766 houses to PwDs vs an MoRD target of 79,005 (CAG, FY2017-24). [Bihar]
 last_verified: '2026-06-19'

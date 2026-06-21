@@ -62,6 +62,7 @@ async function exportSchemes() {
     "is_for_disabled", "is_for_startups", "land_ownership",
     "status", "status_evidence", "last_budget_year", "last_notification_date",
     "source_url", "application_portal_url", "successor_scheme", "policies", "budget_allocations",
+    "metrics",
   ];
   const always = new Set([
     "name_en", "categories", "personas", "education_levels", "gender_eligibility",
@@ -80,11 +81,16 @@ async function exportSchemes() {
       `select fiscal_year, allocated_cr, revised_cr, source_url from budget_allocations
        where scheme_id = $1 order by fiscal_year`, [id]
     );
+    const metrics = await query<Record<string, unknown>>(
+      `select dimension, fiscal_year, label, value, unit, provenance, as_of_date, source_url, note
+       from scheme_metrics where scheme_id = $1
+       order by dimension, fiscal_year nulls first, label`, [id]
+    );
     const flat: Record<string, unknown> = {
       ...r,
       department_en: r.dep_en, department_hi: r.dep_hi, department_website: r.dep_web,
       successor_scheme: r.succ_name ?? null,
-      policies, budget_allocations: budget,
+      policies, budget_allocations: budget, metrics,
       last_verified: r.last_verified,
     };
     const obj = ordered(flat, [...order, "last_verified"], always);

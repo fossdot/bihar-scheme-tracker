@@ -32,4 +32,15 @@ status_evidence: >-
   https://jaljeevanmission.gov.in/
 source_url: https://phedcms.bihar.gov.in
 application_portal_url: https://phedcgrc.in/
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: Bihar tap connections
+    value: 1847000
+    unit: connections
+    provenance: reported
+    as_of_date: '2024-09-01'
+    source_url: >-
+      https://patnapress.com/bihar-nears-universal-tap-water-coverage-under-har-ghar-nal-ka-jal-initiative/
+    note: '18.47 lakh FHTCs; ~99% rural ward coverage. [scope: Bihar]'
 last_verified: '2026-06-19'

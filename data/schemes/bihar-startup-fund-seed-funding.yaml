@@ -43,4 +43,25 @@ source_url: https://startup.bihar.gov.in
 application_portal_url: https://startup.bihar.gov.in
 policies:
   - Bihar Startup Policy 2022
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: Bihar startups funded
+    value: 1522
+    unit: startups
+    provenance: reported
+    as_of_date: '2025-05-19'
+    source_url: >-
+      https://indianmasterminds.com/news/bihars-startup-boom-state-emerges-as-innovation-hub-with-1500-ventures-rs-62-5-crore-in-support-118762/
+    note: 1,522 startups registered under the seed fund. [Bihar]
+  - dimension: budget
+    fiscal_year: 2024-25
+    label: Bihar seed funding disbursed
+    value: 62.5
+    unit: cr
+    provenance: reported
+    as_of_date: '2025-05-19'
+    source_url: >-
+      https://indianmasterminds.com/news/bihars-startup-boom-state-emerges-as-innovation-hub-with-1500-ventures-rs-62-5-crore-in-support-118762/
+    note: Cumulative seed-fund disbursal. [Bihar]
 last_verified: '2026-06-19'

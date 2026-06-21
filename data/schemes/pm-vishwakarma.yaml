@@ -39,4 +39,15 @@ status_evidence: >-
   2026-06-19. Source: https://pmvishwakarma.gov.in/
 source_url: https://pmvishwakarma.gov.in
 application_portal_url: https://pmvishwakarma.gov.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: India artisans registered
+    value: 3000000
+    unit: artisans
+    provenance: reported
+    as_of_date: '2025-12-01'
+    source_url: >-
+      https://www.ibef.org/news/pm-vishwakarma-scheme-provides-end-to-end-holistic-support-to-artisans-of-18-traditional-trades-23-09-lakh-beneficiaries-trained
+    note: 'National. [scope: National]'
 last_verified: '2026-06-19'

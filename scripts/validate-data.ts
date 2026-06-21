@@ -51,6 +51,14 @@ for (const { file, data } of schemes) {
   if ((status === "subsumed" || status === "superseded") && !successor_scheme) warnings.push(`${file}: status '${status}' but no successor_scheme set`);
   if (successor_scheme && !schemeNames.has(successor_scheme)) warnings.push(`${file}: successor_scheme "${successor_scheme}" not found among schemes`);
   for (const p of (pols ?? [])) if (!policyNames.has(p)) warnings.push(`${file}: policy "${p}" not found among policies`);
+  // metrics: enforce the no-fabrication rule (CLAUDE.md) at the data layer.
+  for (const m of ((data as Record<string, any>).metrics ?? [])) {
+    const real = ["published", "reported", "rti_received"].includes(m.provenance);
+    if (m.value != null && real && !m.source_url)
+      errors.push(`${file}: metric "${m.label ?? m.dimension}" has a ${m.provenance} value but no source_url`);
+    if (m.value == null && !["rti_needed", "rti_filed", "estimated"].includes(m.provenance))
+      errors.push(`${file}: metric "${m.label ?? m.dimension}" has no value — provenance must be rti_needed/rti_filed/estimated, not '${m.provenance}'`);
+  }
 }
 
 for (const { file, data } of policies) {

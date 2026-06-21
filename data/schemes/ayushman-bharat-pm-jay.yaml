@@ -39,4 +39,25 @@ status_evidence: >-
   https://pmjay.gov.in/
 source_url: https://pmjay.gov.in
 application_portal_url: https://pmjay.gov.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: Bihar Ayushman cards
+    value: 28300000
+    unit: persons
+    provenance: reported
+    as_of_date: '2025-06-10'
+    source_url: >-
+      https://theprint.in/health/how-bihar-is-ramping-up-ab-pmjay-heath-infra-to-keep-patients-from-turning-to-delhi-vellore/2651718/
+    note: '2.83 cr cards created in Bihar (2024); 7.5 lakh hospital admissions in 2024-25. [scope: Bihar]'
+  - dimension: budget
+    fiscal_year: 2024-25
+    label: Bihar PM-JAY spend
+    value: 1010
+    unit: cr
+    provenance: reported
+    as_of_date: '2025-06-10'
+    source_url: >-
+      https://theprint.in/health/how-bihar-is-ramping-up-ab-pmjay-heath-infra-to-keep-patients-from-turning-to-delhi-vellore/2651718/
+    note: '[scope: Bihar]'
 last_verified: '2026-06-19'

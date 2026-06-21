@@ -49,4 +49,75 @@ source_url: https://www.7nishchay-yuvaupmission.bihar.gov.in/
 application_portal_url: https://www.7nishchay-yuvaupmission.bihar.gov.in/
 policies:
   - Saat Nishchay-2 — Yuva Upmission
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: students
+    value: 80236
+    unit: persons
+    provenance: reported
+    as_of_date: '2026-06-19'
+    source_url: >-
+      https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
+    note: Students who received loans in FY2024-25.
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: target
+    value: 127000
+    unit: persons
+    provenance: reported
+    as_of_date: '2026-06-19'
+    source_url: >-
+      https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
+    note: Planned/target students for FY2025-26 (1.27 lakh).
+  - dimension: budget
+    fiscal_year: 2024-25
+    label: disbursed
+    value: 1715.23
+    unit: cr
+    provenance: reported
+    as_of_date: '2026-06-19'
+    source_url: >-
+      https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
+    note: Loans disbursed to 80,236 students (news report; cross-check vs budget.bihar.gov.in).
+  - dimension: budget
+    fiscal_year: 2025-26
+    label: sanctioned
+    value: 1013.23
+    unit: cr
+    provenance: reported
+    as_of_date: '2026-06-19'
+    source_url: >-
+      https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
+    note: Finance Dept sanction on Education Dept proposal to reach 1.27 lakh students.
+  - dimension: demographics
+    fiscal_year: null
+    label: null
+    value: null
+    unit: null
+    provenance: rti_needed
+    as_of_date: '2026-06-19'
+    source_url: >-
+      https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
+    note: Breakdown by social category / gender not published. Needs an RTI.
+  - dimension: district
+    fiscal_year: null
+    label: null
+    value: null
+    unit: null
+    provenance: rti_needed
+    as_of_date: '2026-06-19'
+    source_url: >-
+      https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
+    note: District-wise disbursement / sanction not published. Needs an RTI to DRCC / Education Dept.
+  - dimension: outcomes
+    fiscal_year: null
+    label: null
+    value: null
+    unit: null
+    provenance: rti_needed
+    as_of_date: '2026-06-19'
+    source_url: >-
+      https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
+    note: Course-completion and loan-repayment outcomes not published. Needs an RTI.
 last_verified: '2026-06-19'

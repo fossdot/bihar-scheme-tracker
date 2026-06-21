@@ -65,6 +65,25 @@
           "source_url": { "type": "string", "format": "uri" }
         }
       }
+    },
+    "metrics": {
+      "type": "array",
+      "description": "Research-mode time series (Data & impact). Provenance-aware: a NULL value with provenance 'rti_needed'/'rti_filed' is the honest placeholder — never a fabricated figure.",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["dimension", "provenance"],
+        "properties": {
+          "dimension": { "enum": ["budget", "beneficiaries", "district", "demographics", "outcomes"] },
+          "fiscal_year": { "type": ["string", "null"] },
+          "label": { "type": ["string", "null"] },
+          "value": { "type": ["number", "null"], "description": "NULL when the figure isn't yet sourced (use an rti_* provenance)." },
+          "unit": { "type": ["string", "null"] },
+          "provenance": { "enum": ["published", "reported", "rti_received", "rti_filed", "rti_needed", "estimated"] },
+          "as_of_date": { "type": ["string", "null"], "format": "date" },
+          "source_url": { "type": ["string", "null"], "format": "uri" },
+          "note": { "type": ["string", "null"] }
+        }
+      }
     }
   }
 }

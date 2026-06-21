@@ -40,4 +40,65 @@ status_evidence: >-
   Source: https://serviceonline.bihar.gov.in/
 source_url: https://serviceonline.bihar.gov.in
 application_portal_url: https://serviceonline.bihar.gov.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2007-08
+    label: Bihar girls assisted
+    value: 20000
+    unit: girls
+    provenance: reported
+    as_of_date: null
+    source_url: >-
+      https://indianmasterminds.com/news/bihar-mukhyamantri-kanya-vivah-yojana-2272-lakh-beneficiaries-188652/
+    note: 'Launch year (approx). Cumulative to 2025-26: ~22.72 lakh girls, ₹1,136 cr. [Bihar]'
+  - dimension: beneficiaries
+    fiscal_year: 2022-23
+    label: Bihar girls assisted
+    value: 231723
+    unit: girls
+    provenance: reported
+    as_of_date: null
+    source_url: >-
+      https://indianmasterminds.com/news/bihar-mukhyamantri-kanya-vivah-yojana-2272-lakh-beneficiaries-188652/
+    note: Highest single-year. [Bihar]
+  - dimension: beneficiaries
+    fiscal_year: 2023-24
+    label: Bihar girls assisted
+    value: 157868
+    unit: girls
+    provenance: reported
+    as_of_date: null
+    source_url: >-
+      https://indianmasterminds.com/news/bihar-mukhyamantri-kanya-vivah-yojana-2272-lakh-beneficiaries-188652/
+    note: '[Bihar]'
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: Bihar girls assisted
+    value: 65535
+    unit: girls
+    provenance: reported
+    as_of_date: null
+    source_url: >-
+      https://indianmasterminds.com/news/bihar-mukhyamantri-kanya-vivah-yojana-2272-lakh-beneficiaries-188652/
+    note: '[Bihar]'
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: Bihar girls assisted (partial)
+    value: 39435
+    unit: girls
+    provenance: reported
+    as_of_date: null
+    source_url: >-
+      https://indianmasterminds.com/news/bihar-mukhyamantri-kanya-vivah-yojana-2272-lakh-beneficiaries-188652/
+    note: Partial year so far. [Bihar]
+  - dimension: budget
+    fiscal_year: 2022-23
+    label: Bihar disbursed
+    value: 115.86
+    unit: cr
+    provenance: reported
+    as_of_date: null
+    source_url: >-
+      https://indianmasterminds.com/news/bihar-mukhyamantri-kanya-vivah-yojana-2272-lakh-beneficiaries-188652/
+    note: 'Cumulative since 2007-08: ₹1,136 cr. [Bihar]'
 last_verified: '2026-06-19'

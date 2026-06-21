@@ -42,4 +42,43 @@ status_evidence: >-
   categories, age 18–50. Verified 2026-06-19. Source: https://udyami.bihar.gov.in/
 source_url: https://udyami.bihar.gov.in
 application_portal_url: https://udyami.bihar.gov.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2023-24
+    label: Bihar families (1st installment)
+    value: 40099
+    unit: families
+    provenance: reported
+    as_of_date: '2024-09-01'
+    source_url: >-
+      https://www.constructionworld.in/policy-updates-and-economic-news/bihar-govt-disburses-rs-29-billion-to-74540-beneficiaries/62190
+    note: Families paid the first installment (cumulative to Sep 2024). [Bihar]
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: Bihar beneficiaries (1st installment)
+    value: 20106
+    unit: persons
+    provenance: reported
+    as_of_date: '2025-07-15'
+    source_url: https://patnapress.com/bihar-laghu-udyam-yojana-first-installment-disbursed/
+    note: First installment disbursed at the 15 Jul 2025 event. [Bihar]
+  - dimension: budget
+    fiscal_year: 2023-24
+    label: Bihar disbursed (1st installment)
+    value: 200
+    unit: cr
+    provenance: reported
+    as_of_date: '2024-09-01'
+    source_url: >-
+      https://www.constructionworld.in/policy-updates-and-economic-news/bihar-govt-disburses-rs-29-billion-to-74540-beneficiaries/62190
+    note: First-installment amount (₹50,000 each). [Bihar]
+  - dimension: budget
+    fiscal_year: 2025-26
+    label: Bihar disbursed (1st installment)
+    value: 100.53
+    unit: cr
+    provenance: reported
+    as_of_date: '2025-07-15'
+    source_url: https://patnapress.com/bihar-laghu-udyam-yojana-first-installment-disbursed/
+    note: ₹50,000 each at the 15 Jul 2025 event. [Bihar]
 last_verified: '2026-06-19'

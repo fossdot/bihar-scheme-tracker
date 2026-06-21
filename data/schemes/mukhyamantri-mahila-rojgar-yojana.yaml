@@ -40,4 +40,25 @@ status_evidence: >-
   https://www.pmindia.gov.in/en/news_updates/pm-launches-bihars-mukhyamantri-mahila-rojgar-yojana/
 source_url: https://industries.bihar.gov.in
 application_portal_url: https://brlps.in
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: Bihar women (launch transfer)
+    value: 7500000
+    unit: persons
+    provenance: published
+    as_of_date: '2025-09-26'
+    source_url: >-
+      https://www.pmindia.gov.in/en/news_updates/pm-launches-bihars-mukhyamantri-mahila-rojgar-yojana/
+    note: '₹10,000 each to 75 lakh women at launch; 1.1 cr+ selected overall. [scope: Bihar]'
+  - dimension: budget
+    fiscal_year: 2025-26
+    label: Bihar disbursed (launch)
+    value: 7500
+    unit: cr
+    provenance: published
+    as_of_date: '2025-09-26'
+    source_url: >-
+      https://ddnews.gov.in/en/pm-modi-launches-bihars-mukhyamantri-mahila-rojgar-yojana-transfers-rs-7500-crore-to-75-lakh-women/
+    note: '[scope: Bihar]'
 last_verified: '2026-06-19'
