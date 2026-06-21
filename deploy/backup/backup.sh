@@ -23,10 +23,12 @@ out="$DEST/bihar-$ts.sql.gz"
 docker compose exec -T db pg_dump -U bihar -d bihar_scheme_tracker --clean --if-exists \
   | gzip > "$out"
 
-# Integrity: non-trivial gzip that contains our table. (wc -c is portable; stat flags differ Linux/macOS.)
+# Integrity: non-trivial gzip that contains our table. Use `wc -c` (portable) for size and
+# `grep -c` (reads the whole stream — `grep -q` would close the pipe early and trip pipefail).
 size=$(wc -c < "$out")
-if [ "$size" -lt 1000 ] || ! gunzip -c "$out" | grep -q "public.schemes"; then
-  echo "[$(date -u)] BACKUP FAILED — $out looks empty/invalid (size=$size)" >&2
+hits=$(gunzip -c "$out" | grep -c "public.schemes" || true)
+if [ "$size" -lt 1000 ] || [ "$hits" -eq 0 ]; then
+  echo "[$(date -u)] BACKUP FAILED — $out looks empty/invalid (size=$size, schema hits=$hits)" >&2
   rm -f "$out"
   exit 1
 fi
