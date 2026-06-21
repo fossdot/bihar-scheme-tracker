@@ -52,6 +52,12 @@ export const STRINGS = {
   navMap: { en: "Map", hi: "मानचित्र" },
   navAbout: { en: "About the data", hi: "डेटा के बारे में" },
   navMenu: { en: "Menu", hi: "मेन्यू" },
+  footerSource: { en: "Source code", hi: "स्रोत कोड" },
+  footerApi: { en: "API", hi: "API" },
+  footerNote: {
+    en: "Source-verified and evidence-based. Status is derived from evidence, never asserted; every figure carries its source.",
+    hi: "स्रोत-सत्यापित व प्रमाण-आधारित। स्थिति प्रमाण से निकाली जाती है, दावा नहीं की जाती; हर आँकड़ा अपना स्रोत रखता है।",
+  },
   mapTitle: { en: "Policy map", hi: "नीति मानचित्र" },
   mapSubtitle: {
     en: "How schemes sit under Bihar's policy frameworks — tap a policy or a scheme to dive in.",

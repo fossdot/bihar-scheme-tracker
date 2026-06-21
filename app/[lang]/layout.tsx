@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
 import { Logo } from "@/components/Logo";
+import { Footer } from "@/components/Footer";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { SiteNav } from "@/components/SiteNav";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -74,6 +75,7 @@ export default function LangLayout({
         </div>
       </header>
       <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+      <Footer locale={locale} />
       <ViewBeacon />
     </>
   );
