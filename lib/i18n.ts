@@ -204,6 +204,11 @@ export const STRINGS = {
   resultsOne: { en: "scheme", hi: "योजना" },
   resultsMany: { en: "schemes", hi: "योजनाएँ" },
   matchingProfile: { en: "matching your profile", hi: "आपकी प्रोफ़ाइल के अनुसार" },
+  showing: { en: "Showing", hi: "दिखा रहे हैं" },
+  ofTotal: { en: "of", hi: "में से" },
+  prevPage: { en: "Previous", hi: "पिछला" },
+  nextPage: { en: "Next", hi: "अगला" },
+  pageLabel: { en: "Page", hi: "पृष्ठ" },
   noResults: {
     en: "No schemes match these filters. Try removing one, or include inactive schemes.",
     hi: "इन फ़िल्टरों से कोई योजना मेल नहीं खाती। एक हटाएँ, या निष्क्रिय योजनाएँ शामिल करें।",

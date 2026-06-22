@@ -30,10 +30,27 @@ export async function POST(req: Request) {
   try {
     const raw = await req.text();
     if (raw.length > 2048) return noContent(); // ignore oversized bodies
-    const body = JSON.parse(raw) as { path?: unknown };
+    const body = JSON.parse(raw) as { path?: unknown; event?: unknown; page?: unknown; total?: unknown };
     const path = typeof body.path === "string" ? body.path.slice(0, 512) : "";
     // Only log genuine localized routes — ignores junk/spam paths and bounds the data shape.
     if (!LOCALIZED.test(path) || rateLimited()) return noContent();
+
+    // Finder pagination beacon: a deliberate move past page 1. Logged into search_events under
+    // a 'paginate' surface (q = null, so it never pollutes query-term analytics) — tells us
+    // whether people page deeper than the first 20 results. No schema change needed.
+    if (body.event === "paginate") {
+      const page = typeof body.page === "number" && Number.isFinite(body.page)
+        ? Math.min(Math.max(2, Math.trunc(body.page)), 999) : null; // page 1 isn't a paginate click
+      const total = typeof body.total === "number" && Number.isFinite(body.total)
+        ? Math.min(Math.max(0, Math.trunc(body.total)), 100_000) : 0;
+      if (page) {
+        await query(
+          `insert into search_events (surface, q, filters, result_count) values ('paginate', null, $1::jsonb, $2)`,
+          [JSON.stringify({ page }), total],
+        ).catch(() => {});
+      }
+      return noContent();
+    }
 
     const detail = DETAIL.exec(path);
     const locale = LOCALIZED.exec(path)?.[1] ?? null;

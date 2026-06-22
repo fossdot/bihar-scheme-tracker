@@ -32,6 +32,8 @@ import type {
 type Gender = "" | "female" | "male" | "transgender";
 type SortKey = "relevance" | "name" | "status" | "verified";
 
+const PAGE_SIZE = 20;
+
 type State = {
   q: string;
   buckets: StatusBucket[];
@@ -72,6 +74,34 @@ const csv = (raw: string | null) =>
 
 const sameSet = (a: string[], b: string[]) =>
   a.length === b.length && [...a].sort().join(",") === [...b].sort().join(",");
+
+// Fire-and-forget beacon when a visitor pages past the first 20 results — tells us whether
+// anyone browses deeper. No identity, no cookies; mirrors ViewBeacon's privacy stance.
+function logPaginate(page: number, total: number) {
+  if (typeof navigator === "undefined" || !navigator.sendBeacon) return;
+  try {
+    const blob = new Blob(
+      [JSON.stringify({ event: "paginate", path: window.location.pathname, page, total })],
+      { type: "application/json" }
+    );
+    navigator.sendBeacon("/api/track", blob);
+  } catch {
+    /* never let analytics break the page */
+  }
+}
+
+// Compact page list with ellipses for wide ranges, e.g. [1, "…", 4, 5, 6, "…", 12].
+function pageWindow(current: number, count: number): (number | "…")[] {
+  if (count <= 7) return Array.from({ length: count }, (_, i) => i + 1);
+  const out: (number | "…")[] = [1];
+  const lo = Math.max(2, current - 1);
+  const hi = Math.min(count - 1, current + 1);
+  if (lo > 2) out.push("…");
+  for (let i = lo; i <= hi; i++) out.push(i);
+  if (hi < count - 1) out.push("…");
+  out.push(count);
+  return out;
+}
 
 function parseState(qs: string): State {
   const p = new URLSearchParams(qs);
@@ -146,6 +176,8 @@ export function LiveSearch({
   const [filtersOpen, setFiltersOpen] = useState(false); // mobile
   const [resultView, setResultView] = useState<"cards" | "table">("table");
   const [eligOpen, setEligOpen] = useState(() => hasEligibility(parseState(initialQuery)));
+  const [page, setPage] = useState(1);
+  const resultsTopRef = useRef<HTMLDivElement>(null);
   const firstRun = useRef(true);
   const syncSkip = useRef(true); // don't persist on the mount run (would clobber saved filters)
   const router = useRouter();
@@ -236,6 +268,27 @@ export function LiveSearch({
       arr.sort((a, b) => (b.last_verified ?? "").localeCompare(a.last_verified ?? ""));
     return arr;
   }, [results, state.sort, locale]);
+
+  // A new result set or a re-sort returns the visitor to page 1.
+  useEffect(() => {
+    setPage(1);
+  }, [results, state.sort]);
+
+  // ── client-side pagination (20/page) over the already-filtered + sorted list ──
+  const pageCount = Math.max(1, Math.ceil(display.length / PAGE_SIZE));
+  const current = Math.min(page, pageCount); // clamp if the list shrank under us
+  const from = (current - 1) * PAGE_SIZE;
+  const paged = useMemo(
+    () => display.slice(from, from + PAGE_SIZE),
+    [display, from]
+  );
+  const goToPage = (n: number) => {
+    const clamped = Math.min(Math.max(1, n), pageCount);
+    if (clamped === current) return;
+    setPage(clamped);
+    if (clamped > 1) logPaginate(clamped, display.length); // only log deliberate deeper paging
+    resultsTopRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   const anyFilter = paramsStr.length > 0;
   const label = (en: string, hi: string) => (locale === "hi" ? hi : en);
@@ -397,12 +450,24 @@ export function LiveSearch({
             <Panel>{anyFilter ? t(locale, "noResults") : t(locale, "noSchemes")}</Panel>
           ) : (
             <>
-              <div className="flex items-center justify-between gap-3 border-b border-line pb-3">
+              <div ref={resultsTopRef} className="flex items-center justify-between gap-3 border-b border-line pb-3">
                 <p className="text-sm text-muted">
-                  <span className="font-medium text-ink">{display.length}</span>{" "}
-                  {display.length === 1
-                    ? t(locale, "resultsOne")
-                    : t(locale, "resultsMany")}
+                  {display.length > PAGE_SIZE ? (
+                    <>
+                      {t(locale, "showing")}{" "}
+                      <span className="font-medium text-ink">{from + paged.length}</span>{" "}
+                      {t(locale, "ofTotal")}{" "}
+                      <span className="font-medium text-ink">{display.length}</span>{" "}
+                      {t(locale, "resultsMany")}
+                    </>
+                  ) : (
+                    <>
+                      <span className="font-medium text-ink">{display.length}</span>{" "}
+                      {display.length === 1
+                        ? t(locale, "resultsOne")
+                        : t(locale, "resultsMany")}
+                    </>
+                  )}
                   {hasEligibility(state) ? ` ${t(locale, "matchingProfile")}` : ""}
                   {loading && (
                     <span className="ml-2 text-xs">{t(locale, "searching")}</span>
@@ -447,12 +512,12 @@ export function LiveSearch({
 
               {resultView === "table" && (
                 <div className="hidden md:block">
-                  <SchemeTable rows={display} locale={locale} today={today} />
+                  <SchemeTable rows={paged} locale={locale} today={today} />
                 </div>
               )}
               {/* Cards: always on mobile (the table is desktop-only); on desktop only in cards mode */}
               <ul className={`divide-y divide-line ${resultView === "table" ? "md:hidden" : ""}`}>
-                {display.map((s) => {
+                {paged.map((s) => {
                   const band = ageBand(s.min_age, s.max_age);
                   const name = pick(locale, s.name_en, s.name_hi);
                   const sub =
@@ -515,11 +580,91 @@ export function LiveSearch({
                   );
                 })}
               </ul>
+
+              {pageCount > 1 && (
+                <Pager
+                  current={current}
+                  pageCount={pageCount}
+                  onGo={goToPage}
+                  locale={locale}
+                />
+              )}
             </>
           )}
         </div>
       </div>
     </div>
+  );
+}
+
+/** Numbered pager: Prev · windowed page numbers · Next. Brand green marks the current page;
+ *  everything else is the flat B&W chrome used across the finder. */
+function Pager({
+  current,
+  pageCount,
+  onGo,
+  locale,
+}: {
+  current: number;
+  pageCount: number;
+  onGo: (n: number) => void;
+  locale: Locale;
+}) {
+  return (
+    <nav
+      className="mt-5 flex flex-wrap items-center justify-center gap-1.5"
+      aria-label={t(locale, "pageLabel")}
+    >
+      <PagerBtn disabled={current <= 1} onClick={() => onGo(current - 1)}>
+        {t(locale, "prevPage")}
+      </PagerBtn>
+      {pageWindow(current, pageCount).map((pg, i) =>
+        pg === "…" ? (
+          <span key={`gap-${i}`} className="px-1.5 text-sm text-muted">
+            …
+          </span>
+        ) : (
+          <button
+            key={pg}
+            type="button"
+            aria-current={pg === current ? "page" : undefined}
+            aria-label={`${t(locale, "pageLabel")} ${pg}`}
+            onClick={() => onGo(pg)}
+            className={
+              pg === current
+                ? "min-w-[2.25rem] rounded-md border border-brand bg-brand px-2.5 py-1 text-sm font-medium text-white"
+                : "min-w-[2.25rem] rounded-md border border-line bg-surface px-2.5 py-1 text-sm text-ink hover:border-ink"
+            }
+          >
+            {pg}
+          </button>
+        )
+      )}
+      <PagerBtn disabled={current >= pageCount} onClick={() => onGo(current + 1)}>
+        {t(locale, "nextPage")}
+      </PagerBtn>
+    </nav>
+  );
+}
+
+function PagerBtn({
+  disabled,
+  onClick,
+  children,
+}: {
+  disabled: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      disabled={disabled}
+      onClick={onClick}
+      className="rounded-md border border-line bg-surface px-2.5 py-1 text-sm text-ink hover:border-ink disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-line"
+    >
+      {children}
+    </button>
   );
 }
 

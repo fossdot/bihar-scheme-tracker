@@ -11,7 +11,8 @@ export const OPTIONS = () => preflight();
 export async function GET(req: NextRequest) {
   if (!isDbConfigured()) return apiError(503, "database not configured");
   try {
-    const results = await searchSchemes(parseFilters(req.nextUrl.searchParams));
+    // The public API keeps its documented 50-cap (the in-app finder returns all + paginates).
+    const results = await searchSchemes(parseFilters(req.nextUrl.searchParams), 50);
     return apiJson({ count: results.length, limit: 50, results });
   } catch (e) {
     console.error("api/v1/schemes:", e);

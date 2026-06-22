@@ -27,6 +27,12 @@ export async function getSchemeCounts(): Promise<{ total: number; active: number
   return { total: rows[0]?.total ?? 0, active: rows[0]?.active ?? 0 };
 }
 
+// Generous backstop on a single result page. The finder returns ALL matching schemes (then
+// paginates client-side) so nothing potentially-live is hidden — CLAUDE.md: never hide help.
+// This cap only guards against pathological growth; bump or switch to server-side LIMIT/OFFSET
+// if the registry ever exceeds it. The header count stays accurate up to this number.
+export const LIST_LIMIT = 500;
+
 const LIST_COLUMNS = `
   s.id, s.name_en, s.name_hi, s.categories, s.status, s.objective_en, s.objective_hi,
   s.benefit_type, s.min_age, s.max_age, s.last_verified, s.last_budget_year,
@@ -72,7 +78,8 @@ function expandQuery(q: string): string {
  * Status: filtered to the citizen-facing buckets (default Active + Possibly active).
  */
 export async function searchSchemes(
-  filters: SchemeFilters
+  filters: SchemeFilters,
+  limit: number = LIST_LIMIT
 ): Promise<SchemeListItem[]> {
   const params: unknown[] = [];
   const p = (val: unknown) => `$${params.push(val)}`; // push + return its placeholder
@@ -137,7 +144,7 @@ export async function searchSchemes(
 
   const where = conds.length ? `where ${conds.join("\n         and ")}` : "";
   return query<SchemeListItem>(
-    `select ${LIST_COLUMNS} from ${LIST_FROM} ${where} order by ${orderBy} limit 50`,
+    `select ${LIST_COLUMNS} from ${LIST_FROM} ${where} order by ${orderBy} limit ${p(limit)}`,
     params
   );
 }

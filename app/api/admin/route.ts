@@ -72,7 +72,8 @@ const q = <T,>(sql: string) => query<T>(sql).catch(() => [] as T[]);
 async function loadStats() {
   const [searchTotal, bySurface, topQueries, zeroQueries, viewTotal, topSchemes, topPolicies] =
     await Promise.all([
-      q<{ n: string }>(`select count(*)::text n from search_events where created_at >= ${SINCE}`),
+      // 'paginate' rows are page-advance events, not searches — exclude from the search total.
+      q<{ n: string }>(`select count(*)::text n from search_events where created_at >= ${SINCE} and surface <> 'paginate'`),
       q<{ surface: string; n: string; zero: string }>(
         `select surface, count(*)::text n, count(*) filter (where result_count=0)::text zero
            from search_events where created_at >= ${SINCE} group by surface order by count(*) desc`,
