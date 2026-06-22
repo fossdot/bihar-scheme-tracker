@@ -1,0 +1,55 @@
+name_en: Janani Shishu Suraksha Karyakram (JSSK)
+name_hi: जननी शिशु सुरक्षा कार्यक्रम
+department_en: >-
+  National Health Mission, Ministry of Health & Family Welfare (implemented in Bihar by State Health
+  Society, Bihar)
+department_hi: >-
+  राष्ट्रीय स्वास्थ्य मिशन, स्वास्थ्य एवं परिवार कल्याण मंत्रालय (बिहार में राज्य स्वास्थ्य समिति
+  द्वारा कार्यान्वित)
+categories:
+  - health
+  - women_child
+launch_date: '2011-06-01'
+objective_en: >-
+  Eliminate out-of-pocket expenses for pregnant women delivering in public health institutions and
+  for treatment of sick newborns and infants, thereby promoting institutional delivery and infant
+  survival.
+objective_hi: >-
+  सार्वजनिक स्वास्थ्य संस्थानों में प्रसव कराने वाली गर्भवती महिलाओं तथा बीमार नवजात/शिशुओं के उपचार
+  में जेब-खर्च समाप्त करना।
+eligibility_en: >-
+  All pregnant women delivering in public health institutions, and all sick newborns/infants up to
+  one year of age accessing public health institutions. No application or income test — entitlements
+  are automatic at government facilities.
+eligibility_hi: >-
+  सार्वजनिक स्वास्थ्य संस्थानों में प्रसव कराने वाली सभी गर्भवती महिलाएँ, तथा एक वर्ष तक के सभी
+  बीमार नवजात/शिशु। कोई आवेदन या आय-परीक्षण नहीं — सरकारी सुविधाओं में स्वतः लाभ।
+benefit_type: free service
+benefit_detail: >-
+  Entirely free, zero-expense services at public health institutions: free delivery including
+  caesarean section; free drugs and consumables; free diagnostics; free blood when required; free
+  diet (3 days for normal delivery, 7 days for C-section); and free transport (home-to-institution,
+  inter-facility referral, and drop-back). Same free entitlements extended to sick newborns and
+  infants up to one year of age.
+target_beneficiary: Pregnant women & sick infants
+personas:
+  - pregnant_lactating_woman
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Fetched the NHM/MoHFW JSSK page (nhm.gov.in, level=3 sublinkid=842), which describes JSSK as
+  launched 1 June 2011, extended in 2014, and currently entitling all pregnant women and sick
+  infants to free services in public facilities — an ongoing NHM program operating across all states
+  including Bihar.
+source_url: https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=842&lid=308
+last_verified: '2026-06-22'

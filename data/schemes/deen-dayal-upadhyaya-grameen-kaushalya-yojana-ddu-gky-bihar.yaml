@@ -1,0 +1,59 @@
+name_en: Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY) — Bihar
+name_hi: दीन दयाल उपाध्याय ग्रामीण कौशल्य योजना
+department_en: >-
+  Ministry of Rural Development, Government of India (under NRLM); implemented in Bihar by the State
+  Rural Livelihoods Mission / Bihar Rural Livelihoods Promotion Society (BRLPS - JEEViKA) as nodal
+  agency
+department_hi: >-
+  ग्रामीण विकास मंत्रालय, भारत सरकार (NRLM के अंतर्गत); बिहार में बिहार ग्रामीण आजीविका संवर्धन
+  समिति (BRLPS — जीविका) द्वारा कार्यान्वित
+categories:
+  - skilling
+  - employment
+  - social_welfare
+objective_en: >-
+  Transform economically disadvantaged rural youth into self-reliant, market-relevant workers
+  through placement-linked, market-driven skill training, with a focus on poor rural households.
+objective_hi: >-
+  स्थान-संबद्ध, बाजार-आधारित कौशल प्रशिक्षण के माध्यम से गरीब ग्रामीण युवाओं को आत्मनिर्भर,
+  बाजार-प्रासंगिक कामगार बनाना।
+eligibility_en: >-
+  Rural poor youth aged 15-35 (up to 45 for women, PVTGs, PwDs, transgender persons and special
+  groups), identified as poor via Participatory Identification of Poor, BPL/SECC auto-inclusion,
+  MGNREGA households, RSBY/Antyodaya cardholders or NRLM SHG membership. Mandatory coverage for
+  SC/ST (34%), minorities (13%) and women (33%). Bihar-resident rural youth apply through
+  JEEViKA/training partners.
+eligibility_hi: >-
+  15–35 वर्ष (महिलाओं, PVTG, दिव्यांग, ट्रांसजेंडर हेतु 45 तक) के ग्रामीण गरीब युवा, जिनकी पहचान
+  PIP/BPL/SECC/मनरेगा परिवार या NRLM SHG सदस्यता से होती है। SC/ST (34%), अल्पसंख्यक (13%), महिला
+  (33%) अनिवार्य कवरेज। जीविका/प्रशिक्षण भागीदारों के माध्यम से आवेदन।
+benefit_type: training
+benefit_detail: >-
+  Free, fully residential or non-residential market-driven skill training with
+  national/internationally aligned certification, mandatory placement support (target of at least
+  70-75% of trained candidates placed in jobs), post-placement support and migration/handholding
+  assistance.
+target_beneficiary: Rural poor youth (15–45)
+personas:
+  - unemployed_youth
+  - shg_jeevika_member
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 15
+max_age: 45
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  BRLPS/JEEViKA official skills-and-jobs page details DDU-GKY as a currently-run program with
+  placement targets and ongoing Expression of Interest for training partners in Bihar; central MoRD
+  scheme remains active on the unified kaushal.rural.gov.in portal. JEEViKA is named as the standing
+  nodal agency for Bihar.
+source_url: https://brlps.in/skillsandjobs
+application_portal_url: https://kaushal.rural.gov.in/
+last_verified: '2026-06-22'

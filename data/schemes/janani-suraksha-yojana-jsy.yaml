@@ -1,0 +1,52 @@
+name_en: Janani Suraksha Yojana (JSY)
+name_hi: जननी सुरक्षा योजना
+department_en: >-
+  National Health Mission, Ministry of Health & Family Welfare (implemented in Bihar by State Health
+  Society, Bihar)
+department_hi: >-
+  राष्ट्रीय स्वास्थ्य मिशन, स्वास्थ्य एवं परिवार कल्याण मंत्रालय (बिहार में राज्य स्वास्थ्य समिति
+  द्वारा कार्यान्वित)
+categories:
+  - health
+  - women_child
+objective_en: >-
+  Reduce maternal and neonatal mortality by promoting institutional delivery among poor pregnant
+  women through conditional cash assistance.
+objective_hi: >-
+  गरीब गर्भवती महिलाओं में संस्थागत प्रसव को बढ़ावा देकर मातृ एवं नवजात मृत्यु-दर घटाना, सशर्त नकद
+  सहायता के माध्यम से।
+eligibility_en: >-
+  Bihar is classified as a Low Performing State, so all pregnant women delivering in a government
+  health centre (Sub Centre/PHC/CHC) are eligible (in High Performing States only BPL/SC/ST women
+  qualify). ASHA acts as the link facilitating the delivery.
+eligibility_hi: >-
+  बिहार 'कम-प्रदर्शन राज्य' है, अतः सरकारी स्वास्थ्य केंद्र में प्रसव कराने वाली सभी गर्भवती महिलाएँ
+  पात्र हैं। ASHA प्रसव में सहायता करती है।
+benefit_type: cash transfer
+benefit_detail: >-
+  Cash transfer on institutional delivery. In Low Performing States (which include Bihar): ₹1,400 to
+  a rural mother + ₹600 to ASHA; ₹1,000 to an urban mother + ₹400 to ASHA. Entire entitlement
+  disbursed to the mother in one go at the health institution.
+target_beneficiary: Pregnant women (institutional delivery)
+personas:
+  - pregnant_lactating_woman
+education_levels: []
+gender_eligibility: female
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Fetched the NHM/MoHFW JSY page (nhm.gov.in, level=3 lid=309), which describes JSY as a current
+  100% centrally-sponsored NHM scheme with active cash-assistance amounts and special focus on Bihar
+  as a Low Performing State. State Health Society Bihar maintains a live JSY maternal-health
+  programme page (shs.bihar.gov.in) confirming state implementation. Could not pull an exact
+  current-FY Bihar budget figure, but it is an ongoing core NHM intervention.
+source_url: https://nhm.gov.in/index1.php?lang=1&level=3&lid=309&sublinkid=841
+last_verified: '2026-06-22'

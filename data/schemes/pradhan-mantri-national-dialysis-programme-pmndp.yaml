@@ -1,0 +1,50 @@
+name_en: Pradhan Mantri National Dialysis Programme (PMNDP)
+name_hi: प्रधानमंत्री राष्ट्रीय डायलिसिस कार्यक्रम
+department_en: >-
+  National Health Mission, Ministry of Health & Family Welfare (operated in Bihar at district
+  hospitals via State Health Society, Bihar)
+department_hi: >-
+  राष्ट्रीय स्वास्थ्य मिशन, स्वास्थ्य एवं परिवार कल्याण मंत्रालय (बिहार में जिला अस्पतालों में राज्य
+  स्वास्थ्य समिति द्वारा संचालित)
+categories:
+  - health
+launch_date: '2016-04-07'
+objective_en: >-
+  Make renal-care/dialysis services accessible and affordable to poor (BPL) patients with chronic
+  kidney disease / end-stage renal disease, addressing the financial burden of recurring dialysis.
+objective_hi: >-
+  गुर्दा रोग से ग्रस्त गरीब (BPL) रोगियों के लिए डायलिसिस सेवाएँ सुलभ एवं किफायती बनाना, बार-बार
+  होने वाले खर्च के बोझ को कम करना।
+eligibility_en: >-
+  Below Poverty Line patients needing dialysis — eligibility evidenced by a National Food Security
+  card or an income certificate showing annual income below ₹1 lakh, per search-sourced guidance.
+eligibility_hi: >-
+  डायलिसिस की आवश्यकता वाले गरीबी-रेखा-से-नीचे (BPL) रोगी — राष्ट्रीय खाद्य सुरक्षा कार्ड या वार्षिक
+  आय 1 लाख रु. से कम का प्रमाण-पत्र द्वारा पात्रता।
+benefit_type: free service
+benefit_detail: >-
+  Free dialysis services at district hospitals (in PPP and in-house modes), covering both
+  haemodialysis and peritoneal dialysis. For BPL economic group, 100% of expenses are covered under
+  NHM by the government.
+target_beneficiary: BPL dialysis patients
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: true
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Fetched the official MoHFW PMNDP portal introduction page (pmndp.mohfw.gov.in), describing it as
+  launched 7 April 2016, currently operating across States/UTs in PPP/in-house/hybrid modes with a
+  live PMNDP IT portal (launched May 2022). Bihar-specific reporting (State Health Society Bihar
+  data cited in press) shows active district dialysis centres with sessions delivered as recently as
+  2024, confirming the program runs in Bihar.
+source_url: https://pmndp.mohfw.gov.in/en/introduction-of-pradhan-mantri-national-dialysis-program-pmndp
+last_verified: '2026-06-22'

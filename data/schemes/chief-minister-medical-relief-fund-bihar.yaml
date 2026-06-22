@@ -1,0 +1,48 @@
+name_en: Chief Minister Medical Relief Fund (Bihar)
+name_hi: मुख्यमंत्री चिकित्सा सहायता कोष
+department_en: Government of Bihar (administered via Bihar Bhawan, New Delhi; Chief Minister's Office)
+department_hi: बिहार सरकार (बिहार भवन, नई दिल्ली के माध्यम से प्रशासित; मुख्यमंत्री कार्यालय)
+categories:
+  - health
+  - social_welfare
+objective_en: >-
+  Provide medical financial aid to Bihar residents for the treatment of certain serious ailments at
+  empanelled hospitals, including treatment outside Bihar.
+objective_hi: >-
+  बिहार के निवासियों को कुछ गंभीर बीमारियों के उपचार हेतु, बिहार के बाहर सहित, सूचीबद्ध अस्पतालों
+  में चिकित्सा वित्तीय सहायता प्रदान करना।
+eligibility_en: >-
+  Bihar residents with annual family income less than ₹2,50,000, for treatment of certain serious
+  ailments at CGHS-empanelled hospitals.
+eligibility_hi: >-
+  वार्षिक पारिवारिक आय 2,50,000 रु. से कम वाले बिहार निवासी, CGHS-सूचीबद्ध अस्पतालों में कुछ गंभीर
+  बीमारियों के उपचार हेतु।
+benefit_type: financial assistance
+benefit_detail: >-
+  Medical financial assistance toward treatment of specified serious ailments at CGHS-empanelled
+  hospitals (including hospitals outside Bihar, for which aid can be applied for and availed at
+  Bihar Bhawan, New Delhi). Exact per-case ceiling and full disease list not stated on the page
+  fetched.
+target_beneficiary: Bihar residents (serious illness, income < ₹2.5L)
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: 250000
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Fetched the official Bihar Bhawan page (biharbhawan.gov.in/cmReliefFund.aspx), which is live and
+  describes the income-based eligibility (income < ₹2.5 lakh), CGHS-empanelled-hospital treatment,
+  an application route via Bihar Bhawan New Delhi, and active helplines (WhatsApp +91 8527595623;
+  Jigyasa 0612-2233333). Marked likely_active rather than active because the page does not show a
+  current budget line, the full covered-disease list, or the exact benefit ceiling — those were in a
+  linked PDF I could not parse.
+source_url: https://www.biharbhawan.gov.in/cmReliefFund.aspx
+last_verified: '2026-06-22'

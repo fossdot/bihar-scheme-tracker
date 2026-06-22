@@ -1,0 +1,50 @@
+name_en: Rashtriya Bal Swasthya Karyakram (RBSK)
+name_hi: राष्ट्रीय बाल स्वास्थ्य कार्यक्रम
+department_en: >-
+  National Health Mission, Ministry of Health & Family Welfare (implemented in Bihar by State Health
+  Society, Bihar)
+department_hi: >-
+  राष्ट्रीय स्वास्थ्य मिशन, स्वास्थ्य एवं परिवार कल्याण मंत्रालय (बिहार में राज्य स्वास्थ्य समिति
+  द्वारा कार्यान्वित)
+categories:
+  - health
+  - women_child
+objective_en: >-
+  Improve children's quality of life through early identification and free intervention for the 4 Ds
+  — Defects at birth, Diseases, Deficiencies, and Development delays/disability.
+objective_hi: >-
+  4 'D' — जन्मजात दोष, रोग, कमियाँ एवं विकास-संबंधी देरी/दिव्यांगता — की शीघ्र पहचान एवं नि:शुल्क
+  उपचार से बच्चों का स्वास्थ्य सुधारना।
+eligibility_en: >-
+  Children from birth to 18 years: 0-6 years in the community/anganwadi, and children enrolled in
+  government and government-aided schools (classes I-XII). No income test.
+eligibility_hi: >-
+  जन्म से 18 वर्ष तक के बच्चे: 0–6 वर्ष आँगनबाड़ी/समुदाय में, तथा सरकारी एवं सरकारी-सहायता प्राप्त
+  विद्यालयों (कक्षा 1–12) के बच्चे। कोई आय-परीक्षण नहीं।
+benefit_type: free service
+benefit_detail: >-
+  Free screening of children for 30+ health conditions across the 4 Ds, plus free treatment and
+  management including tertiary-level surgeries (e.g. congenital heart disease, cleft lip/palate,
+  club foot, cataract, hearing impairment) and early-intervention services. All services free of
+  cost; delivered via block-level mobile health teams and District Early Intervention Centres.
+target_beneficiary: Children (0–18 years)
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 0
+max_age: 18
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Fetched the NHM RBSK page (nhm.gov.in, level=0 linkid=499 lid=773), which describes RBSK as a
+  current NHM child-health program with active mobile health teams and District Early Intervention
+  Centres providing free screening and treatment. An NHM RBSK directory lists Bihar among
+  implementing states.
+source_url: https://nhm.gov.in/index1.php?lang=1&level=0&linkid=499&lid=773
+last_verified: '2026-06-22'

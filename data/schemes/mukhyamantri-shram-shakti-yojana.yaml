@@ -1,0 +1,58 @@
+name_en: Mukhyamantri Shram Shakti Yojana
+name_hi: मुख्यमंत्री श्रमशक्ति योजना
+department_en: >-
+  Minority Welfare Department, Government of Bihar (implemented by Bihar State Minorities Financial
+  Corporation Ltd. / BSMFC)
+department_hi: >-
+  अल्पसंख्यक कल्याण विभाग, बिहार सरकार (बिहार राज्य अल्पसंख्यक वित्तीय निगम / BSMFC द्वारा
+  कार्यान्वित)
+categories:
+  - skilling
+  - employment
+  - social_welfare
+objective_en: >-
+  Provide employment-oriented vocational skill training to men and women of minority communities in
+  Bihar so they can secure jobs or move toward self-employment, with self-employment loans available
+  separately via the linked Mukhyamantri Alpsankhyak Rozgar Rin Yojana.
+objective_hi: >-
+  बिहार के अल्पसंख्यक समुदायों के स्त्री-पुरुषों को रोजगारोन्मुख व्यावसायिक कौशल प्रशिक्षण देना ताकि
+  वे नौकरी या स्वरोजगार की ओर बढ़ सकें।
+eligibility_en: >-
+  Permanent residents of Bihar belonging to notified minority communities, aged 18-45, with annual
+  family income below Rs 4,50,000; minimum education typically 8th/10th pass depending on the
+  course. 30% reservation for women and 3% for persons with disabilities. Apply online via the BSMFC
+  portal.
+eligibility_hi: >-
+  अधिसूचित अल्पसंख्यक समुदायों के बिहार के स्थायी निवासी, आयु 18–45, वार्षिक पारिवारिक आय 4,50,000
+  रु. से कम; पाठ्यक्रम अनुसार न्यूनतम शिक्षा प्रायः 8वीं/10वीं। महिलाओं हेतु 30% एवं दिव्यांगों हेतु
+  3% आरक्षण।
+benefit_type: training
+benefit_detail: >-
+  Free job-oriented vocational skill training (training period up to 2 years) through empanelled
+  government and private training providers, with study materials and tool-kits provided free of
+  cost, and a certificate awarded on successful completion by the training institute.
+target_beneficiary: Minority youth (18–45, income < ₹4.5L)
+personas:
+  - unemployed_youth
+education_levels: []
+gender_eligibility: any
+social_categories:
+  - minority
+min_age: 18
+max_age: 45
+income_ceiling: 450000
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  BSMFC official scheme page describes a live 'Apply for Skill Training' online portal and lists
+  training-provider documentation; district administrations (e.g., Madhubani NIC) have issued recent
+  online-application invitation notices for minority candidates under the scheme. No current-FY
+  state budget line was confirmed from budget.bihar.gov.in, so status is likely_active rather than
+  active. Distinct from the loan-only 'Bihar Alpsankhyak Rozgar Rin' already in catalogue.
+source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+application_portal_url: https://bsmfc.org/
+last_verified: '2026-06-22'

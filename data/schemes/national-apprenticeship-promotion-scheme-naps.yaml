@@ -1,0 +1,58 @@
+name_en: National Apprenticeship Promotion Scheme (NAPS)
+name_hi: राष्ट्रीय शिक्षुता प्रोत्साहन योजना
+department_en: >-
+  Ministry of Skill Development and Entrepreneurship (MSDE) / Directorate General of Training (DGT);
+  in Bihar coordinated via the Regional Directorate of Skill Development & Entrepreneurship (RDSDE)
+  and the apprenticeshipindia.gov.in portal
+department_hi: >-
+  कौशल विकास एवं उद्यमिता मंत्रालय (MSDE) / प्रशिक्षण महानिदेशालय; बिहार में
+  apprenticeshipindia.gov.in पोर्टल द्वारा
+categories:
+  - skilling
+  - employment
+objective_en: >-
+  Promote apprenticeship training across the country by incentivising employers to engage
+  apprentices, thereby giving youth (including ITI pass-outs, school pass-outs and skill-certificate
+  holders) industry-based, paid, on-the-job skilling.
+objective_hi: >-
+  नियोक्ताओं को शिक्षुओं को रखने हेतु प्रोत्साहित कर शिक्षुता को बढ़ावा देना, जिससे युवाओं (ITI
+  उत्तीर्ण, स्कूल उत्तीर्ण, कौशल-प्रमाणपत्रधारक) को सवेतन, उद्योग-आधारित ऑन-द-जॉब कौशल मिले।
+eligibility_en: >-
+  Indian citizens aged 14+ (18+ for hazardous trades) with minimum 5th-class education; ITI
+  pass-outs, Class 8/10/12 pass candidates, diploma holders, graduates and skill-certificate holders
+  are eligible depending on trade. Open to Bihar youth; engagement is through registered
+  employers/establishments on the apprenticeship portal.
+eligibility_hi: >-
+  14 वर्ष से अधिक (खतरनाक व्यवसायों हेतु 18+) के भारतीय नागरिक, न्यूनतम 5वीं पास; ट्रेड के अनुसार
+  ITI उत्तीर्ण, कक्षा 8/10/12, डिप्लोमा, स्नातक एवं कौशल-प्रमाणपत्रधारक पात्र। पोर्टल पर पंजीकृत
+  नियोक्ताओं के माध्यम से बिहार के युवाओं हेतु खुला।
+benefit_type: training
+benefit_detail: >-
+  Apprentices receive a prescribed monthly stipend (revised in May 2025 to a range of approx. Rs
+  6,800-Rs 12,300/month), of which the Government contributes 25% of the prescribed minimum stipend
+  up to Rs 1,500/month directly via DBT; for non-ITI candidates the Government also shares basic
+  training cost up to Rs 7,500 for 500 hours/3 months. Apprentices gain certified,
+  industry-recognised work experience.
+target_beneficiary: Apprentices (youth 14+)
+personas:
+  - unemployed_youth
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 14
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  MSDE NAPS implementation guidelines (2024) and the May 2025 38th Central Apprenticeship Council
+  decision revising stipends by 36% confirm the scheme is current and actively funded for 2025-26;
+  quarterly reimbursement to employers is ongoing via RDATs/State Apprenticeship Advisors. Central
+  scheme operated through apprenticeshipindia.gov.in.
+source_url: https://www.apprenticeshipindia.gov.in/
+application_portal_url: https://www.apprenticeshipindia.gov.in/
+last_verified: '2026-06-22'

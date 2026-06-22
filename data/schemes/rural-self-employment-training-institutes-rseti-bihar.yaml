@@ -1,0 +1,58 @@
+name_en: Rural Self Employment Training Institutes (RSETI) - Bihar
+name_hi: ग्रामीण स्वरोजगार प्रशिक्षण संस्थान
+department_en: >-
+  Ministry of Rural Development, Government of India (sub-scheme of NRLM); RSETIs in Bihar districts
+  are managed by sponsor banks (e.g., SBI and regional rural banks) with State Government
+  cooperation
+department_hi: >-
+  ग्रामीण विकास मंत्रालय, भारत सरकार (NRLM की उप-योजना); बिहार के जिलों में RSETI प्रायोजक बैंकों
+  द्वारा राज्य सरकार के सहयोग से संचालित
+categories:
+  - skilling
+  - employment
+  - financial_inclusion
+objective_en: >-
+  Establish a dedicated RSETI in each district to impart short-term skill training oriented towards
+  entrepreneurship/self-employment for rural unemployed youth, with long-term handholding for
+  setting up micro-enterprises.
+objective_hi: >-
+  प्रत्येक जिले में एक RSETI स्थापित कर ग्रामीण बेरोजगार युवाओं को स्वरोजगार-उन्मुख अल्पकालिक कौशल
+  प्रशिक्षण देना, सूक्ष्म उद्यम स्थापना हेतु दीर्घकालिक सहायता के साथ।
+eligibility_en: >-
+  Rural poor unemployed youth aged 18-45 (priority to BPL households and NRLM/SHG members), enrolled
+  through the district RSETI free of cost. Applicable to rural Bihar residents through the RSETIs
+  operating in Bihar districts.
+eligibility_hi: >-
+  18–45 वर्ष के ग्रामीण गरीब बेरोजगार युवा (BPL परिवारों एवं NRLM/SHG सदस्यों को प्राथमिकता), जिला
+  RSETI के माध्यम से नि:शुल्क नामांकन। बिहार के जिलों में संचालित RSETI के माध्यम से ग्रामीण
+  निवासियों हेतु।
+benefit_type: training
+benefit_detail: >-
+  Free short-term residential skill training (from a basket of ~64 NCVET/MoRD-approved trades such
+  as tailoring, dairy, electronics repair, apparel), followed by long-term handholding and
+  credit-linkage support to start a self-employment venture. Reported settlement
+  (self-employment/wage-employment) rate above 70%.
+target_beneficiary: Rural unemployed youth (18–45)
+personas:
+  - unemployed_youth
+  - shg_jeevika_member
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 18
+max_age: 45
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  NIRDPR/MoRD official RSETI portal confirms the scheme is operational with district institutes,
+  bank management, approved trades and progress reporting; PIB (2024) notes 590 RSETIs functioning
+  across 572 districts in 33 States/UTs. MoRD national scheme, with RSETIs present in Bihar
+  districts; dashboard.rural.nic.in carries state/district RSETI data including Bihar.
+source_url: https://nirdpr.org.in/rseti/
+application_portal_url: https://dashboard.rural.nic.in/dashboardnew/rseti.aspx
+last_verified: '2026-06-22'

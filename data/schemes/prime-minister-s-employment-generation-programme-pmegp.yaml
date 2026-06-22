@@ -1,0 +1,55 @@
+name_en: Prime Minister's Employment Generation Programme (PMEGP)
+name_hi: प्रधानमंत्री रोजगार सृजन कार्यक्रम (पीएमईजीपी)
+department_en: >-
+  Ministry of Micro, Small and Medium Enterprises (MSME); implemented via KVIC nodal agency and, in
+  Bihar, through State KVIC Directorate, Bihar KVIB and District Industries Centres (DICs) and banks
+department_hi: >-
+  सूक्ष्म, लघु एवं मध्यम उद्यम मंत्रालय (MSME); KVIC के माध्यम से, बिहार में राज्य KVIC निदेशालय,
+  बिहार KVIB एवं जिला उद्योग केंद्रों द्वारा कार्यान्वित
+categories:
+  - employment
+  - industry
+  - financial_inclusion
+objective_en: >-
+  Generate employment by helping individuals set up new non-agricultural micro-enterprises
+  (manufacturing and service/business units) through a credit-linked margin-money subsidy.
+objective_hi: >-
+  ऋण-संबद्ध मार्जिन-मनी सब्सिडी के माध्यम से नए गैर-कृषि सूक्ष्म उद्यम स्थापित करने में सहायता देकर
+  रोजगार सृजन।
+eligibility_en: >-
+  Any individual above 18 years; for projects above Rs.10 lakh (manufacturing) or Rs.5 lakh
+  (service) the applicant must have passed at least Class VIII. Also open to SHGs, registered
+  institutions/societies, production cooperatives and charitable trusts. Existing units and those
+  who already availed subsidy under another govt scheme are not eligible.
+eligibility_hi: >-
+  18 वर्ष से अधिक का कोई भी व्यक्ति; निर्माण में 10 लाख रु. / सेवा में 5 लाख रु. से बड़ी परियोजनाओं
+  हेतु कम-से-कम कक्षा 8 उत्तीर्ण। SHG, पंजीकृत संस्थाएँ, सहकारी समितियाँ एवं ट्रस्ट भी पात्र। मौजूदा
+  इकाइयाँ / पहले से अन्य सब्सिडी प्राप्त इकाइयाँ अपात्र।
+benefit_type: subsidy
+benefit_detail: >-
+  Credit-linked margin-money subsidy. General category: 15% (urban) / 25% (rural) of project cost;
+  special category (SC/ST/OBC/minorities/women/ex-servicemen/PwD/NER/hill/border): 25% (urban) / 35%
+  (rural). Max project cost Rs.25 lakh (manufacturing) and Rs.10 lakh (service/business).
+target_beneficiary: New micro-entrepreneurs
+personas:
+  - self_employed_entrepreneur
+  - unemployed_youth
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: 18
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Official MSME portal (my.msme.gov.in) and msme.gov.in list PMEGP as a current flagship scheme with
+  a live online application portal (kviconline.gov.in/pmegp). Implemented at state level through
+  Bihar KVIC/KVIB/DIC. Listed as operational for 2025-26.
+source_url: https://my.msme.gov.in/MyMsmeMob/MsmeScheme/Pages/1_3_0.html
+application_portal_url: https://www.kviconline.gov.in/pmegpeportal/
+last_verified: '2026-06-22'

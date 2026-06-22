@@ -1,0 +1,52 @@
+name_en: Niramaya Health Insurance Scheme
+name_hi: निरामय स्वास्थ्य बीमा योजना
+department_en: >-
+  The National Trust, Department of Empowerment of Persons with Disabilities, Ministry of Social
+  Justice & Empowerment
+department_hi: राष्ट्रीय न्यास, दिव्यांगजन सशक्तिकरण विभाग, सामाजिक न्याय एवं अधिकारिता मंत्रालय
+categories:
+  - health
+  - social_welfare
+objective_en: >-
+  Provide affordable health insurance to persons with developmental disabilities (autism, cerebral
+  palsy, intellectual disability and multiple disabilities) covering medical needs across the
+  lifespan.
+objective_hi: >-
+  विकासात्मक दिव्यांगता (ऑटिज़्म, सेरेब्रल पाल्सी, बौद्धिक दिव्यांगता, बहु-दिव्यांगता) वाले
+  व्यक्तियों को किफायती स्वास्थ्य बीमा उपलब्ध कराना।
+eligibility_en: >-
+  Persons with disabilities covered under the National Trust Act (autism, cerebral palsy, mental
+  retardation/intellectual disability, multiple disabilities) holding a valid disability certificate
+  / UDID card or enrolment, registered with the National Trust. No income ceiling; premium varies by
+  BPL/APL status.
+eligibility_hi: >-
+  राष्ट्रीय न्यास अधिनियम के अंतर्गत आने वाले दिव्यांग व्यक्ति (ऑटिज़्म, सेरेब्रल पाल्सी, बौद्धिक
+  दिव्यांगता, बहु-दिव्यांगता) जिनके पास वैध दिव्यांगता/UDID प्रमाण-पत्र हो एवं जो राष्ट्रीय न्यास
+  में पंजीकृत हों। कोई आय-सीमा नहीं; प्रीमियम BPL/APL के अनुसार।
+benefit_type: insurance
+benefit_detail: >-
+  Health insurance cover up to ₹1,00,000 per year (reimbursement basis) with sub-limits:
+  hospitalisation/corrective surgeries (₹55,000), OPD incl. medicines/pathology/diagnostics and
+  preventive dentistry (₹19,000), ongoing therapies (₹20,000), alternative/AYUSH medicine (₹4,000)
+  and transportation (₹2,000). No exclusion for pre-existing conditions; no pre-insurance medical
+  test.
+target_beneficiary: Persons with disabilities (National Trust Act)
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: true
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Fetched the National Trust Niramaya page (nationaltrust.nic.in/niramaya), which shows current
+  coverage amounts, sub-limits, and a live claims helpline, indicating an actively administered
+  scheme. Applies nationwide including Bihar residents registered with the National Trust.
+source_url: https://nationaltrust.nic.in/niramaya/
+last_verified: '2026-06-22'

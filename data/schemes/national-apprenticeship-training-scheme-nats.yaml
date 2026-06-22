@@ -1,0 +1,58 @@
+name_en: National Apprenticeship Training Scheme (NATS)
+name_hi: राष्ट्रीय शिक्षुता प्रशिक्षण योजना
+department_en: >-
+  Ministry of Education, Government of India (implemented through Boards of Apprenticeship Training
+  / BOATs; in Bihar via NATS 2.0 portal and graduate/diploma institutions)
+department_hi: >-
+  शिक्षा मंत्रालय, भारत सरकार (शिक्षुता प्रशिक्षण बोर्डों के माध्यम से; बिहार में NATS 2.0 पोर्टल
+  द्वारा)
+categories:
+  - skilling
+  - employment
+objective_en: >-
+  Provide fresh graduate, diploma and vocational-certificate holders with practical, on-the-job
+  apprenticeship training (6 months to 1 year) under the Apprentices Act 1961, bridging the gap
+  between classroom education and industry requirements.
+objective_hi: >-
+  नए स्नातक, डिप्लोमा एवं व्यावसायिक-प्रमाणपत्रधारकों को शिक्षुता अधिनियम 1961 के अंतर्गत 6 माह से 1
+  वर्ष तक का व्यावहारिक ऑन-द-जॉब शिक्षुता प्रशिक्षण देना।
+eligibility_en: >-
+  Graduate students, diploma holders and vocational certificate holders (engineering, technical, and
+  now commerce/arts/humanities streams) seeking apprenticeship training; registration on the NATS
+  2.0 portal. No income or social-category bar; open to recent graduates including those in Bihar.
+eligibility_hi: >-
+  शिक्षुता प्रशिक्षण चाहने वाले स्नातक, डिप्लोमा एवं व्यावसायिक-प्रमाणपत्रधारक; NATS 2.0 पोर्टल पर
+  पंजीकरण। कोई आय या सामाजिक-श्रेणी बंधन नहीं; बिहार सहित नए स्नातकों के लिए खुला।
+benefit_type: training
+benefit_detail: >-
+  Hands-on apprenticeship training in an industry/establishment for 6 months to 1 year, a monthly
+  stipend (aligned to minimum rates under the Apprentices Act; 50% of the stipend is reimbursed to
+  the employer by the Government of India via DBT), and a Government of India Certificate of
+  Proficiency registrable at employment exchanges as valid work experience. Widely promoted in Bihar
+  as a ~Rs 9,000/month opportunity for recent graduates.
+target_beneficiary: Graduate & diploma apprentices
+personas:
+  - unemployed_youth
+  - student
+education_levels:
+  - iti_diploma
+  - graduate
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Official NATS about-us page (Ministry of Education) confirms NATS 2.0 portal is operational with
+  active establishments and stipend disbursal via DBT; PIB recorded launch of NATS 2.0 and disbursal
+  of Rs 100 Cr stipends to graduates/diploma holders. Bihar graduates (2020-2024 cohort) are being
+  actively enrolled per state notifications. Central scheme, no state budget line needed.
+source_url: https://nats.education.gov.in/about-us.php
+application_portal_url: https://nats.education.gov.in
+last_verified: '2026-06-22'
