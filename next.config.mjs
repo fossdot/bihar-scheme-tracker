@@ -1,13 +1,15 @@
 // Baseline security headers applied to every app response (so they hold regardless of which
 // proxy/vhost serves it). CSP allows 'unsafe-inline' (Next injects inline hydration scripts +
 // styles and we don't use nonces) but no 'unsafe-eval'; it still hardens object/base/frame/form.
+// Dev adds 'unsafe-eval' because Next's react-refresh hot-reload needs eval(); production never does.
+const isDev = process.env.NODE_ENV !== "production";
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  isDev ? "script-src 'self' 'unsafe-inline' 'unsafe-eval'" : "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self'",
-  "connect-src 'self'",
+  isDev ? "connect-src 'self' ws: wss:" : "connect-src 'self'",
   "object-src 'none'",
   "base-uri 'self'",
   "frame-ancestors 'self'",
