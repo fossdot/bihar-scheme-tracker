@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
@@ -51,7 +52,9 @@ export default function LangLayout({
               <span className="hidden sm:inline">{t(locale, "appName")}</span>
               <span className="sm:hidden">{locale === "hi" ? "योजना ट्रैकर" : "Tracker"}</span>
             </Link>
-            <SiteNav locale={locale} />
+            <Suspense fallback={null}>
+              <SiteNav locale={locale} />
+            </Suspense>
           </div>
 
           {/* Global search across schemes + policies (plain GET form — works without JS) */}
@@ -70,13 +73,18 @@ export default function LangLayout({
 
           <div className="flex shrink-0 items-center gap-2">
             <ThemeToggle initial={theme} />
-            <LanguageToggle locale={locale} />
+            {/* LanguageToggle uses useSearchParams which requires Suspense in Next 14 App Router. */}
+            <Suspense fallback={null}>
+              <LanguageToggle locale={locale} />
+            </Suspense>
           </div>
         </div>
       </header>
       <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
       <Footer locale={locale} />
-      <ViewBeacon />
+      <Suspense fallback={null}>
+        <ViewBeacon />
+      </Suspense>
     </>
   );
 }
