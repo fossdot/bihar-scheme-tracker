@@ -49,6 +49,17 @@ metrics:
     source_url: >-
       https://www.newsonair.gov.in/pm-modi-to-release-19th-pm-kisan-installment-%E2%82%B922000-cr-to-benefit-9-8-crore-farmers
     note: '~76.37 lakh Bihar farmers in the 19th instalment (national: 9.8 cr). [scope: Bihar]'
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: >-
+      National PM-KISAN beneficiaries, latest period DEC-MAR 2025-26 (official pmkisan.gov.in
+      dashboard) [scope: National]
+    value: 94615309
+    unit: farmers
+    provenance: published
+    as_of_date: '2026-06-22'
+    source_url: https://pmkisan.gov.in/
+    note: '9,46,15,309 farmers, as of 2026-06-22. [scope: National]'
   - dimension: budget
     fiscal_year: 2024-25
     label: Bihar — 19th instalment

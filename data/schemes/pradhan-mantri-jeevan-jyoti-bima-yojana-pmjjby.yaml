@@ -34,4 +34,23 @@ status_evidence: >-
   https://www.jansuraksha.gov.in/
 source_url: https://www.jansuraksha.gov.in
 application_portal_url: https://www.jansuraksha.gov.in
+metrics:
+  - dimension: outcomes
+    fiscal_year: 2024-25
+    label: Cumulative claims paid under PMJJBY (as of 19 March 2025)
+    value: 18102
+    unit: Rs crore
+    provenance: published
+    as_of_date: '2025-03-19'
+    source_url: https://www.ibef.org/government-schemes/pradhan-mantri-jeevan-jyoti-bima-yojana
+    note: '18,102 Rs crore, as of 2025-03-19. [scope: National]'
+  - dimension: outcomes
+    fiscal_year: 2024-25
+    label: Number of claims settled under PMJJBY (as of 19 March 2025)
+    value: 905139
+    unit: claims
+    provenance: published
+    as_of_date: '2025-03-19'
+    source_url: https://www.ibef.org/government-schemes/pradhan-mantri-jeevan-jyoti-bima-yojana
+    note: '9,05,139 claims, as of 2025-03-19. [scope: National]'
 last_verified: '2026-06-19'

@@ -49,4 +49,49 @@ status_evidence: >-
   coverage amounts, sub-limits, and a live claims helpline, indicating an actively administered
   scheme. Applies nationwide including Bihar residents registered with the National Trust.
 source_url: https://nationaltrust.nic.in/niramaya/
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2023-24
+    label: >-
+      Divyangjan enrolled under Niramaya during the year 2023-24 (annual flow, not cumulative)
+      [scope: National]
+    value: 87746
+    unit: persons
+    provenance: published
+    as_of_date: '2024-03-31'
+    source_url: >-
+      https://cdnbbsr.s3waas.gov.in/s3300891a62162b960cf02ce3827bb363c/uploads/2025/01/20250110901229377.pdf
+    note: '87,746 persons, as of 2024-03-31. [scope: National]'
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: >-
+      Divyangjan enrolled under Niramaya during the year 2024-25 (annual flow, not cumulative)
+      [scope: National]
+    value: 52677
+    unit: persons
+    provenance: published
+    as_of_date: '2025-03-31'
+    source_url: >-
+      https://cdnbbsr.s3waas.gov.in/s3300891a62162b960cf02ce3827bb363c/uploads/2026/04/202604242112896603.pdf
+    note: '52,677 persons, as of 2025-03-31. [scope: National]'
+  - dimension: budget
+    fiscal_year: 2023-24
+    label: 'Expenditure on Niramaya during the year 2023-24 [scope: National]'
+    value: 13.86
+    unit: Rs crore
+    provenance: published
+    as_of_date: '2024-03-31'
+    source_url: >-
+      https://cdnbbsr.s3waas.gov.in/s3300891a62162b960cf02ce3827bb363c/uploads/2025/01/20250110901229377.pdf
+    note: '13.86 Rs crore, as of 2024-03-31. [scope: National]'
+  - dimension: budget
+    fiscal_year: 2024-25
+    label: 'Expenditure on Niramaya during the year 2024-25 (01-04-2024 to 31-03-2025) [scope: National]'
+    value: 13.22
+    unit: Rs crore
+    provenance: published
+    as_of_date: '2025-03-31'
+    source_url: >-
+      https://cdnbbsr.s3waas.gov.in/s3300891a62162b960cf02ce3827bb363c/uploads/2026/04/202604242112896603.pdf
+    note: '13.22 Rs crore, as of 2025-03-31. [scope: National]'
 last_verified: '2026-06-22'

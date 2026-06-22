@@ -1,0 +1,51 @@
+name_en: Mukhyamantri Vas Sthal Kray Sahayata Yojana
+name_hi: मुख्यमंत्री वास स्थल क्रय सहायता योजना
+department_en: Rural Development Department, Government of Bihar
+department_hi: ग्रामीण विकास विभाग, बिहार सरकार
+department_website: https://rdd.bihar.gov.in
+categories:
+  - housing
+  - social_welfare
+objective_en: >-
+  Help landless and houseless rural families who are listed as PMAY-G beneficiaries but have no
+  homestead land to first acquire residential land, so they can subsequently avail
+  house-construction assistance under PMAY-G.
+objective_hi: >-
+  ऐसे ग्रामीण परिवारों की सहायता करना जो PMAY-ग्रामीण के लाभार्थी हैं किन्तु भूमिहीन हैं, ताकि वे
+  आवासीय भूखंड क्रय कर सकें और फिर मकान-निर्माण सहायता प्राप्त कर सकें।
+eligibility_en: >-
+  Rural Bihar resident; listed as a beneficiary under PMAY-Gramin; landless and houseless (owns no
+  residential land/house); resides in a village where no government land is available for housing
+  allocation; must have an operational bank account for DBT.
+eligibility_hi: >-
+  ग्रामीण बिहार निवासी; PMAY-ग्रामीण के लाभार्थी सूची में नाम; भूमिहीन एवं बेघर (कोई आवासीय
+  भूमि/मकान नहीं); ऐसे गाँव में रहते हों जहाँ सरकारी भूमि उपलब्ध नहीं; DBT हेतु बैंक खाता आवश्यक।
+benefit_type: cash transfer
+benefit_detail: >-
+  Cash assistance of Rs. 60,000 transferred directly (DBT) to the beneficiary's bank account, to be
+  used exclusively for purchasing residential/homestead land. (Note: some 2025 sources report the
+  amount revised upward to Rs. 1 lakh — re-verify against a Rural Development Department
+  notification.)
+target_beneficiary: Landless PMAY-G beneficiaries (rural Bihar)
+personas: []
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Listed as a live scheme on the Government of India myScheme portal
+  (myscheme.gov.in/schemes/mmvsksy, Rural Development Dept, Bihar) and widely referenced in 2025
+  state sources as currently open. No current-FY Bihar Rural Development budget allocation confirmed
+  — classed likely_active. Benefit amount discrepancy (Rs. 60,000 on myScheme vs Rs. 1 lakh in some
+  2025 news) flagged for re-verification against an RD notification. Distinct from Bihar Vaas Bhoomi
+  Yojana (Revenue & Land Reforms free land grant — different dept and mechanism).
+source_url: https://www.myscheme.gov.in/schemes/mmvsksy
+last_verified: '2026-06-22'

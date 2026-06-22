@@ -56,6 +56,15 @@ metrics:
     source_url: >-
       https://www.newslaundry.com/2024/04/01/corruption-bad-working-conditions-how-mgnrega-continues-to-falter-in-bihar
     note: '46 lakh households; 201.5 M person-days (FY23-24, NREGA portal). [scope: Bihar]'
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: Total person-days generated under MGNREGS (Bihar)
+    value: 250399729
+    unit: person-days
+    provenance: published
+    as_of_date: '2025-03-31'
+    source_url: https://www.dord.gov.in/static/uploads/2025/09/d81193f25cde78b36f36b559ffabbb18.pdf
+    note: '25,03,99,729 person-days, as of 2025-03-31. [scope: Bihar]'
   - dimension: budget
     fiscal_year: 2024-25
     label: Bihar actual expenditure
@@ -65,6 +74,24 @@ metrics:
     as_of_date: '2025-09-01'
     source_url: https://www.dord.gov.in/static/uploads/2025/09/d81193f25cde78b36f36b559ffabbb18.pdf
     note: Total actual MGNREGA expenditure in Bihar, FY2024-25 (MoRD). [Bihar]
+  - dimension: budget
+    fiscal_year: 2024-25
+    label: Total actual expenditure under MGNREGS (Bihar)
+    value: 8473.73
+    unit: Rs crore
+    provenance: published
+    as_of_date: '2025-03-31'
+    source_url: https://www.dord.gov.in/static/uploads/2025/09/d81193f25cde78b36f36b559ffabbb18.pdf
+    note: '8,473.73 Rs crore, as of 2025-03-31. [scope: Bihar]'
+  - dimension: budget
+    fiscal_year: 2024-25
+    label: Unskilled wage expenditure under MGNREGS (Bihar)
+    value: 5925.63
+    unit: Rs crore
+    provenance: published
+    as_of_date: '2025-03-31'
+    source_url: https://www.dord.gov.in/static/uploads/2025/09/d81193f25cde78b36f36b559ffabbb18.pdf
+    note: '5,925.63 Rs crore, as of 2025-03-31. [scope: Bihar]'
   - dimension: demographics
     fiscal_year: 2024-25
     label: SC/ST share of person-days

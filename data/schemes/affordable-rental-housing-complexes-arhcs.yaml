@@ -1,0 +1,55 @@
+name_en: Affordable Rental Housing Complexes (ARHCs)
+name_hi: किफायती किराया आवास परिसर योजना
+department_en: Ministry of Housing and Urban Affairs, Government of India (sub-scheme of PMAY-Urban)
+department_hi: आवास एवं शहरी कार्य मंत्रालय, भारत सरकार (PMAY-शहरी की उप-योजना)
+categories:
+  - housing
+  - social_welfare
+  - employment
+launch_date: '2020-07-08'
+objective_en: >-
+  Provide affordable subsidised rental housing to urban migrants and urban poor (EWS/LIG) near their
+  workplaces, reducing distress and unsafe living conditions for industrial and construction
+  workers, street vendors, and similar groups.
+objective_hi: >-
+  शहरी प्रवासियों एवं शहरी गरीबों (EWS/LIG) को उनके कार्यस्थल के निकट किफायती किराया आवास उपलब्ध
+  कराना, ताकि औद्योगिक/निर्माण श्रमिकों, रेहड़ी-पटरी वालों आदि की परेशानी एवं असुरक्षित आवास की
+  स्थिति कम हो सके।
+eligibility_en: >-
+  Urban migrants and urban poor in the EWS / LIG categories — including industrial workers,
+  construction workers, street vendors, rickshaw pullers, market/trade workers — seeking affordable
+  rental housing near their workplace in urban areas.
+eligibility_hi: >-
+  EWS/LIG श्रेणी के शहरी प्रवासी एवं शहरी गरीब — जैसे औद्योगिक/निर्माण श्रमिक, रेहड़ी-पटरी वाले,
+  रिक्शा चालक, बाजार/व्यापार कर्मी — जो शहरी क्षेत्र में कार्यस्थल के निकट किफायती किराया आवास चाहते
+  हों।
+benefit_type: subsidised housing
+benefit_detail: >-
+  Access to subsidised rental housing in ARHCs comprising single-bedroom (~30 sq m) and
+  double-bedroom (~60 sq m) dwelling units plus 4-6 bed dormitories, at affordable rents. Complexes
+  developed on existing government-funded vacant housing stock or by private/public entities on
+  their own land through PPP.
+target_beneficiary: Urban migrants and urban poor (EWS/LIG)
+personas:
+  - worker_labourer
+  - unemployed_youth
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Fetched official PMAY-Urban ARHC page (pmay-urban.gov.in/arhc-about): launched 8 July 2020 under
+  PMAY-Urban as a sub-scheme for urban migrants/poor; Model 1 (govt housing stock) and Model 2
+  (private/public land) operational; cities listed Bihar among potential implementation states. No
+  current-FY Bihar-specific budget confirmation found — likely_active. Distinct from PMAY-Urban
+  (ownership housing) — ARHC is specifically a rental sub-scheme.
+source_url: https://pmay-urban.gov.in/arhc-about
+last_verified: '2026-06-22'

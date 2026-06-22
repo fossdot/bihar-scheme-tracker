@@ -1,0 +1,53 @@
+name_en: PM Formalisation of Micro Food Processing Enterprises (PMFME)
+name_hi: प्रधानमंत्री सूक्ष्म खाद्य उद्यम उन्नयन योजना (PMFME)
+department_en: Ministry of Food Processing Industries, Government of India
+department_hi: खाद्य प्रसंस्करण उद्योग मंत्रालय, भारत सरकार
+categories:
+  - industry
+  - skilling
+  - financial_inclusion
+  - agriculture
+launch_date: '2020-06-29'
+objective_en: >-
+  Enhance the competitiveness of existing micro food-processing enterprises and bring them into the
+  formal economy through credit-linked capital subsidies, technical support, and capacity building.
+objective_hi: >-
+  मौजूदा सूक्ष्म खाद्य प्रसंस्करण उद्यमों की प्रतिस्पर्धात्मकता बढ़ाना और ऋण-संबद्ध पूंजी सब्सिडी,
+  तकनीकी सहायता एवं क्षमता निर्माण के माध्यम से उन्हें औपचारिक अर्थव्यवस्था में लाना।
+eligibility_en: >-
+  Existing individual micro food processing enterprises, proprietorships, partnerships, FPOs, SHGs,
+  producer cooperatives, and self-help groups engaged in food processing. Open to Bihar-based units
+  — state implementation through Bihar's nodal agency.
+eligibility_hi: >-
+  मौजूदा सूक्ष्म खाद्य प्रसंस्करण इकाइयाँ, एकल-स्वामित्व/भागीदारी, FPO, SHG, उत्पादक सहकारी समितियाँ
+  एवं स्वयं-सहायता समूह। बिहार की इकाइयाँ राज्य की नोडल एजेंसी के माध्यम से पात्र।
+benefit_type: subsidy
+benefit_detail: >-
+  Credit-linked capital subsidy of 35% of eligible project cost up to Rs. 10 lakh per micro unit;
+  seed capital of Rs. 40,000 per SHG member for working capital and small tools; grants for
+  FPOs/SHGs/co-operatives for common infrastructure; branding and marketing support.
+target_beneficiary: Micro food-processing enterprises
+personas:
+  - self_employed_entrepreneur
+  - shg_jeevika_member
+  - farmer
+education_levels: []
+gender_eligibility: any
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: any
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: active
+status_evidence: >-
+  Fetched official MoFPI PMFME page (mofpi.gov.in/en/pmfme/seed-capital-shg): describes PMFME as a
+  current central sector scheme launched 29 June 2020 with a 5-year outlay (2020-21 to 2024-25) and
+  an online application portal (pmfme.mofpi.gov.in). Scheme extended and operational per MoFPI 2024
+  annual report and PIB releases through 2025.
+source_url: https://mofpi.gov.in/en/pmfme/seed-capital-shg
+application_portal_url: https://pmfme.mofpi.gov.in
+last_verified: '2026-06-22'
