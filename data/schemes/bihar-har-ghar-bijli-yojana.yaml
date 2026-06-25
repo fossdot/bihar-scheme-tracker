@@ -34,3 +34,12 @@ status_evidence: >-
 source_url: https://energy.bihar.gov.in
 application_portal_url: https://hargharbijli.bsphcl.co.in
 last_verified: '2026-06-19'
+metrics:
+  - dimension: district
+    label: District & demographic breakdown
+    value: null
+    provenance: rti_needed
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI
+      drafted — see docs/rti/bihar-state-departments.md. Mine public sources first; file for
+      the unpublished splits.

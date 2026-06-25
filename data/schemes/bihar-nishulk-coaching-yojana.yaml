@@ -44,3 +44,12 @@ status_evidence: >-
 source_url: https://state.bihar.gov.in/socialwelfare
 application_portal_url: https://state.bihar.gov.in/socialwelfare
 last_verified: '2026-06-19'
+metrics:
+  - dimension: district
+    label: District & demographic breakdown
+    value: null
+    provenance: rti_needed
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI
+      drafted — see docs/rti/bihar-state-departments.md. Mine public sources first; file for
+      the unpublished splits.

@@ -37,3 +37,12 @@ application_portal_url: https://farmech.bihar.gov.in/
 policies:
   - Bihar Krishi Road Map (Agriculture Roadmap)
 last_verified: '2026-06-19'
+metrics:
+  - dimension: district
+    label: District & demographic breakdown
+    value: null
+    provenance: rti_needed
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI
+      drafted — see docs/rti/bihar-state-departments.md. Mine public sources first; file for
+      the unpublished splits.
