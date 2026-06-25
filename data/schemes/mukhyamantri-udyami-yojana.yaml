@@ -62,13 +62,4 @@ metrics:
     note: >-
       District-wise / social-category / gender splits and outcomes not published. RTI filed via
       Bihar RTI Online to the Industries Department on 25 June 2026; awaiting reply.
-  - dimension: beneficiaries
-    fiscal_year: 2024-25
-    label: Bihar beneficiaries selected
-    value: 9247
-    unit: persons
-    provenance: reported
-    as_of_date: '2024-08-23'
-    source_url: https://biharhelp.in/bihar-mukhyamantri-udyami-yojana-2024-25/
-    note: 'FY24-25 computerised randomisation (SC/ST, EBC, women, youth, minority). [scope: Bihar]'
 last_verified: '2026-06-19'
