@@ -50,6 +50,17 @@ application_portal_url: https://www.7nishchay-yuvaupmission.bihar.gov.in/
 policies:
   - Saat Nishchay-2 — Yuva Upmission
 metrics:
+  - dimension: beneficiaries
+    fiscal_year: '2024-25'
+    label: Cumulative admissions (since inception)
+    value: 2478215
+    unit: persons
+    provenance: reported
+    as_of_date: '2024-07-08'
+    source_url: https://socialwelfare.vikaspedia.in/viewcontent/social-welfare/skill-development/best-practices-on-skill-development/kaushal-yuva-program-in-bihar
+    note: >-
+      ~24.78 lakh cumulative KYP admissions as of 8 Jul 2024 (25 lakh+ certified), across 534 block
+      skill centres. Reported; verify against the BSDM dashboard at skillmissionbihar.org.
   - dimension: district
     label: District & demographic breakdown
     value: null
