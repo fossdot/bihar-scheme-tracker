@@ -50,8 +50,8 @@ metrics:
   - dimension: district
     label: District & demographic breakdown
     value: null
-    provenance: rti_needed
+    provenance: rti_filed
+    as_of_date: '2026-06-26'
     note: >-
-      District-wise and social-category/gender splits not published for this scheme. RTI
-      drafted — see docs/rti/bihar-state-departments.md. Mine public sources first; file for
-      the unpublished splits.
+      District / social-category / gender splits and per-scheme outcomes not published. RTI
+      filed via Bihar RTI Online to the Social Welfare Department on 26 June 2026; awaiting reply.
