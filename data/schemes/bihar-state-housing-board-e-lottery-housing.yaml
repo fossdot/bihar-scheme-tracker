@@ -64,43 +64,45 @@ metrics:
     label: Construction/development expenditure and allotment receipts
     value: null
     unit: cr
-    provenance: rti_needed
+    provenance: rti_filed
     note: >-
       BSHB is a parastatal board largely financed by its own allotment/e-auction receipts and loans
-      — it has no clean scheme-wise line in budget.bihar.gov.in. Mined public budget/PRS sources;
-      no Board-specific allocation/expenditure figure found. RTI to BSHB needed.
+      — no clean scheme-wise line in budget.bihar.gov.in. RTI filed via Bihar RTI Online to the
+      Urban Development & Housing Department (Bihar State Housing Board) on 25 June 2026; awaiting
+      reply.
   - dimension: beneficiaries
     label: Dwelling units / plots allotted (cumulative)
     value: null
     unit: units
-    provenance: rti_needed
+    provenance: rti_filed
     note: >-
-      No public count of allottees / units allotted. Mined the official portal, India.gov.in and
-      CAG audit listings (the housing-board CAG report located was Kerala's, not Bihar's) — nothing
-      published. RTI to BSHB needed.
+      No public count of allottees / units allotted. RTI filed via Bihar RTI Online to the Urban
+      Development & Housing Department (Bihar State Housing Board) on 25 June 2026; awaiting reply.
   - dimension: outcomes
     label: Dwelling units / projects completed (cumulative)
     value: null
     unit: units
-    provenance: rti_needed
+    provenance: rti_filed
     note: >-
-      BSHB does not publish a cumulative count of completed dwelling units or projects. RTI to the
-      Bihar State Housing Board needed to source this figure.
+      BSHB does not publish a cumulative count of completed dwelling units or projects. RTI filed
+      via Bihar RTI Online to the Urban Development & Housing Department (BSHB) on 25 June 2026;
+      awaiting reply.
   - dimension: outcomes
     label: Projects / dwelling units currently under construction
     value: null
     unit: units
-    provenance: rti_needed
+    provenance: rti_filed
     note: >-
-      No published count of ongoing projects/units. Indicative of activity: 300+ live e-tenders and
-      a proposed residential complex at Ara, but a verified in-progress total requires an RTI.
+      No published count of ongoing projects/units (indicative only: 300+ live e-tenders, a proposed
+      Ara residential complex). RTI filed via Bihar RTI Online to the Urban Development & Housing
+      Department (BSHB) on 25 June 2026; awaiting reply.
   - dimension: outcomes
     label: Upcoming projects / units open for application (e-lottery)
     value: null
     unit: units
-    provenance: rti_needed
+    provenance: rti_filed
     note: >-
-      No consolidated published list of upcoming/about-to-open allotment projects. RTI needed; in
-      the interim, citizens should check the "Schemes" tab on bshb.bihar.gov.in for live
-      advertisements.
+      No consolidated published list of upcoming/about-to-open allotment projects. RTI filed via
+      Bihar RTI Online to the Urban Development & Housing Department (BSHB) on 25 June 2026; awaiting
+      reply. Meanwhile citizens should check the "Schemes" tab on bshb.bihar.gov.in.
 last_verified: '2026-06-25'
