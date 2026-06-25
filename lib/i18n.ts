@@ -51,7 +51,17 @@ export const STRINGS = {
   navSchemes: { en: "Schemes", hi: "योजनाएँ" },
   navMap: { en: "Map", hi: "मानचित्र" },
   navAbout: { en: "About the data", hi: "डेटा के बारे में" },
+  navRti: { en: "RTI tracker", hi: "RTI ट्रैकर" },
   navMenu: { en: "Menu", hi: "मेन्यू" },
+  rtiTitle: { en: "RTI tracker", hi: "RTI ट्रैकर" },
+  rtiSubtitle: {
+    en: "Data Bihar doesn't publish, requested under the Right to Information Act. Every figure we can't source publicly becomes an RTI — the request itself is the evidence trail.",
+    hi: "जो आँकड़े बिहार सरकार प्रकाशित नहीं करती, उन्हें सूचना का अधिकार अधिनियम के तहत माँगा गया है। जो भी आँकड़ा सार्वजनिक स्रोत से नहीं मिलता, वह एक RTI बन जाता है — अनुरोध स्वयं प्रमाण-शृंखला है।",
+  },
+  rtiEmpty: { en: "No RTI items tracked yet.", hi: "अभी कोई RTI मद दर्ज नहीं।" },
+  rtiColScheme: { en: "Scheme", hi: "योजना" },
+  rtiColData: { en: "Data requested", hi: "माँगा गया आँकड़ा" },
+  rtiColStatus: { en: "Status", hi: "स्थिति" },
   footerSource: { en: "Source code", hi: "स्रोत कोड" },
   footerApi: { en: "API", hi: "API" },
   footerNote: {

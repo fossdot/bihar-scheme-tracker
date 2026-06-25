@@ -19,6 +19,45 @@ export function isDbConfigured(): boolean {
   return Boolean(process.env.DATABASE_URL);
 }
 
+export interface RtiApplication {
+  scheme_id: string;
+  scheme_name_en: string;
+  scheme_name_hi: string | null;
+  dimension: string;
+  label: string | null;
+  unit: string | null;
+  value: number | null;
+  provenance: string;
+  as_of_date: string | null;
+  source_url: string | null;
+  note: string | null;
+}
+
+/**
+ * The RTI tracker: every scheme_metric whose provenance is part of the RTI lifecycle
+ * (needed → filed → received). This page IS the public evidence trail. Ordered so the
+ * live ones (filed/received) sit above the not-yet-filed (needed).
+ */
+export async function listRtiApplications(): Promise<RtiApplication[]> {
+  return query<RtiApplication>(
+    `select m.scheme_id,
+            s.name_en as scheme_name_en,
+            s.name_hi as scheme_name_hi,
+            m.dimension, m.label, m.unit, m.value,
+            m.provenance::text as provenance,
+            m.as_of_date::text as as_of_date,
+            m.source_url, m.note
+       from scheme_metrics m
+       join schemes s on s.id = m.scheme_id
+      where m.provenance in ('rti_needed','rti_filed','rti_received')
+      order by case m.provenance
+                 when 'rti_received' then 0
+                 when 'rti_filed' then 1
+                 else 2 end,
+               s.name_en, m.dimension, m.label`
+  );
+}
+
 /** Aggregate counts for the home page — a cheap COUNT instead of fetching (and capping) rows. */
 export async function getSchemeCounts(): Promise<{ total: number; active: number }> {
   const rows = await query<{ total: number; active: number }>(
