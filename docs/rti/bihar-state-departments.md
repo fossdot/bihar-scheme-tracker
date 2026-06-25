@@ -66,7 +66,31 @@ For **each** scheme above, please provide:
 
 ---
 
-## 5. Other departments (same five data points; one application each)
+## 5. Bihar State Housing Board (BSHB), Urban Development & Housing Department
+**PIO address:** The Public Information Officer, Bihar State Housing Board, Lok Niyojan Bhawan,
+near Income Tax Golambar, Patna – 800001. (Website: bshb.bihar.gov.in)
+**Scheme:** Bihar State Housing Board — Housing Allotment (e-Lottery).
+
+> **Mined first — nothing public:** no Board-specific budget line on budget.bihar.gov.in, no
+> published allotment/completion counts on the portal or India.gov.in, and the only housing-board
+> CAG audit located covers Kerala, not Bihar. All five dimensions genuinely require this RTI.
+
+Please provide, for the Bihar State Housing Board, for **FY 2021-22 to 2024-25** (latest available):
+1. **Year-wise number of dwelling units / residential plots** (a) **completed**, (b) **under
+   construction**, and (c) **allotted**, broken down by income category (EWS / LIG / MIG / HIG).
+2. **Year-wise finances** — total **expenditure** on construction/development, and total **receipts**
+   from allotment and e-auction (₹), each FY.
+3. **District-wise (or project/town-wise) number of dwelling units** completed and allotted, latest
+   completed FY.
+4. **Category-wise split of allottees** — by **income category** (EWS/LIG/MIG/HIG), **social category**
+   (SC / ST / EBC / BC / General), and **gender**, latest FY.
+5. **Applications received vs. allotted vs. units lying unsold/vacant**, and the **number of e-lottery
+   draws** conducted, each FY; plus a **current list of ongoing and upcoming allotment projects** with
+   each project's status (completed / under construction / open or about to open for application).
+
+---
+
+## 6. Other departments (same five data points; one application each)
 - **Rural Development Department** — Bihar Mukhyamantri Gramin Awas Yojana (houses sanctioned / completed; instalments released).
 - **Revenue & Land Reforms Department** — Bihar Vaas Bhoomi Yojana (households allotted homestead land; area).
 - **Energy Department** — Bihar Har Ghar Bijli Yojana (connections released).

@@ -1,0 +1,84 @@
+name_en: Housing Accommodation for Women Government Employees (near place of posting)
+name_hi: महिला सरकारी कर्मियों हेतु आवास सुविधा (पदस्थापन स्थल के निकट)
+department_en: Government of Bihar (Cabinet-approved; implemented via district administration / DM-led committees)
+department_hi: बिहार सरकार (कैबिनेट द्वारा स्वीकृत; जिला प्रशासन / डीएम की अध्यक्षता वाली समितियों द्वारा क्रियान्वित)
+department_website: null
+categories:
+  - housing
+  - women_child
+  - social_welfare
+launch_date: null
+objective_en: >-
+  Provide safe, affordable rental accommodation to women state-government employees at or near their
+  place of posting — especially those serving in rural and block-level offices — to improve their
+  safety and convenience. Where government quarters are unavailable, the state leases private
+  housing for them.
+objective_hi: >-
+  महिला राज्य-सरकारी कर्मियों को उनके पदस्थापन स्थल पर या उसके निकट सुरक्षित एवं किफायती किराया आवास
+  उपलब्ध कराना — विशेषकर ग्रामीण एवं प्रखंड-स्तरीय कार्यालयों में कार्यरत महिलाओं को — ताकि उनकी
+  सुरक्षा एवं सुविधा बढ़े। जहाँ सरकारी आवास उपलब्ध न हो, वहाँ सरकार उनके लिए निजी आवास पट्टे पर लेगी।
+eligibility_en: >-
+  Women employees of the Bihar state government posted in the state — reported to include
+  schoolteachers, women officers and staff, police personnel, and women working from the panchayat
+  level up to the secretariat. Priority emphasis on those posted at rural / block-level offices.
+  Employees opting for this government-provided accommodation forgo House Rent Allowance (HRA).
+eligibility_hi: >-
+  बिहार राज्य सरकार की महिला कर्मी जो राज्य में पदस्थापित हैं — समाचारों के अनुसार इसमें शिक्षिकाएँ,
+  महिला अधिकारी एवं कर्मचारी, पुलिसकर्मी, तथा पंचायत स्तर से सचिवालय तक कार्यरत महिलाएँ शामिल हैं।
+  ग्रामीण / प्रखंड-स्तरीय कार्यालयों में पदस्थापित महिलाओं को प्राथमिकता। यह सरकारी आवास चुनने वाली
+  कर्मी मकान किराया भत्ता (HRA) नहीं लेंगी।
+benefit_type: Leased rental accommodation (in lieu of HRA)
+benefit_detail: >-
+  Rent-free or government-leased private accommodation near the employee's posting, arranged by a
+  district-level committee chaired by the District Magistrate, which identifies suitable buildings
+  (with electricity, water, sanitation and structural safety) and executes lease agreements with
+  landlords; the Sub-Divisional Officer (SDO) finalises the rent and handles grievances. Rollout is
+  phased — beginning at district and divisional headquarters before expanding. Specific rent
+  ceilings have not been published.
+target_beneficiary: Women employees of the Bihar state government, especially those in rural/block-level postings.
+personas:
+  - salaried_employee
+education_levels: []
+gender_eligibility: female
+social_categories: []
+min_age: null
+max_age: null
+income_ceiling: null
+requires_bpl: false
+domicile: bihar
+is_for_disabled: false
+is_for_startups: false
+land_ownership: null
+status: likely_active
+status_evidence: >-
+  Likely active — approved by the Bihar Cabinet on 10 June 2025 (chaired by CM Nitish Kumar) to
+  provide accommodation near posting for ~4 lakh women government employees. As of verification the
+  scheme is in early rollout: implementing departments are to begin formalities, district committees
+  and landlord expressions-of-interest are the delivery mechanism, and no application portal,
+  budget line, or formal operating guidelines have been published yet. No official government
+  notification/PDF located — sourced from news coverage of the cabinet decision; replace source_url
+  with the official notification when available. Verified 2026-06-25.
+source_url: https://www.hrkatha.com/news/bihar-cabinet-approves-housing-for-women-staff-near-workplaces/
+application_portal_url: null
+last_notification_date: '2025-06-10'
+metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2025-26
+    label: Women employees targeted (announced at cabinet approval)
+    value: 400000
+    unit: persons
+    provenance: reported
+    as_of_date: '2025-06-10'
+    source_url: https://www.hrkatha.com/news/bihar-cabinet-approves-housing-for-women-staff-near-workplaces/
+    note: >-
+      Announced eligible pool / target (~4 lakh) at cabinet approval — NOT actual enrolment or units
+      leased. Reported in news coverage of the 10 June 2025 cabinet decision.
+  - dimension: beneficiaries
+    label: Women employees actually allotted accommodation
+    value: null
+    unit: persons
+    provenance: rti_needed
+    note: >-
+      No published count of women employees who have actually been provided leased accommodation
+      under this scheme. RTI to the implementing department needed once rollout progresses.
+last_verified: '2026-06-25'
