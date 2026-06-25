@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { StatusBadge } from "@/components/StatusBadge";
 import {
+  CATEGORY_OPTIONS,
   EDUCATION_OPTIONS,
   GENDER_OPTIONS,
   PERSONA_OPTIONS,
@@ -56,6 +57,7 @@ function Question({ label, hint, children }: { label: string; hint?: string; chi
 
 export function GuidedFinder({ locale }: { locale: Locale }) {
   const [personas, setPersonas] = useState<string[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
   const [social, setSocial] = useState("");
@@ -75,6 +77,7 @@ export function GuidedFinder({ locale }: { locale: Locale }) {
     setLoading(true);
     const params = new URLSearchParams();
     if (personas.length) params.set("persona", personas.join(","));
+    if (categories.length) params.set("category", categories.join(","));
     if (age) params.set("age", age);
     if (gender) params.set("gender", gender);
     if (social) params.set("social", social);
@@ -100,7 +103,7 @@ export function GuidedFinder({ locale }: { locale: Locale }) {
   }
 
   function reset() {
-    setPersonas([]); setAge(""); setGender(""); setSocial(""); setEducation("");
+    setPersonas([]); setCategories([]); setAge(""); setGender(""); setSocial(""); setEducation("");
     setIncome(null); setDisability(""); setResults(null);
   }
 
@@ -112,6 +115,15 @@ export function GuidedFinder({ locale }: { locale: Locale }) {
             {PERSONA_OPTIONS.map((o) => (
               <Chip key={o.value} label={locale === "hi" ? o.hi : o.en}
                 selected={personas.includes(o.value)} onClick={() => toggle(personas, o.value, setPersonas)} />
+            ))}
+          </div>
+        </Question>
+
+        <Question label={t(locale, "qSector")} hint={t(locale, "optionalHint")}>
+          <div className="flex flex-wrap gap-2">
+            {CATEGORY_OPTIONS.map((o) => (
+              <Chip key={o.value} label={locale === "hi" ? o.hi : o.en}
+                selected={categories.includes(o.value)} onClick={() => toggle(categories, o.value, setCategories)} />
             ))}
           </div>
         </Question>
