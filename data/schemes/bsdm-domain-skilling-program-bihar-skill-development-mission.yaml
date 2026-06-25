@@ -53,3 +53,12 @@ source_url: >-
   https://skillmissionbihar.org/domain-skilling/domain-based-fresh-skilling/schemes-under-domain-skilling
 application_portal_url: https://skillmissionbihar.org/
 last_verified: '2026-06-22'
+metrics:
+  - dimension: district
+    label: District & demographic breakdown
+    value: null
+    provenance: rti_needed
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI
+      needed — draft to be added to docs/rti. Mine public sources first; file for the
+      unpublished splits.

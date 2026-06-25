@@ -45,6 +45,14 @@ application_portal_url: https://dbtagriculture.bihar.gov.in
 policies:
   - Bihar Krishi Road Map (Agriculture Roadmap)
 metrics:
+  - dimension: district
+    label: District & demographic breakdown
+    value: null
+    provenance: rti_needed
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI
+      needed — draft to be added to docs/rti. Mine public sources first; file for the
+      unpublished splits.
   - dimension: budget
     fiscal_year: 2025-26
     label: Bihar disbursed (Aug-2025 flood loss)

@@ -41,6 +41,14 @@ application_portal_url: https://pacsonline.bih.nic.in
 policies:
   - Bihar Krishi Road Map (Agriculture Roadmap)
 metrics:
+  - dimension: district
+    label: District & demographic breakdown
+    value: null
+    provenance: rti_needed
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI
+      needed — draft to be added to docs/rti. Mine public sources first; file for the
+      unpublished splits.
   - dimension: beneficiaries
     fiscal_year: Rabi 2022-23
     label: Bihar farmers paid

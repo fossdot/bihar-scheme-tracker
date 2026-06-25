@@ -46,3 +46,12 @@ status_evidence: >-
   linked PDF I could not parse.
 source_url: https://www.biharbhawan.gov.in/cmReliefFund.aspx
 last_verified: '2026-06-22'
+metrics:
+  - dimension: district
+    label: District & demographic breakdown
+    value: null
+    provenance: rti_needed
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI
+      needed — draft to be added to docs/rti. Mine public sources first; file for the
+      unpublished splits.

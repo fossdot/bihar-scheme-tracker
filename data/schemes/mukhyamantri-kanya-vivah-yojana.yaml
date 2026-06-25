@@ -41,6 +41,14 @@ status_evidence: >-
 source_url: https://serviceonline.bihar.gov.in
 application_portal_url: https://serviceonline.bihar.gov.in
 metrics:
+  - dimension: district
+    label: District & demographic breakdown
+    value: null
+    provenance: rti_needed
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI
+      needed — draft to be added to docs/rti. Mine public sources first; file for the
+      unpublished splits.
   - dimension: beneficiaries
     fiscal_year: 2007-08
     label: Bihar girls assisted
