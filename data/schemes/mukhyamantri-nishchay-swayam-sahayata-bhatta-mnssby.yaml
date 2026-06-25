@@ -47,9 +47,9 @@ metrics:
     value: null
     provenance: rti_needed
     note: >-
-      District-wise and social-category/gender splits not published for this scheme. RTI
-      needed — draft to be added to docs/rti. Mine public sources first; file for the
-      unpublished splits.
+      District-wise and social-category/gender splits not published for this scheme. RTI drafted —
+      see docs/rti/bihar-state-departments.md. Mine public sources first; file for the unpublished
+      splits.
   - dimension: beneficiaries
     fiscal_year: cumulative
     label: Bihar paid beneficiaries (since launch)

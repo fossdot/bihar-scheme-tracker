@@ -54,15 +54,18 @@ For **each** scheme above, please provide:
 ---
 
 ## 4. Labour Resources Department, Government of Bihar (incl. Bihar Skill Development Mission)
-**Schemes:** Bihar Pravasi Majdoor Durghatna Bima Yojana · Mukhyamantri Pratigya Yojana (Internship).
+**Schemes:** Bihar Pravasi Majdoor Durghatna Bima Yojana · Mukhyamantri Pratigya Yojana (Internship) ·
+Kushal Yuva Program (KYP) · BSDM Domain Skilling Program.
 
 For **each** scheme above, please provide:
-1. **Year-wise number of beneficiaries** (Pravasi Majdoor: claims received/settled; Pratigya: interns enrolled), FY 2021-22 to 2024-25.
+1. **Year-wise number of beneficiaries** (Pravasi Majdoor: claims received/settled; Pratigya: interns
+   enrolled; KYP / BSDM: candidates enrolled and trained), FY 2021-22 to 2024-25.
 2. **Year-wise funds** allocated and disbursed (₹), each FY.
 3. **District-wise number of beneficiaries**, latest completed FY.
-4. **Split by gender and social category**, latest FY.
-5. Outcome: Pravasi Majdoor — claims **received vs. settled vs. rejected** + average settlement time;
-   Pratigya — interns who **completed** the internship and the stipend disbursed, each FY.
+4. **Split by gender and social category** (SC / ST / EBC / BC / General / Minority), latest FY.
+5. Outcome, each FY: Pravasi Majdoor — claims **received vs. settled vs. rejected** + average settlement
+   time; Pratigya — interns who **completed** the internship and stipend disbursed; KYP / BSDM —
+   candidates **certified** and the number **placed in employment** (with average wage/placement rate).
 
 ---
 
@@ -90,7 +93,41 @@ Please provide, for the Bihar State Housing Board, for **FY 2021-22 to 2024-25**
 
 ---
 
-## 6. Other departments (same five data points; one application each)
+## 6. Industries Department, Government of Bihar
+**PIO address:** The Public Information Officer, Industries Department, Vikas Bhawan, New Secretariat,
+Bailey Road, Patna – 800015. (Website: state.bihar.gov.in/industries)
+**Schemes:** Bihar Laghu Udyami Yojana · Mukhyamantri Udyami Yojana · Mukhyamantri Mahila Rojgar Yojana ·
+Bihar Startup Fund (Seed Funding).
+
+For **each** scheme above, for **FY 2021-22 to 2024-25** (latest available), please provide:
+1. **Year-wise number of applicants** — received, **selected/sanctioned**, and rejected (with main
+   rejection reasons), and the number of units/enterprises that actually **commenced operation**.
+2. **Year-wise funds** — amount **allocated** and amount actually **disbursed** (₹), and (for Udyami /
+   Laghu Udyami) the **grant vs. loan** split and amount **recovered**, each FY.
+3. **District-wise number of beneficiaries** sanctioned, latest completed FY.
+4. **Category-wise split of beneficiaries** — by **social category** (SC / ST / EBC / BC / General /
+   Minority) and **gender** (and, for Mahila Rojgar, women-only confirmation), latest FY.
+5. Outcome, each FY: enterprises **still operational** after 1–2 years; **jobs/self-employment created**;
+   for Startup Fund — startups funded, total seed capital deployed, and follow-on funding raised.
+
+---
+
+## 7. Saat Nischay — Yuva Upmission, Government of Bihar (youth employment)
+**Schemes:** Mukhyamantri Nishchay Swayam Sahayata Bhatta (MNSSBY).
+(Bihar Student Credit Card — filed separately, §- under Education/BSEFC.)
+
+For **MNSSBY**, for **FY 2021-22 to 2024-25** (latest available), please provide:
+1. **Year-wise number of unemployed youth** who **applied**, were **approved**, and to whom the
+   allowance was actually **paid**.
+2. **Year-wise funds** allocated and **disbursed** as allowance (₹), each FY.
+3. **District-wise number of beneficiaries**, latest completed FY.
+4. **Split by gender and social category** (SC / ST / EBC / BC / General / Minority), latest FY.
+5. Outcome, each FY: beneficiaries who **completed** the 2-year allowance term; number of payments
+   **stopped/failed** (with reasons); and any tracking of beneficiaries who **found employment**.
+
+---
+
+## 8. Other departments (same five data points; one application each)
 - **Rural Development Department** — Bihar Mukhyamantri Gramin Awas Yojana (houses sanctioned / completed; instalments released).
 - **Revenue & Land Reforms Department** — Bihar Vaas Bhoomi Yojana (households allotted homestead land; area).
 - **Energy Department** — Bihar Har Ghar Bijli Yojana (connections released).
