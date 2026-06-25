@@ -127,10 +127,24 @@ For **MNSSBY**, for **FY 2021-22 to 2024-25** (latest available), please provide
 
 ---
 
-## 8. Other departments (same five data points; one application each)
+## 8. Energy Department, Government of Bihar (FILED 2026-06-25)
+**PIO address:** The Public Information Officer, Energy Department, Vidyut Bhawan, Bailey Road,
+Patna – 800021. (May transfer to NBPDCL / SBPDCL — the distribution companies that implement it.)
+**Scheme:** Bihar Har Ghar Bijli Yojana (Mukhyamantri Vidyut Sambandh Nishchay Yojana).
+
+For **FY 2021-22 to 2024-25** (latest available):
+1. **Year-wise new connections released** (households connected) and households **still pending**.
+2. **Year-wise funds** allocated and actually **spent** (₹).
+3. **District-wise connections released**, latest completed FY.
+4. **Category-wise split** — **BPL vs. APL** and by **social category** (SC / ST / EBC / BC / General), latest FY.
+5. Outcomes each FY: villages/tolas declared **fully electrified**; households still **un-electrified**;
+   and **complaints** about non-functional / disconnected connections under the scheme.
+
+---
+
+## 9. Other departments (same five data points; one application each)
 - **Rural Development Department** — Bihar Mukhyamantri Gramin Awas Yojana (houses sanctioned / completed; instalments released).
 - **Revenue & Land Reforms Department** — Bihar Vaas Bhoomi Yojana (households allotted homestead land; area).
-- **Energy Department** — Bihar Har Ghar Bijli Yojana (connections released).
 - **Minority Welfare Department** — Bihar Alpsankhyak Rozgar Rin Yojana (loans sanctioned / disbursed / recovered).
 - **District Administration (via DM / respective DPO)** — National Family Benefit Scheme, Kabir Antyeshti
   Anudan Yojana, District Mineral Foundation Trust schemes (these are district-administered; file with the

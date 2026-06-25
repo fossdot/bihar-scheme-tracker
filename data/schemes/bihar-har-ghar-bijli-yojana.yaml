@@ -38,8 +38,9 @@ metrics:
   - dimension: district
     label: District & demographic breakdown
     value: null
-    provenance: rti_needed
+    provenance: rti_filed
+    as_of_date: '2026-06-25'
     note: >-
-      District-wise and social-category/gender splits not published for this scheme. RTI
-      drafted — see docs/rti/bihar-state-departments.md. Mine public sources first; file for
-      the unpublished splits.
+      District-wise / category splits, connection & outcome figures not published. RTI filed via
+      Bihar RTI Online to the Energy Department (Har Ghar Bijli Yojana; may transfer to
+      NBPDCL/SBPDCL) on 25 June 2026; awaiting reply.
