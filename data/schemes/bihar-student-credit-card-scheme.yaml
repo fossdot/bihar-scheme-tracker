@@ -95,29 +95,29 @@ metrics:
     label: null
     value: null
     unit: null
-    provenance: rti_needed
-    as_of_date: '2026-06-19'
-    source_url: >-
-      https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
-    note: Breakdown by social category / gender not published. Needs an RTI.
+    provenance: rti_filed
+    as_of_date: '2026-06-25'
+    note: >-
+      Breakdown by social category / gender not published. RTI filed via Bihar RTI Online to the
+      Education Department (BSEFC), Bihar Student Credit Card Scheme, on 25 June 2026; awaiting reply.
   - dimension: district
     fiscal_year: null
     label: null
     value: null
     unit: null
-    provenance: rti_needed
-    as_of_date: '2026-06-19'
-    source_url: >-
-      https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
-    note: District-wise disbursement / sanction not published. Needs an RTI to DRCC / Education Dept.
+    provenance: rti_filed
+    as_of_date: '2026-06-25'
+    note: >-
+      District-wise disbursement / sanction not published. RTI filed via Bihar RTI Online to the
+      Education Department (BSEFC) on 25 June 2026; awaiting reply.
   - dimension: outcomes
     fiscal_year: null
     label: null
     value: null
     unit: null
-    provenance: rti_needed
-    as_of_date: '2026-06-19'
-    source_url: >-
-      https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
-    note: Course-completion and loan-repayment outcomes not published. Needs an RTI.
+    provenance: rti_filed
+    as_of_date: '2026-06-25'
+    note: >-
+      Course-completion and loan-repayment outcomes not published. RTI filed via Bihar RTI Online to
+      the Education Department (BSEFC) on 25 June 2026; awaiting reply.
 last_verified: '2026-06-19'

@@ -26,40 +26,81 @@ function provClass(p: string): string {
   return "text-muted ring-line"; // rti_needed
 }
 
-export default async function RtiPage({ params }: { params: { lang: string } }) {
+const TABS = ["all", "rti_needed", "rti_filed", "rti_received"] as const;
+type Tab = (typeof TABS)[number];
+
+export default async function RtiPage({
+  params,
+  searchParams,
+}: {
+  params: { lang: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
   const locale = resolveLocale(params.lang);
   const configured = isDbConfigured();
 
-  let rows: RtiApplication[] = [];
+  let all: RtiApplication[] = [];
   if (configured) {
     try {
-      rows = await listRtiApplications();
+      all = await listRtiApplications();
     } catch {
-      rows = [];
+      all = [];
     }
   }
 
-  const filed = rows.filter((r) => r.provenance === "rti_filed").length;
-  const received = rows.filter((r) => r.provenance === "rti_received").length;
-  const needed = rows.filter((r) => r.provenance === "rti_needed").length;
+  const counts = {
+    all: all.length,
+    rti_needed: all.filter((r) => r.provenance === "rti_needed").length,
+    rti_filed: all.filter((r) => r.provenance === "rti_filed").length,
+    rti_received: all.filter((r) => r.provenance === "rti_received").length,
+  };
+
+  const raw = typeof searchParams.tab === "string" ? searchParams.tab : "all";
+  const tab: Tab = (TABS as readonly string[]).includes(raw) ? (raw as Tab) : "all";
+  const rows = tab === "all" ? all : all.filter((r) => r.provenance === tab);
+
+  const tabLabel = (k: Tab) =>
+    k === "all" ? (locale === "hi" ? "सभी" : "All") : tryT(locale, `prov_${k}`, k);
 
   return (
     <div className="space-y-6">
       <section className="space-y-1">
         <h1 className="text-2xl font-semibold tracking-tight text-ink">{t(locale, "rtiTitle")}</h1>
         <p className="max-w-2xl text-sm text-muted">{t(locale, "rtiSubtitle")}</p>
-        {configured && rows.length > 0 && (
-          <p className="pt-1 text-xs text-muted">
-            {received} {tryT(locale, "prov_rti_received", "RTI received")} · {filed}{" "}
-            {tryT(locale, "prov_rti_filed", "RTI filed")} · {needed}{" "}
-            {tryT(locale, "prov_rti_needed", "RTI needed")}
-          </p>
-        )}
       </section>
 
       {!configured ? (
         <ConfigNotice />
-      ) : rows.length === 0 ? (
+      ) : all.length === 0 ? (
+        <p className="text-sm text-muted">{t(locale, "rtiEmpty")}</p>
+      ) : (
+        <>
+          {/* Tab-wise filter */}
+          <nav className="flex flex-wrap gap-2 text-sm">
+            {TABS.map((k) => {
+              const isActive = k === tab;
+              const href =
+                k === "all"
+                  ? localizedHref(locale, "/rti")
+                  : localizedHref(locale, `/rti?tab=${k}`);
+              return (
+                <Link
+                  key={k}
+                  href={href}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`rounded-full border px-3 py-1 ${
+                    isActive
+                      ? "border-brand bg-brand/5 font-medium text-brand"
+                      : "border-line text-muted hover:text-ink"
+                  }`}
+                >
+                  {tabLabel(k)} <span className="text-xs opacity-70">({counts[k]})</span>
+                </Link>
+              );
+            })}
+          </nav>
+
+          {rows.length === 0 ? (
         <p className="text-sm text-muted">{t(locale, "rtiEmpty")}</p>
       ) : (
         <div className="overflow-hidden rounded-md border border-line">
@@ -111,6 +152,8 @@ export default async function RtiPage({ params }: { params: { lang: string } }) 
             </tbody>
           </table>
         </div>
+          )}
+        </>
       )}
     </div>
   );
