@@ -70,15 +70,17 @@ metrics:
     label_hi: वास्तव में आवास आवंटित महिला कर्मी
     value: null
     unit: persons
-    provenance: rti_needed
-    as_of_date: null
+    provenance: rti_filed
+    as_of_date: '2026-06-26'
     source_url: null
     note: >-
-      No published count of women employees who have actually been provided leased accommodation
-      under this scheme. RTI to the implementing department needed once rollout progresses.
+      Official notification, implementation status, beneficiaries housed, district committees and
+      lease spending requested. RTI filed via Bihar RTI Online to the General Administration
+      Department on 26 June 2026; awaiting reply.
     note_hi: >-
-      योजना के अंतर्गत वास्तव में पट्टे पर आवास प्राप्त महिला कर्मियों की कोई प्रकाशित गणना नहीं —
-      क्रियान्वयन आगे बढ़ने पर RTI आवश्यक।
+      योजना की अधिसूचना, क्रियान्वयन स्थिति, आवास प्राप्त महिला कर्मी, जिला समितियाँ एवं किराया व्यय
+      माँगा गया। सामान्य प्रशासन विभाग को Bihar RTI Online के माध्यम से जून 2026 में RTI दायर; उत्तर
+      प्रतीक्षित।
   - dimension: beneficiaries
     fiscal_year: 2025-26
     label: Women employees targeted (announced at cabinet approval)

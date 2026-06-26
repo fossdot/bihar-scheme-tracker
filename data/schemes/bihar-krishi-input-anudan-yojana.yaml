@@ -65,15 +65,15 @@ metrics:
     label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
     value: null
     unit: null
-    provenance: rti_needed
-    as_of_date: null
+    provenance: rti_filed
+    as_of_date: '2026-06-26'
     source_url: null
     note: >-
-      District-wise and social-category/gender splits not published for this scheme. RTI needed —
-      draft to be added to docs/rti. Mine public sources first; file for the unpublished splits.
+      District / social-category / land-holding splits and application outcomes not published. RTI
+      filed via Bihar RTI Online to the Department of Agriculture on 26 June 2026; awaiting reply.
     note_hi: >-
-      इस योजना हेतु जिलावार एवं सामाजिक-श्रेणी / लिंग आधारित विवरण प्रकाशित नहीं — RTI आवश्यक। पहले
-      सार्वजनिक स्रोत खंगालें, फिर अप्रकाशित विवरण हेतु आवेदन करें।
+      जिलावार / सामाजिक-श्रेणी / भू-धारण विवरण एवं आवेदन-परिणाम प्रकाशित नहीं। कृषि विभाग को Bihar
+      RTI Online के माध्यम से जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
   - dimension: district
     fiscal_year: 2025-26
     label: Phase-1 districts
