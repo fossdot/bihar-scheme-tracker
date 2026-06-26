@@ -10,7 +10,7 @@ import { SiteNav } from "@/components/SiteNav";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ViewBeacon } from "@/components/ViewBeacon";
 import { localizedHref, LOCALES, t, type Locale } from "@/lib/i18n";
-import { getTheme, resolveLocale } from "@/lib/locale";
+import { resolveLocale } from "@/lib/locale";
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
   const locale = resolveLocale(params.lang);
@@ -37,7 +37,6 @@ export default function LangLayout({
   // Defense in depth — middleware only ever passes /en or /hi through, but guard anyway.
   if (!(LOCALES as readonly string[]).includes(params.lang)) notFound();
   const locale = resolveLocale(params.lang) as Locale;
-  const theme = getTheme();
 
   return (
     <>
@@ -72,7 +71,7 @@ export default function LangLayout({
           </form>
 
           <div className="flex shrink-0 items-center gap-2">
-            <ThemeToggle initial={theme} />
+            <ThemeToggle />
             {/* LanguageToggle uses useSearchParams which requires Suspense in Next 14 App Router. */}
             <Suspense fallback={null}>
               <LanguageToggle locale={locale} />
