@@ -36,19 +36,23 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2025-26
     label: India accounts
+    label_hi: null
     value: 580600000
     unit: accounts
     provenance: reported
     as_of_date: '2026-04-08'
     source_url: https://www.uniindia.com/news/business-economy/economy-jan-dhan-account-data/3821744.html
     note: 'National (~58.06 cr accounts). [scope: National]'
+    note_hi: null
   - dimension: budget
     fiscal_year: 2025-26
     label: India deposits
+    label_hi: null
     value: 307000
     unit: cr
     provenance: reported
     as_of_date: '2026-04-08'
     source_url: https://www.uniindia.com/news/business-economy/economy-jan-dhan-account-data/3821744.html
     note: '[scope: National]'
+    note_hi: null
 last_verified: '2026-06-19'

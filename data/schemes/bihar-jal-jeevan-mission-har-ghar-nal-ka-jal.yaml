@@ -36,6 +36,7 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2024-25
     label: Bihar tap connections
+    label_hi: null
     value: 1847000
     unit: connections
     provenance: reported
@@ -43,4 +44,5 @@ metrics:
     source_url: >-
       https://patnapress.com/bihar-nears-universal-tap-water-coverage-under-har-ghar-nal-ka-jal-initiative/
     note: '18.47 lakh FHTCs; ~99% rural ward coverage. [scope: Bihar]'
+    note_hi: null
 last_verified: '2026-06-19'

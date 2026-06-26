@@ -41,17 +41,10 @@ status_evidence: >-
 source_url: https://serviceonline.bihar.gov.in
 application_portal_url: https://serviceonline.bihar.gov.in
 metrics:
-  - dimension: district
-    label: District & demographic breakdown
-    value: null
-    provenance: rti_filed
-    as_of_date: '2026-06-26'
-    note: >-
-      District / social-category / gender splits and per-scheme outcomes not published. RTI
-      filed via Bihar RTI Online to the Social Welfare Department on 26 June 2026; awaiting reply.
   - dimension: beneficiaries
     fiscal_year: 2007-08
     label: Bihar girls assisted
+    label_hi: null
     value: 20000
     unit: girls
     provenance: reported
@@ -59,9 +52,11 @@ metrics:
     source_url: >-
       https://indianmasterminds.com/news/bihar-mukhyamantri-kanya-vivah-yojana-2272-lakh-beneficiaries-188652/
     note: 'Launch year (approx). Cumulative to 2025-26: ~22.72 lakh girls, ₹1,136 cr. [Bihar]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: 2022-23
     label: Bihar girls assisted
+    label_hi: null
     value: 231723
     unit: girls
     provenance: reported
@@ -69,9 +64,11 @@ metrics:
     source_url: >-
       https://indianmasterminds.com/news/bihar-mukhyamantri-kanya-vivah-yojana-2272-lakh-beneficiaries-188652/
     note: Highest single-year. [Bihar]
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: 2023-24
     label: Bihar girls assisted
+    label_hi: null
     value: 157868
     unit: girls
     provenance: reported
@@ -79,9 +76,11 @@ metrics:
     source_url: >-
       https://indianmasterminds.com/news/bihar-mukhyamantri-kanya-vivah-yojana-2272-lakh-beneficiaries-188652/
     note: '[Bihar]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: 2024-25
     label: Bihar girls assisted
+    label_hi: null
     value: 65535
     unit: girls
     provenance: reported
@@ -89,9 +88,11 @@ metrics:
     source_url: >-
       https://indianmasterminds.com/news/bihar-mukhyamantri-kanya-vivah-yojana-2272-lakh-beneficiaries-188652/
     note: '[Bihar]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: 2025-26
     label: Bihar girls assisted (partial)
+    label_hi: null
     value: 39435
     unit: girls
     provenance: reported
@@ -99,9 +100,11 @@ metrics:
     source_url: >-
       https://indianmasterminds.com/news/bihar-mukhyamantri-kanya-vivah-yojana-2272-lakh-beneficiaries-188652/
     note: Partial year so far. [Bihar]
+    note_hi: null
   - dimension: budget
     fiscal_year: 2022-23
     label: Bihar disbursed
+    label_hi: null
     value: 115.86
     unit: cr
     provenance: reported
@@ -109,4 +112,20 @@ metrics:
     source_url: >-
       https://indianmasterminds.com/news/bihar-mukhyamantri-kanya-vivah-yojana-2272-lakh-beneficiaries-188652/
     note: 'Cumulative since 2007-08: ₹1,136 cr. [Bihar]'
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: District & demographic breakdown
+    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
+    value: null
+    unit: null
+    provenance: rti_filed
+    as_of_date: '2026-06-26'
+    source_url: null
+    note: >-
+      District / social-category / gender splits and per-scheme outcomes not published. RTI filed
+      via Bihar RTI Online to the Social Welfare Department on 26 June 2026; awaiting reply.
+    note_hi: >-
+      जिलावार / सामाजिक-श्रेणी / लिंग विवरण एवं योजना-विशिष्ट परिणाम प्रकाशित नहीं। समाज कल्याण
+      विभाग को Bihar RTI Online के माध्यम से जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
 last_verified: '2026-06-19'

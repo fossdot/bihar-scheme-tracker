@@ -41,6 +41,7 @@ metrics:
     label: >-
       Candidates trained under PMKVY 4.0 (as on 11 July 2025), per government 10-year statement
       [scope: National]
+    label_hi: null
     value: 2500000
     unit: persons
     provenance: published
@@ -48,11 +49,13 @@ metrics:
     source_url: >-
       https://ddnews.gov.in/en/a-decade-of-skill-building-pmkvy-powers-indias-future-ready-workforce/
     note: '25,00,000 persons, as of 2025-07-11. [scope: National]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: null
     label: >-
       Total candidates trained/oriented under PMKVY across all four phases over 10 years (cumulative
       since 2015 launch) [scope: National]
+    label_hi: null
     value: 16300000
     unit: persons
     provenance: published
@@ -60,4 +63,5 @@ metrics:
     source_url: >-
       https://ddnews.gov.in/en/a-decade-of-skill-building-pmkvy-powers-indias-future-ready-workforce/
     note: '1,63,00,000 persons, as of 2025-07-14. [scope: National]'
+    note_hi: null
 last_verified: '2026-06-19'

@@ -41,17 +41,10 @@ status_evidence: >-
 source_url: https://industries.bihar.gov.in
 application_portal_url: https://brlps.in
 metrics:
-  - dimension: district
-    label: District & demographic breakdown
-    value: null
-    provenance: rti_needed
-    note: >-
-      District-wise and social-category/gender splits not published for this scheme. RTI drafted —
-      see docs/rti/bihar-state-departments.md. Mine public sources first; file for the unpublished
-      splits.
   - dimension: beneficiaries
     fiscal_year: 2025-26
     label: Bihar women (launch transfer)
+    label_hi: null
     value: 7500000
     unit: persons
     provenance: published
@@ -59,9 +52,11 @@ metrics:
     source_url: >-
       https://www.pmindia.gov.in/en/news_updates/pm-launches-bihars-mukhyamantri-mahila-rojgar-yojana/
     note: '₹10,000 each to 75 lakh women at launch; 1.1 cr+ selected overall. [scope: Bihar]'
+    note_hi: null
   - dimension: budget
     fiscal_year: 2025-26
     label: Bihar disbursed (launch)
+    label_hi: null
     value: 7500
     unit: cr
     provenance: published
@@ -69,4 +64,21 @@ metrics:
     source_url: >-
       https://ddnews.gov.in/en/pm-modi-launches-bihars-mukhyamantri-mahila-rojgar-yojana-transfers-rs-7500-crore-to-75-lakh-women/
     note: '[scope: Bihar]'
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: District & demographic breakdown
+    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
+    value: null
+    unit: null
+    provenance: rti_needed
+    as_of_date: null
+    source_url: null
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI drafted —
+      see docs/rti/bihar-state-departments.md. Mine public sources first; file for the unpublished
+      splits.
+    note_hi: >-
+      इस योजना हेतु जिलावार एवं सामाजिक-श्रेणी / लिंग आधारित विवरण प्रकाशित नहीं — RTI आवश्यक। पहले
+      सार्वजनिक स्रोत खंगालें, फिर अप्रकाशित विवरण हेतु आवेदन करें।
 last_verified: '2026-06-19'

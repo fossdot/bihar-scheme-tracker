@@ -60,37 +60,45 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: cumulative
     label: 'Candidates placed under DDU-GKY (cumulative, all-India) [scope: National]'
+    label_hi: null
     value: 786649
     unit: candidates
     provenance: published
     as_of_date: '2026-06-21'
     source_url: https://kaushalbharat.gov.in/ddugky-report/candidateview
     note: '7,86,649 candidates, as of 2026-06-21. [scope: National]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: cumulative
     label: 'Candidates placed under DDU-GKY in Bihar (cumulative) [scope: Bihar]'
+    label_hi: null
     value: 25346
     unit: candidates
     provenance: published
     as_of_date: '2026-06-21'
     source_url: https://kaushalbharat.gov.in/ddugky-report/candidateview
     note: '25,346 candidates, as of 2026-06-21. [scope: Bihar]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: cumulative
     label: 'Candidates trained under DDU-GKY (cumulative, all-India) [scope: National]'
+    label_hi: null
     value: 1925679
     unit: candidates
     provenance: published
     as_of_date: '2026-06-21'
     source_url: https://kaushalbharat.gov.in/ddugky-report/candidateview
     note: '19,25,679 candidates, as of 2026-06-21. [scope: National]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: cumulative
     label: 'Candidates trained under DDU-GKY in Bihar (cumulative) [scope: Bihar]'
+    label_hi: null
     value: 62605
     unit: candidates
     provenance: published
     as_of_date: '2026-06-21'
     source_url: https://kaushalbharat.gov.in/ddugky-report/candidateview
     note: '62,605 candidates, as of 2026-06-21. [scope: Bihar]'
+    note_hi: null
 last_verified: '2026-06-22'

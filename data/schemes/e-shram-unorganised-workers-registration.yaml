@@ -44,46 +44,56 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2024-25
     label: e-Shram registrations in Bihar, as on 19 Dec 2024
+    label_hi: null
     value: 29588748
     unit: workers
     provenance: published
     as_of_date: '2024-12-19'
     source_url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2086193
     note: '2,95,88,748 workers, as of 2024-12-19. [scope: Bihar]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: 2024-25
     label: Total e-Shram registrations (National), as on 19 Dec 2024
+    label_hi: null
     value: 304802313
     unit: workers
     provenance: published
     as_of_date: '2024-12-19'
     source_url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2086193
     note: '30,48,02,313 workers, as of 2024-12-19. [scope: National]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: 2024-25
     label: Total unorganised workers registered on e-Shram (National)
+    label_hi: null
     value: 306874094
     unit: workers
     provenance: published
     as_of_date: '2025-03-03'
     source_url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2109828
     note: '30,68,74,094 workers, as of 2025-03-03. [scope: National]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: 2024-25
     label: Unorganised workers registered on e-Shram in Bihar
+    label_hi: null
     value: 29784018
     unit: workers
     provenance: published
     as_of_date: '2025-03-03'
     source_url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2109828
     note: '2,97,84,018 workers, as of 2025-03-03. [scope: Bihar]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: 2025-26
     label: Bihar workers registered
+    label_hi: null
     value: 29588748
     unit: persons
     provenance: reported
     as_of_date: '2025-07-31'
     source_url: https://www.medianama.com/2026/01/223-maharashtra-e-shram-platform-workers-small-states-lag/
     note: 'Ministry of Labour data (~2.96 cr registered in Bihar). [scope: Bihar]'
+    note_hi: null
 last_verified: '2026-06-19'

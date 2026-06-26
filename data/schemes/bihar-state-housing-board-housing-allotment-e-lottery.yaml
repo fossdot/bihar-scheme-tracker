@@ -6,7 +6,6 @@ department_website: https://bshb.bihar.gov.in/
 categories:
   - housing
   - social_welfare
-launch_date: null
 objective_en: >-
   The Bihar State Housing Board (a statutory body established in 1972) develops integrated
   residential colonies — plots, flats and apartments across income categories (EWS / LIG / MIG /
@@ -60,49 +59,83 @@ status_evidence: >-
 source_url: https://bshb.bihar.gov.in/
 application_portal_url: https://bshb.bihar.gov.in/
 metrics:
+  - dimension: beneficiaries
+    fiscal_year: null
+    label: Dwelling units / plots allotted (cumulative)
+    label_hi: आवंटित आवास इकाइयाँ / भूखंड (संचयी)
+    value: null
+    unit: units
+    provenance: rti_filed
+    as_of_date: null
+    source_url: null
+    note: >-
+      No public count of allottees / units allotted. RTI filed via Bihar RTI Online to the Urban
+      Development & Housing Department (Bihar State Housing Board) on 25 June 2026; awaiting reply.
+    note_hi: आवंटियों/इकाइयों की कोई सार्वजनिक गणना नहीं। BSHB को जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
   - dimension: budget
+    fiscal_year: null
     label: Construction/development expenditure and allotment receipts
+    label_hi: निर्माण/विकास व्यय एवं आवंटन प्राप्तियाँ
     value: null
     unit: cr
     provenance: rti_filed
+    as_of_date: null
+    source_url: null
     note: >-
       BSHB is a parastatal board largely financed by its own allotment/e-auction receipts and loans
       — no clean scheme-wise line in budget.bihar.gov.in. RTI filed via Bihar RTI Online to the
       Urban Development & Housing Department (Bihar State Housing Board) on 25 June 2026; awaiting
       reply.
-  - dimension: beneficiaries
-    label: Dwelling units / plots allotted (cumulative)
-    value: null
-    unit: units
-    provenance: rti_filed
-    note: >-
-      No public count of allottees / units allotted. RTI filed via Bihar RTI Online to the Urban
-      Development & Housing Department (Bihar State Housing Board) on 25 June 2026; awaiting reply.
+    note_hi: >-
+      BSHB मुख्यतः अपनी आवंटन/ई-नीलामी प्राप्तियों व ऋण से वित्तपोषित बोर्ड है — budget.bihar.gov.in
+      में योजनावार मद नहीं। नगर विकास एवं आवास विभाग (BSHB) को जून 2026 में RTI दायर; उत्तर
+      प्रतीक्षित।
   - dimension: outcomes
+    fiscal_year: null
     label: Dwelling units / projects completed (cumulative)
+    label_hi: पूर्ण आवास इकाइयाँ / परियोजनाएँ (संचयी)
     value: null
     unit: units
     provenance: rti_filed
+    as_of_date: null
+    source_url: null
     note: >-
       BSHB does not publish a cumulative count of completed dwelling units or projects. RTI filed
       via Bihar RTI Online to the Urban Development & Housing Department (BSHB) on 25 June 2026;
       awaiting reply.
+    note_hi: >-
+      पूर्ण इकाइयों/परियोजनाओं की संचयी गणना प्रकाशित नहीं। BSHB को जून 2026 में RTI दायर; उत्तर
+      प्रतीक्षित।
   - dimension: outcomes
+    fiscal_year: null
     label: Projects / dwelling units currently under construction
+    label_hi: निर्माणाधीन परियोजनाएँ / आवास इकाइयाँ
     value: null
     unit: units
     provenance: rti_filed
+    as_of_date: null
+    source_url: null
     note: >-
       No published count of ongoing projects/units (indicative only: 300+ live e-tenders, a proposed
       Ara residential complex). RTI filed via Bihar RTI Online to the Urban Development & Housing
       Department (BSHB) on 25 June 2026; awaiting reply.
+    note_hi: >-
+      निर्माणाधीन परियोजनाओं/इकाइयों की गणना प्रकाशित नहीं। BSHB को जून 2026 में RTI दायर; उत्तर
+      प्रतीक्षित।
   - dimension: outcomes
+    fiscal_year: null
     label: Upcoming projects / units open for application (e-lottery)
+    label_hi: आगामी परियोजनाएँ / आवेदन हेतु खुली इकाइयाँ (ई-लॉटरी)
     value: null
     unit: units
     provenance: rti_filed
+    as_of_date: null
+    source_url: null
     note: >-
       No consolidated published list of upcoming/about-to-open allotment projects. RTI filed via
-      Bihar RTI Online to the Urban Development & Housing Department (BSHB) on 25 June 2026; awaiting
-      reply. Meanwhile citizens should check the "Schemes" tab on bshb.bihar.gov.in.
+      Bihar RTI Online to the Urban Development & Housing Department (BSHB) on 25 June 2026;
+      awaiting reply. Meanwhile citizens should check the "Schemes" tab on bshb.bihar.gov.in.
+    note_hi: >-
+      आगामी/शीघ्र-खुलने वाली आवंटन परियोजनाओं की समेकित सूची प्रकाशित नहीं। BSHB को जून 2026 में RTI
+      दायर; उत्तर प्रतीक्षित।
 last_verified: '2026-06-25'

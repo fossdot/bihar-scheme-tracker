@@ -43,6 +43,7 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2025-26
     label: India artisans registered
+    label_hi: null
     value: 3000000
     unit: artisans
     provenance: reported
@@ -50,4 +51,5 @@ metrics:
     source_url: >-
       https://www.ibef.org/news/pm-vishwakarma-scheme-provides-end-to-end-holistic-support-to-artisans-of-18-traditional-trades-23-09-lakh-beneficiaries-trained
     note: 'National. [scope: National]'
+    note_hi: null
 last_verified: '2026-06-19'

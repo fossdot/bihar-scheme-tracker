@@ -33,14 +33,22 @@ status_evidence: >-
   began Aug 2025. Verified 2026-06-19. Source: https://hargharbijli.bsphcl.co.in/
 source_url: https://energy.bihar.gov.in
 application_portal_url: https://hargharbijli.bsphcl.co.in
-last_verified: '2026-06-19'
 metrics:
   - dimension: district
+    fiscal_year: null
     label: District & demographic breakdown
+    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
     value: null
+    unit: null
     provenance: rti_filed
     as_of_date: '2026-06-25'
+    source_url: null
     note: >-
       District-wise / category splits, connection & outcome figures not published. RTI filed via
       Bihar RTI Online to the Energy Department (Har Ghar Bijli Yojana; may transfer to
       NBPDCL/SBPDCL) on 25 June 2026; awaiting reply.
+    note_hi: >-
+      जिलावार / श्रेणीवार विवरण, कनेक्शन एवं परिणाम प्रकाशित नहीं। ऊर्जा विभाग (हर घर बिजली;
+      NBPDCL/SBPDCL को अंतरण संभव) को Bihar RTI Online के माध्यम से जून 2026 में RTI दायर; उत्तर
+      प्रतीक्षित।
+last_verified: '2026-06-19'

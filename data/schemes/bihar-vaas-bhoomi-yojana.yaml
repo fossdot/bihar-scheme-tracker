@@ -36,13 +36,21 @@ status_evidence: >-
   Source: https://state.bihar.gov.in/lrc/
 source_url: https://state.bihar.gov.in/lrc
 application_portal_url: https://state.bihar.gov.in/lrc/
-last_verified: '2026-06-19'
 metrics:
   - dimension: district
+    fiscal_year: null
     label: District & demographic breakdown
+    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
     value: null
+    unit: null
     provenance: rti_needed
+    as_of_date: null
+    source_url: null
     note: >-
-      District-wise and social-category/gender splits not published for this scheme. RTI
-      drafted — see docs/rti/bihar-state-departments.md. Mine public sources first; file for
-      the unpublished splits.
+      District-wise and social-category/gender splits not published for this scheme. RTI drafted —
+      see docs/rti/bihar-state-departments.md. Mine public sources first; file for the unpublished
+      splits.
+    note_hi: >-
+      इस योजना हेतु जिलावार एवं सामाजिक-श्रेणी / लिंग आधारित विवरण प्रकाशित नहीं — RTI आवश्यक। पहले
+      सार्वजनिक स्रोत खंगालें, फिर अप्रकाशित विवरण हेतु आवेदन करें।
+last_verified: '2026-06-19'

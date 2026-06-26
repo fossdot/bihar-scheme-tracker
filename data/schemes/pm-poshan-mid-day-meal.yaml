@@ -38,6 +38,7 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2024-25
     label: India students covered
+    label_hi: null
     value: 110000000
     unit: students
     provenance: reported
@@ -45,4 +46,5 @@ metrics:
     source_url: >-
       https://www.newsonair.gov.in/govt-provides-nutritious-meals-to-nearly-11cr-students-informs-state-education-minister-to-ls
     note: 'National (~11 cr children). [scope: National]'
+    note_hi: null
 last_verified: '2026-06-19'

@@ -39,19 +39,23 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2025-26
     label: India loans
+    label_hi: null
     value: 10000000
     unit: loans
     provenance: published
     as_of_date: '2026-03-30'
     source_url: https://www.newsonair.gov.in/pm-svanidhi-scheme-supports-street-vendors-with-17115-crore-loans
     note: 'National (~1 cr loans). [scope: National]'
+    note_hi: null
   - dimension: budget
     fiscal_year: 2025-26
     label: India loans disbursed
+    label_hi: null
     value: 17115
     unit: cr
     provenance: published
     as_of_date: '2026-03-30'
     source_url: https://www.newsonair.gov.in/pm-svanidhi-scheme-supports-street-vendors-with-17115-crore-loans
     note: '[scope: National]'
+    note_hi: null
 last_verified: '2026-06-19'

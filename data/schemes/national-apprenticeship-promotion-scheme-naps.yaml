@@ -59,19 +59,23 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2018-19 to 2025-26 (up to July 2025)
     label: 'Cumulative apprentices engaged under NAPS [scope: National]'
+    label_hi: null
     value: 4195703
     unit: apprentices
     provenance: published
     as_of_date: '2025-07-31'
     source_url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2157511&reg=3&lang=2
     note: '41,95,703 apprentices, as of 2025-07-31. [scope: National]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: 2018-19 to 2025-26 (up to July 2025)
     label: 'Cumulative apprentices who completed NAPS apprenticeship training [scope: National]'
+    label_hi: null
     value: 2147122
     unit: apprentices
     provenance: published
     as_of_date: '2025-07-31'
     source_url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2157511&reg=3&lang=2
     note: '21,47,122 apprentices, as of 2025-07-31. [scope: National]'
+    note_hi: null
 last_verified: '2026-06-22'

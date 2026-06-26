@@ -115,6 +115,9 @@ export default async function RtiPage({
             <tbody>
               {rows.map((r, i) => {
                 const name = (locale === "hi" && r.scheme_name_hi) || r.scheme_name_en;
+                const dataLabel =
+                  ((locale === "hi" && r.label_hi) || r.label) ?? r.dimension;
+                const dataNote = (locale === "hi" && r.note_hi) || r.note;
                 return (
                   <tr key={`${r.scheme_id}-${i}`} className="border-b border-line last:border-0 align-top">
                     <td className="px-3 py-3">
@@ -126,8 +129,8 @@ export default async function RtiPage({
                       </Link>
                     </td>
                     <td className="px-3 py-3">
-                      <div className="text-ink">{r.label ?? r.dimension}</div>
-                      {r.note && <p className="mt-0.5 text-xs text-muted">{r.note}</p>}
+                      <div className="text-ink">{dataLabel}</div>
+                      {dataNote && <p className="mt-0.5 text-xs text-muted">{dataNote}</p>}
                       {r.source_url && (
                         <a
                           href={r.source_url}

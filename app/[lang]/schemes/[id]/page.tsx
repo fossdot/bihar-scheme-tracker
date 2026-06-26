@@ -544,8 +544,9 @@ function DataImpact({
               : DIM_PUBLIC.has(dim)
                 ? "public_todo"
                 : "rti_needed";
+          const noteRow = rows.find((r) => r.note);
           const note =
-            rows.find((r) => r.note)?.note ??
+            (locale === "hi" && noteRow?.note_hi ? noteRow.note_hi : noteRow?.note) ??
             (locale === "hi" ? DIM_NOTE[dim].hi : DIM_NOTE[dim].en);
           const src = rows.find((r) => r.source_url)?.source_url ?? null;
           return (

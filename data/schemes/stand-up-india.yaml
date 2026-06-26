@@ -38,6 +38,7 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: null
     label: 'Cumulative SC accounts sanctioned (since inception, as of March 2024) [scope: National]'
+    label_hi: null
     value: 46248
     unit: accounts
     provenance: reported
@@ -45,9 +46,11 @@ metrics:
     source_url: >-
       https://ddnews.gov.in/en/stand-up-india-scheme-marks-7-years-of-empowering-marginalized-entrepreneurs-sanctions-over-rs-61000-crore-in-loans/
     note: '46,248 accounts, as of 2024-03-31. [scope: National]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: null
     label: 'Cumulative ST accounts sanctioned (since inception, as of March 2024) [scope: National]'
+    label_hi: null
     value: 15228
     unit: accounts
     provenance: reported
@@ -55,9 +58,11 @@ metrics:
     source_url: >-
       https://ddnews.gov.in/en/stand-up-india-scheme-marks-7-years-of-empowering-marginalized-entrepreneurs-sanctions-over-rs-61000-crore-in-loans/
     note: '15,228 accounts, as of 2024-03-31. [scope: National]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: null
     label: 'Cumulative women accounts sanctioned (since inception, as of March 2024) [scope: National]'
+    label_hi: null
     value: 190844
     unit: accounts
     provenance: reported
@@ -65,29 +70,35 @@ metrics:
     source_url: >-
       https://ddnews.gov.in/en/stand-up-india-scheme-marks-7-years-of-empowering-marginalized-entrepreneurs-sanctions-over-rs-61000-crore-in-loans/
     note: '1,90,844 accounts, as of 2024-03-31. [scope: National]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: null
     label: 'ST entrepreneurs supported, April 2022 to March 2025 [scope: National]'
+    label_hi: null
     value: 9625
     unit: accounts
     provenance: reported
     as_of_date: '2025-03-31'
     source_url: https://www.ibef.org/government-schemes/stand-up-india
     note: '9,625 accounts, as of 2025-03-31. [scope: National]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: null
     label: 'Women entrepreneurs supported, April 2022 to March 2025 [scope: National]'
+    label_hi: null
     value: 126508
     unit: accounts
     provenance: reported
     as_of_date: '2025-03-31'
     source_url: https://www.ibef.org/government-schemes/stand-up-india
     note: '1,26,508 accounts, as of 2025-03-31. [scope: National]'
+    note_hi: null
   - dimension: budget
     fiscal_year: null
     label: >-
       Cumulative amount sanctioned to SC entrepreneurs (since inception, as of March 2024) [scope:
       National]
+    label_hi: null
     value: 9747.11
     unit: ₹ crore
     provenance: reported
@@ -95,11 +106,13 @@ metrics:
     source_url: >-
       https://ddnews.gov.in/en/stand-up-india-scheme-marks-7-years-of-empowering-marginalized-entrepreneurs-sanctions-over-rs-61000-crore-in-loans/
     note: '9,747.11 ₹ crore, as of 2024-03-31. [scope: National]'
+    note_hi: null
   - dimension: budget
     fiscal_year: null
     label: >-
       Cumulative amount sanctioned to ST entrepreneurs (since inception, as of March 2024) [scope:
       National]
+    label_hi: null
     value: 3244.07
     unit: ₹ crore
     provenance: reported
@@ -107,11 +120,13 @@ metrics:
     source_url: >-
       https://ddnews.gov.in/en/stand-up-india-scheme-marks-7-years-of-empowering-marginalized-entrepreneurs-sanctions-over-rs-61000-crore-in-loans/
     note: '3,244.07 ₹ crore, as of 2024-03-31. [scope: National]'
+    note_hi: null
   - dimension: budget
     fiscal_year: null
     label: >-
       Cumulative amount sanctioned to women entrepreneurs (since inception, as of March 2024)
       [scope: National]
+    label_hi: null
     value: 43984.1
     unit: ₹ crore
     provenance: reported
@@ -119,9 +134,11 @@ metrics:
     source_url: >-
       https://ddnews.gov.in/en/stand-up-india-scheme-marks-7-years-of-empowering-marginalized-entrepreneurs-sanctions-over-rs-61000-crore-in-loans/
     note: '43,984.1 ₹ crore, as of 2024-03-31. [scope: National]'
+    note_hi: null
   - dimension: budget
     fiscal_year: null
     label: 'Cumulative loans sanctioned since inception (total amount) [scope: National]'
+    label_hi: null
     value: 61020.41
     unit: ₹ crore
     provenance: reported
@@ -129,4 +146,5 @@ metrics:
     source_url: >-
       https://ddnews.gov.in/en/stand-up-india-scheme-marks-7-years-of-empowering-marginalized-entrepreneurs-sanctions-over-rs-61000-crore-in-loans/
     note: '61,020.41 ₹ crore, as of 2025-03-17. [scope: National]'
+    note_hi: null
 last_verified: '2026-06-19'

@@ -217,12 +217,14 @@ export interface SchemeMetric {
   dimension: MetricDimension;
   fiscal_year: string | null; // null = dimension-level data-status marker
   label: string | null;
+  label_hi: string | null; // Hindi label; null → falls back to `label` at render
   value: number | null; // null while only tracking provenance (e.g. RTI awaited)
   unit: string | null; // 'cr' | 'persons'
   provenance: DataProvenance;
   as_of_date: string | null;
   source_url: string | null;
   note: string | null;
+  note_hi: string | null; // Hindi note; null → falls back to `note` at render
   created_at: string;
 }
 

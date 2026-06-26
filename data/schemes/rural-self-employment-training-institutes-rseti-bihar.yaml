@@ -59,6 +59,7 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2023-24
     label: 'RSETI candidates trained (Bihar, BRLPS, during FY 2023-24) [scope: Bihar]'
+    label_hi: null
     value: 26073
     unit: candidates
     provenance: published
@@ -66,9 +67,11 @@ metrics:
     source_url: >-
       https://brlps.in/UplodFiles/Files/AAP%20and%20Budget%20of%20BRLPS(JEEVIKA)%20for%20FY%202024-25%20(1).pdf
     note: '26,073 candidates, as of 2024-03-31. [scope: Bihar]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: since-inception-to-2023-24
     label: 'RSETI candidates trained (Bihar, BRLPS, cumulative since inception) [scope: Bihar]'
+    label_hi: null
     value: 295024
     unit: candidates
     provenance: published
@@ -76,18 +79,22 @@ metrics:
     source_url: >-
       https://brlps.in/UplodFiles/Files/AAP%20and%20Budget%20of%20BRLPS(JEEVIKA)%20for%20FY%202024-25%20(1).pdf
     note: '2,95,024 candidates, as of 2024-03-31. [scope: Bihar]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: since-inception-to-2024-25
     label: 'RSETI functional institutes (National, as on 31.12.2024) [scope: National]'
+    label_hi: null
     value: 605
     unit: institutes
     provenance: published
     as_of_date: '2024-12-31'
     source_url: https://www.dord.gov.in/static/uploads/2024/02/43f6d3ecbd0cf21b1a0c23d80d270e0c.pdf
     note: '605 institutes, as of 2024-12-31. [scope: National]'
+    note_hi: null
   - dimension: outcomes
     fiscal_year: 2023-24
     label: 'RSETI candidates settled (Bihar, BRLPS, during FY 2023-24) [scope: Bihar]'
+    label_hi: null
     value: 17453
     unit: candidates
     provenance: published
@@ -95,9 +102,11 @@ metrics:
     source_url: >-
       https://brlps.in/UplodFiles/Files/AAP%20and%20Budget%20of%20BRLPS(JEEVIKA)%20for%20FY%202024-25%20(1).pdf
     note: '17,453 candidates, as of 2024-03-31. [scope: Bihar]'
+    note_hi: null
   - dimension: outcomes
     fiscal_year: since-inception-to-2023-24
     label: 'RSETI candidates settled (Bihar, BRLPS, cumulative since inception) [scope: Bihar]'
+    label_hi: null
     value: 216926
     unit: candidates
     provenance: published
@@ -105,9 +114,11 @@ metrics:
     source_url: >-
       https://brlps.in/UplodFiles/Files/AAP%20and%20Budget%20of%20BRLPS(JEEVIKA)%20for%20FY%202024-25%20(1).pdf
     note: '2,16,926 candidates, as of 2024-03-31. [scope: Bihar]'
+    note_hi: null
   - dimension: outcomes
     fiscal_year: since-inception-to-2023-24
     label: 'RSETI settlement rate (Bihar, BRLPS = 216926 settled / 295024 trained) [scope: Bihar]'
+    label_hi: null
     value: 73.5
     unit: percent
     provenance: published
@@ -115,13 +126,16 @@ metrics:
     source_url: >-
       https://brlps.in/UplodFiles/Files/AAP%20and%20Budget%20of%20BRLPS(JEEVIKA)%20for%20FY%202024-25%20(1).pdf
     note: '73.5 percent, as of 2024-03-31. [scope: Bihar]'
+    note_hi: null
   - dimension: outcomes
     fiscal_year: since-inception-to-2024-25
     label: 'RSETI settlement rate (National = 38.76 lakh settled / 54.03 lakh trained) [scope: National]'
+    label_hi: null
     value: 71.7
     unit: percent
     provenance: published
     as_of_date: '2024-12-31'
     source_url: https://www.dord.gov.in/static/uploads/2024/02/43f6d3ecbd0cf21b1a0c23d80d270e0c.pdf
     note: '71.7 percent, as of 2024-12-31. [scope: National]'
+    note_hi: null
 last_verified: '2026-06-22'

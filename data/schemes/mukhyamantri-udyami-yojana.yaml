@@ -44,22 +44,32 @@ source_url: https://udyami.bihar.gov.in
 application_portal_url: https://udyami.bihar.gov.in
 metrics:
   - dimension: beneficiaries
-    fiscal_year: '2024-25'
+    fiscal_year: 2024-25
     label: Beneficiaries selected
+    label_hi: null
     value: 9247
     unit: persons
     provenance: reported
     as_of_date: '2024-08-23'
-    source_url: https://www.prabhatkhabar.com/state/bihar/patna/selection-of-9247-beneficiaries-in-cm-udyam-yojana
+    source_url: >-
+      https://www.prabhatkhabar.com/state/bihar/patna/selection-of-9247-beneficiaries-in-cm-udyam-yojana
     note: >-
-      Selected under MMUY for FY2024-25 (~2,000 each for SC/ST, EBC, youth, women + 1,247
-      minority). Reported (Prabhat Khabar); verify against the result list at udyami.bihar.gov.in.
+      Selected under MMUY for FY2024-25 (~2,000 each for SC/ST, EBC, youth, women + 1,247 minority).
+      Reported (Prabhat Khabar); verify against the result list at udyami.bihar.gov.in.
+    note_hi: null
   - dimension: district
+    fiscal_year: null
     label: District & demographic breakdown
+    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
     value: null
+    unit: null
     provenance: rti_filed
     as_of_date: '2026-06-25'
+    source_url: null
     note: >-
       District-wise / social-category / gender splits and outcomes not published. RTI filed via
       Bihar RTI Online to the Industries Department on 25 June 2026; awaiting reply.
+    note_hi: >-
+      जिलावार / सामाजिक-श्रेणी / लिंग विवरण एवं परिणाम प्रकाशित नहीं। उद्योग विभाग को Bihar RTI
+      Online के माध्यम से जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
 last_verified: '2026-06-19'

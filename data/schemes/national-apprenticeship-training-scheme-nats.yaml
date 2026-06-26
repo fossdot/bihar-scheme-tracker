@@ -59,21 +59,25 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: '2025'
     label: Apprentices engaged under NATS during 2025 (calendar year)
+    label_hi: null
     value: 523024
     unit: apprentices
     provenance: published
     as_of_date: '2026-03-23'
     source_url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2243987&reg=3&lang=1
     note: '5,23,024 apprentices, as of 2026-03-23. [scope: National]'
+    note_hi: null
   - dimension: budget
     fiscal_year: 2024-25
     label: >-
       Stipend disbursed through DBT at NATS 2.0 portal launch (30 July 2024); launch-event
       disbursement, not an annual total
+    label_hi: null
     value: 100
     unit: Rs crore
     provenance: published
     as_of_date: '2024-07-30'
     source_url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2039276
     note: '100 Rs crore, as of 2024-07-30. [scope: National]'
+    note_hi: null
 last_verified: '2026-06-22'

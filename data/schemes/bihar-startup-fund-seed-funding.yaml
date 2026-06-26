@@ -44,17 +44,10 @@ application_portal_url: https://startup.bihar.gov.in
 policies:
   - Bihar Startup Policy 2022
 metrics:
-  - dimension: district
-    label: District & demographic breakdown
-    value: null
-    provenance: rti_filed
-    as_of_date: '2026-06-25'
-    note: >-
-      District-wise / social-category / gender splits and outcomes not published. RTI filed via
-      Bihar RTI Online to the Industries Department on 25 June 2026; awaiting reply.
   - dimension: beneficiaries
     fiscal_year: 2024-25
     label: Bihar startups funded
+    label_hi: null
     value: 1522
     unit: startups
     provenance: reported
@@ -62,9 +55,11 @@ metrics:
     source_url: >-
       https://indianmasterminds.com/news/bihars-startup-boom-state-emerges-as-innovation-hub-with-1500-ventures-rs-62-5-crore-in-support-118762/
     note: 1,522 startups registered under the seed fund. [Bihar]
+    note_hi: null
   - dimension: budget
     fiscal_year: 2024-25
     label: Bihar seed funding disbursed
+    label_hi: null
     value: 62.5
     unit: cr
     provenance: reported
@@ -72,4 +67,20 @@ metrics:
     source_url: >-
       https://indianmasterminds.com/news/bihars-startup-boom-state-emerges-as-innovation-hub-with-1500-ventures-rs-62-5-crore-in-support-118762/
     note: Cumulative seed-fund disbursal. [Bihar]
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: District & demographic breakdown
+    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
+    value: null
+    unit: null
+    provenance: rti_filed
+    as_of_date: '2026-06-25'
+    source_url: null
+    note: >-
+      District-wise / social-category / gender splits and outcomes not published. RTI filed via
+      Bihar RTI Online to the Industries Department on 25 June 2026; awaiting reply.
+    note_hi: >-
+      जिलावार / सामाजिक-श्रेणी / लिंग विवरण एवं परिणाम प्रकाशित नहीं। उद्योग विभाग को Bihar RTI
+      Online के माध्यम से जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
 last_verified: '2026-06-19'

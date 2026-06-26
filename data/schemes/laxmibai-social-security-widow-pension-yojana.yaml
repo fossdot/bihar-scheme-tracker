@@ -40,17 +40,10 @@ application_portal_url: https://www.sspmis.bihar.gov.in
 policies:
   - Bihar Social Security Pensions (SSPMIS)
 metrics:
-  - dimension: district
-    label: District & demographic breakdown
-    value: null
-    provenance: rti_filed
-    as_of_date: '2026-06-26'
-    note: >-
-      District / social-category / gender splits and per-scheme outcomes not published. RTI
-      filed via Bihar RTI Online to the Social Welfare Department on 26 June 2026; awaiting reply.
   - dimension: beneficiaries
     fiscal_year: 2025-26
     label: Bihar widow pensioners
+    label_hi: null
     value: 860000
     unit: persons
     provenance: reported
@@ -58,4 +51,20 @@ metrics:
     source_url: >-
       https://patnapress.com/bihar-raises-social-security-pension-to-rs-1100-for-over-11-million-beneficiaries/
     note: ~8.6 lakh widows — disaggregated from the combined ~1.09 crore social-security total. [Bihar]
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: District & demographic breakdown
+    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
+    value: null
+    unit: null
+    provenance: rti_filed
+    as_of_date: '2026-06-26'
+    source_url: null
+    note: >-
+      District / social-category / gender splits and per-scheme outcomes not published. RTI filed
+      via Bihar RTI Online to the Social Welfare Department on 26 June 2026; awaiting reply.
+    note_hi: >-
+      जिलावार / सामाजिक-श्रेणी / लिंग विवरण एवं योजना-विशिष्ट परिणाम प्रकाशित नहीं। समाज कल्याण
+      विभाग को Bihar RTI Online के माध्यम से जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
 last_verified: '2026-06-19'

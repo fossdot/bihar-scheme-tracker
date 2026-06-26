@@ -25,12 +25,14 @@ export interface RtiApplication {
   scheme_name_hi: string | null;
   dimension: string;
   label: string | null;
+  label_hi: string | null;
   unit: string | null;
   value: number | null;
   provenance: string;
   as_of_date: string | null;
   source_url: string | null;
   note: string | null;
+  note_hi: string | null;
 }
 
 /**
@@ -43,10 +45,10 @@ export async function listRtiApplications(): Promise<RtiApplication[]> {
     `select m.scheme_id,
             s.name_en as scheme_name_en,
             s.name_hi as scheme_name_hi,
-            m.dimension, m.label, m.unit, m.value,
+            m.dimension, m.label, m.label_hi, m.unit, m.value,
             m.provenance::text as provenance,
             m.as_of_date::text as as_of_date,
-            m.source_url, m.note
+            m.source_url, m.note, m.note_hi
        from scheme_metrics m
        join schemes s on s.id = m.scheme_id
       where m.provenance in ('rti_needed','rti_filed','rti_received')

@@ -42,17 +42,10 @@ application_portal_url: https://www.7nishchay-yuvaupmission.bihar.gov.in/
 policies:
   - Saat Nishchay-2 — Yuva Upmission
 metrics:
-  - dimension: district
-    label: District & demographic breakdown
-    value: null
-    provenance: rti_needed
-    note: >-
-      District-wise and social-category/gender splits not published for this scheme. RTI drafted —
-      see docs/rti/bihar-state-departments.md. Mine public sources first; file for the unpublished
-      splits.
   - dimension: beneficiaries
     fiscal_year: cumulative
     label: Bihar paid beneficiaries (since launch)
+    label_hi: null
     value: 516076
     unit: persons
     provenance: published
@@ -61,13 +54,32 @@ metrics:
     note: >-
       5.16 lakh youth paid the ₹1,000/month allowance; 5.71 lakh applications accepted since launch.
       [Bihar]
+    note_hi: null
   - dimension: budget
     fiscal_year: cumulative
     label: Bihar disbursed (since launch)
+    label_hi: null
     value: 696
     unit: cr
     provenance: published
     as_of_date: null
     source_url: https://bvm.bihar.gov.in/submission/nc/nishchay-1-aarthik-hal-yuvao-ko-bal/
     note: Total allowance paid since launch. [Bihar]
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: District & demographic breakdown
+    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
+    value: null
+    unit: null
+    provenance: rti_needed
+    as_of_date: null
+    source_url: null
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI drafted —
+      see docs/rti/bihar-state-departments.md. Mine public sources first; file for the unpublished
+      splits.
+    note_hi: >-
+      इस योजना हेतु जिलावार एवं सामाजिक-श्रेणी / लिंग आधारित विवरण प्रकाशित नहीं — RTI आवश्यक। पहले
+      सार्वजनिक स्रोत खंगालें, फिर अप्रकाशित विवरण हेतु आवेदन करें।
 last_verified: '2026-06-19'

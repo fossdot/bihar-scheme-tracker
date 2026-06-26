@@ -45,17 +45,10 @@ application_portal_url: https://dbtagriculture.bihar.gov.in
 policies:
   - Bihar Krishi Road Map (Agriculture Roadmap)
 metrics:
-  - dimension: district
-    label: District & demographic breakdown
-    value: null
-    provenance: rti_needed
-    note: >-
-      District-wise and social-category/gender splits not published for this scheme. RTI
-      needed — draft to be added to docs/rti. Mine public sources first; file for the
-      unpublished splits.
   - dimension: budget
     fiscal_year: 2025-26
     label: Bihar disbursed (Aug-2025 flood loss)
+    label_hi: null
     value: 113.16
     unit: cr
     provenance: reported
@@ -65,9 +58,26 @@ metrics:
     note: >-
       Input subsidy via DBT for Aug-2025 flood / Cyclone Montha kharif crop loss (CM transfer, 21
       Feb 2026). [Bihar]
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: District & demographic breakdown
+    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
+    value: null
+    unit: null
+    provenance: rti_needed
+    as_of_date: null
+    source_url: null
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI needed —
+      draft to be added to docs/rti. Mine public sources first; file for the unpublished splits.
+    note_hi: >-
+      इस योजना हेतु जिलावार एवं सामाजिक-श्रेणी / लिंग आधारित विवरण प्रकाशित नहीं — RTI आवश्यक। पहले
+      सार्वजनिक स्रोत खंगालें, फिर अप्रकाशित विवरण हेतु आवेदन करें।
   - dimension: district
     fiscal_year: 2025-26
     label: Phase-1 districts
+    label_hi: null
     value: 13
     unit: districts
     provenance: reported
@@ -78,4 +88,5 @@ metrics:
       Phase-1 disbursement covered 13 districts, 53 blocks, 493 panchayats (Begusarai, Bhojpur,
       Darbhanga, Gaya, Kaimur, Kishanganj, Madhepura, Madhubani, Muzaffarpur, E. Champaran, Sheohar,
       Sitamarhi, Supaul). [Bihar]
+    note_hi: null
 last_verified: '2026-06-19'

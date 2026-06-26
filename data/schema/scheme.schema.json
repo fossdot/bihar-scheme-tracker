@@ -76,12 +76,14 @@
           "dimension": { "enum": ["budget", "beneficiaries", "district", "demographics", "outcomes"] },
           "fiscal_year": { "type": ["string", "null"] },
           "label": { "type": ["string", "null"] },
+          "label_hi": { "type": ["string", "null"], "description": "Hindi label; null falls back to label." },
           "value": { "type": ["number", "null"], "description": "NULL when the figure isn't yet sourced (use an rti_* provenance)." },
           "unit": { "type": ["string", "null"] },
           "provenance": { "enum": ["published", "reported", "rti_received", "rti_filed", "rti_needed", "estimated"] },
           "as_of_date": { "type": ["string", "null"], "format": "date" },
           "source_url": { "type": ["string", "null"], "format": "uri" },
-          "note": { "type": ["string", "null"] }
+          "note": { "type": ["string", "null"] },
+          "note_hi": { "type": ["string", "null"], "description": "Hindi note; null falls back to note." }
         }
       }
     }

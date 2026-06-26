@@ -82,7 +82,7 @@ async function exportSchemes() {
        where scheme_id = $1 order by fiscal_year`, [id]
     );
     const metrics = await query<Record<string, unknown>>(
-      `select dimension, fiscal_year, label, value, unit, provenance, as_of_date, source_url, note
+      `select dimension, fiscal_year, label, label_hi, value, unit, provenance, as_of_date, source_url, note, note_hi
        from scheme_metrics where scheme_id = $1
        order by dimension, fiscal_year nulls first, label`, [id]
     );

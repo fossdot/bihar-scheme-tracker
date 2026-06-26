@@ -53,6 +53,7 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2024-25
     label: students
+    label_hi: null
     value: 80236
     unit: persons
     provenance: reported
@@ -60,9 +61,11 @@ metrics:
     source_url: >-
       https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
     note: Students who received loans in FY2024-25.
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: 2025-26
     label: target
+    label_hi: null
     value: 127000
     unit: persons
     provenance: reported
@@ -70,9 +73,11 @@ metrics:
     source_url: >-
       https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
     note: Planned/target students for FY2025-26 (1.27 lakh).
+    note_hi: null
   - dimension: budget
     fiscal_year: 2024-25
     label: disbursed
+    label_hi: null
     value: 1715.23
     unit: cr
     provenance: reported
@@ -80,9 +85,11 @@ metrics:
     source_url: >-
       https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
     note: Loans disbursed to 80,236 students (news report; cross-check vs budget.bihar.gov.in).
+    note_hi: null
   - dimension: budget
     fiscal_year: 2025-26
     label: sanctioned
+    label_hi: null
     value: 1013.23
     unit: cr
     provenance: reported
@@ -90,34 +97,51 @@ metrics:
     source_url: >-
       https://www.thedailyjagran.com/bihar/bihar-student-credit-card-scheme-2025-26-education-dept-plans-to-disburse-rs-1013-crore-loan-to-127-lakh-students-10247736
     note: Finance Dept sanction on Education Dept proposal to reach 1.27 lakh students.
+    note_hi: null
   - dimension: demographics
     fiscal_year: null
     label: null
+    label_hi: सामाजिक-श्रेणी / लिंग विवरण
     value: null
     unit: null
     provenance: rti_filed
     as_of_date: '2026-06-25'
+    source_url: null
     note: >-
       Breakdown by social category / gender not published. RTI filed via Bihar RTI Online to the
-      Education Department (BSEFC), Bihar Student Credit Card Scheme, on 25 June 2026; awaiting reply.
+      Education Department (BSEFC), Bihar Student Credit Card Scheme, on 25 June 2026; awaiting
+      reply.
+    note_hi: >-
+      सामाजिक-श्रेणी/लिंग आधारित विवरण प्रकाशित नहीं। शिक्षा विभाग (BSEFC) को Bihar RTI Online के
+      माध्यम से जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
   - dimension: district
     fiscal_year: null
     label: null
+    label_hi: जिलावार विवरण
     value: null
     unit: null
     provenance: rti_filed
     as_of_date: '2026-06-25'
+    source_url: null
     note: >-
       District-wise disbursement / sanction not published. RTI filed via Bihar RTI Online to the
       Education Department (BSEFC) on 25 June 2026; awaiting reply.
+    note_hi: >-
+      जिलावार वितरण/स्वीकृति प्रकाशित नहीं। शिक्षा विभाग (BSEFC) को Bihar RTI Online के माध्यम से
+      जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
   - dimension: outcomes
     fiscal_year: null
     label: null
+    label_hi: परिणाम (कोर्स पूर्णता / ऋण वापसी)
     value: null
     unit: null
     provenance: rti_filed
     as_of_date: '2026-06-25'
+    source_url: null
     note: >-
       Course-completion and loan-repayment outcomes not published. RTI filed via Bihar RTI Online to
       the Education Department (BSEFC) on 25 June 2026; awaiting reply.
+    note_hi: >-
+      कोर्स-पूर्णता एवं ऋण-वापसी परिणाम प्रकाशित नहीं। शिक्षा विभाग (BSEFC) को Bihar RTI Online के
+      माध्यम से जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
 last_verified: '2026-06-19'

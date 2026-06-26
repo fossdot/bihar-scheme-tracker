@@ -38,6 +38,7 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2024-25
     label: India beneficiaries (cumulative)
+    label_hi: null
     value: 36400000
     unit: persons
     provenance: published
@@ -45,9 +46,11 @@ metrics:
     source_url: >-
       https://www.newsonair.gov.in/rs-18854-crore-disbursed-among-3-64-crore-beneficiaries-of-pm-matru-vandana-yojana-union-minister-annapurna-devi
     note: 'National cumulative since inception. [scope: National]'
+    note_hi: null
   - dimension: budget
     fiscal_year: 2024-25
     label: India disbursed (cumulative)
+    label_hi: null
     value: 18854
     unit: cr
     provenance: published
@@ -55,4 +58,5 @@ metrics:
     source_url: >-
       https://www.newsonair.gov.in/rs-18854-crore-disbursed-among-3-64-crore-beneficiaries-of-pm-matru-vandana-yojana-union-minister-annapurna-devi
     note: '[scope: National]'
+    note_hi: null
 last_verified: '2026-06-19'

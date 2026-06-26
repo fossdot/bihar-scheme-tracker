@@ -39,17 +39,10 @@ status_evidence: >-
 source_url: https://www.medhasoft.bihar.gov.in
 application_portal_url: https://www.medhasoft.bihar.gov.in
 metrics:
-  - dimension: district
-    label: District & demographic breakdown
-    value: null
-    provenance: rti_filed
-    as_of_date: '2026-06-26'
-    note: >-
-      District / social-category / gender splits and per-scheme outcomes not published. RTI
-      filed via Bihar RTI Online to the Social Welfare Department on 26 June 2026; awaiting reply.
   - dimension: beneficiaries
     fiscal_year: 2020–25
     label: Bihar SC/ST students (cumulative)
+    label_hi: null
     value: 978000
     unit: students
     provenance: reported
@@ -57,9 +50,11 @@ metrics:
     source_url: >-
       https://indianmasterminds.com/news/government/bihar-sc-st-students-scholarship-under-mukhyamantri-medhavriti-yojana-202730/
     note: '6-year cumulative (2020–2025). [scope: Bihar]'
+    note_hi: null
   - dimension: budget
     fiscal_year: 2020–25
     label: Bihar disbursed (cumulative)
+    label_hi: null
     value: 941.31
     unit: cr
     provenance: reported
@@ -67,4 +62,20 @@ metrics:
     source_url: >-
       https://indianmasterminds.com/news/government/bihar-sc-st-students-scholarship-under-mukhyamantri-medhavriti-yojana-202730/
     note: '[scope: Bihar]'
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: District & demographic breakdown
+    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
+    value: null
+    unit: null
+    provenance: rti_filed
+    as_of_date: '2026-06-26'
+    source_url: null
+    note: >-
+      District / social-category / gender splits and per-scheme outcomes not published. RTI filed
+      via Bihar RTI Online to the Social Welfare Department on 26 June 2026; awaiting reply.
+    note_hi: >-
+      जिलावार / सामाजिक-श्रेणी / लिंग विवरण एवं योजना-विशिष्ट परिणाम प्रकाशित नहीं। समाज कल्याण
+      विभाग को Bihar RTI Online के माध्यम से जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
 last_verified: '2026-06-19'

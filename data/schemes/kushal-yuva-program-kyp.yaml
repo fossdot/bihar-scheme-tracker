@@ -51,27 +51,9 @@ policies:
   - Saat Nishchay-2 — Yuva Upmission
 metrics:
   - dimension: beneficiaries
-    fiscal_year: '2024-25'
-    label: Cumulative admissions (since inception)
-    value: 2478215
-    unit: persons
-    provenance: reported
-    as_of_date: '2024-07-08'
-    source_url: https://socialwelfare.vikaspedia.in/viewcontent/social-welfare/skill-development/best-practices-on-skill-development/kaushal-yuva-program-in-bihar
-    note: >-
-      ~24.78 lakh cumulative KYP admissions as of 8 Jul 2024 (25 lakh+ certified), across 534 block
-      skill centres. Reported; verify against the BSDM dashboard at skillmissionbihar.org.
-  - dimension: district
-    label: District & demographic breakdown
-    value: null
-    provenance: rti_needed
-    note: >-
-      District-wise and social-category/gender splits not published for this scheme. RTI drafted —
-      see docs/rti/bihar-state-departments.md. Mine public sources first; file for the unpublished
-      splits.
-  - dimension: beneficiaries
     fiscal_year: '2019'
     label: Bihar youth enrolled
+    label_hi: null
     value: 729000
     unit: persons
     provenance: reported
@@ -80,4 +62,35 @@ metrics:
     note: >-
       7.29 lakh enrolled / 4.83 lakh certified (2019 — latest sourceable; newer counts unverified).
       [scope: Bihar]
+    note_hi: null
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: Cumulative admissions (since inception)
+    label_hi: null
+    value: 2478215
+    unit: persons
+    provenance: reported
+    as_of_date: '2024-07-08'
+    source_url: >-
+      https://socialwelfare.vikaspedia.in/viewcontent/social-welfare/skill-development/best-practices-on-skill-development/kaushal-yuva-program-in-bihar
+    note: >-
+      ~24.78 lakh cumulative KYP admissions as of 8 Jul 2024 (25 lakh+ certified), across 534 block
+      skill centres. Reported; verify against the BSDM dashboard at skillmissionbihar.org.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: District & demographic breakdown
+    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
+    value: null
+    unit: null
+    provenance: rti_needed
+    as_of_date: null
+    source_url: null
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI drafted —
+      see docs/rti/bihar-state-departments.md. Mine public sources first; file for the unpublished
+      splits.
+    note_hi: >-
+      इस योजना हेतु जिलावार एवं सामाजिक-श्रेणी / लिंग आधारित विवरण प्रकाशित नहीं — RTI आवश्यक। पहले
+      सार्वजनिक स्रोत खंगालें, फिर अप्रकाशित विवरण हेतु आवेदन करें।
 last_verified: '2026-06-19'

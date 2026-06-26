@@ -41,26 +41,21 @@ application_portal_url: https://pacsonline.bih.nic.in
 policies:
   - Bihar Krishi Road Map (Agriculture Roadmap)
 metrics:
-  - dimension: district
-    label: District & demographic breakdown
-    value: null
-    provenance: rti_needed
-    note: >-
-      District-wise and social-category/gender splits not published for this scheme. RTI
-      needed — draft to be added to docs/rti. Mine public sources first; file for the
-      unpublished splits.
   - dimension: beneficiaries
     fiscal_year: Rabi 2022-23
     label: Bihar farmers paid
+    label_hi: null
     value: 167237
     unit: farmers
     provenance: reported
     as_of_date: '2025-03-12'
     source_url: https://m.bihar.punjabkesari.in/national/news/bihar-fasal-sahayata-yojana-2025-2119117
     note: Farmers paid compensation for Rabi 2022-23 crop loss. [Bihar]
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: Rabi 2025-26
     label: Bihar applications (not yet paid)
+    label_hi: null
     value: 365563
     unit: applications
     provenance: published
@@ -69,22 +64,42 @@ metrics:
     note: >-
       Applications for Rabi 2025-26 on the official Cooperative Dept portal — these are
       APPLICATIONS, not confirmed payouts. [Bihar]
+    note_hi: null
   - dimension: budget
     fiscal_year: Kharif 2023
     label: Bihar disbursed
+    label_hi: null
     value: 32.83
     unit: cr
     provenance: reported
     as_of_date: '2025-04-26'
     source_url: https://bihar.punjabkesari.in/bihar/news/bihar-fasal-sahayata-yojana-2142281
     note: Compensation transferred for Kharif 2023 crop loss. [Bihar]
+    note_hi: null
   - dimension: budget
     fiscal_year: Rabi 2022-23
     label: Bihar disbursed
+    label_hi: null
     value: 122.32
     unit: cr
     provenance: reported
     as_of_date: '2025-03-12'
     source_url: https://m.bihar.punjabkesari.in/national/news/bihar-fasal-sahayata-yojana-2025-2119117
     note: Compensation transferred for Rabi 2022-23 crop loss. [Bihar]
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: District & demographic breakdown
+    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
+    value: null
+    unit: null
+    provenance: rti_needed
+    as_of_date: null
+    source_url: null
+    note: >-
+      District-wise and social-category/gender splits not published for this scheme. RTI needed —
+      draft to be added to docs/rti. Mine public sources first; file for the unpublished splits.
+    note_hi: >-
+      इस योजना हेतु जिलावार एवं सामाजिक-श्रेणी / लिंग आधारित विवरण प्रकाशित नहीं — RTI आवश्यक। पहले
+      सार्वजनिक स्रोत खंगालें, फिर अप्रकाशित विवरण हेतु आवेदन करें।
 last_verified: '2026-06-19'

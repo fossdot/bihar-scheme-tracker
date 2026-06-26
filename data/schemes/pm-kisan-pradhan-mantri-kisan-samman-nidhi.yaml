@@ -42,6 +42,7 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2024-25
     label: Bihar farmers (19th instalment)
+    label_hi: null
     value: 7637000
     unit: persons
     provenance: reported
@@ -49,20 +50,24 @@ metrics:
     source_url: >-
       https://www.newsonair.gov.in/pm-modi-to-release-19th-pm-kisan-installment-%E2%82%B922000-cr-to-benefit-9-8-crore-farmers
     note: '~76.37 lakh Bihar farmers in the 19th instalment (national: 9.8 cr). [scope: Bihar]'
+    note_hi: null
   - dimension: beneficiaries
     fiscal_year: 2025-26
     label: >-
       National PM-KISAN beneficiaries, latest period DEC-MAR 2025-26 (official pmkisan.gov.in
       dashboard) [scope: National]
+    label_hi: null
     value: 94615309
     unit: farmers
     provenance: published
     as_of_date: '2026-06-22'
     source_url: https://pmkisan.gov.in/
     note: '9,46,15,309 farmers, as of 2026-06-22. [scope: National]'
+    note_hi: null
   - dimension: budget
     fiscal_year: 2024-25
     label: Bihar — 19th instalment
+    label_hi: null
     value: 1591
     unit: cr
     provenance: reported
@@ -70,9 +75,11 @@ metrics:
     source_url: >-
       https://www.newsonair.gov.in/pm-modi-to-release-19th-pm-kisan-installment-%E2%82%B922000-cr-to-benefit-9-8-crore-farmers
     note: '[scope: Bihar]'
+    note_hi: null
   - dimension: district
     fiscal_year: 2024-25
     label: District-wise (public)
+    label_hi: null
     value: 282000
     unit: beneficiaries
     provenance: published
@@ -81,4 +88,5 @@ metrics:
     note: >-
       District-wise distribution is published on the PM-KISAN dashboard (e.g. Bhagalpur ~2.82 lakh
       cumulative). [Bihar]
+    note_hi: null
 last_verified: '2026-06-19'

@@ -41,21 +41,25 @@ metrics:
     label: >-
       Cumulative SSY accounts opened (as of Nov 2024; per Rajya Sabha Unstarred Q No.2490) [scope:
       National]
+    label_hi: null
     value: 41000000
     unit: accounts
     provenance: published
     as_of_date: '2024-11-30'
     source_url: https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jan/doc2025121487401.pdf
     note: '4,10,00,000 accounts, as of 2024-11-30. [scope: National]'
+    note_hi: null
   - dimension: budget
     fiscal_year: null
     label: >-
       Cumulative total deposits in SSY accounts (depositor contributions, as of Dec 2025) [scope:
       National]
+    label_hi: null
     value: 333000
     unit: Rs crore
     provenance: published
     as_of_date: '2025-12-31'
     source_url: https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/jan/doc2026121762801.pdf
     note: '3,33,000 Rs crore, as of 2025-12-31. [scope: National]'
+    note_hi: null
 last_verified: '2026-06-19'

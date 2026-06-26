@@ -37,6 +37,7 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2024-25
     label: India subscribers
+    label_hi: null
     value: 4612330
     unit: persons
     provenance: reported
@@ -44,4 +45,5 @@ metrics:
     source_url: >-
       https://visionias.in/current-affairs/news-today/2025-03-05/schemes-in-news/six-years-of-pradhan-mantri-shram-yogi-maandhan-yojana-pm-sym-completed
     note: 'National. [scope: National]'
+    note_hi: null
 last_verified: '2026-06-19'

@@ -49,6 +49,7 @@ metrics:
   - dimension: beneficiaries
     fiscal_year: 2025-26
     label: India houses sanctioned (since launch)
+    label_hi: null
     value: 16400000
     unit: houses
     provenance: reported
@@ -56,4 +57,5 @@ metrics:
     source_url: >-
       https://www.newsonair.gov.in/over-1-64-crore-houses-sanctioned-under-pmay-urban-since-launch-govt
     note: 'National; no clean Bihar-only figure sourced. [scope: National]'
+    note_hi: null
 last_verified: '2026-06-19'
