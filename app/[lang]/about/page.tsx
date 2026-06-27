@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { EvidenceArt } from "@/components/EvidenceArt";
 import { Card } from "@/components/ui";
 import { altLinks } from "@/lib/i18n";
 import { resolveLocale } from "@/lib/locale";
@@ -23,16 +24,19 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
 
   return (
     <div className="space-y-6">
-      <section className="max-w-2xl space-y-1">
-        <h1 className="text-2xl font-semibold tracking-tight text-ink">
-          {L("About the data", "डेटा के बारे में")}
-        </h1>
-        <p className="text-sm text-muted">
-          {L(
-            "How this project decides what's true — and what it won't claim.",
-            "यह परियोजना कैसे तय करती है कि क्या सत्य है — और क्या यह दावा नहीं करेगी।"
-          )}
-        </p>
+      <section className="flex items-center gap-5">
+        <EvidenceArt className="h-auto w-[132px] shrink-0 text-ink" />
+        <div className="max-w-2xl space-y-1">
+          <h1 className="text-2xl font-semibold tracking-tight text-ink">
+            {L("About the data", "डेटा के बारे में")}
+          </h1>
+          <p className="text-sm text-muted">
+            {L(
+              "How this project decides what's true — and what it won't claim.",
+              "यह परियोजना कैसे तय करती है कि क्या सत्य है — और क्या यह दावा नहीं करेगी।"
+            )}
+          </p>
+        </div>
       </section>
 
       <Card icon="info" title={L("What this is", "यह क्या है")}>

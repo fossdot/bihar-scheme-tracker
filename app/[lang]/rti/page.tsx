@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { RtiArt } from "@/components/RtiArt";
 import { ConfigNotice } from "@/components/ui";
 import { altLinks, localizedHref, t, tryT } from "@/lib/i18n";
 import { resolveLocale } from "@/lib/locale";
@@ -64,9 +65,12 @@ export default async function RtiPage({
 
   return (
     <div className="space-y-6">
-      <section className="space-y-1">
-        <h1 className="text-2xl font-semibold tracking-tight text-ink">{t(locale, "rtiTitle")}</h1>
-        <p className="max-w-2xl text-sm text-muted">{t(locale, "rtiSubtitle")}</p>
+      <section className="flex items-center gap-5">
+        <RtiArt className="h-auto w-[132px] shrink-0 text-ink" />
+        <div className="space-y-1">
+          <h1 className="text-2xl font-semibold tracking-tight text-ink">{t(locale, "rtiTitle")}</h1>
+          <p className="max-w-2xl text-sm text-muted">{t(locale, "rtiSubtitle")}</p>
+        </div>
       </section>
 
       {!configured ? (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PoliciesArt } from "@/components/PoliciesArt";
 import { PolicyExplore } from "@/components/PolicyExplore";
 import { ConfigNotice } from "@/components/ui";
 import { altLinks, t } from "@/lib/i18n";
@@ -44,11 +45,14 @@ export default async function PoliciesPage({
 
   return (
     <div className="space-y-6">
-      <section className="space-y-1">
-        <h1 className="text-2xl font-semibold tracking-tight text-ink">
-          {t(locale, "policiesTitle")}
-        </h1>
-        <p className="text-sm text-muted">{t(locale, "policiesSubtitle")}</p>
+      <section className="flex items-center gap-5">
+        <PoliciesArt className="h-auto w-[132px] shrink-0 text-ink" />
+        <div className="space-y-1">
+          <h1 className="text-2xl font-semibold tracking-tight text-ink">
+            {t(locale, "policiesTitle")}
+          </h1>
+          <p className="text-sm text-muted">{t(locale, "policiesSubtitle")}</p>
+        </div>
       </section>
 
       {!configured ? (

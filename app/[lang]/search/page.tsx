@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LiveSearch } from "@/components/LiveSearch";
+import { SchemesArt } from "@/components/SchemesArt";
 import { ConfigNotice } from "@/components/ui";
 import { parseFilters } from "@/lib/facets";
 import { altLinks, t } from "@/lib/i18n";
@@ -59,11 +60,14 @@ export default async function SearchPage({
 
   return (
     <div className="space-y-6">
-      <section className="space-y-1">
-        <h1 className="text-2xl font-semibold tracking-tight text-ink">
-          {t(locale, "exploreTitle")}
-        </h1>
-        <p className="text-sm text-muted">{t(locale, "exploreSubtitle")}</p>
+      <section className="flex items-center gap-5">
+        <SchemesArt className="h-auto w-[132px] shrink-0 text-ink" />
+        <div className="space-y-1">
+          <h1 className="text-2xl font-semibold tracking-tight text-ink">
+            {t(locale, "exploreTitle")}
+          </h1>
+          <p className="text-sm text-muted">{t(locale, "exploreSubtitle")}</p>
+        </div>
       </section>
 
       {!configured ? (

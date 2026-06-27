@@ -1,38 +1,26 @@
-// Decorative mark for the "About this data" panel: records/sources (one verified-green, with a
-// source-link underline) linked along a dashed path to a verified ✓ — "status derived from
-// evidence, never asserted." Same visual family as HeroArt. Ink = currentColor (set `text-*`);
-// single green accent #278F5E. aria-hidden — the panel copy carries the meaning.
+// "About the data" mark: a source document with text lines, a green source-link, and a verified
+// seal — "status derived from evidence, never asserted." Distinct silhouette from the hero field.
+// Used on the homepage coverage panel and the /about page. Ink = currentColor; accent #278F5E.
 export function EvidenceArt({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 180 120"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-hidden="true"
-    >
-      <g stroke="currentColor" strokeWidth="1.5">
-        <circle cx="26" cy="30" r="6" opacity="0.25" />
-        <circle cx="26" cy="90" r="6" opacity="0.25" />
-      </g>
-      <circle cx="26" cy="60" r="6.5" fill="#278F5E" />
-      <polyline
-        points="26,60 92,50 124,38"
-        stroke="#278F5E"
-        strokeWidth="1.4"
-        strokeDasharray="2 6"
-        opacity="0.45"
-        strokeLinecap="round"
-      />
-      <circle cx="138" cy="34" r="14" stroke="#278F5E" strokeWidth="2" />
+    <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
       <path
-        d="M131 34 l5 5 l10 -11"
-        stroke="#278F5E"
-        strokeWidth="2"
-        strokeLinecap="round"
+        d="M150 70 h120 l30 30 v160 h-150 z M270 70 v30 h30"
+        stroke="currentColor"
+        strokeWidth="4"
+        opacity="0.32"
         strokeLinejoin="round"
       />
-      <line x1="40" y1="74" x2="78" y2="74" stroke="#278F5E" strokeWidth="1.4" opacity="0.5" />
+      <g stroke="currentColor" strokeWidth="4" opacity="0.22">
+        <line x1="172" y1="118" x2="278" y2="118" />
+        <line x1="172" y1="144" x2="278" y2="144" />
+        <line x1="172" y1="170" x2="248" y2="170" />
+      </g>
+      <line x1="172" y1="200" x2="238" y2="200" stroke="#278F5E" strokeWidth="4.5" />
+      <line x1="172" y1="214" x2="238" y2="214" stroke="#278F5E" strokeWidth="3" opacity="0.5" />
+      <circle cx="300" cy="234" r="24" fill="rgb(var(--surface))" />
+      <circle cx="300" cy="234" r="19" stroke="#278F5E" strokeWidth="4.5" />
+      <path d="M290 234 l7 7 l13 -15" stroke="#278F5E" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
