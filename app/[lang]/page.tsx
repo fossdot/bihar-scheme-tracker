@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { EvidenceArt } from "@/components/EvidenceArt";
 import { HeroArt } from "@/components/HeroArt";
 import { Icon } from "@/components/Icon";
 import { PolicyBadge } from "@/components/PolicyBadge";
@@ -85,18 +86,22 @@ export default async function Home({ params }: { params: { lang: string } }) {
       </section>
 
       {/* Coverage & confidence — honest about what this catalogue is */}
-      <section className="rounded-md border border-line bg-surface p-5">
-        <h2 className="flex items-center gap-2 text-sm font-semibold text-ink">
-          <Icon name="info" className="h-4 w-4 text-brand" />
-          {t(locale, "coverageTitle")}
-        </h2>
-        <p className="mt-2 text-sm text-muted">{t(locale, "coverageBody")}</p>
-        {verifiedActive > 0 && (
-          <p className="mt-3 text-sm text-ink">
-            <span className="font-semibold text-brand">{verifiedActive}</span>{" "}
-            {t(locale, "coverageStat")}.
-          </p>
-        )}
+      <section className="flex items-center gap-6 rounded-md border border-line bg-surface p-5">
+        <div className="min-w-0 flex-1">
+          <h2 className="flex items-center gap-2 text-sm font-semibold text-ink">
+            <Icon name="info" className="h-4 w-4 text-brand" />
+            {t(locale, "coverageTitle")}
+          </h2>
+          <p className="mt-2 text-sm text-muted">{t(locale, "coverageBody")}</p>
+          {verifiedActive > 0 && (
+            <p className="mt-3 text-sm text-ink">
+              <span className="font-semibold text-brand">{verifiedActive}</span>{" "}
+              {t(locale, "coverageStat")}.
+            </p>
+          )}
+        </div>
+        {/* Decorative — hidden on phones */}
+        <EvidenceArt className="hidden shrink-0 self-center text-ink lg:block lg:w-[150px]" />
       </section>
 
       {/* Counts */}
