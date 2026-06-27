@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HeroArt } from "@/components/HeroArt";
 import { Icon } from "@/components/Icon";
 import { PolicyBadge } from "@/components/PolicyBadge";
 import { Card, FactTile } from "@/components/ui";
@@ -52,31 +53,35 @@ export default async function Home({ params }: { params: { lang: string } }) {
 
   return (
     <div className="space-y-10">
-      <section className="max-w-2xl">
-        <h1 className="text-3xl font-semibold tracking-tight text-ink">
-          {t(locale, "homeTitle")}
-        </h1>
-        <p className="mt-4 text-ink">{t(locale, "homeBody")}</p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href={localizedHref(locale, "/find-my-schemes")}
-            className="inline-flex items-center rounded-md bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark"
-          >
-            {t(locale, "homeCtaFind")} →
-          </Link>
-          <Link
-            href={localizedHref(locale, "/search")}
-            className="inline-flex items-center rounded-md border border-line px-4 py-2 text-sm font-medium text-ink hover:border-ink"
-          >
-            {t(locale, "homeCtaExplore")} →
-          </Link>
-          <Link
-            href={localizedHref(locale, "/policies")}
-            className="inline-flex items-center rounded-md border border-line px-4 py-2 text-sm font-medium text-ink hover:border-ink"
-          >
-            {t(locale, "homeCtaPolicies")} →
-          </Link>
+      <section className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between md:gap-10">
+        <div className="max-w-2xl">
+          <h1 className="text-3xl font-semibold tracking-tight text-ink">
+            {t(locale, "homeTitle")}
+          </h1>
+          <p className="mt-4 text-ink">{t(locale, "homeBody")}</p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              href={localizedHref(locale, "/find-my-schemes")}
+              className="inline-flex items-center rounded-md bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark"
+            >
+              {t(locale, "homeCtaFind")} →
+            </Link>
+            <Link
+              href={localizedHref(locale, "/search")}
+              className="inline-flex items-center rounded-md border border-line px-4 py-2 text-sm font-medium text-ink hover:border-ink"
+            >
+              {t(locale, "homeCtaExplore")} →
+            </Link>
+            <Link
+              href={localizedHref(locale, "/policies")}
+              className="inline-flex items-center rounded-md border border-line px-4 py-2 text-sm font-medium text-ink hover:border-ink"
+            >
+              {t(locale, "homeCtaPolicies")} →
+            </Link>
+          </div>
         </div>
+        {/* Decorative — hidden on phones to keep the hero lean on small/slow devices */}
+        <HeroArt className="hidden shrink-0 text-ink md:block md:w-[300px] lg:w-[360px]" />
       </section>
 
       {/* Coverage & confidence — honest about what this catalogue is */}
