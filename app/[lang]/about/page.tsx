@@ -24,7 +24,7 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
 
   return (
     <div className="space-y-6">
-      <section className="flex items-center gap-5">
+      <section className="flex flex-col-reverse items-start gap-4 md:flex-row md:items-center md:gap-5">
         <EvidenceArt className="h-auto w-[132px] shrink-0 text-ink" />
         <div className="max-w-2xl space-y-1">
           <h1 className="text-2xl font-semibold tracking-tight text-ink">

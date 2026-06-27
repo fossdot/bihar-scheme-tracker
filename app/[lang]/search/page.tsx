@@ -60,7 +60,7 @@ export default async function SearchPage({
 
   return (
     <div className="space-y-6">
-      <section className="flex items-center gap-5">
+      <section className="flex flex-col-reverse items-start gap-4 md:flex-row md:items-center md:gap-5">
         <SchemesArt className="h-auto w-[132px] shrink-0 text-ink" />
         <div className="space-y-1">
           <h1 className="text-2xl font-semibold tracking-tight text-ink">
