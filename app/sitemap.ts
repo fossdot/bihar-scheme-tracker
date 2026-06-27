@@ -23,7 +23,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entry("/search", { changeFrequency: "weekly", priority: 0.9 }),
     entry("/policies", { changeFrequency: "weekly", priority: 0.7 }),
     entry("/find-my-schemes", { changeFrequency: "monthly", priority: 0.6 }),
-    entry("/map", { changeFrequency: "monthly", priority: 0.5 }),
     entry("/about", { changeFrequency: "monthly", priority: 0.4 }),
   ];
   if (!isDbConfigured()) return staticPages;

@@ -8,7 +8,6 @@ import { localizedHref, t, type Locale, type StringKey } from "@/lib/i18n";
 const ITEMS: { path: string; key: StringKey }[] = [
   { path: "/search", key: "navSchemes" },
   { path: "/policies", key: "navPolicies" },
-  { path: "/map", key: "navMap" },
   { path: "/rti", key: "navRti" },
   { path: "/about", key: "navAbout" },
 ];
