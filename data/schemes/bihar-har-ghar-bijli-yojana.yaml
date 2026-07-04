@@ -41,14 +41,14 @@ metrics:
     value: null
     unit: null
     provenance: rti_filed
-    as_of_date: '2026-06-25'
+    as_of_date: '2026-07-02'
     source_url: null
     note: >-
-      District-wise / category splits, connection & outcome figures not published. RTI filed via
-      Bihar RTI Online to the Energy Department (Har Ghar Bijli Yojana; may transfer to
-      NBPDCL/SBPDCL) on 25 June 2026; awaiting reply.
+      District-wise / category splits, connection & outcome figures are not published. RTI filed
+      via the Jankari portal to the Energy Department on 30 June 2026; transferred under RTI Act
+      §6(3) to NBPDCL and SBPDCL on 2 July 2026 — reply awaited.
     note_hi: >-
-      जिलावार / श्रेणीवार विवरण, कनेक्शन एवं परिणाम प्रकाशित नहीं। ऊर्जा विभाग (हर घर बिजली;
-      NBPDCL/SBPDCL को अंतरण संभव) को Bihar RTI Online के माध्यम से जून 2026 में RTI दायर; उत्तर
-      प्रतीक्षित।
+      जिलावार / श्रेणीवार विवरण, कनेक्शन एवं परिणाम प्रकाशित नहीं। ऊर्जा विभाग को जानकारी पोर्टल के
+      माध्यम से 30 जून 2026 को RTI दायर; RTI अधिनियम की धारा 6(3) के तहत 2 जुलाई 2026 को NBPDCL एवं
+      SBPDCL को अंतरित — उत्तर प्रतीक्षित।
 last_verified: '2026-06-19'
