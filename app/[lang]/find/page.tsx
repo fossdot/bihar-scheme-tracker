@@ -62,7 +62,7 @@ export default async function FindPage({
         <p className="text-sm text-muted">
           {q ? (
             <>
-              {total} {total === 1 ? t(locale, "resultsOne") : t(locale, "resultsMany")}{" "}
+              {total} {total === 1 ? t(locale, "genericResultOne") : t(locale, "genericResultMany")}{" "}
               {t(locale, "forQuery")} “{q}”
             </>
           ) : (

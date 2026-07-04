@@ -30,10 +30,13 @@ function diff(from: Date, to: Date) {
   let mo = to.getUTCMonth() - from.getUTCMonth();
   let d = to.getUTCDate() - from.getUTCDate();
   if (d < 0) {
-    const prevMonthDays = new Date(
-      Date.UTC(to.getUTCFullYear(), to.getUTCMonth(), 0)
+    // Borrow a month's worth of days from `from`'s own month (days-in-month of `from`).
+    // Using `from` (not `to`) keeps the day component non-negative for spans that cross a
+    // shorter month — e.g. 2026-01-30 → 2026-03-01 would otherwise yield a negative day.
+    const borrowDays = new Date(
+      Date.UTC(from.getUTCFullYear(), from.getUTCMonth() + 1, 0)
     ).getUTCDate();
-    d += prevMonthDays;
+    d += borrowDays;
     mo -= 1;
   }
   if (mo < 0) {

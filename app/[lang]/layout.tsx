@@ -40,6 +40,13 @@ export default function LangLayout({
 
   return (
     <>
+      {/* Skip link — first focusable element, visible only on keyboard focus (WCAG 2.4.1). */}
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:border focus:border-line focus:bg-surface focus:px-3 focus:py-2 focus:text-sm focus:font-medium focus:text-ink"
+      >
+        {t(locale, "skipToContent")}
+      </a>
       <header className="border-b border-line bg-surface">
         <div className="mx-auto flex max-w-5xl items-center gap-4 px-4 py-3">
           <div className="flex shrink-0 items-center gap-5">
@@ -79,7 +86,7 @@ export default function LangLayout({
           </div>
         </div>
       </header>
-      <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+      <main id="main" tabIndex={-1} className="mx-auto max-w-5xl px-4 py-8 focus:outline-none">{children}</main>
       <Footer locale={locale} />
       <Suspense fallback={null}>
         <ViewBeacon />

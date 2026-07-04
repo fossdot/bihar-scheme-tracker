@@ -49,10 +49,10 @@ export const STRINGS = {
   },
   navExplore: { en: "Explore", hi: "देखें" },
   navSchemes: { en: "Schemes", hi: "योजनाएँ" },
-  navMap: { en: "Map", hi: "मानचित्र" },
   navAbout: { en: "About the data", hi: "डेटा के बारे में" },
   navRti: { en: "RTI tracker", hi: "RTI ट्रैकर" },
   navMenu: { en: "Menu", hi: "मेन्यू" },
+  skipToContent: { en: "Skip to content", hi: "मुख्य सामग्री पर जाएँ" },
   rtiTitle: { en: "RTI tracker", hi: "RTI ट्रैकर" },
   rtiSubtitle: {
     en: "Data Bihar doesn't publish, requested under the Right to Information Act. Every figure we can't source publicly becomes an RTI — the request itself is the evidence trail.",
@@ -68,12 +68,6 @@ export const STRINGS = {
     en: "Source-verified and evidence-based. Status is derived from evidence, never asserted; every figure carries its source.",
     hi: "स्रोत-सत्यापित व प्रमाण-आधारित। स्थिति प्रमाण से निकाली जाती है, दावा नहीं की जाती; हर आँकड़ा अपना स्रोत रखता है।",
   },
-  mapTitle: { en: "Policy map", hi: "नीति मानचित्र" },
-  mapSubtitle: {
-    en: "How schemes sit under Bihar's policy frameworks — tap a policy or a scheme to dive in.",
-    hi: "बिहार की नीतिगत रूपरेखाओं के अंतर्गत योजनाएँ कैसे आती हैं — किसी नीति या योजना पर टैप करें।",
-  },
-  mapEmpty: { en: "No scheme–policy links yet.", hi: "अभी कोई योजना–नीति संबंध नहीं।" },
   searchAllPlaceholder: { en: "Search schemes & policies…", hi: "योजनाएँ व नीतियाँ खोजें…" },
   findTitle: { en: "Search results", hi: "खोज परिणाम" },
   findPrompt: {
@@ -82,6 +76,9 @@ export const STRINGS = {
   },
   findNothing: { en: "Nothing matches", hi: "कुछ मेल नहीं खाता" },
   forQuery: { en: "for", hi: "के लिए" },
+  // Neutral count noun for the global /find results (schemes + policies combined).
+  genericResultOne: { en: "result", hi: "परिणाम" },
+  genericResultMany: { en: "results", hi: "परिणाम" },
 
   // home
   homeTitle: { en: "Bihar’s schemes, honestly tracked", hi: "बिहार की योजनाएँ, ईमानदारी से दर्ज" },
@@ -122,8 +119,8 @@ export const STRINGS = {
     hi: "यह एक चयनित, स्रोत-जाँचित सूची है — बिहार की हर योजना नहीं। स्थिति प्रमाण से ली जाती है (बजट पंक्तियाँ, आधिकारिक पोर्टल, सरकारी अधिसूचनाएँ), हर एक के साथ सत्यापन तिथि व स्रोत लिंक — कभी अनुमानित नहीं। जिन योजनाओं को हमने अभी सत्यापित नहीं किया, वे “संभवतः सक्रिय” दिखती हैं, छिपाई नहीं जातीं। कार्य करने से पहले आधिकारिक पोर्टल पर पुष्टि करें।",
   },
   coverageStat: {
-    en: "verified Active against official sources",
-    hi: "आधिकारिक स्रोतों से सत्यापित सक्रिय",
+    en: "verified active against official sources, each with a current budget line",
+    hi: "आधिकारिक स्रोतों से सत्यापित सक्रिय, प्रत्येक वर्तमान बजट पंक्ति सहित",
   },
   reportIssue: {
     en: "Spotted something wrong or outdated? Report it",
