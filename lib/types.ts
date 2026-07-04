@@ -96,7 +96,8 @@ export type PolicyListItem = Pick<
   | "summary_en"
   | "summary_hi"
   | "categories"
-  | "status"
+  // NOTE: the asserted `status` enum is intentionally excluded — policy display status is
+  // DERIVED (lib/policy.ts) from the fields below, never the stored column (CLAUDE.md).
   | "is_draft"
   | "policy_type"
   | "period_start"
@@ -104,6 +105,7 @@ export type PolicyListItem = Pick<
   | "superseded_by"
   | "consultation_end"
   | "last_verified"
+  | "source_url"
 > & {
   department_en: string | null;
   department_hi: string | null;
@@ -191,6 +193,7 @@ export type SchemeListItem = Pick<
   | "max_age"
   | "last_verified"
   | "last_budget_year"
+  | "source_url"
 > & {
   department_en: string | null;
   department_hi: string | null;

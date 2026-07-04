@@ -53,6 +53,21 @@ for (const { file, data } of schemes) {
   // silently, so the citizen loses the "continue via" link) — hard error, not a warning.
   if (successor_scheme && !schemeNames.has(successor_scheme)) errors.push(`${file}: successor_scheme "${successor_scheme}" not found among schemes (dangling reference)`);
   for (const p of (pols ?? [])) if (!policyNames.has(p)) warnings.push(`${file}: policy "${p}" not found among policies`);
+  // Status discipline (CLAUDE.md taxonomy): 'active' = current budget line and/or recent
+  // notification/disbursement — NOT merely "portal is live" (that's 'likely_active'). Warn when an
+  // 'active' scheme carries no structured signal. Warning, not error: lets affected records be
+  // reclassified without walling CI, and both statuses sit in the Active bucket so no live help is
+  // hidden either way.
+  if (status === "active") {
+    const d = data as Record<string, any>;
+    const hasSignal =
+      !!d.last_budget_year ||
+      !!d.last_notification_date ||
+      (Array.isArray(d.budget_allocations) && d.budget_allocations.length > 0) ||
+      (d.metrics ?? []).some((m: any) => m.dimension === "budget" && m.value != null && m.fiscal_year);
+    if (!hasSignal)
+      warnings.push(`${file}: status 'active' has no structured evidence (last_budget_year / last_notification_date / budget_allocations / recent budget metric) — consider 'likely_active'`);
+  }
   // metrics: enforce the no-fabrication rule (CLAUDE.md) at the data layer.
   for (const m of ((data as Record<string, any>).metrics ?? [])) {
     // Any non-null figure must carry a source — regardless of provenance. No sourceless numbers.

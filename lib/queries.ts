@@ -12,7 +12,6 @@ import type {
   SchemeFilters,
   SchemeListItem,
   SchemeMetric,
-  SchemeStatus,
 } from "./types";
 
 export function isDbConfigured(): boolean {
@@ -76,7 +75,7 @@ export const LIST_LIMIT = 500;
 
 const LIST_COLUMNS = `
   s.id, s.name_en, s.name_hi, s.categories, s.status, s.objective_en, s.objective_hi,
-  s.benefit_type, s.min_age, s.max_age, s.last_verified, s.last_budget_year,
+  s.benefit_type, s.min_age, s.max_age, s.last_verified, s.last_budget_year, s.source_url,
   d.name_en as department_en, d.name_hi as department_hi`;
 const LIST_FROM = "schemes s left join departments d on d.id = s.department_id";
 
@@ -231,11 +230,14 @@ export async function getSchemeDetail(id: string): Promise<SchemeDetail | null> 
       : Promise.resolve<SchemeDetail["successor"]>(null),
     scheme.categories.length
       ? query<SchemeDetail["similar"][number]>(
+          // Mirror the finder's default view: never surface Inactive (lapsed/subsumed/superseded)
+          // schemes in this default rail (CLAUDE.md — Inactive is opt-in only).
           `select id, name_en, name_hi, status, categories
              from schemes
             where id <> $1 and categories && $2::text[]
+              and status = any($3::scheme_status[])
             order by name_en limit 6`,
-          [id, scheme.categories]
+          [id, scheme.categories, statusesForBuckets(DEFAULT_BUCKETS)]
         )
       : Promise.resolve<SchemeDetail["similar"]>([]),
   ]);
@@ -243,10 +245,13 @@ export async function getSchemeDetail(id: string): Promise<SchemeDetail | null> 
   return { scheme, department, allocations, metrics, policies, successor, similar };
 }
 
+// NOTE: the asserted `p.status` enum is deliberately NOT selected — policy display status is
+// DERIVED (lib/policy.ts policyStatusKey) from is_draft/period_end/consultation_end/superseded_by,
+// never the stored column. Callers derive; the API emits the derived value (CLAUDE.md: never asserted).
 const POLICY_LIST_COLUMNS = `
-  p.id, p.name_en, p.name_hi, p.summary_en, p.summary_hi, p.categories, p.status,
+  p.id, p.name_en, p.name_hi, p.summary_en, p.summary_hi, p.categories,
   p.is_draft, p.policy_type, p.period_start, p.period_end, p.superseded_by,
-  p.consultation_end, p.last_verified,
+  p.consultation_end, p.last_verified, p.source_url,
   d.name_en as department_en, d.name_hi as department_hi`;
 
 /** List policies, with optional text search, sector filter, and a drafts-only filter.
@@ -324,66 +329,4 @@ export async function getPolicyDetail(id: string): Promise<PolicyDetail | null> 
     : [];
 
   return { policy, department, successor, schemes, related };
-}
-
-export type PolicyMapGroup = {
-  policy: {
-    id: string;
-    name_en: string;
-    name_hi: string | null;
-    is_draft: boolean;
-    superseded_by: string | null;
-    period_end: string | null;
-    consultation_end: string | null;
-  };
-  schemes: { id: string; name_en: string; name_hi: string | null; status: SchemeStatus }[];
-};
-
-/** Policies that have ≥1 linked scheme, each with its schemes — powers the Map view. */
-export async function getPolicyMap(): Promise<PolicyMapGroup[]> {
-  const rows = await query<{
-    policy_id: string;
-    p_en: string;
-    p_hi: string | null;
-    is_draft: boolean;
-    superseded_by: string | null;
-    period_end: string | null;
-    consultation_end: string | null;
-    scheme_id: string;
-    s_en: string;
-    s_hi: string | null;
-    status: SchemeStatus;
-  }>(
-    `select p.id as policy_id, p.name_en as p_en, p.name_hi as p_hi, p.is_draft,
-            p.superseded_by, p.period_end, p.consultation_end,
-            s.id as scheme_id, s.name_en as s_en, s.name_hi as s_hi, s.status
-       from scheme_policy_links l
-       join policies p on p.id = l.policy_id
-       join schemes s on s.id = l.scheme_id
-      order by p.name_en, s.name_en`
-  );
-  const groups = new Map<string, PolicyMapGroup>();
-  for (const r of rows) {
-    if (!groups.has(r.policy_id)) {
-      groups.set(r.policy_id, {
-        policy: {
-          id: r.policy_id,
-          name_en: r.p_en,
-          name_hi: r.p_hi,
-          is_draft: r.is_draft,
-          superseded_by: r.superseded_by,
-          period_end: r.period_end,
-          consultation_end: r.consultation_end,
-        },
-        schemes: [],
-      });
-    }
-    groups.get(r.policy_id)!.schemes.push({
-      id: r.scheme_id,
-      name_en: r.s_en,
-      name_hi: r.s_hi,
-      status: r.status,
-    });
-  }
-  return Array.from(groups.values());
 }

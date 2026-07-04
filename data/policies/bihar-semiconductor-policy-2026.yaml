@@ -4,16 +4,20 @@ department_en: Industries Department, Government of Bihar
 department_hi: उद्योग विभाग, बिहार सरकार
 department_website: https://industries.bihar.gov.in
 summary_en: >-
-  Recently announced policy to build a semiconductor/electronics ecosystem in Bihar, part of the
-  state's 2026 industrial and technology push. Verify incentives and scope against the official
-  policy document.
+  Bihar's framework to build a semiconductor and electronics manufacturing ecosystem, approved by
+  the state cabinet in February 2026. Offers land, stamp-duty and capital incentives to attract
+  chip fabrication and ATMP investment, overseen by a dedicated Bihar Semiconductor Mission. Verify
+  incentive specifics and eligibility against the official policy document.
 summary_hi: >-
-  बिहार में सेमीकंडक्टर/इलेक्ट्रॉनिक्स पारिस्थितिकी तंत्र बनाने हेतु हाल में घोषित नीति। प्रोत्साहन
-  एवं दायरा आधिकारिक दस्तावेज़ से सत्यापित करें।
+  सेमीकंडक्टर व इलेक्ट्रॉनिक्स विनिर्माण पारिस्थितिकी तंत्र बनाने हेतु बिहार की रूपरेखा, फरवरी 2026 में
+  राज्य कैबिनेट द्वारा अनुमोदित। चिप निर्माण व ATMP निवेश आकर्षित करने हेतु भूमि, स्टांप शुल्क व पूँजी
+  प्रोत्साहन; एक समर्पित बिहार सेमीकंडक्टर मिशन द्वारा निगरानी। प्रोत्साहन विवरण व पात्रता आधिकारिक नीति
+  दस्तावेज़ से सत्यापित करें।
 categories:
   - industry
 policy_type: framework
 status: active
 is_draft: false
-source_url: https://yourstory.com/2026/03/bihar-startup-industrial-ecosystem-policy-investment-growth
-last_verified: '2026-06-19'
+source_url: https://betastate.bihar.gov.in/industries/DyPageView?PageTitleID=1097
+document_url: https://betastate.bihar.gov.in/file_2/FileUpload/2026/Feb/03-Feb-2026/40/DyPage/62f1ae11-6b6b-4993-83c7-60870d10c071.pdf
+last_verified: '2026-07-04'

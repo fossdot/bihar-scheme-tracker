@@ -162,7 +162,7 @@ export default async function SchemeDetailPage({
     <div className="space-y-6">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
       <BackLink locale={locale} />
       <div
@@ -446,6 +446,17 @@ function provClass(p: string): string {
   return "text-muted ring-line"; // rti_needed, public_todo, estimated
 }
 
+// Provenance trust ranking (higher = stronger). When a dimension mixes provenances across its
+// valued rows, the badge collapses to the WEAKEST present, so a 'reported'/'estimated' figure is
+// never shown under a stronger 'Published' label (CLAUDE.md no-fabrication: each figure keeps its
+// own provenance; the collapsed badge must never overstate).
+const PROV_TRUST: Record<string, number> = {
+  published: 4,
+  rti_received: 3,
+  reported: 2,
+  estimated: 1,
+};
+
 function DataImpact({
   metrics,
   allocations,
@@ -534,11 +545,17 @@ function DataImpact({
       <div className="mt-2 divide-y divide-line rounded-md border border-line">
         {DIMENSIONS.map((dim) => {
           const rows = byDim(dim);
-          const valued = rows.find((r) => r.value != null);
+          const valuedRows = rows.filter((r) => r.value != null);
           const statusRow = rows.find((r) => r.fiscal_year === null) ?? rows[0];
-          // Budget/beneficiaries are PUBLIC: when absent they're "to add", never "RTI needed".
-          const key = valued
-            ? valued.provenance
+          // Collapse the badge to the most cautious provenance among valued rows (never hide a
+          // weaker one under a stronger label). Budget/beneficiaries are PUBLIC: when absent
+          // they're "to add", never "RTI needed".
+          const key = valuedRows.length
+            ? valuedRows.reduce((weakest, r) =>
+                (PROV_TRUST[r.provenance] ?? 0) < (PROV_TRUST[weakest.provenance] ?? 0)
+                  ? r
+                  : weakest
+              ).provenance
             : statusRow
               ? statusRow.provenance
               : DIM_PUBLIC.has(dim)
