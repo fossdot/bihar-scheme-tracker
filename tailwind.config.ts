@@ -26,7 +26,8 @@ const config: Config = {
         line: v("--line"), // 1px borders & dividers
         paper: v("--paper"), // subtle inset surface (table headers, code, insets)
         brand: {
-          DEFAULT: v("--brand"), // FOSS United green
+          DEFAULT: v("--brand"), // FOSS United green (decorative accent)
+          strong: v("--brand-strong"), // AA-contrast variant for link/CTA text & button fills
           dark: v("--brand-dark"), // hover / pressed
         },
         danger: v("--danger"), // destructive actions & errors

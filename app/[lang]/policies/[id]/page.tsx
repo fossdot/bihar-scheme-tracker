@@ -204,7 +204,7 @@ export default async function PolicyDetailPage({
                 href={primary.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark sm:w-auto sm:justify-start"
+                className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-brand-strong px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark sm:w-auto sm:justify-start"
               >
                 <Icon name="external" className="h-4 w-4" />
                 {primary.label}
@@ -284,7 +284,7 @@ export default async function PolicyDetailPage({
                 href={policy.consultation_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-md border border-brand px-3 py-1.5 text-sm font-medium text-brand hover:bg-brand hover:text-white"
+                className="inline-flex items-center gap-1.5 rounded-md border border-brand px-3 py-1.5 text-sm font-medium text-brand-strong hover:bg-brand-strong hover:text-white"
               >
                 <Icon name="external" className="h-4 w-4" />
                 {t(locale, "goToConsultation")}
@@ -313,7 +313,7 @@ export default async function PolicyDetailPage({
           </span>
           <Link
             href={localizedHref(locale, `/policies/${successor.id}`)}
-            className="font-medium text-brand underline underline-offset-2"
+            className="font-medium text-brand-strong underline underline-offset-2"
           >
             {pick(locale, successor.name_en, successor.name_hi)}
           </Link>
@@ -374,7 +374,7 @@ function PolicyImpact({ locale }: { locale: Locale }) {
 
 function BackLink({ locale }: { locale: Locale }) {
   return (
-    <Link href={localizedHref(locale, "/policies")} className="text-sm font-medium text-brand hover:underline">
+    <Link href={localizedHref(locale, "/policies")} className="text-sm font-medium text-brand-strong hover:underline">
       {t(locale, "backToPolicies")}
     </Link>
   );
@@ -388,7 +388,7 @@ function SourceLink({ label, url }: { label: string; url: string }) {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="break-all font-medium text-brand underline underline-offset-2"
+        className="break-all font-medium text-brand-strong underline underline-offset-2"
       >
         {hostLabel(url)} ↗
       </a>

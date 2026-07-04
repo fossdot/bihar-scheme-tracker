@@ -100,7 +100,7 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-brand underline underline-offset-2"
+                className="font-medium text-brand-strong underline underline-offset-2"
               >
                 {label} ↗
               </a>

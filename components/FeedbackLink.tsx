@@ -14,7 +14,7 @@ export function FeedbackLink({ entity, label }: { entity: string; label: string 
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1.5 text-sm font-medium text-brand hover:underline"
+      className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-strong hover:underline"
     >
       <Icon name="info" className="h-4 w-4" />
       {label}

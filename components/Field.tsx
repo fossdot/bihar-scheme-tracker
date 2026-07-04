@@ -31,7 +31,7 @@ export function Field({
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-medium text-brand underline underline-offset-2"
+                className="text-sm font-medium text-brand-strong underline underline-offset-2"
               >
                 {t(locale, "verifyAtSource")}
               </a>

@@ -201,7 +201,7 @@ export default async function SchemeDetailPage({
                 href={scheme.application_portal_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark sm:w-auto sm:justify-start"
+                className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-brand-strong px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark sm:w-auto sm:justify-start"
               >
                 <Icon name="external" className="h-4 w-4" />
                 {t(locale, "applyCta")}
@@ -223,7 +223,7 @@ export default async function SchemeDetailPage({
                 {i > 0 && ", "}
                 <Link
                   href={localizedHref(locale, `/policies/${p.id}`)}
-                  className="font-medium text-brand hover:underline"
+                  className="font-medium text-brand-strong hover:underline"
                 >
                   {pick(locale, p.name_en, p.name_hi)}
                 </Link>
@@ -239,7 +239,7 @@ export default async function SchemeDetailPage({
           <span className="text-ink">{t(locale, "inactiveSuccessor")} </span>
           <Link
             href={localizedHref(locale, `/schemes/${successor.id}`)}
-            className="font-medium text-brand underline underline-offset-2"
+            className="font-medium text-brand-strong underline underline-offset-2"
           >
             {pick(locale, successor.name_en, successor.name_hi)}
           </Link>
@@ -441,7 +441,7 @@ const DIM_NOTE: Record<MetricDimension, { en: string; hi: string }> = {
 };
 
 function provClass(p: string): string {
-  if (p === "published" || p === "rti_received") return "text-brand ring-brand/40";
+  if (p === "published" || p === "rti_received") return "text-brand-strong ring-brand/40";
   if (p === "reported" || p === "rti_filed") return "text-warn ring-warn/40";
   return "text-muted ring-line"; // rti_needed, public_todo, estimated
 }
@@ -656,7 +656,7 @@ function Meta({ label, value }: { label: string; value: string | null }) {
 
 function BackLink({ locale }: { locale: Locale }) {
   return (
-    <Link href={localizedHref(locale, "/search")} className="text-sm font-medium text-brand hover:underline">
+    <Link href={localizedHref(locale, "/search")} className="text-sm font-medium text-brand-strong hover:underline">
       {t(locale, "backToExplore")}
     </Link>
   );
@@ -668,7 +668,7 @@ function SourceChip({ url }: { url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 font-medium text-brand underline underline-offset-2"
+      className="inline-flex items-center gap-1 font-medium text-brand-strong underline underline-offset-2"
     >
       {hostLabel(url)} ↗
     </a>
@@ -683,7 +683,7 @@ function SourceLink({ label, url }: { label: string; url: string }) {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="break-all font-medium text-brand underline underline-offset-2"
+        className="break-all font-medium text-brand-strong underline underline-offset-2"
       >
         {url} ↗
       </a>

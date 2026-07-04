@@ -27,7 +27,7 @@ export default function FindMySchemesPage({ params }: { params: { lang: string }
         <p className="text-muted">{t(locale, "findIntro")}</p>
         <p className="text-sm text-muted">
           {t(locale, "orBrowse")}{" "}
-          <Link href={localizedHref(locale, "/search")} className="font-medium text-brand hover:underline">
+          <Link href={localizedHref(locale, "/search")} className="font-medium text-brand-strong hover:underline">
             {t(locale, "browseAll")}
           </Link>
         </p>

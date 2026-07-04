@@ -33,7 +33,7 @@ function Chip({
       aria-pressed={selected}
       className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
         selected
-          ? "border-brand bg-brand text-white"
+          ? "border-brand bg-brand-strong text-white"
           : "border-line bg-surface text-ink hover:border-ink"
       }`}
     >
@@ -184,7 +184,7 @@ export function GuidedFinder({ locale }: { locale: Locale }) {
       <div className="flex flex-wrap items-center gap-3">
         <button
           type="button" onClick={submit} disabled={loading}
-          className="inline-flex items-center gap-2 rounded-md bg-brand px-5 py-2.5 text-sm font-medium text-white hover:bg-brand-dark disabled:opacity-60"
+          className="inline-flex items-center gap-2 rounded-md bg-brand-strong px-5 py-2.5 text-sm font-medium text-white hover:bg-brand-dark disabled:opacity-60"
         >
           <Icon name="search" className="h-4 w-4" />
           {loading ? t(locale, "searching") : t(locale, "showMySchemes")}
@@ -227,7 +227,7 @@ export function GuidedFinder({ locale }: { locale: Locale }) {
                           {pick(locale, s.objective_en, s.objective_hi)}
                         </p>
                       )}
-                      <span className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-brand">
+                      <span className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-brand-strong">
                         {t(locale, "viewDetails")} →
                       </span>
                     </Link>

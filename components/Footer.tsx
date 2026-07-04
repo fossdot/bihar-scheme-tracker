@@ -2,14 +2,14 @@ import Link from "next/link";
 import { localizedHref, t, type Locale } from "@/lib/i18n";
 
 // Site-wide footer (rendered in the [lang] layout, so it appears on every public page —
-// home, search, schemes, policies, map, about, detail pages). Attribution + quick links.
+// home, search, schemes, policies, about, detail pages). Attribution + quick links.
 export function Footer({ locale }: { locale: Locale }) {
   const bodhya = (
     <a
       href="https://bodhya.net"
       target="_blank"
       rel="noopener noreferrer"
-      className="font-medium text-brand hover:underline"
+      className="font-medium text-brand-strong hover:underline"
     >
       Bodhya ↗
     </a>

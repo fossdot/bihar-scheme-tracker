@@ -317,7 +317,7 @@ export function LiveSearch({
               <button
                 type="button"
                 onClick={() => setState(defaultState())}
-                className="text-sm font-medium text-brand hover:underline"
+                className="text-sm font-medium text-brand-strong hover:underline"
               >
                 {t(locale, "clearAll")}
               </button>
@@ -485,7 +485,7 @@ export function LiveSearch({
                           onClick={() => setResultView(v)}
                           className={
                             on
-                              ? "bg-brand px-2.5 py-1 font-medium text-white"
+                              ? "bg-brand-strong px-2.5 py-1 font-medium text-white"
                               : "bg-surface px-2.5 py-1 text-ink hover:bg-paper"
                           }
                         >
@@ -632,7 +632,7 @@ function Pager({
             onClick={() => onGo(pg)}
             className={
               pg === current
-                ? "min-w-[2.25rem] rounded-md border border-brand bg-brand px-2.5 py-1 text-sm font-medium text-white"
+                ? "min-w-[2.25rem] rounded-md border border-brand bg-brand-strong px-2.5 py-1 text-sm font-medium text-white"
                 : "min-w-[2.25rem] rounded-md border border-line bg-surface px-2.5 py-1 text-sm text-ink hover:border-ink"
             }
           >
@@ -718,7 +718,7 @@ function Chip({
       onClick={onClick}
       className={
         on
-          ? "rounded-md border border-brand bg-brand px-2.5 py-1 text-sm font-medium text-white"
+          ? "rounded-md border border-brand bg-brand-strong px-2.5 py-1 text-sm font-medium text-white"
           : "rounded-md border border-line bg-surface px-2.5 py-1 text-sm text-ink hover:border-ink"
       }
     >

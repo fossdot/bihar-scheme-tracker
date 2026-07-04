@@ -16,7 +16,7 @@ export default function NotFound() {
       </p>
       <Link
         href="/"
-        className="mt-6 inline-flex items-center rounded-md bg-brand px-5 py-2.5 text-sm font-medium text-white hover:bg-brand-dark"
+        className="mt-6 inline-flex items-center rounded-md bg-brand-strong px-5 py-2.5 text-sm font-medium text-white hover:bg-brand-dark"
       >
         Back to home · होम पर लौटें
       </Link>

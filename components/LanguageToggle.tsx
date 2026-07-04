@@ -42,7 +42,7 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
             className={
               "inline-flex h-8 min-w-[2.25rem] items-center justify-center px-2 text-xs " +
               (active
-                ? "bg-brand font-medium text-white"
+                ? "bg-brand-strong font-medium text-white"
                 : "bg-surface text-ink hover:bg-paper")
             }
           >

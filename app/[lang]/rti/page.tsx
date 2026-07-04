@@ -22,7 +22,7 @@ export function generateMetadata({ params }: { params: { lang: string } }): Meta
 
 // RTI lifecycle pill colour — mirrors the scheme detail page's provClass.
 function provClass(p: string): string {
-  if (p === "rti_received") return "text-brand ring-brand/40";
+  if (p === "rti_received") return "text-brand-strong ring-brand/40";
   if (p === "rti_filed") return "text-warn ring-warn/40";
   return "text-muted ring-line"; // rti_needed
 }
@@ -94,7 +94,7 @@ export default async function RtiPage({
                   aria-current={isActive ? "page" : undefined}
                   className={`rounded-full border px-3 py-1 ${
                     isActive
-                      ? "border-brand bg-brand/5 font-medium text-brand"
+                      ? "border-brand bg-brand/5 font-medium text-brand-strong"
                       : "border-line text-muted hover:text-ink"
                   }`}
                 >
@@ -127,7 +127,7 @@ export default async function RtiPage({
                     <td className="px-3 py-3">
                       <Link
                         href={localizedHref(locale, `/schemes/${r.scheme_id}`)}
-                        className="font-medium text-ink hover:text-brand"
+                        className="font-medium text-ink hover:text-brand-strong"
                       >
                         {name}
                       </Link>
@@ -140,7 +140,7 @@ export default async function RtiPage({
                           href={r.source_url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-0.5 inline-block text-xs text-brand hover:underline"
+                          className="mt-0.5 inline-block text-xs text-brand-strong hover:underline"
                         >
                           {r.source_url.replace(/^https?:\/\//, "").slice(0, 48)}
                         </a>

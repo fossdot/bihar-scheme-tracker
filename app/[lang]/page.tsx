@@ -63,7 +63,7 @@ export default async function Home({ params }: { params: { lang: string } }) {
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href={localizedHref(locale, "/find-my-schemes")}
-              className="inline-flex items-center rounded-md bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark"
+              className="inline-flex items-center rounded-md bg-brand-strong px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark"
             >
               {t(locale, "homeCtaFind")} →
             </Link>
@@ -89,13 +89,13 @@ export default async function Home({ params }: { params: { lang: string } }) {
       <section className="flex items-center gap-6 rounded-md border border-line bg-surface p-5">
         <div className="min-w-0 flex-1">
           <h2 className="flex items-center gap-2 text-sm font-semibold text-ink">
-            <Icon name="info" className="h-4 w-4 text-brand" />
+            <Icon name="info" className="h-4 w-4 text-brand-strong" />
             {t(locale, "coverageTitle")}
           </h2>
           <p className="mt-2 text-sm text-muted">{t(locale, "coverageBody")}</p>
           {verifiedActive > 0 && (
             <p className="mt-3 text-sm text-ink">
-              <span className="font-semibold text-brand">{verifiedActive}</span>{" "}
+              <span className="font-semibold text-brand-strong">{verifiedActive}</span>{" "}
               {t(locale, "coverageStat")}.
             </p>
           )}

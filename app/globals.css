@@ -11,8 +11,9 @@
   --muted: 107 114 128; /* #6B7280 */
   --line: 229 229 229; /* #E5E5E5 */
   --paper: 250 250 250; /* #FAFAFA */
-  --brand: 39 143 94; /* #278F5E — FOSS United green */
-  --brand-dark: 31 122 79; /* #1F7A4F */
+  --brand: 39 143 94; /* #278F5E — FOSS United green (decorative accent: dots, bars, borders) */
+  --brand-strong: 31 122 79; /* #1F7A4F — AA-contrast green for link/CTA TEXT & button fills (5.3:1) */
+  --brand-dark: 23 92 60; /* #175C3C — button hover / pressed */
   --danger: 220 38 38; /* #DC2626 */
   --warn: 180 83 9; /* #B45309 */
 }
@@ -25,7 +26,8 @@
   --line: 42 42 46;
   --paper: 28 28 31;
   --brand: 52 168 110; /* slightly lighter green for contrast on dark */
-  --brand-dark: 39 143 94;
+  --brand-strong: 52 168 110; /* #34A86E — already AA on dark; text/CTA use the accent as-is */
+  --brand-dark: 39 143 94; /* #278F5E — button hover / pressed on dark */
   --danger: 248 113 113;
   --warn: 217 119 6;
 }

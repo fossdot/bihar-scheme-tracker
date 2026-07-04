@@ -102,7 +102,7 @@ export function AdminClient() {
         <button
           type="submit"
           disabled={busy || !key}
-          className="rounded-md bg-brand px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark disabled:opacity-60"
+          className="rounded-md bg-brand-strong px-4 py-2 text-sm font-medium text-white hover:bg-brand-dark disabled:opacity-60"
         >
           {busy ? "Checking…" : "Unlock"}
         </button>
