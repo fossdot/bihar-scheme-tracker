@@ -27,3 +27,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 freshness.md
+
+# primary-source PDFs kept locally as evidence, not in git (re-downloadable from cited URLs)
+/docs/sources/

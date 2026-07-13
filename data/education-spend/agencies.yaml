@@ -1,0 +1,76 @@
+# Education-spend module — implementing agencies (standalone `education` schema).
+# `parent` is a self-reference by name_en; `department_en` is an optional soft (FK-less)
+# link to the registry's departments. Every row carries a source_url + last_verified.
+
+- name_en: Education Department
+  name_hi: शिक्षा विभाग
+  abbrev: EdDept
+  agency_type: department
+  website: https://state.bihar.gov.in/educationbihar
+  source_url: https://state.bihar.gov.in/educationbihar
+  last_verified: 2026-07-13
+
+- name_en: Bihar Education Project Council
+  name_hi: बिहार शिक्षा परियोजना परिषद्
+  abbrev: BEPC
+  agency_type: society
+  parent: Education Department
+  website: https://www.bepcssa.in
+  source_url: https://www.bepcssa.in/en/about.php
+  last_verified: 2026-07-13
+  note_en: Single Nodal Agency for Samagra Shiksha in Bihar; funds are booked as expenditure the moment they are transferred to it.
+
+- name_en: SCERT Bihar
+  name_hi: राज्य शैक्षिक अनुसंधान एवं प्रशिक्षण परिषद्, बिहार
+  abbrev: SCERT
+  agency_type: directorate
+  parent: Education Department
+  website: https://scert.bihar.gov.in
+  source_url: https://scert.bihar.gov.in
+  last_verified: 2026-07-13
+
+- name_en: Bihar Skill Development Mission
+  name_hi: बिहार कौशल विकास मिशन
+  abbrev: BSDM
+  agency_type: mission
+  parent: Youth, Employment & Skill Development Department
+  website: https://www.biharskilldevelopmentmission.in
+  source_url: https://skillmissionbihar.org
+  last_verified: 2026-07-13
+  note_en: Registered society (Reg. 896/2010-11); nodal for state skilling incl. Kushal Yuva Program. Moved under the new YESD Department (Dec 2025).
+
+- name_en: Youth, Employment & Skill Development Department
+  name_hi: युवा, रोजगार एवं कौशल विकास विभाग
+  abbrev: YESD
+  agency_type: department
+  website: https://state.bihar.gov.in/yesd
+  source_url: https://state.bihar.gov.in/yesd
+  last_verified: 2026-07-13
+  note_en: Created by the Bihar cabinet on 09.12.2025; BSDM and the Directorate of Employment & Training moved here from Labour Resources.
+
+- name_en: Higher Education Department
+  name_hi: उच्च शिक्षा विभाग
+  abbrev: HED
+  agency_type: department
+  source_url: https://state.bihar.gov.in/educationbihar
+  last_verified: 2026-07-13
+  note_en: Carved out as a separate department by the Bihar cabinet on 09.12.2025 (previously a Directorate under the Education Department); no public portal yet.
+
+- name_en: Bihar State Higher Education Council
+  name_hi: बिहार राज्य उच्च शिक्षा परिषद्
+  abbrev: BSHEC
+  agency_type: council
+  parent: Higher Education Department
+  website: https://bshec.bihar.gov.in
+  source_url: https://bshec.bihar.gov.in
+  last_verified: 2026-07-13
+  note_en: State implementing unit for PM-USHA / RUSA; publishes no budget, release, or State Higher Education Plan data.
+
+- name_en: Panchayati Raj Department
+  name_hi: पंचायती राज विभाग
+  abbrev: PRD
+  agency_type: department
+  website: https://state.bihar.gov.in/biharprd
+  source_url: https://state.bihar.gov.in/biharprd
+  last_verified: 2026-07-13
+  note_en: Largest UC defaulter in the state (₹28,154 cr outstanding, 31 Mar 2024); nodal for RGSA panchayat-training funds.

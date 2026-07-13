@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Education-spend funding programmes",
+  "description": "Money-side programmes with per-stage (approved/released/spent) allocations and finer expenditure lines. `scheme_en` is a SOFT link to the registry's schemes. Every figure carries its own provenance + source (no-fabrication rule).",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["name_en", "funding_source", "source_url"],
+    "properties": {
+      "name_en": { "type": "string", "minLength": 2 },
+      "name_hi": { "type": ["string", "null"] },
+      "funding_source": { "enum": ["centrally_sponsored", "central_sector", "state_scheme", "externally_aided", "mixed"] },
+      "centre_share_pct": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+      "state_share_pct": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+      "parent_programme": { "type": ["string", "null"] },
+      "scheme_en": { "type": ["string", "null"], "description": "soft link to registry schemes by name_en" },
+      "source_url": { "type": "string", "format": "uri" },
+      "last_verified": { "type": ["string", "null"], "format": "date" },
+      "note_en": { "type": ["string", "null"] },
+      "note_hi": { "type": ["string", "null"] },
+      "agencies": {
+        "type": "array",
+        "items": {
+          "type": "object", "additionalProperties": false, "required": ["agency", "role"],
+          "properties": {
+            "agency": { "type": "string" },
+            "role": { "enum": ["nodal", "co_implementer", "conductor", "funder", "other"] },
+            "note_en": { "type": ["string", "null"] }
+          }
+        }
+      },
+      "allocations": { "type": "array", "items": { "$ref": "#/definitions/allocation" } },
+      "expenditure_lines": { "type": "array", "items": { "$ref": "#/definitions/expline" } }
+    }
+  },
+  "definitions": {
+    "prov": { "type": ["string", "null"], "enum": ["published", "reported", "rti_received", "rti_filed", "rti_needed", "estimated", null] },
+    "allocation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["fiscal_year", "last_verified"],
+      "properties": {
+        "fiscal_year": { "type": "string" },
+        "agency": { "type": ["string", "null"] },
+        "district": { "type": ["string", "null"] },
+        "approved_cr": { "type": ["number", "null"], "minimum": 0 },
+        "approved_provenance": { "$ref": "#/definitions/prov" },
+        "approved_source_url": { "type": ["string", "null"], "format": "uri" },
+        "approved_source_doc": { "type": ["string", "null"] },
+        "released_cr": { "type": ["number", "null"], "minimum": 0 },
+        "released_centre_cr": { "type": ["number", "null"], "minimum": 0 },
+        "released_state_cr": { "type": ["number", "null"], "minimum": 0 },
+        "released_provenance": { "$ref": "#/definitions/prov" },
+        "released_source_url": { "type": ["string", "null"], "format": "uri" },
+        "released_source_doc": { "type": ["string", "null"] },
+        "spent_cr": { "type": ["number", "null"], "minimum": 0 },
+        "spent_provenance": { "$ref": "#/definitions/prov" },
+        "spent_source_url": { "type": ["string", "null"], "format": "uri" },
+        "spent_source_doc": { "type": ["string", "null"] },
+        "as_of_date": { "type": ["string", "null"], "format": "date" },
+        "last_verified": { "type": "string", "format": "date" },
+        "note_en": { "type": ["string", "null"] },
+        "note_hi": { "type": ["string", "null"] }
+      }
+    },
+    "expline": {
+      "type": "object", "additionalProperties": false,
+      "required": ["fiscal_year", "category", "last_verified"],
+      "properties": {
+        "fiscal_year": { "type": "string" },
+        "agency": { "type": ["string", "null"] },
+        "district": { "type": ["string", "null"] },
+        "category": { "enum": ["salaries", "infrastructure_civil", "training", "scholarships_dbt", "procurement_hardware", "procurement_software", "textbooks_content", "mid_day_meal", "consultancy", "administration", "other"] },
+        "education_stage": { "enum": ["pre_primary", "elementary", "secondary", "senior_secondary", "higher_degree", "skill_vocational", "teacher_education", "all_stages", "not_applicable"] },
+        "beneficiary_type": { "enum": ["students", "teachers_in_service", "teachers_pre_service", "non_teaching_staff", "pri_representatives", "frontline_workers", "government_officials", "mixed", "not_applicable"] },
+        "approved_cr": { "type": ["number", "null"], "minimum": 0 },
+        "approved_provenance": { "$ref": "#/definitions/prov" },
+        "approved_source_url": { "type": ["string", "null"], "format": "uri" },
+        "approved_source_doc": { "type": ["string", "null"] },
+        "spent_cr": { "type": ["number", "null"], "minimum": 0 },
+        "spent_provenance": { "$ref": "#/definitions/prov" },
+        "spent_source_url": { "type": ["string", "null"], "format": "uri" },
+        "spent_source_doc": { "type": ["string", "null"] },
+        "as_of_date": { "type": ["string", "null"], "format": "date" },
+        "last_verified": { "type": "string", "format": "date" },
+        "note_en": { "type": ["string", "null"] },
+        "note_hi": { "type": ["string", "null"] }
+      }
+    }
+  }
+}
