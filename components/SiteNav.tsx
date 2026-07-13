@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { localizedHref, t, type Locale, type StringKey } from "@/lib/i18n";
 
 const ITEMS: { path: string; key: StringKey }[] = [
+  { path: "/education", key: "navEducation" },
   { path: "/search", key: "navSchemes" },
   { path: "/policies", key: "navPolicies" },
   { path: "/rti", key: "navRti" },

@@ -372,6 +372,29 @@ export const STRINGS = {
   pdim_jobs: { en: "Jobs / employment", hi: "रोज़गार" },
   pdim_units: { en: "Units / approvals", hi: "इकाइयाँ / स्वीकृतियाँ" },
   pdim_outlay: { en: "Budget outlay", hi: "बजट परिव्यय" },
+
+  // education-spend module ("where the money goes")
+  navEducation: { en: "Education money", hi: "शिक्षा का पैसा" },
+  eduTitle: { en: "Where Bihar’s education money goes", hi: "बिहार का शिक्षा-धन कहाँ जाता है" },
+  eduSubtitle: {
+    en: "What each major education programme was allocated, and how much was actually spent — every figure with its source. An early slice; more programmes to come.",
+    hi: "हर बड़ी शिक्षा योजना को कितना आवंटित हुआ और वास्तव में कितना खर्च हुआ — हर आँकड़ा अपने स्रोत सहित। यह एक शुरुआती हिस्सा है; और योजनाएँ आनी बाकी हैं।",
+  },
+  eduProgrammes: { en: "Programme by programme", hi: "योजना-दर-योजना" },
+  eduSpentOf: { en: "spent of", hi: "में से खर्च" },
+  eduPctSpent: { en: "spent", hi: "खर्च" },
+  eduUnspentSuffix: { en: "set aside but not spent", hi: "आवंटित, पर खर्च नहीं" },
+  eduSpendRtiNeeded: { en: "spend not published — RTI needed", hi: "व्यय अप्रकाशित — RTI आवश्यक" },
+  eduNodal: { en: "Nodal", hi: "नोडल" },
+  eduStatProgrammes: { en: "Programmes tracked", hi: "दर्ज योजनाएँ" },
+  eduStatFlagged: { en: "Flagged by audit", hi: "ऑडिट में चिह्नित" },
+  eduStatRti: { en: "Figures awaiting RTI", hi: "RTI-प्रतीक्षित आँकड़े" },
+  eduAuditTitle: { en: "What the auditors found", hi: "ऑडिट में क्या मिला" },
+  eduAuditFlagged: { en: "flagged", hi: "चिह्नित" },
+  eduSourceNote: {
+    en: "Bihar figures from CAG audit reports; “spent” is what the accounts record. Where end-use below the agency isn’t published, we file an RTI rather than show a guess.",
+    hi: "बिहार के आँकड़े CAG ऑडिट रिपोर्टों से; “खर्च” वही है जो लेखा दर्ज करता है। जहाँ एजेंसी के नीचे अंतिम उपयोग प्रकाशित नहीं, वहाँ अनुमान के बजाय हम RTI दायर करते हैं।",
+  },
 } as const;
 
 export type StringKey = keyof typeof STRINGS;
