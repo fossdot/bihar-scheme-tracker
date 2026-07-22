@@ -30,6 +30,12 @@ export function Footer({ locale }: { locale: Locale }) {
             </p>
           </div>
           <nav className="flex flex-wrap gap-x-5 gap-y-2">
+            <Link href={localizedHref(locale, "/search")} className="hover:text-ink">
+              {t(locale, "navSchemes")}
+            </Link>
+            <Link href={localizedHref(locale, "/policies")} className="hover:text-ink">
+              {t(locale, "navPolicies")}
+            </Link>
             <Link href={localizedHref(locale, "/about")} className="hover:text-ink">
               {t(locale, "navAbout")}
             </Link>

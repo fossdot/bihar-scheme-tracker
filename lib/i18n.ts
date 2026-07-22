@@ -42,12 +42,19 @@ export function pick(
 
 export const STRINGS = {
   // header / nav
-  appName: { en: "Bihar Scheme Tracker", hi: "बिहार योजना ट्रैकर" },
+  appName: { en: "Bihar Education Money", hi: "शिक्षा का पैसा" },
   tagline: {
-    en: "Evidence-based status for Bihar policies & schemes",
-    hi: "बिहार की नीतियों व योजनाओं की प्रमाण-आधारित स्थिति",
+    en: "Where Bihar’s education money goes",
+    hi: "बिहार का शिक्षा-धन कहाँ जाता है",
   },
   navExplore: { en: "Explore", hi: "देखें" },
+  navMoneyFlow: { en: "Money flow", hi: "धन-प्रवाह" },
+  navProgrammes: { en: "Programmes", hi: "कार्यक्रम" },
+  navReport: { en: "Report", hi: "रिपोर्ट" },
+  reportBadge: { en: "Accountability briefing", hi: "जवाबदेही रिपोर्ट" },
+  reportPrint: { en: "Print / Save as PDF", hi: "प्रिंट / PDF सहेजें" },
+  reportCompiled: { en: "Compiled", hi: "संकलित" },
+  reportFinding: { en: "The finding", hi: "मुख्य निष्कर्ष" },
   navSchemes: { en: "Schemes", hi: "योजनाएँ" },
   navAbout: { en: "About the data", hi: "डेटा के बारे में" },
   navRti: { en: "RTI tracker", hi: "RTI ट्रैकर" },
@@ -65,8 +72,8 @@ export const STRINGS = {
   footerSource: { en: "Source code", hi: "स्रोत कोड" },
   footerApi: { en: "API", hi: "API" },
   footerNote: {
-    en: "Source-verified and evidence-based. Status is derived from evidence, never asserted; every figure carries its source.",
-    hi: "स्रोत-सत्यापित व प्रमाण-आधारित। स्थिति प्रमाण से निकाली जाती है, दावा नहीं की जाती; हर आँकड़ा अपना स्रोत रखता है।",
+    en: "Source-verified and evidence-based. Spending is never asserted — where Bihar publishes nothing, the RTI request itself is the evidence trail; every figure carries its source and date.",
+    hi: "स्रोत-सत्यापित व प्रमाण-आधारित। व्यय का दावा नहीं किया जाता — जहाँ बिहार कुछ प्रकाशित नहीं करता, वहाँ RTI अनुरोध ही प्रमाण-शृंखला है; हर आँकड़ा अपना स्रोत व तिथि रखता है।",
   },
   searchAllPlaceholder: { en: "Search schemes & policies…", hi: "योजनाएँ व नीतियाँ खोजें…" },
   findTitle: { en: "Search results", hi: "खोज परिणाम" },
@@ -111,6 +118,60 @@ export const STRINGS = {
     en: "Schemes are Active, Possibly active, or Inactive — with a last-verified date and the evidence behind each call.",
     hi: "योजनाएँ सक्रिय, संभवतः सक्रिय या निष्क्रिय — अंतिम-सत्यापन तिथि व हर निर्णय के पीछे का प्रमाण सहित।",
   },
+
+  // education-first homepage (money-flow story)
+  homeEyebrow: { en: "Where Bihar’s education money goes", hi: "बिहार का शिक्षा-धन कहाँ जाता है" },
+  homeH1: {
+    en: "Bihar releases the money. It can’t show that it reached a single child.",
+    hi: "बिहार पैसा जारी करता है। पर यह नहीं दिखा सकता कि वह एक भी बच्चे तक पहुँचा।",
+  },
+  homeLede: {
+    en: "Bihar is India’s poorest state — per-capita income ₹66,828, the lowest in the country (CAG, 2023–24). This is what happens to the money meant to educate its children: we trace every rupee from released, to drawn down, to verified as reaching a school — and the trail keeps ending in the same place. Every figure carries its source; where nothing is published, we file an RTI.",
+    hi: "बिहार भारत का सबसे ग़रीब राज्य है — प्रति व्यक्ति आय ₹66,828, देश में सबसे कम (CAG, 2023–24)। इसके बच्चों को पढ़ाने के लिए आए पैसे का यही हाल होता है: हम हर रुपये का पीछा करते हैं — जारी से निकासी तक, और निकासी से स्कूल तक पहुँचा सत्यापित होने तक — और सुराग हर बार एक ही जगह ख़त्म होता है। हर आँकड़ा अपना स्रोत रखता है; जहाँ कुछ प्रकाशित नहीं, वहाँ हम RTI दायर करते हैं।",
+  },
+  homeMoveTitle: { en: "The money doesn’t move", hi: "पैसा हिलता नहीं" },
+  homeMoveNote: {
+    en: "Approved vs. what treasury records show as spent. A dashed strip means Bihar publishes no spend figure at all.",
+    hi: "स्वीकृत बनाम कोषागार में दर्ज व्यय। धारीदार पट्टी का अर्थ — बिहार कोई व्यय आँकड़ा प्रकाशित ही नहीं करता।",
+  },
+  homeSeeProgrammes: { en: "See all programmes & agencies →", hi: "सभी कार्यक्रम व एजेंसियाँ देखें →" },
+  homeStayTitle: { en: "The children don’t stay", hi: "बच्चे टिकते नहीं" },
+  homeStayNote: {
+    en: "Where the money should show up: keeping kids in school. Bihar (red) vs. the national average.",
+    hi: "जहाँ पैसा दिखना चाहिए: बच्चों को स्कूल में बनाए रखना। बिहार (लाल) बनाम राष्ट्रीय औसत।",
+  },
+  homeCapacityTitle: { en: "Why it doesn’t land: the system is hollow", hi: "क्यों नहीं पहुँचता: व्यवस्था खोखली है" },
+  homeCapacityNote: {
+    en: "Even when money is released, there aren’t the teachers, trainers or labs to turn it into teaching.",
+    hi: "पैसा जारी होने पर भी उसे पढ़ाई में बदलने के लिए शिक्षक, प्रशिक्षक या लैब नहीं हैं।",
+  },
+  homeAuditsTitle: { en: "What the auditors found", hi: "अंकेक्षकों ने क्या पाया" },
+  homeSeeAudits: { en: "See all audit findings →", hi: "सभी अंकेक्षण निष्कर्ष देखें →" },
+  homeBihar: { en: "Bihar", hi: "बिहार" },
+  homeIndia: { en: "India", hi: "भारत" },
+  homeSourcesTitle: { en: "How we know — sources on this page", hi: "हम कैसे जानते हैं — इस पृष्ठ के स्रोत" },
+  finderTitle: { en: "Student or family? Find what you’re owed.", hi: "छात्र या परिवार? जानिए आपका क्या हक़ है।" },
+  finderBody: {
+    en: "Behind every line above are schemes you might personally claim — the Student Credit Card, the Kanya Utthan scholarship, Kushal Yuva skilling and more. Tell us a little about yourself and see the education support you likely qualify for.",
+    hi: "ऊपर की हर पंक्ति के पीछे ऐसी योजनाएँ हैं जिनका दावा आप स्वयं कर सकते हैं — स्टूडेंट क्रेडिट कार्ड, कन्या उत्थान छात्रवृत्ति, कुशल युवा प्रशिक्षण और भी। अपने बारे में थोड़ा बताइए और देखिए किस शिक्षा-सहायता के आप पात्र हैं।",
+  },
+  finderCta: { en: "Find scholarships & support →", hi: "छात्रवृत्ति व सहायता खोजें →" },
+  finderOr: { en: "Looking beyond education?", hi: "शिक्षा से आगे देख रहे हैं?" },
+  finderOrLink: { en: "Find any Bihar scheme you qualify for →", hi: "बिहार की कोई भी योजना खोजें जिसके आप पात्र हों →" },
+
+  // plain-language citizen layer — meaning + the one thing to do (kept deliberately simple)
+  plainTitle: { en: "In plain words", hi: "आसान शब्दों में" },
+  plainProblem: {
+    en: "Government money meant for your child’s school mostly isn’t reaching it — and no one can show where it went.",
+    hi: "आपके बच्चे के स्कूल के लिए आई सरकारी राशि अधिकतर वहाँ पहुँच ही नहीं रही — और कोई नहीं बता सकता कि वह कहाँ गई।",
+  },
+  plainSolution: {
+    en: "It should be spent on classrooms, teachers and meals — with every rupee accounted for. This site shows you the gap and helps you push to close it.",
+    hi: "इसे कक्षाओं, शिक्षकों और भोजन पर ख़र्च होना चाहिए — हर रुपये का हिसाब देकर। यह साइट आपको वह कमी दिखाती है और उसे पाटने में मदद करती है।",
+  },
+  plainDoTitle: { en: "What you can do", hi: "आप क्या कर सकते हैं" },
+  plainDoClaim: { en: "See what you can claim", hi: "देखें आप क्या पा सकते हैं" },
+  plainDoRti: { en: "Ask where the money went — file an RTI", hi: "पूछें पैसा कहाँ गया — RTI दायर करें" },
 
   // coverage & confidence banner (honest about what this is)
   coverageTitle: { en: "About this data — read first", hi: "इस डेटा के बारे में — पहले पढ़ें" },
@@ -300,6 +361,8 @@ export const STRINGS = {
   prov_rti_needed: { en: "RTI needed", hi: "RTI आवश्यक" },
   prov_public_todo: { en: "Public — not yet added", hi: "सार्वजनिक — अभी जोड़ा नहीं" },
   prov_estimated: { en: "Estimated", hi: "अनुमानित" },
+  prov_derived: { en: "Derived (computed)", hi: "व्युत्पन्न (गणना)" },
+  guessReveal: { en: "Reveal", hi: "जवाब देखें" },
   lbl_sanctioned: { en: "sanctioned", hi: "स्वीकृत" },
   lbl_disbursed: { en: "disbursed", hi: "वितरित" },
   lbl_target: { en: "target", hi: "लक्ष्य" },
@@ -375,7 +438,19 @@ export const STRINGS = {
 
   // education-spend module ("where the money goes")
   navEducation: { en: "Education money", hi: "शिक्षा का पैसा" },
-  eduTitle: { en: "Where Bihar’s education money goes", hi: "बिहार का शिक्षा-धन कहाँ जाता है" },
+  eduTitle: { en: "The money, programme by programme", hi: "पैसा, कार्यक्रम-दर-कार्यक्रम" },
+  progExploreHint: {
+    en: "Pick a programme to follow its money — year by year, stage by stage. Add a second to compare.",
+    hi: "किसी कार्यक्रम को चुनें और उसके पैसे का पीछा करें — साल-दर-साल, चरण-दर-चरण। तुलना हेतु दूसरा जोड़ें।",
+  },
+  progApproved: { en: "Approved", hi: "स्वीकृत" },
+  progReleased: { en: "Released", hi: "जारी" },
+  progSpent: { en: "Spent", hi: "व्यय" },
+  progCompare: { en: "Compare with…", hi: "तुलना करें…" },
+  progClear: { en: "Clear", hi: "हटाएँ" },
+  progNotPublished: { en: "not published", hi: "अप्रकाशित" },
+  progNoAudits: { en: "No audit findings recorded for this programme yet.", hi: "इस कार्यक्रम हेतु अभी कोई अंकेक्षण निष्कर्ष दर्ज नहीं।" },
+  progOtherFindings: { en: "System-wide findings", hi: "व्यवस्था-व्यापी निष्कर्ष" },
   eduSubtitle: {
     en: "What each major education programme was allocated, and how much was actually spent — every figure with its source. An early slice; more programmes to come.",
     hi: "हर बड़ी शिक्षा योजना को कितना आवंटित हुआ और वास्तव में कितना खर्च हुआ — हर आँकड़ा अपने स्रोत सहित। यह एक शुरुआती हिस्सा है; और योजनाएँ आनी बाकी हैं।",

@@ -44,3 +44,80 @@ body {
     outline-offset: 2px;
   }
 }
+
+/* ── Scrollytelling homepage ─────────────────────────────────────────────────
+   Pinned money-flow stage + narrative steps; reveal-on-scroll; the "100 kids"
+   dot grid. Colours use rgb(var(--x)) so they flip with the .dark class. */
+
+.scrolly {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 860px) {
+  .scrolly { grid-template-columns: 46% 54%; column-gap: 2rem; }
+}
+.scrolly-stage {
+  grid-column: 1; grid-row: 1;
+  position: sticky; top: 0;
+  height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1;
+}
+@media (min-width: 860px) { .scrolly-stage { grid-column: 2; } }
+.scrolly-steps { grid-column: 1; grid-row: 1; position: relative; z-index: 2; pointer-events: none; }
+.scrolly-step { min-height: 86vh; display: flex; align-items: center; }
+.scrolly-step > * { pointer-events: auto; }
+
+/* Stage money bar */
+.mbar { display: flex; height: 54px; width: 100%; border-radius: 6px; overflow: hidden;
+  background: rgb(var(--paper)); border: 1px solid rgb(var(--line)); }
+.mseg { height: 100%; transition: width .7s cubic-bezier(.4, 0, .2, 1), background .5s, box-shadow .5s; }
+.mseg-green { width: 100%; background: rgb(var(--brand)); }
+.mseg-amber { width: 0; background: rgb(var(--warn) / .32); }
+[data-state="b"] .mseg-green, [data-state="c"] .mseg-green, [data-state="d"] .mseg-green { width: 53%; }
+[data-state="b"] .mseg-amber, [data-state="c"] .mseg-amber, [data-state="d"] .mseg-amber { width: 47%; }
+[data-state="c"] .mseg-green, [data-state="d"] .mseg-green { background: transparent; box-shadow: inset 0 0 0 1px rgb(var(--line)); }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s, transform .7s; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* "100 children" dot grid */
+.kid-dots { display: grid; grid-template-columns: repeat(20, 1fr); gap: 6px; max-width: 520px; }
+.kid-dot { aspect-ratio: 1; border-radius: 50%; background: rgb(var(--line)); }
+.kid-dot.on { background: rgb(var(--brand)); }
+
+/* Interactive widgets: brand-tinted range sliders (guess-first, year scrubbers) */
+.range-brand { accent-color: rgb(var(--brand)); height: 28px; }
+
+/* Scroll cue */
+.scrollcue-dot { width: 22px; height: 34px; border: 1.5px solid rgb(var(--muted)); border-radius: 12px; position: relative; }
+.scrollcue-dot::after { content: ""; position: absolute; left: 50%; top: 6px; width: 3px; height: 6px;
+  border-radius: 2px; background: rgb(var(--muted)); transform: translateX(-50%); animation: scrollcue 1.5s infinite; }
+@keyframes scrollcue { 0% { opacity: 0; transform: translate(-50%, 0); } 30% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, 10px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .mseg { transition: none; }
+  .scrollcue-dot::after { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ── Print (the /report route → "Save as PDF") ──────────────────────────────
+   Strip site chrome, force a light palette (never waste ink on a dark theme),
+   and keep sections from breaking across pages. */
+@media print {
+  :root, .dark {
+    --bg: 255 255 255; --surface: 255 255 255; --ink: 17 17 17; --muted: 82 82 82;
+    --line: 208 208 208; --paper: 245 245 245; --brand: 39 143 94; --brand-strong: 27 122 77;
+    --brand-dark: 23 92 60; --danger: 176 38 38; --warn: 146 66 12;
+  }
+  body > header, body > footer, body > a[href="#main"], .no-print { display: none !important; }
+  main { max-width: none !important; padding: 0 !important; }
+  .report { max-width: none !important; }
+  a { color: inherit !important; text-decoration: none !important; }
+  .report-section { break-inside: avoid; }
+  .report-hero { break-after: page; }
+  @page { margin: 16mm; }
+}

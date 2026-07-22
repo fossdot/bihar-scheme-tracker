@@ -1,19 +1,17 @@
 # Education-spend module — audit & accountability findings, linked to programmes/agencies by name.
 
 - source_type: cag_audit
-  report_ref: CAG Report No. 1 of 2025 (State Finances Audit Report 2023-24), Para 4.19
-  programme: Samagra Shiksha
-  agency: Bihar Education Project Council
+  report_ref: CAG SFAR 2023-24, Para 4.19 (SNA fund-flow, all schemes)
   fiscal_years: 2023-24
   finding_en: >-
-    The Accountant General received no vouchers of actual expenditure from Single Nodal Agencies;
-    ₹14,738.13 cr of the funds released lay unspent in SNA bank accounts on 31 March 2024. To the
-    extent of non-submission of Utilisation Certificates, the amount shown as expenditure may not
-    have reached the beneficiaries.
+    Across Bihar's Single Nodal Agencies for all centrally-sponsored schemes, the Accountant General
+    received no vouchers of actual expenditure; ₹14,738.13 cr of the funds released lay unspent in
+    SNA bank accounts on 31 March 2024. To the extent of non-submission of Utilisation Certificates,
+    the amount shown as expenditure may not have reached the beneficiaries.
   amount_flagged_cr: 14738.13
   report_date: 2025-07-24
   provenance: published
-  source_url: https://cag.gov.in/ag/bihar/en/audit-report
+  source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
   source_doc: CAG SFAR 2023-24, Para 4.19 / Table 4.5
   last_verified: 2026-07-13
 
@@ -28,7 +26,7 @@
   amount_flagged_cr: 4134.21
   report_date: 2025-03-26
   provenance: reported
-  source_url: https://cag.gov.in/ag/bihar/en/audit-report
+  source_url: "https://cag.gov.in/uploads/download_audit_report/2024/Performance-and-Compliance-Audit-Report-English-Report-no-5-FINAL-for-net-upload-067e25ebc9fe458.93000291.pdf"
   source_doc: CAG Report No. 5 of 2024; exact figures via press, pending byte-verification of the report PDF
   last_verified: 2026-07-13
 
@@ -42,6 +40,6 @@
     centres had closed.
   amount_flagged_cr: 30.86
   provenance: published
-  source_url: https://cag.gov.in/en/audit-report
+  source_url: "https://cag.gov.in/uploads/download_audit_report/2025/Report-No.-20-of-2025_PA-PMKVY_English-PDF-A-06943abec463479.68516873.pdf"
   source_doc: CAG Report No. 20 of 2025 (PMKVY performance audit)
   last_verified: 2026-07-13

@@ -12,8 +12,8 @@ export function generateMetadata({ params }: { params: { lang: string } }): Meta
     title: locale === "hi" ? "डेटा के बारे में" : "About the data",
     description:
       locale === "hi"
-        ? "बिहार योजना ट्रैकर प्रमाण से स्थिति कैसे तय करता है, हर तथ्य का स्रोत देता है, और पुरानी जानकारी के बारे में ईमानदार रहता है।"
-        : "How the Bihar Scheme Tracker determines status from evidence, sources every fact, and stays honest about staleness.",
+        ? "बिहार एजुकेशन मनी कैसे प्रमाण से व्यय का पीछा करता है, हर आँकड़े का स्रोत देता है, और जो सत्यापित नहीं वह कभी दावा नहीं करता।"
+        : "How Bihar Education Money traces spending from evidence, sources every figure, and never asserts what it can’t verify.",
     alternates: altLinks(locale, "/about"),
   };
 }
@@ -42,8 +42,8 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
       <Card icon="info" title={L("What this is", "यह क्या है")}>
         <p className="text-sm text-ink">
           {L(
-            "A source-backed catalogue of Bihar government schemes and policies. Citizens can find what they likely qualify for; researchers and policymakers can explore the landscape — status, budgets, and public consultations — with the evidence behind every entry.",
-            "बिहार सरकार की योजनाओं व नीतियों की स्रोत-समर्थित सूची। नागरिक जान सकते हैं कि वे किसके पात्र हैं; शोधकर्ता व नीति-निर्माता परिदृश्य देख सकते हैं — स्थिति, बजट व सार्वजनिक परामर्श — हर प्रविष्टि के प्रमाण सहित।"
+            "An accountability tracker for Bihar’s education money — following every rupee from what the state released, to what it can be shown to have actually spent, with the evidence behind each figure. It also carries a citizen scheme finder: tell it who you are and see the education support you likely qualify for.",
+            "बिहार के शिक्षा-धन का जवाबदेही ट्रैकर — हर रुपये का पीछा, जो राज्य ने जारी किया से लेकर जो वह वास्तव में ख़र्च करना सिद्ध कर सके तक, हर आँकड़े के प्रमाण सहित। साथ ही एक नागरिक योजना-खोज: बताइए आप कौन हैं और देखिए किस शिक्षा-सहायता के आप पात्र हैं।"
           )}
         </p>
       </Card>
@@ -89,11 +89,12 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
       <Card icon="building" title={L("Primary sources", "मुख्य स्रोत")}>
         <ul className="space-y-1.5 text-sm">
           {[
-            ["budget.bihar.gov.in", "https://budget.bihar.gov.in"],
-            ["myscheme.gov.in (Bihar)", "https://www.myscheme.gov.in/search/state/Bihar"],
-            ["7nishchay-yuvaupmission.bihar.gov.in", "https://www.7nishchay-yuvaupmission.bihar.gov.in/"],
-            ["medhasoft.bihar.gov.in", "https://medhasoft.bihar.gov.in"],
+            ["CAG — Bihar State Finances & audit reports", "https://cag.gov.in/ag/bihar/en/audit-report"],
+            ["UDISE+ — school statistics dashboard", "https://dashboard.udiseplus.gov.in"],
+            ["budget.bihar.gov.in — scheme-wise allocations", "https://budget.bihar.gov.in"],
             ["prsindia.org — Bihar budget analyses", "https://prsindia.org/budgets/states"],
+            ["myscheme.gov.in (Bihar) — scheme finder", "https://www.myscheme.gov.in/search/state/Bihar"],
+            ["medhasoft.bihar.gov.in — scholarships", "https://medhasoft.bihar.gov.in"],
           ].map(([label, url]) => (
             <li key={url}>
               <a

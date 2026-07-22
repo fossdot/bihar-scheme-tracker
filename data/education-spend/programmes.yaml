@@ -2,14 +2,14 @@
 # `approved` / `released` / `spent` are three separate facts, each with its own provenance +
 # source, because they come from documents published years apart. A NULL figure + an rti_*
 # provenance is the honest placeholder — never a fabricated number.
-# Source URLs point to stable index pages; the exact report + table is in *_source_doc.
+# Source URLs point to the exact report PDF on cag.gov.in; the specific table/para is in *_source_doc.
 
 - name_en: Samagra Shiksha
   name_hi: समग्र शिक्षा
   funding_source: centrally_sponsored
   centre_share_pct: 60
   state_share_pct: 40
-  source_url: https://cag.gov.in/ag/bihar/en/audit-report
+  source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
   last_verified: 2026-07-13
   note_en: Umbrella school-education programme (elementary + secondary); routed through BEPC as Single Nodal Agency.
   agencies:
@@ -22,26 +22,14 @@
       agency: Bihar Education Project Council
       approved_cr: 20013.18
       approved_provenance: published
-      approved_source_url: https://cag.gov.in/ag/bihar/en/audit-report
+      approved_source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
       approved_source_doc: CAG SFAR 2023-24, Table 3.28
       spent_cr: 8385.07
       spent_provenance: published
-      spent_source_url: https://cag.gov.in/ag/bihar/en/audit-report
+      spent_source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
       spent_source_doc: CAG SFAR 2023-24, Table 3.28 (provision minus ₹11,628.11 cr unspent)
       last_verified: 2026-07-13
       note_en: Spent = treasury expenditure; ₹11,628.11 cr (58.1%) unspent. True end-use below the SNA is unverified — the AG received no vouchers of actual expenditure.
-    - fiscal_year: 2023-24
-      agency: Bihar Education Project Council
-      released_cr: 31145.19
-      released_centre_cr: 18173.89
-      released_state_cr: 12971.30
-      released_provenance: published
-      released_source_url: https://cag.gov.in/ag/bihar/en/audit-report
-      released_source_doc: CAG SFAR 2023-24, Para 4.19 (PFMS, 26.08.2024)
-      spent_cr: null
-      spent_provenance: rti_needed
-      last_verified: 2026-07-13
-      note_en: Released to the SNA in FY24; ₹14,738.13 cr of it lay unspent in SNA bank accounts on 31 March 2024.
   expenditure_lines:
     - fiscal_year: 2021-22
       agency: SCERT Bihar
@@ -70,7 +58,7 @@
   funding_source: centrally_sponsored
   centre_share_pct: 60
   state_share_pct: 40
-  source_url: https://cag.gov.in/ag/bihar/en/audit-report
+  source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
   last_verified: 2026-07-13
   note_en: Mid-day-meal scheme; nutrition routed through the Education Department in Bihar.
   agencies:
@@ -80,11 +68,11 @@
     - fiscal_year: 2021-24
       approved_cr: 5132.78
       approved_provenance: published
-      approved_source_url: https://cag.gov.in/ag/bihar/en/audit-report
+      approved_source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
       approved_source_doc: CAG SFAR 2023-24, Table 3.28
       spent_cr: 2163.35
       spent_provenance: published
-      spent_source_url: https://cag.gov.in/ag/bihar/en/audit-report
+      spent_source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
       spent_source_doc: CAG SFAR 2023-24, Table 3.28 (provision minus ₹2,969.43 cr unspent)
       last_verified: 2026-07-13
       note_en: ₹2,969.43 cr (57.9%) unspent, 2021-24.
@@ -92,7 +80,7 @@
 - name_en: PMKVY (Bihar)
   name_hi: प्रधानमंत्री कौशल विकास योजना
   funding_source: central_sector
-  source_url: https://cag.gov.in/en/audit-report
+  source_url: https://cag.gov.in/uploads/download_audit_report/2025/Report-No.-20-of-2025_PA-PMKVY_English-PDF-A-06943abec463479.68516873.pdf
   last_verified: 2026-07-13
   note_en: Central skilling scheme; distinct from the state Kushal Yuva Program.
   agencies:
@@ -102,11 +90,11 @@
     - fiscal_year: 2015-22
       released_cr: 36.82
       released_provenance: published
-      released_source_url: https://cag.gov.in/en/audit-report
+      released_source_url: https://cag.gov.in/uploads/download_audit_report/2025/Report-No.-20-of-2025_PA-PMKVY_English-PDF-A-06943abec463479.68516873.pdf
       released_source_doc: CAG Performance Audit Report No. 20 of 2025 (PMKVY)
       spent_cr: 5.96
       spent_provenance: published
-      spent_source_url: https://cag.gov.in/en/audit-report
+      spent_source_url: https://cag.gov.in/uploads/download_audit_report/2025/Report-No.-20-of-2025_PA-PMKVY_English-PDF-A-06943abec463479.68516873.pdf
       spent_source_doc: CAG Report No. 20 of 2025 — ₹5.96 cr of ₹36.82 cr utilised
       last_verified: 2026-07-13
       note_en: Only 16% utilised — no training centres were set up and no skill-gap study was done.
@@ -177,7 +165,7 @@
 - name_en: State universities block grant
   name_hi: राज्य विश्वविद्यालय अनुदान
   funding_source: state_scheme
-  source_url: https://cag.gov.in/ag/bihar/en/audit-report
+  source_url: "https://cag.gov.in/uploads/download_audit_report/2024/Performance-and-Compliance-Audit-Report-English-Report-no-5-FINAL-for-net-upload-067e25ebc9fe458.93000291.pdf"
   last_verified: 2026-07-13
   note_en: State grant to universities (salaries, pensions, development). Audited in CAG Report No. 5 of 2024.
   agencies:
@@ -187,11 +175,11 @@
     - fiscal_year: 2017-22
       approved_cr: 22576.33
       approved_provenance: reported
-      approved_source_url: https://cag.gov.in/ag/bihar/en/audit-report
+      approved_source_url: "https://cag.gov.in/uploads/download_audit_report/2024/Performance-and-Compliance-Audit-Report-English-Report-no-5-FINAL-for-net-upload-067e25ebc9fe458.93000291.pdf"
       approved_source_doc: CAG Report No. 5 of 2024 (11 state universities); exact rupees via press, 18% unutilised corroborated
       spent_cr: 18442.12
       spent_provenance: reported
-      spent_source_url: https://cag.gov.in/ag/bihar/en/audit-report
+      spent_source_url: "https://cag.gov.in/uploads/download_audit_report/2024/Performance-and-Compliance-Audit-Report-English-Report-no-5-FINAL-for-net-upload-067e25ebc9fe458.93000291.pdf"
       spent_source_doc: CAG Report No. 5 of 2024 — provision minus ₹4,134.21 cr surrendered
       last_verified: 2026-07-13
       note_en: ₹4,134.21 cr (18%) surrendered unutilised; 57% of teaching posts vacant. Exact figures pending byte-verification of the report PDF.

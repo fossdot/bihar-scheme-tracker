@@ -6,7 +6,7 @@ export function Logo({ className = "h-7 w-7" }: { className?: string }) {
       viewBox="0 0 24 24"
       className={className}
       role="img"
-      aria-label="Bihar Scheme Tracker logo"
+      aria-label="Bihar Education Money logo"
     >
       <rect width="24" height="24" rx="6" fill="#278F5E" />
       <rect x="5.5" y="13" width="3.2" height="5" rx="1" fill="#ffffff" />
