@@ -26,6 +26,12 @@ const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ["pg"],
   },
+  // /education was renamed to /programmes — keep old links/bookmarks alive.
+  async redirects() {
+    return [
+      { source: "/:lang(en|hi)/education", destination: "/:lang/programmes", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

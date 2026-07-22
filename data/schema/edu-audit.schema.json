@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Education-spend audit findings",
+  "description": "CAG / social-audit / UC / PAB findings, linked to a programme and/or agency by name_en.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["source_type", "finding_en", "provenance", "source_url"],
+    "properties": {
+      "source_type": { "enum": ["cag_audit", "pac_report", "social_audit", "utilisation_certificate", "pab_minutes", "internal_audit", "other"] },
+      "report_ref": { "type": ["string", "null"] },
+      "programme": { "type": ["string", "null"] },
+      "agency": { "type": ["string", "null"] },
+      "district": { "type": ["string", "null"] },
+      "fiscal_years": { "type": ["string", "null"] },
+      "finding_en": { "type": "string", "minLength": 10 },
+      "finding_hi": { "type": ["string", "null"] },
+      "amount_flagged_cr": { "type": ["number", "null"], "minimum": 0 },
+      "report_date": { "type": ["string", "null"], "format": "date" },
+      "provenance": { "enum": ["published", "reported", "rti_received", "rti_filed", "rti_needed", "estimated"] },
+      "source_url": { "type": "string", "format": "uri" },
+      "source_doc": { "type": ["string", "null"] },
+      "last_verified": { "type": ["string", "null"], "format": "date" }
+    }
+  }
+}

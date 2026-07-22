@@ -20,7 +20,7 @@ export function generateMetadata({ params }: { params: { lang: string } }): Meta
   return {
     openGraph: {
       type: "website",
-      siteName: "Bihar Scheme Tracker",
+      siteName: "Bihar Education Money",
       locale: locale === "hi" ? "hi_IN" : "en_IN",
       alternateLocale: locale === "hi" ? "en_IN" : "hi_IN",
     },
@@ -52,11 +52,17 @@ export default function LangLayout({
           <div className="flex shrink-0 items-center gap-5">
             <Link
               href={localizedHref(locale, "/")}
-              className="flex items-center gap-2 text-base font-semibold tracking-tight text-ink"
+              className="flex items-center gap-2 tracking-tight text-ink"
+              aria-label={t(locale, "appName")}
             >
               <Logo className="h-7 w-7 shrink-0" />
-              <span className="hidden sm:inline">{t(locale, "appName")}</span>
-              <span className="sm:hidden">{locale === "hi" ? "योजना ट्रैकर" : "Tracker"}</span>
+              {/* Bilingual wordmark: the Devanagari brand mark always, English lockup on sm+. */}
+              <span className="flex flex-col leading-none">
+                <span className="text-[15px] font-semibold">शिक्षा का पैसा</span>
+                <span className="mt-0.5 hidden text-[10px] font-medium uppercase tracking-wide text-muted sm:block">
+                  Bihar Education Money
+                </span>
+              </span>
             </Link>
             <Suspense fallback={null}>
               <SiteNav locale={locale} />

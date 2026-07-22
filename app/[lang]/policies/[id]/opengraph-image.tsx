@@ -6,7 +6,7 @@ import { POLICY_STATUS, policyStatusKey, todayISO } from "@/lib/policy";
 export const runtime = "nodejs";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Bihar Scheme Tracker — policy";
+export const alt = "Bihar Education Money — policy";
 
 const BRAND = "#278F5E";
 const STATUS_COLOR: Record<string, string> = {
@@ -15,7 +15,7 @@ const STATUS_COLOR: Record<string, string> = {
 
 // English-only text (see scheme opengraph-image): next/og has no Devanagari font.
 export default async function Image({ params }: { params: { lang: string; id: string } }) {
-  let name = "Bihar Scheme Tracker";
+  let name = "Bihar Education Money";
   let summary = "Bihar government policies & frameworks";
   let statusLabel = "Policy";
   let color = BRAND;
@@ -38,7 +38,7 @@ export default async function Image({ params }: { params: { lang: string; id: st
       <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", backgroundColor: "#ffffff", padding: "64px", fontFamily: "sans-serif" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <OgLogo size={44} />
-          <div style={{ display: "flex", fontSize: "30px", fontWeight: 600, color: "#111111" }}>Bihar Scheme Tracker</div>
+          <div style={{ display: "flex", fontSize: "30px", fontWeight: 600, color: "#111111" }}>Bihar Education Money</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
           <div style={{ display: "flex", fontSize: "12px" }} />

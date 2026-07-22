@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: { lang: string; id:
       description,
       alternates: altLinks(locale, `/policies/${params.id}`),
       openGraph: {
-        title: `${name} · Bihar Scheme Tracker`,
+        title: `${name} · Bihar Education Money`,
         description,
         type: "article",
         url: localizedHref(locale, `/policies/${params.id}`),

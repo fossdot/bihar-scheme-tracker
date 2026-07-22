@@ -1,0 +1,185 @@
+# Education-spend module — funding programmes with per-stage allocations.
+# `approved` / `released` / `spent` are three separate facts, each with its own provenance +
+# source, because they come from documents published years apart. A NULL figure + an rti_*
+# provenance is the honest placeholder — never a fabricated number.
+# Source URLs point to the exact report PDF on cag.gov.in; the specific table/para is in *_source_doc.
+
+- name_en: Samagra Shiksha
+  name_hi: समग्र शिक्षा
+  funding_source: centrally_sponsored
+  centre_share_pct: 60
+  state_share_pct: 40
+  source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
+  last_verified: 2026-07-13
+  note_en: Umbrella school-education programme (elementary + secondary); routed through BEPC as Single Nodal Agency.
+  agencies:
+    - agency: Bihar Education Project Council
+      role: nodal
+    - agency: Education Department
+      role: co_implementer
+  allocations:
+    - fiscal_year: 2021-24
+      agency: Bihar Education Project Council
+      approved_cr: 20013.18
+      approved_provenance: published
+      approved_source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
+      approved_source_doc: CAG SFAR 2023-24, Table 3.28
+      spent_cr: 8385.07
+      spent_provenance: published
+      spent_source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
+      spent_source_doc: CAG SFAR 2023-24, Table 3.28 (provision minus ₹11,628.11 cr unspent)
+      last_verified: 2026-07-13
+      note_en: Spent = treasury expenditure; ₹11,628.11 cr (58.1%) unspent. True end-use below the SNA is unverified — the AG received no vouchers of actual expenditure.
+  expenditure_lines:
+    - fiscal_year: 2021-22
+      agency: SCERT Bihar
+      category: training
+      education_stage: teacher_education
+      beneficiary_type: teachers_in_service
+      approved_cr: 4.01
+      approved_provenance: published
+      approved_source_url: https://www.bepcssa.in/en/samagra-awpb.php
+      approved_source_doc: Bihar PAB minutes 2021-22 — NISHTHA 2.0 (secondary), ₹1,000/teacher × 40,086
+      last_verified: 2026-07-13
+      note_en: NISHTHA 2.0 online teacher training.
+    - fiscal_year: 2021-22
+      agency: SCERT Bihar
+      category: textbooks_content
+      education_stage: teacher_education
+      beneficiary_type: teachers_in_service
+      approved_cr: 0.387
+      approved_provenance: published
+      approved_source_url: https://www.bepcssa.in/en/samagra-awpb.php
+      approved_source_doc: Bihar PAB minutes 2021-22 — DIKSHA digital content (₹38.7 lakh)
+      last_verified: 2026-07-13
+
+- name_en: PM POSHAN
+  name_hi: पीएम पोषण (मध्याह्न भोजन)
+  funding_source: centrally_sponsored
+  centre_share_pct: 60
+  state_share_pct: 40
+  source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
+  last_verified: 2026-07-13
+  note_en: Mid-day-meal scheme; nutrition routed through the Education Department in Bihar.
+  agencies:
+    - agency: Education Department
+      role: nodal
+  allocations:
+    - fiscal_year: 2021-24
+      approved_cr: 5132.78
+      approved_provenance: published
+      approved_source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
+      approved_source_doc: CAG SFAR 2023-24, Table 3.28
+      spent_cr: 2163.35
+      spent_provenance: published
+      spent_source_url: "https://cag.gov.in/uploads/download_audit_report/2025/State-Finance-Report-2023-24-(08-04-2025)-ENGLISH-FINAL-with-Signeture-FINAL-FOR-PRINT-06881e24daadd66.83179080.pdf"
+      spent_source_doc: CAG SFAR 2023-24, Table 3.28 (provision minus ₹2,969.43 cr unspent)
+      last_verified: 2026-07-13
+      note_en: ₹2,969.43 cr (57.9%) unspent, 2021-24.
+
+- name_en: PMKVY (Bihar)
+  name_hi: प्रधानमंत्री कौशल विकास योजना
+  funding_source: central_sector
+  source_url: https://cag.gov.in/uploads/download_audit_report/2025/Report-No.-20-of-2025_PA-PMKVY_English-PDF-A-06943abec463479.68516873.pdf
+  last_verified: 2026-07-13
+  note_en: Central skilling scheme; distinct from the state Kushal Yuva Program.
+  agencies:
+    - agency: Bihar Skill Development Mission
+      role: nodal
+  allocations:
+    - fiscal_year: 2015-22
+      released_cr: 36.82
+      released_provenance: published
+      released_source_url: https://cag.gov.in/uploads/download_audit_report/2025/Report-No.-20-of-2025_PA-PMKVY_English-PDF-A-06943abec463479.68516873.pdf
+      released_source_doc: CAG Performance Audit Report No. 20 of 2025 (PMKVY)
+      spent_cr: 5.96
+      spent_provenance: published
+      spent_source_url: https://cag.gov.in/uploads/download_audit_report/2025/Report-No.-20-of-2025_PA-PMKVY_English-PDF-A-06943abec463479.68516873.pdf
+      spent_source_doc: CAG Report No. 20 of 2025 — ₹5.96 cr of ₹36.82 cr utilised
+      last_verified: 2026-07-13
+      note_en: Only 16% utilised — no training centres were set up and no skill-gap study was done.
+
+- name_en: RGSA (Panchayat training)
+  name_hi: राष्ट्रीय ग्राम स्वराज अभियान
+  funding_source: centrally_sponsored
+  centre_share_pct: 60
+  state_share_pct: 40
+  source_url: https://panchayat.gov.in
+  last_verified: 2026-07-13
+  note_en: Trains elected panchayat representatives; nodal Panchayati Raj Dept. Education-adjacent (functionary training).
+  agencies:
+    - agency: Panchayati Raj Department
+      role: nodal
+  allocations:
+    - fiscal_year: 2022-23
+      released_cr: 33.37
+      released_provenance: published
+      released_source_url: https://panchayat.gov.in
+      released_source_doc: MoPR Annual Report 2025-26, Annexure-IV (Bihar RGSA releases)
+      spent_cr: null
+      spent_provenance: rti_needed
+      last_verified: 2026-07-13
+    - fiscal_year: 2023-24
+      released_cr: 25.00
+      released_provenance: published
+      released_source_url: https://panchayat.gov.in
+      released_source_doc: MoPR Annual Report 2025-26, Annexure-IV
+      spent_cr: null
+      spent_provenance: rti_needed
+      last_verified: 2026-07-13
+    - fiscal_year: 2024-25
+      released_cr: 0
+      released_provenance: published
+      released_source_url: https://panchayat.gov.in
+      released_source_doc: MoPR Annual Report 2025-26, Annexure-IV (nil release to Bihar)
+      spent_cr: null
+      spent_provenance: rti_needed
+      last_verified: 2026-07-13
+
+- name_en: PM-USHA (Bihar)
+  name_hi: पीएम-उषा
+  funding_source: centrally_sponsored
+  centre_share_pct: 60
+  state_share_pct: 40
+  source_url: https://pmusha.education.gov.in
+  last_verified: 2026-07-13
+  note_en: Higher-education infrastructure scheme (formerly RUSA); state implementing unit BSHEC.
+  agencies:
+    - agency: Bihar State Higher Education Council
+      role: nodal
+    - agency: Higher Education Department
+      role: co_implementer
+  allocations:
+    - fiscal_year: 2023-26
+      approved_cr: 335
+      approved_provenance: reported
+      approved_source_url: https://pmusha.education.gov.in
+      approved_source_doc: PM-USHA PAB-3 minutes (19.11.2024) — Bihar approvals (MERU ₹100 cr × 2, GSU ₹20 cr × 3, GSC ₹5 cr × 15); scanned, not byte-verified
+      released_cr: null
+      released_provenance: rti_needed
+      spent_cr: null
+      spent_provenance: rti_needed
+      last_verified: 2026-07-13
+      note_en: Approvals reported; actual releases and expenditure for Bihar not published. The RUSA/PM-USHA capital head 4202-01-203-0207 was fully unspent in FY24 (CAG).
+
+- name_en: State universities block grant
+  name_hi: राज्य विश्वविद्यालय अनुदान
+  funding_source: state_scheme
+  source_url: "https://cag.gov.in/uploads/download_audit_report/2024/Performance-and-Compliance-Audit-Report-English-Report-no-5-FINAL-for-net-upload-067e25ebc9fe458.93000291.pdf"
+  last_verified: 2026-07-13
+  note_en: State grant to universities (salaries, pensions, development). Audited in CAG Report No. 5 of 2024.
+  agencies:
+    - agency: Higher Education Department
+      role: nodal
+  allocations:
+    - fiscal_year: 2017-22
+      approved_cr: 22576.33
+      approved_provenance: reported
+      approved_source_url: "https://cag.gov.in/uploads/download_audit_report/2024/Performance-and-Compliance-Audit-Report-English-Report-no-5-FINAL-for-net-upload-067e25ebc9fe458.93000291.pdf"
+      approved_source_doc: CAG Report No. 5 of 2024 (11 state universities); exact rupees via press, 18% unutilised corroborated
+      spent_cr: 18442.12
+      spent_provenance: reported
+      spent_source_url: "https://cag.gov.in/uploads/download_audit_report/2024/Performance-and-Compliance-Audit-Report-English-Report-no-5-FINAL-for-net-upload-067e25ebc9fe458.93000291.pdf"
+      spent_source_doc: CAG Report No. 5 of 2024 — provision minus ₹4,134.21 cr surrendered
+      last_verified: 2026-07-13
+      note_en: ₹4,134.21 cr (18%) surrendered unutilised; 57% of teaching posts vacant. Exact figures pending byte-verification of the report PDF.

@@ -5,11 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { localizedHref, t, type Locale, type StringKey } from "@/lib/i18n";
 
+// Education-first primary nav, kept lean. Money flow = the homepage (the money-flow story);
+// Programmes = the detailed /programmes money view. "About the data", the scheme finder, and
+// policies live in the footer only — they don't compete for the top bar.
 const ITEMS: { path: string; key: StringKey }[] = [
-  { path: "/search", key: "navSchemes" },
-  { path: "/policies", key: "navPolicies" },
+  { path: "/", key: "navMoneyFlow" },
+  { path: "/programmes", key: "navProgrammes" },
+  { path: "/report", key: "navReport" },
   { path: "/rti", key: "navRti" },
-  { path: "/about", key: "navAbout" },
 ];
 
 // Primary nav: a horizontal row on desktop and a hamburger dropdown on mobile (the row was
@@ -20,6 +23,8 @@ export function SiteNav({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const active = (path: string) => {
     const href = localizedHref(locale, path);
+    // Home ("/") localizes to "/en" — a prefix of every page — so match it only exactly.
+    if (path === "/") return pathname === href;
     return pathname === href || pathname.startsWith(href + "/");
   };
 

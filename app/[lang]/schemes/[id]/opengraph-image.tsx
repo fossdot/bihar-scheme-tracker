@@ -5,7 +5,7 @@ import { getSchemeDetail, isDbConfigured } from "@/lib/queries";
 export const runtime = "nodejs";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Bihar Scheme Tracker";
+export const alt = "Bihar Education Money";
 
 const BRAND = "#278F5E";
 
@@ -19,7 +19,7 @@ function statusView(status?: string): { label: string; color: string } {
 // name would render as tofu. The localized og:title/description (HTML metadata) drive the
 // share text; bundling a Devanagari font for Hindi OG images is a separate follow-up.
 export default async function Image({ params }: { params: { lang: string; id: string } }) {
-  let name = "Bihar Scheme Tracker";
+  let name = "Bihar Education Money";
   let benefit = "Find government schemes you qualify for";
   let status: string | undefined;
   if (isDbConfigured()) {
@@ -46,7 +46,7 @@ export default async function Image({ params }: { params: { lang: string; id: st
       >
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <OgLogo size={44} />
-          <div style={{ display: "flex", fontSize: "30px", fontWeight: 600, color: "#111111" }}>Bihar Scheme Tracker</div>
+          <div style={{ display: "flex", fontSize: "30px", fontWeight: 600, color: "#111111" }}>Bihar Education Money</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
           <div style={{ display: "flex", fontSize: name.length > 46 ? "54px" : "68px", fontWeight: 700, color: "#111111", lineHeight: 1.1 }}>

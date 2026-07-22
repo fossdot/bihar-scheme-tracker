@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Education-spend agencies",
+  "description": "Implementing agencies for the standalone education-spend module. `department_en` is a SOFT (FK-less) link to the registry's departments; `parent` is a self-reference by name_en.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["name_en", "agency_type", "source_url"],
+    "properties": {
+      "name_en": { "type": "string", "minLength": 2 },
+      "name_hi": { "type": ["string", "null"] },
+      "abbrev": { "type": ["string", "null"] },
+      "agency_type": { "enum": ["department", "directorate", "society", "mission", "board", "training_institute", "psu", "corporation", "council", "commission", "other"] },
+      "parent": { "type": ["string", "null"], "description": "name_en of the parent agency" },
+      "department_en": { "type": ["string", "null"], "description": "soft link to registry departments by name_en" },
+      "website": { "type": ["string", "null"], "format": "uri" },
+      "source_url": { "type": "string", "format": "uri" },
+      "last_verified": { "type": ["string", "null"], "format": "date" },
+      "note_en": { "type": ["string", "null"] },
+      "note_hi": { "type": ["string", "null"] }
+    }
+  }
+}
