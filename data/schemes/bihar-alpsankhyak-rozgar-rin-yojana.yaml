@@ -31,25 +31,152 @@ is_for_startups: false
 land_ownership: null
 status: likely_active
 status_evidence: >-
-  Likely active — listed by BSMFC and myScheme, but the latest official sanction lists are FY2021-22
-  with no new 2024-26 cycle confirmed. [Corrected: flat 5% (no separate women's rate); ceiling ₹5
-  lakh; family income ≤₹4 lakh/yr.] Verified 2026-06-19. Source: https://bsmfc.org/
+  Likely active — the BSMFC RTI reply (dated 24 Jul 2026) shows loans still being disbursed through
+  FY2023-24 (₹37.36 cr) with recoveries continuing into FY2024-25, but FY2024-25 shows no fresh
+  disbursement and no new 2025-26 sanction cycle is confirmed. [Flat 5% interest; ceiling ₹5 lakh;
+  family income ≤₹4 lakh/yr.] Verified 2026-07-24. Source: https://bsmfc.org/
 source_url: https://state.bihar.gov.in/minoritywelfare
 application_portal_url: https://state.bihar.gov.in/minoritywelfare
 metrics:
-  - dimension: district
+  - dimension: beneficiaries
+    fiscal_year: 2021-22
+    label: Beneficiaries (loans sanctioned), FY2021-22
+    label_hi: लाभार्थी (स्वीकृत ऋण), 2021-22
+    value: 3995
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: District-wise total. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: जिलावार कुल। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: beneficiaries
+    fiscal_year: 2022-23
+    label: Beneficiaries (loans sanctioned), FY2022-23
+    label_hi: लाभार्थी (स्वीकृत ऋण), 2022-23
+    value: 5975
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: District-wise total. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: जिलावार कुल। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: beneficiaries
+    fiscal_year: 2023-24
+    label: Beneficiaries (loans sanctioned), FY2023-24
+    label_hi: लाभार्थी (स्वीकृत ऋण), 2023-24
+    value: 1783
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: District-wise total. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: जिलावार कुल। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: budget
+    fiscal_year: 2021-22
+    label: Loan amount disbursed, FY2021-22
+    label_hi: वितरित ऋण राशि, 2021-22
+    value: 92.96
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: '₹ crore disbursed. Received via BSMFC RTI reply dated 24 Jul 2026.'
+    note_hi: करोड़ ₹ वितरित। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: budget
+    fiscal_year: 2022-23
+    label: Loan amount disbursed, FY2022-23
+    label_hi: वितरित ऋण राशि, 2022-23
+    value: 134.15
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: '₹ crore disbursed. Received via BSMFC RTI reply dated 24 Jul 2026.'
+    note_hi: करोड़ ₹ वितरित। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: budget
+    fiscal_year: 2023-24
+    label: Loan amount disbursed, FY2023-24
+    label_hi: वितरित ऋण राशि, 2023-24
+    value: 37.36
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: '₹ crore disbursed. Received via BSMFC RTI reply dated 24 Jul 2026.'
+    note_hi: करोड़ ₹ वितरित। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: budget
+    fiscal_year: 2021-22
+    label: Funds allotted, FY2021-22
+    label_hi: आवंटित राशि, 2021-22
+    value: 62.2
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: '₹ crore allotted. Received via BSMFC RTI reply dated 24 Jul 2026.'
+    note_hi: करोड़ ₹ आवंटित। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: budget
     fiscal_year: null
-    label: District & demographic breakdown
-    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
+    label: Funds allotted (cumulative total, as stated)
+    label_hi: आवंटित राशि (संचयी कुल, यथावत्)
+    value: 548.64
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: >-
+      Reply's TOTAL row (₹548.64 cr); exceeds the FY2021-22 figure shown, so it appears cumulative
+      since scheme inception (earlier years not broken out). Received via BSMFC RTI reply dated 24
+      Jul 2026.
+    note_hi: >-
+      उत्तर की कुल पंक्ति (₹548.64 करोड़); दर्शाए गए 2021-22 आंकड़े से अधिक, अतः योजना आरंभ से संचयी
+      प्रतीत। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: budget
+    fiscal_year: null
+    label: Loan amount disbursed (cumulative total, as stated)
+    label_hi: वितरित ऋण राशि (संचयी कुल, यथावत्)
+    value: 479.3
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: >-
+      Reply's TOTAL row (₹479.30 cr); exceeds the sum of FY2021-22..2023-24 shown (₹264.48 cr), so it
+      appears cumulative since inception. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: >-
+      उत्तर की कुल पंक्ति (₹479.30 करोड़); दर्शाए गए 2021-24 योग (₹264.48 करोड़) से अधिक, अतः आरंभ से
+      संचयी प्रतीत। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: outcomes
+    fiscal_year: null
+    label: Loan recovered (cumulative total, as stated)
+    label_hi: वसूल ऋण (संचयी कुल, यथावत्)
+    value: 61.98
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: >-
+      Reply's TOTAL recovery (₹61.98 cr); per-year recoveries were ₹4.47 cr (2021-22), ₹8.24 cr
+      (2022-23), ₹14.11 cr (2023-24), ₹12.12 cr (2024-25). The total exceeds their sum, so it appears
+      cumulative since inception. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: >-
+      उत्तर की कुल वसूली (₹61.98 करोड़); वार्षिक वसूली: ₹4.47 (2021-22), ₹8.24 (2022-23), ₹14.11
+      (2023-24), ₹12.12 करोड़ (2024-25)। कुल इनके योग से अधिक, अतः आरंभ से संचयी प्रतीत। BSMFC के RTI
+      उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: demographics
+    fiscal_year: null
+    label: Gender / social-category split
+    label_hi: लिंग / सामाजिक-श्रेणी विवरण
     value: null
     unit: null
-    provenance: rti_filed
-    as_of_date: '2026-06-26'
+    provenance: rti_needed
+    as_of_date: '2026-07-24'
     source_url: null
     note: >-
-      District / category / gender splits and per-scheme outcomes not published. RTI filed via Bihar
-      RTI Online to the Minority Welfare Department on 26 June 2026; awaiting reply.
+      The 24 Jul 2026 RTI reply provided district-wise beneficiaries and financials but no gender /
+      social-category split; that breakdown remains unavailable. (District-wise beneficiary tables
+      for FY2021-22, FY2022-23 and FY2023-24 were also received and can be added as district rows.)
     note_hi: >-
-      जिलावार / श्रेणी / लिंग विवरण एवं योजना-विशिष्ट परिणाम प्रकाशित नहीं। अल्पसंख्यक कल्याण विभाग
-      को Bihar RTI Online के माध्यम से जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
-last_verified: '2026-06-19'
+      24 जुलाई 2026 के RTI उत्तर में जिलावार लाभार्थी एवं वित्तीय आंकड़े मिले, परंतु लिंग /
+      सामाजिक-श्रेणी विवरण नहीं; यह विवरण अभी अनुपलब्ध।
+last_verified: '2026-07-24'
