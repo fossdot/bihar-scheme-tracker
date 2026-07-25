@@ -48,27 +48,286 @@ is_for_startups: false
 land_ownership: null
 status: likely_active
 status_evidence: >-
-  BSMFC official scheme page describes a live 'Apply for Skill Training' online portal and lists
-  training-provider documentation; district administrations (e.g., Madhubani NIC) have issued recent
-  online-application invitation notices for minority candidates under the scheme. No current-FY
-  state budget line was confirmed from budget.bihar.gov.in, so status is likely_active rather than
-  active. Distinct from the loan-only 'Bihar Alpsankhyak Rozgar Rin' already in catalogue.
+  Likely active — the BSMFC RTI reply (dated 24 Jul 2026) shows training batches running into
+  FY2024-25 (951 trainees, certification/assessment ongoing), on top of FY2021-22 and FY2022-23
+  batches. No current-FY state budget line was confirmed from budget.bihar.gov.in, so status is
+  likely_active rather than active. Distinct from the loan-only 'Bihar Alpsankhyak Rozgar Rin'
+  already in catalogue. Verified 2026-07-24.
 source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
 application_portal_url: https://bsmfc.org/
 metrics:
+  - dimension: beneficiaries
+    fiscal_year: 2021-22
+    label: Trainees enrolled, FY2021-22
+    label_hi: प्रशिक्षित अभ्यर्थी, 2021-22
+    value: 183
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: Summed from the 9 batch-wise rows in the reply. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: उत्तर की 9 बैचवार पंक्तियों का योग। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: beneficiaries
+    fiscal_year: 2022-23
+    label: Trainees enrolled, FY2022-23
+    label_hi: प्रशिक्षित अभ्यर्थी, 2022-23
+    value: 668
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: Summed from the 28 batch-wise rows in the reply. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: उत्तर की 28 बैचवार पंक्तियों का योग। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: beneficiaries
+    fiscal_year: 2024-25
+    label: Trainees enrolled, FY2024-25
+    label_hi: प्रशिक्षित अभ्यर्थी, 2024-25
+    value: 951
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Summed from the 34 batch-wise rows in the reply; certification still in progress (see certified
+      metric). No FY2023-24 batches were listed in the reply. Received via BSMFC RTI reply dated 24
+      Jul 2026.
+    note_hi: >-
+      उत्तर की 34 बैचवार पंक्तियों का योग; प्रमाणन जारी। उत्तर में 2023-24 बैच सूचीबद्ध नहीं। BSMFC के
+      RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: outcomes
+    fiscal_year: 2021-22
+    label: Trainees certified, FY2021-22
+    label_hi: प्रमाणित अभ्यर्थी, 2021-22
+    value: 155
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Summed from batch-wise rows (155 of 183 trainees certified). Received via BSMFC RTI reply dated
+      24 Jul 2026.
+    note_hi: बैचवार पंक्तियों का योग (183 में से 155 प्रमाणित)। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: outcomes
+    fiscal_year: 2022-23
+    label: Trainees certified, FY2022-23
+    label_hi: प्रमाणित अभ्यर्थी, 2022-23
+    value: 557
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Summed from batch-wise rows (557 of 668 trainees certified). Received via BSMFC RTI reply dated
+      24 Jul 2026.
+    note_hi: बैचवार पंक्तियों का योग (668 में से 557 प्रमाणित)। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: outcomes
+    fiscal_year: 2024-25
+    label: Trainees certified so far, FY2024-25
+    label_hi: अब तक प्रमाणित अभ्यर्थी, 2024-25
+    value: 96
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Only 5 of 34 FY2024-25 batches were assessed at reply date (96 certified); the rest are marked
+      'assessment pending'. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: >-
+      उत्तर की तिथि तक 34 में से केवल 5 बैच मूल्यांकित (96 प्रमाणित); शेष 'मूल्यांकन लंबित'। BSMFC के
+      RTI उत्तर (24 जुलाई 2026) से प्राप्त।
   - dimension: district
     fiscal_year: null
-    label: District & demographic breakdown
-    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
+    label: Bhabhua (Kaimur)
+    label_hi: null
+    value: 450
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Bhabhua (Kaimur) across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Purnea
+    label_hi: null
+    value: 240
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Purnea across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Buxar
+    label_hi: null
+    value: 230
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Buxar across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Nalanda
+    label_hi: null
+    value: 185
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Nalanda across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Darbhanga
+    label_hi: null
+    value: 180
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Darbhanga across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Begusarai
+    label_hi: null
+    value: 109
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Begusarai across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Gaya
+    label_hi: null
+    value: 90
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Gaya across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Patna
+    label_hi: null
+    value: 81
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Patna across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Muzaffarpur
+    label_hi: null
+    value: 60
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Muzaffarpur across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Nawada
+    label_hi: null
+    value: 50
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Nawada across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Katihar
+    label_hi: null
+    value: 30
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Katihar across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Kishanganj
+    label_hi: null
+    value: 30
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Kishanganj across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: West Champaran
+    label_hi: null
+    value: 24
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in West Champaran across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Saran
+    label_hi: null
+    value: 23
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Saran across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: null
+    label: Siwan
+    label_hi: null
+    value: 20
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    note: >-
+      Trainees in Siwan across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: demographics
+    fiscal_year: null
+    label: Gender / social-category split
+    label_hi: लिंग / सामाजिक-श्रेणी विवरण
     value: null
     unit: null
-    provenance: rti_filed
-    as_of_date: '2026-06-26'
+    provenance: rti_needed
+    as_of_date: '2026-07-24'
     source_url: null
     note: >-
-      District / category / gender splits and per-scheme outcomes not published. RTI filed via Bihar
-      RTI Online to the Minority Welfare Department on 26 June 2026; awaiting reply.
+      The reply gave batch counts by district and FY but no gender split (the scheme reserves 30% for
+      women and 3% for persons with disabilities); that breakdown remains unavailable. (Per-district trainee totals are captured as district rows below.)
     note_hi: >-
-      जिलावार / श्रेणी / लिंग विवरण एवं योजना-विशिष्ट परिणाम प्रकाशित नहीं। अल्पसंख्यक कल्याण विभाग
-      को Bihar RTI Online के माध्यम से जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
-last_verified: '2026-06-22'
+      उत्तर में जिलावार/वर्षवार बैच संख्या मिली, परंतु लिंग विवरण नहीं (योजना में महिलाओं हेतु 30%,
+      दिव्यांगों हेतु 3% आरक्षण); यह विवरण अभी अनुपलब्ध।
+last_verified: '2026-07-24'

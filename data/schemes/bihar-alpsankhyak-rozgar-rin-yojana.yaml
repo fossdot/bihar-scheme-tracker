@@ -31,25 +31,558 @@ is_for_startups: false
 land_ownership: null
 status: likely_active
 status_evidence: >-
-  Likely active — listed by BSMFC and myScheme, but the latest official sanction lists are FY2021-22
-  with no new 2024-26 cycle confirmed. [Corrected: flat 5% (no separate women's rate); ceiling ₹5
-  lakh; family income ≤₹4 lakh/yr.] Verified 2026-06-19. Source: https://bsmfc.org/
+  Likely active — the BSMFC RTI reply (dated 24 Jul 2026) shows loans still being disbursed through
+  FY2023-24 (₹37.36 cr) with recoveries continuing into FY2024-25, but FY2024-25 shows no fresh
+  disbursement and no new 2025-26 sanction cycle is confirmed. [Flat 5% interest; ceiling ₹5 lakh;
+  family income ≤₹4 lakh/yr.] Verified 2026-07-24. Source: https://bsmfc.org/
 source_url: https://state.bihar.gov.in/minoritywelfare
 application_portal_url: https://state.bihar.gov.in/minoritywelfare
 metrics:
-  - dimension: district
+  - dimension: beneficiaries
+    fiscal_year: 2021-22
+    label: Beneficiaries (loans sanctioned), FY2021-22
+    label_hi: लाभार्थी (स्वीकृत ऋण), 2021-22
+    value: 3995
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: District-wise total. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: जिलावार कुल। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: beneficiaries
+    fiscal_year: 2022-23
+    label: Beneficiaries (loans sanctioned), FY2022-23
+    label_hi: लाभार्थी (स्वीकृत ऋण), 2022-23
+    value: 5975
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: District-wise total. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: जिलावार कुल। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: beneficiaries
+    fiscal_year: 2023-24
+    label: Beneficiaries (loans sanctioned), FY2023-24
+    label_hi: लाभार्थी (स्वीकृत ऋण), 2023-24
+    value: 1783
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: District-wise total. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: जिलावार कुल। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: budget
+    fiscal_year: 2021-22
+    label: Loan amount disbursed, FY2021-22
+    label_hi: वितरित ऋण राशि, 2021-22
+    value: 92.96
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: '₹ crore disbursed. Received via BSMFC RTI reply dated 24 Jul 2026.'
+    note_hi: करोड़ ₹ वितरित। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: budget
+    fiscal_year: 2022-23
+    label: Loan amount disbursed, FY2022-23
+    label_hi: वितरित ऋण राशि, 2022-23
+    value: 134.15
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: '₹ crore disbursed. Received via BSMFC RTI reply dated 24 Jul 2026.'
+    note_hi: करोड़ ₹ वितरित। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: budget
+    fiscal_year: 2023-24
+    label: Loan amount disbursed, FY2023-24
+    label_hi: वितरित ऋण राशि, 2023-24
+    value: 37.36
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: '₹ crore disbursed. Received via BSMFC RTI reply dated 24 Jul 2026.'
+    note_hi: करोड़ ₹ वितरित। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: budget
+    fiscal_year: 2021-22
+    label: Funds allotted, FY2021-22
+    label_hi: आवंटित राशि, 2021-22
+    value: 62.2
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: '₹ crore allotted. Received via BSMFC RTI reply dated 24 Jul 2026.'
+    note_hi: करोड़ ₹ आवंटित। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: budget
     fiscal_year: null
-    label: District & demographic breakdown
-    label_hi: जिलावार एवं सामाजिक-श्रेणी / लिंग विवरण
+    label: Funds allotted (cumulative total, as stated)
+    label_hi: आवंटित राशि (संचयी कुल, यथावत्)
+    value: 548.64
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: >-
+      Reply's TOTAL row (₹548.64 cr); exceeds the FY2021-22 figure shown, so it appears cumulative
+      since scheme inception (earlier years not broken out). Received via BSMFC RTI reply dated 24
+      Jul 2026.
+    note_hi: >-
+      उत्तर की कुल पंक्ति (₹548.64 करोड़); दर्शाए गए 2021-22 आंकड़े से अधिक, अतः योजना आरंभ से संचयी
+      प्रतीत। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: budget
+    fiscal_year: null
+    label: Loan amount disbursed (cumulative total, as stated)
+    label_hi: वितरित ऋण राशि (संचयी कुल, यथावत्)
+    value: 479.3
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: >-
+      Reply's TOTAL row (₹479.30 cr); exceeds the sum of FY2021-22..2023-24 shown (₹264.48 cr), so it
+      appears cumulative since inception. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: >-
+      उत्तर की कुल पंक्ति (₹479.30 करोड़); दर्शाए गए 2021-24 योग (₹264.48 करोड़) से अधिक, अतः आरंभ से
+      संचयी प्रतीत। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: outcomes
+    fiscal_year: null
+    label: Loan recovered (cumulative total, as stated)
+    label_hi: वसूल ऋण (संचयी कुल, यथावत्)
+    value: 61.98
+    unit: cr
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: >-
+      Reply's TOTAL recovery (₹61.98 cr); per-year recoveries were ₹4.47 cr (2021-22), ₹8.24 cr
+      (2022-23), ₹14.11 cr (2023-24), ₹12.12 cr (2024-25). The total exceeds their sum, so it appears
+      cumulative since inception. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: >-
+      उत्तर की कुल वसूली (₹61.98 करोड़); वार्षिक वसूली: ₹4.47 (2021-22), ₹8.24 (2022-23), ₹14.11
+      (2023-24), ₹12.12 करोड़ (2024-25)। कुल इनके योग से अधिक, अतः आरंभ से संचयी प्रतीत। BSMFC के RTI
+      उत्तर (24 जुलाई 2026) से प्राप्त।
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Kaimur
+    label_hi: null
+    value: 305
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Kaimur, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Araria
+    label_hi: null
+    value: 244
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Araria, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Purnea
+    label_hi: null
+    value: 101
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Purnea, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Katihar
+    label_hi: null
+    value: 100
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Katihar, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: East Champaran
+    label_hi: null
+    value: 94
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in East Champaran, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: West Champaran
+    label_hi: null
+    value: 90
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in West Champaran, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Kishanganj
+    label_hi: null
+    value: 70
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Kishanganj, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Patna
+    label_hi: null
+    value: 64
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Patna, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Siwan
+    label_hi: null
+    value: 61
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Siwan, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Madhubani
+    label_hi: null
+    value: 53
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Madhubani, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Begusarai
+    label_hi: null
+    value: 52
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Begusarai, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Sitamarhi
+    label_hi: null
+    value: 51
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Sitamarhi, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Muzaffarpur
+    label_hi: null
+    value: 43
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Muzaffarpur, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Bhagalpur
+    label_hi: null
+    value: 43
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Bhagalpur, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Gaya
+    label_hi: null
+    value: 35
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Gaya, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Darbhanga
+    label_hi: null
+    value: 34
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Darbhanga, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Supaul
+    label_hi: null
+    value: 33
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Supaul, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Chapra (Saran)
+    label_hi: null
+    value: 30
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Chapra (Saran), FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Aurangabad
+    label_hi: null
+    value: 25
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Aurangabad, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Nawada
+    label_hi: null
+    value: 24
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Nawada, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Madhepura
+    label_hi: null
+    value: 24
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Madhepura, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Nalanda
+    label_hi: null
+    value: 22
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Nalanda, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Rohtas
+    label_hi: null
+    value: 22
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Rohtas, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Vaishali
+    label_hi: null
+    value: 21
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Vaishali, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Gopalganj
+    label_hi: null
+    value: 20
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Gopalganj, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Samastipur
+    label_hi: null
+    value: 20
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Samastipur, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Banka
+    label_hi: null
+    value: 19
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Banka, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Khagaria
+    label_hi: null
+    value: 15
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Khagaria, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Saharsa
+    label_hi: null
+    value: 12
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Saharsa, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Jehanabad
+    label_hi: null
+    value: 11
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Jehanabad, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Munger
+    label_hi: null
+    value: 10
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Munger, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Jamui
+    label_hi: null
+    value: 10
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Jamui, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Bhojpur
+    label_hi: null
+    value: 9
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Bhojpur, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Buxar
+    label_hi: null
+    value: 6
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Buxar, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Lakhisarai
+    label_hi: null
+    value: 4
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Lakhisarai, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Sheohar
+    label_hi: null
+    value: 3
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Sheohar, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: district
+    fiscal_year: 2023-24
+    label: Shaikhpura
+    label_hi: null
+    value: 3
+    unit: persons
+    provenance: rti_received
+    as_of_date: '2026-07-24'
+    source_url: https://bsmfc.org/
+    note: Beneficiaries in Shaikhpura, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
+    note_hi: null
+  - dimension: demographics
+    fiscal_year: null
+    label: Gender / social-category split
+    label_hi: लिंग / सामाजिक-श्रेणी विवरण
     value: null
     unit: null
-    provenance: rti_filed
-    as_of_date: '2026-06-26'
+    provenance: rti_needed
+    as_of_date: '2026-07-24'
     source_url: null
     note: >-
-      District / category / gender splits and per-scheme outcomes not published. RTI filed via Bihar
-      RTI Online to the Minority Welfare Department on 26 June 2026; awaiting reply.
+      The 24 Jul 2026 RTI reply provided district-wise beneficiaries and financials but no gender /
+      social-category split; that breakdown remains unavailable. (FY2023-24 district-wise beneficiaries are captured as district rows below; the FY2021-22 and FY2022-23 tables were also received and are available on request.)
     note_hi: >-
-      जिलावार / श्रेणी / लिंग विवरण एवं योजना-विशिष्ट परिणाम प्रकाशित नहीं। अल्पसंख्यक कल्याण विभाग
-      को Bihar RTI Online के माध्यम से जून 2026 में RTI दायर; उत्तर प्रतीक्षित।
-last_verified: '2026-06-19'
+      24 जुलाई 2026 के RTI उत्तर में जिलावार लाभार्थी एवं वित्तीय आंकड़े मिले, परंतु लिंग /
+      सामाजिक-श्रेणी विवरण नहीं; यह विवरण अभी अनुपलब्ध।
+last_verified: '2026-07-24'
