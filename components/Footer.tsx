@@ -36,6 +36,9 @@ export function Footer({ locale }: { locale: Locale }) {
             <Link href={localizedHref(locale, "/policies")} className="hover:text-ink">
               {t(locale, "navPolicies")}
             </Link>
+            <Link href={localizedHref(locale, "/report")} className="hover:text-ink">
+              {t(locale, "navReport")}
+            </Link>
             <Link href={localizedHref(locale, "/about")} className="hover:text-ink">
               {t(locale, "navAbout")}
             </Link>
