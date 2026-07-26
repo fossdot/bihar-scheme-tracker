@@ -23,6 +23,7 @@ export interface RtiApplication {
   scheme_name_en: string;
   scheme_name_hi: string | null;
   dimension: string;
+  fiscal_year: string | null;
   label: string | null;
   label_hi: string | null;
   unit: string | null;
@@ -41,11 +42,11 @@ export interface RtiApplication {
  * live ones (filed/received) sit above the not-yet-filed (needed).
  */
 export async function listRtiApplications(): Promise<RtiApplication[]> {
-  return query<RtiApplication>(
+  const rows = await query<RtiApplication>(
     `select m.scheme_id,
             s.name_en as scheme_name_en,
             s.name_hi as scheme_name_hi,
-            m.dimension, m.label, m.label_hi, m.unit, m.value,
+            m.dimension, m.fiscal_year, m.label, m.label_hi, m.unit, m.value,
             m.provenance::text as provenance,
             m.as_of_date::text as as_of_date,
             m.source_url, m.document_url, m.note, m.note_hi
@@ -58,6 +59,42 @@ export async function listRtiApplications(): Promise<RtiApplication[]> {
                  else 2 end,
                s.name_en, m.dimension, m.label`
   );
+  // Collapse per-district DATA rows (value != null) into one "(N districts)" summary line per
+  // scheme — a received reply otherwise floods the tracker with dozens of rows all citing the
+  // same document. Dimension-level placeholders (value null, e.g. the filed/needed "District &
+  // demographic breakdown" markers) pass through untouched, and the scheme pages keep the full
+  // per-district detail.
+  const out: RtiApplication[] = [];
+  const collapsed = new Set<string>();
+  for (const r of rows) {
+    if (!(r.dimension === "district" && r.value != null)) {
+      out.push(r);
+      continue;
+    }
+    const key = `${r.scheme_id}:${r.provenance}`;
+    if (collapsed.has(key)) continue;
+    collapsed.add(key);
+    const group = rows.filter(
+      (g) =>
+        g.scheme_id === r.scheme_id &&
+        g.provenance === r.provenance &&
+        g.dimension === "district" &&
+        g.value != null
+    );
+    const fy = group.every((g) => g.fiscal_year === group[0].fiscal_year) ? group[0].fiscal_year : null;
+    const n = group.length;
+    out.push({
+      ...r,
+      label: `District-wise breakdown${fy ? `, FY${fy}` : ""} (${n} districts)`,
+      label_hi: `जिलावार विवरण${fy ? `, ${fy}` : ""} (${n} ज़िले)`,
+      value: null,
+      unit: null,
+      // Keep only the shared provenance tail ("Received via …"), not one district's figure.
+      note: r.note?.match(/Received via .*/)?.[0] ?? null,
+      note_hi: null,
+    });
+  }
+  return out;
 }
 
 /** Aggregate counts for the home page — a cheap COUNT instead of fetching (and capping) rows. */
