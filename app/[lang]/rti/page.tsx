@@ -135,16 +135,28 @@ export default async function RtiPage({
                     <td className="px-3 py-3">
                       <div className="text-ink">{dataLabel}</div>
                       {dataNote && <p className="mt-0.5 text-xs text-muted">{dataNote}</p>}
-                      {r.source_url && (
-                        <a
-                          href={r.source_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-0.5 inline-block text-xs text-brand-strong hover:underline"
-                        >
-                          {r.source_url.replace(/^https?:\/\//, "").slice(0, 48)}
-                        </a>
-                      )}
+                      <span className="flex flex-wrap items-center gap-x-3">
+                        {r.source_url && (
+                          <a
+                            href={r.source_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-0.5 inline-block text-xs text-brand-strong hover:underline"
+                          >
+                            {r.source_url.replace(/^https?:\/\//, "").slice(0, 48)}
+                          </a>
+                        )}
+                        {r.document_url && (
+                          <a
+                            href={r.document_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-0.5 inline-block text-xs font-medium text-brand-strong underline underline-offset-2"
+                          >
+                            {t(locale, "rtiReplyPdf")} ⬇
+                          </a>
+                        )}
+                      </span>
                     </td>
                     <td className="px-3 py-3 whitespace-nowrap">
                       <span

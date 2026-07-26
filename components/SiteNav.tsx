@@ -6,13 +6,13 @@ import { usePathname } from "next/navigation";
 import { localizedHref, t, type Locale, type StringKey } from "@/lib/i18n";
 
 // Education-first primary nav, kept lean. Money flow = the homepage (the money-flow story);
-// Programmes = the detailed /programmes money view. "About the data", the scheme finder, and
-// policies live in the footer only — they don't compete for the top bar.
+// Programmes = the detailed /programmes money view; Schemes = the citizen finder. Report, the
+// RTI tracker, "About the data" and policies live in the footer only — they don't compete for
+// the top bar.
 const ITEMS: { path: string; key: StringKey }[] = [
   { path: "/", key: "navMoneyFlow" },
   { path: "/programmes", key: "navProgrammes" },
-  { path: "/report", key: "navReport" },
-  { path: "/rti", key: "navRti" },
+  { path: "/search", key: "navSchemes" },
 ];
 
 // Primary nav: a horizontal row on desktop and a hamburger dropdown on mobile (the row was

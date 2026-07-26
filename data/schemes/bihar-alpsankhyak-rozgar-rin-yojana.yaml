@@ -47,6 +47,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: District-wise total. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: जिलावार कुल। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
   - dimension: beneficiaries
@@ -58,6 +59,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: District-wise total. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: जिलावार कुल। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
   - dimension: beneficiaries
@@ -69,6 +71,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: District-wise total. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: जिलावार कुल। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
   - dimension: budget
@@ -80,6 +83,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: '₹ crore disbursed. Received via BSMFC RTI reply dated 24 Jul 2026.'
     note_hi: करोड़ ₹ वितरित। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
   - dimension: budget
@@ -91,6 +95,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: '₹ crore disbursed. Received via BSMFC RTI reply dated 24 Jul 2026.'
     note_hi: करोड़ ₹ वितरित। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
   - dimension: budget
@@ -102,6 +107,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: '₹ crore disbursed. Received via BSMFC RTI reply dated 24 Jul 2026.'
     note_hi: करोड़ ₹ वितरित। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
   - dimension: budget
@@ -113,6 +119,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: '₹ crore allotted. Received via BSMFC RTI reply dated 24 Jul 2026.'
     note_hi: करोड़ ₹ आवंटित। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
   - dimension: budget
@@ -124,6 +131,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Reply's TOTAL row (₹548.64 cr); exceeds the FY2021-22 figure shown, so it appears cumulative
       since scheme inception (earlier years not broken out). Received via BSMFC RTI reply dated 24
@@ -140,6 +148,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Reply's TOTAL row (₹479.30 cr); exceeds the sum of FY2021-22..2023-24 shown (₹264.48 cr), so it
       appears cumulative since inception. Received via BSMFC RTI reply dated 24 Jul 2026.
@@ -155,6 +164,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Reply's TOTAL recovery (₹61.98 cr); per-year recoveries were ₹4.47 cr (2021-22), ₹8.24 cr
       (2022-23), ₹14.11 cr (2023-24), ₹12.12 cr (2024-25). The total exceeds their sum, so it appears
@@ -172,6 +182,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Kaimur, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -183,6 +194,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Araria, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -194,6 +206,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Purnea, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -205,6 +218,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Katihar, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -216,6 +230,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in East Champaran, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -227,6 +242,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in West Champaran, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -238,6 +254,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Kishanganj, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -249,6 +266,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Patna, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -260,6 +278,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Siwan, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -271,6 +290,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Madhubani, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -282,6 +302,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Begusarai, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -293,6 +314,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Sitamarhi, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -304,6 +326,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Muzaffarpur, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -315,6 +338,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Bhagalpur, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -326,6 +350,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Gaya, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -337,6 +362,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Darbhanga, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -348,6 +374,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Supaul, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -359,6 +386,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Chapra (Saran), FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -370,6 +398,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Aurangabad, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -381,6 +410,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Nawada, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -392,6 +422,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Madhepura, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -403,6 +434,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Nalanda, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -414,6 +446,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Rohtas, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -425,6 +458,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Vaishali, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -436,6 +470,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Gopalganj, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -447,6 +482,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Samastipur, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -458,6 +494,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Banka, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -469,6 +506,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Khagaria, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -480,6 +518,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Saharsa, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -491,6 +530,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Jehanabad, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -502,6 +542,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Munger, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -513,6 +554,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Jamui, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -524,6 +566,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Bhojpur, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -535,6 +578,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Buxar, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -546,6 +590,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Lakhisarai, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -557,6 +602,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Sheohar, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: district
@@ -568,6 +614,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Beneficiaries in Shaikhpura, FY2023-24. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
   - dimension: demographics

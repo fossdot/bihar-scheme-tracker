@@ -65,6 +65,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Summed from the 9 batch-wise rows in the reply. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: उत्तर की 9 बैचवार पंक्तियों का योग। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
   - dimension: beneficiaries
@@ -76,6 +77,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: Summed from the 28 batch-wise rows in the reply. Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: उत्तर की 28 बैचवार पंक्तियों का योग। BSMFC के RTI उत्तर (24 जुलाई 2026) से प्राप्त।
   - dimension: beneficiaries
@@ -87,6 +89,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Summed from the 34 batch-wise rows in the reply; certification still in progress (see certified
       metric). No FY2023-24 batches were listed in the reply. Received via BSMFC RTI reply dated 24
@@ -103,6 +106,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Summed from batch-wise rows (155 of 183 trainees certified). Received via BSMFC RTI reply dated
       24 Jul 2026.
@@ -116,6 +120,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Summed from batch-wise rows (557 of 668 trainees certified). Received via BSMFC RTI reply dated
       24 Jul 2026.
@@ -129,6 +134,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Only 5 of 34 FY2024-25 batches were assessed at reply date (96 certified); the rest are marked
       'assessment pending'. Received via BSMFC RTI reply dated 24 Jul 2026.
@@ -144,6 +150,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Bhabhua (Kaimur) across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -156,6 +163,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Purnea across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -168,6 +176,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Buxar across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -180,6 +189,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Nalanda across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -192,6 +202,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Darbhanga across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -204,6 +215,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Begusarai across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -216,6 +228,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Gaya across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -228,6 +241,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Patna across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -240,6 +254,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Muzaffarpur across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -252,6 +267,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Nawada across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -264,6 +280,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Katihar across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -276,6 +293,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Kishanganj across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -288,6 +306,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in West Champaran across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -300,6 +319,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Saran across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null
@@ -312,6 +332,7 @@ metrics:
     provenance: rti_received
     as_of_date: '2026-07-24'
     source_url: https://bsmfc.org/schemes/mukhyamantrishram-shakti-yojna/
+    document_url: /rti-docs/2026-07-24-bsmfc-letter-920.pdf
     note: >-
       Trainees in Siwan across FY2021-22, 2022-23 and 2024-25 batches (summed from the batch-wise rows). Received via BSMFC RTI reply dated 24 Jul 2026.
     note_hi: null

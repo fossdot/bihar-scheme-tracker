@@ -566,6 +566,7 @@ function DataImpact({
             (locale === "hi" && noteRow?.note_hi ? noteRow.note_hi : noteRow?.note) ??
             (locale === "hi" ? DIM_NOTE[dim].hi : DIM_NOTE[dim].en);
           const src = rows.find((r) => r.source_url)?.source_url ?? null;
+          const doc = rows.find((r) => r.document_url)?.document_url ?? null;
           return (
             <div key={dim} className="flex items-start justify-between gap-3 px-3 py-2.5 text-sm">
               <div className="flex min-w-0 items-start gap-2.5">
@@ -573,9 +574,19 @@ function DataImpact({
                 <div className="min-w-0">
                   <div className="text-ink">{tryT(locale, `dim_${dim}`, dim)}</div>
                   {note && <div className="mt-0.5 text-xs text-muted">{note}</div>}
-                  {src && (
-                    <div className="mt-1">
-                      <SourceChip url={src} />
+                  {(src || doc) && (
+                    <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+                      {src && <SourceChip url={src} />}
+                      {doc && (
+                        <a
+                          href={doc}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-xs font-medium text-brand-strong underline underline-offset-2"
+                        >
+                          {t(locale, "rtiReplyPdf")} ⬇
+                        </a>
+                      )}
                     </div>
                   )}
                 </div>
