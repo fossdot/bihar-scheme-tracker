@@ -226,6 +226,7 @@ export interface SchemeMetric {
   provenance: DataProvenance;
   as_of_date: string | null;
   source_url: string | null;
+  document_url: string | null; // downloadable evidence doc (e.g. redacted RTI reply PDF under /rti-docs/)
   note: string | null;
   note_hi: string | null; // Hindi note; null → falls back to `note` at render
   created_at: string;

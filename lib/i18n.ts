@@ -69,6 +69,7 @@ export const STRINGS = {
   rtiColScheme: { en: "Scheme", hi: "योजना" },
   rtiColData: { en: "Data requested", hi: "माँगा गया आँकड़ा" },
   rtiColStatus: { en: "Status", hi: "स्थिति" },
+  rtiReplyPdf: { en: "Reply PDF", hi: "उत्तर PDF" },
   footerSource: { en: "Source code", hi: "स्रोत कोड" },
   footerApi: { en: "API", hi: "API" },
   footerNote: {

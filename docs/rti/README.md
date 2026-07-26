@@ -27,6 +27,20 @@ A `scheme_metrics` row carries a `provenance`; the RTI lifecycle moves it along:
 
 Edit the scheme's YAML in `data/schemes/`, run `npm run data:validate`, then `data:load`.
 
+### Publishing the reply document itself
+
+Every received reply is published as a downloadable PDF so citizens can read the primary
+document, not just our extraction of it:
+
+1. **Redact first — the repo is public.** Black out ALL personal data (applicant name, father's
+   name, address, PIN, portal reference IDs) with a *pixel-level* redaction (e.g. PyMuPDF
+   `apply_redactions(images=PDF_REDACT_IMAGE_PIXELS)`), never a cosmetic overlay box. Strip PDF
+   metadata. The PIO's letter number/date stay — they are the document's public identity.
+2. Downsample scans to a readable ~150 dpi (a phone-friendly few MB, not a 10 MB+ scan).
+3. Commit to `public/rti-docs/<yyyy-mm-dd>-<office>-letter-<no>.pdf`.
+4. Set `document_url: /rti-docs/<file>.pdf` on every metric row the reply substantiates —
+   the `/rti` tracker and the scheme page's provenance panel then render a "Reply PDF ⬇" link.
+
 ## Standard application format (RTI Act, 2005)
 
 ```

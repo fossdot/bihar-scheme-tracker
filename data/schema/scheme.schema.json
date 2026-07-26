@@ -82,6 +82,7 @@
           "provenance": { "enum": ["published", "reported", "rti_received", "rti_filed", "rti_needed", "estimated"] },
           "as_of_date": { "type": ["string", "null"], "format": "date" },
           "source_url": { "type": ["string", "null"], "format": "uri" },
+          "document_url": { "type": ["string", "null"], "format": "uri-reference", "description": "Downloadable evidence document (e.g. redacted RTI reply PDF under public/rti-docs/); site-relative path or absolute URL. Redact ALL personal data before publishing — the repo is public." },
           "note": { "type": ["string", "null"] },
           "note_hi": { "type": ["string", "null"], "description": "Hindi note; null falls back to note." }
         }
