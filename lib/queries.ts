@@ -59,42 +59,69 @@ export async function listRtiApplications(): Promise<RtiApplication[]> {
                  else 2 end,
                s.name_en, m.dimension, m.label`
   );
-  // Collapse per-district DATA rows (value != null) into one "(N districts)" summary line per
-  // scheme — a received reply otherwise floods the tracker with dozens of rows all citing the
-  // same document. Dimension-level placeholders (value null, e.g. the filed/needed "District &
-  // demographic breakdown" markers) pass through untouched, and the scheme pages keep the full
-  // per-district detail.
-  const out: RtiApplication[] = [];
-  const collapsed = new Set<string>();
+  // The tracker's unit is the REQUEST, not the figure ("the request itself is the evidence
+  // trail"): one reply can substantiate dozens of metric rows, which would flood the list with
+  // near-identical lines all citing the same document. Collapse every scheme's received rows
+  // (grouped by reply document) into ONE summary line — what dimensions it covered, how many
+  // figures, which years, one Reply-PDF link. Filed/needed placeholders pass through (one line
+  // per pending request), and the scheme pages keep the full per-figure detail.
+  const DIM_ORDER = ["beneficiaries", "budget", "outcomes", "district", "demographics"] as const;
+  const DIM_EN: Record<string, string> = {
+    beneficiaries: "beneficiaries",
+    budget: "budget",
+    outcomes: "outcomes",
+    district: "district-wise breakdown",
+    demographics: "demographics",
+  };
+  const DIM_HI: Record<string, string> = {
+    beneficiaries: "लाभार्थी",
+    budget: "बजट",
+    outcomes: "परिणाम",
+    district: "जिलावार विवरण",
+    demographics: "जनसांख्यिकी",
+  };
+  const join = (parts: string[], and: string) =>
+    parts.length <= 1 ? (parts[0] ?? "") : `${parts.slice(0, -1).join(", ")} ${and} ${parts[parts.length - 1]}`;
+
+  const passthrough: RtiApplication[] = [];
+  const groups = new Map<string, RtiApplication[]>();
   for (const r of rows) {
-    if (!(r.dimension === "district" && r.value != null)) {
-      out.push(r);
+    if (r.provenance !== "rti_received") {
+      passthrough.push(r);
       continue;
     }
-    const key = `${r.scheme_id}:${r.provenance}`;
-    if (collapsed.has(key)) continue;
-    collapsed.add(key);
-    const group = rows.filter(
-      (g) =>
-        g.scheme_id === r.scheme_id &&
-        g.provenance === r.provenance &&
-        g.dimension === "district" &&
-        g.value != null
-    );
-    const fy = group.every((g) => g.fiscal_year === group[0].fiscal_year) ? group[0].fiscal_year : null;
-    const n = group.length;
-    out.push({
-      ...r,
-      label: `District-wise breakdown${fy ? `, FY${fy}` : ""} (${n} districts)`,
-      label_hi: `जिलावार विवरण${fy ? `, ${fy}` : ""} (${n} ज़िले)`,
+    const key = `${r.scheme_id}:${r.document_url ?? ""}`;
+    const g = groups.get(key);
+    if (g) g.push(r);
+    else groups.set(key, [r]);
+  }
+
+  const received: RtiApplication[] = [];
+  for (const g of Array.from(groups.values())) {
+    if (g.length === 1) {
+      received.push(g[0]);
+      continue;
+    }
+    const dims = DIM_ORDER.filter((d) => g.some((r) => r.dimension === d));
+    const n = g.filter((r) => r.value != null).length;
+    const fys = g.map((r) => r.fiscal_year).filter((f): f is string => f != null).sort();
+    const fyEn = fys.length ? (fys[0] === fys[fys.length - 1] ? `FY${fys[0]}` : `FY${fys[0]} to ${fys[fys.length - 1]}`) : null;
+    const fyHi = fys.length ? (fys[0] === fys[fys.length - 1] ? fys[0] : `${fys[0]} से ${fys[fys.length - 1]}`) : null;
+    const first = g[0];
+    const en = join(dims.map((d) => DIM_EN[d]), "&");
+    received.push({
+      ...first,
+      label: `${en.charAt(0).toUpperCase()}${en.slice(1)} — ${n} figures${fyEn ? `, ${fyEn}` : ""}`,
+      label_hi: `${join(dims.map((d) => DIM_HI[d]), "एवं")} — ${n} आँकड़े${fyHi ? `, ${fyHi}` : ""}`,
       value: null,
       unit: null,
-      // Keep only the shared provenance tail ("Received via …"), not one district's figure.
-      note: r.note?.match(/Received via .*/)?.[0] ?? null,
+      // Keep only the shared provenance tail ("Received via …"), not one figure's note.
+      note: first.note?.match(/Received via .*/)?.[0] ?? null,
       note_hi: null,
     });
   }
-  return out;
+  received.sort((a, b) => a.scheme_name_en.localeCompare(b.scheme_name_en));
+  return [...received, ...passthrough];
 }
 
 /** Aggregate counts for the home page — a cheap COUNT instead of fetching (and capping) rows. */
